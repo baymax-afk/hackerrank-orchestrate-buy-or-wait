@@ -17,7 +17,7 @@ CACHE_DIR = CODE_DIR / "cache"
 EVALUATION_DIR = CODE_DIR / "evaluation"
 USAGE_LOG = EVALUATION_DIR / "usage.jsonl"
 USAGE_REPORT = EVALUATION_DIR / "usage_report.md"
-PROMPTS_DIR = CODE_DIR / "agents" / "prompts"
+TRACE_DIR = CODE_DIR / "traces"
 
 # Forecast window in days after request_date (inclusive). The spec frames the check as a
 # "90-day" safety check, but calibration on the 25 solved samples (code/tools/calibrate.py,
@@ -73,6 +73,8 @@ NON_RECURRING_INCOME_PATTERN = (
 # Calibrated on the samples (research/synthesis.md addendum): reproduces request_04/13 without
 # breaking request_19/23; set BOW_INTRADAY_DEBITS_FIRST=0 for plain end-of-day netting.
 INTRADAY_DEBITS_FIRST = os.environ.get("BOW_INTRADAY_DEBITS_FIRST", "1") == "1"
+# A message-stated salary above this multiple of the settled level is treated as unconfirmed.
+SALARY_PLAUSIBILITY_FACTOR = Decimal("3")
 SALARY_MESSAGE_AMOUNTS = os.environ.get("BOW_SALARY_MESSAGE_AMOUNTS", "0") == "1"
 # Income descriptions that end a salary series.
 FINAL_INCOME_PATTERN = r"final"
@@ -89,6 +91,12 @@ PRICE_TABLE = {
     "claude-haiku-4-5-20251001": (Decimal("1.00"), Decimal("5.00")),
 }
 MAX_CHANGE_COMBINATIONS = 5000
+# Explanation drafts are independent, cache-backed calls; a small pool keeps a cold run short.
+EXPLAIN_WORKERS = int(os.environ.get("BOW_EXPLAIN_WORKERS", "4"))
+# After this many consecutive API failures the client stops calling and the run continues deterministically.
+LLM_CIRCUIT_BREAKER = int(os.environ.get("BOW_LLM_CIRCUIT_BREAKER", "5"))
+# Set by main.run; stamped on usage records and traces so a run can be reconstructed.
+RUN_ID = "manual"
 
 
 def load_dotenv(path: Path | None = None) -> None:

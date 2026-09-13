@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_177",
-  "content_sha256": "1efc1cea240efb82414aa1ea49738a7fee92ae0ae13b2980260fd8b68751dbe5",
+  "content_sha256": "c38199b3b7b3f217d2334d4c32cf2a37771f43bc97376f60c9d3f00e48b73b4b",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full USD 1,017.60 emergency expense today, 5 January 2026, while keeping at least USD 1,300 in reserve, so no changes to your spending are needed."
+    "explanation": "You can pay the full USD 1,017.60 on 5 January 2026 for this emergency expense, keeping at least USD 1,300 available in your account."
   },
   "usage": {
-    "input_tokens": 569,
-    "output_tokens": 70
+    "input_tokens": 748,
+    "output_tokens": 59
   },
-  "timestamp": "2026-09-13T03:30:44.050602+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:26.989377+00:00"
 }

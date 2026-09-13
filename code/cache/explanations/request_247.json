@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_247",
-  "content_sha256": "231a5dcb9e033fe7aaf41406da994595afcb167498e2c2000731f3a4705d48b5",
+  "content_sha256": "5118d7fce04e8137f55fef8b44896ab28e74d06f608ecfe6c10fb581a89879dd",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full EUR 1,059.30 family transfer today, 5 September 2024, while still keeping at least EUR 1,300 available over the next 90 days."
+    "explanation": "The full family transfer of EUR 1,059.30 can be paid today, 5 September 2024, while still keeping at least EUR 1,300 available."
   },
   "usage": {
-    "input_tokens": 574,
-    "output_tokens": 64
+    "input_tokens": 765,
+    "output_tokens": 58
   },
-  "timestamp": "2026-09-13T03:33:11.883423+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:42.214930+00:00"
 }

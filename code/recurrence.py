@@ -138,7 +138,8 @@ def detect_salary_series(history: list[Event], explicit_flows: list[CashFlow], e
     regular = [e for e in history if e.event_type == "income" and e.category == "salary" and not NON_RECURRING_INCOME.search(e.description)]
     excl = [f for f in facts if f.kind == "exclude_income" and f.pattern]
     if excl:
-        pat = re.compile("|".join(f.pattern for f in excl), re.I)
+        # patterns are keywords (possibly model-supplied): escape them so they can never be regex syntax
+        pat = re.compile("|".join(re.escape(f.pattern.strip()) for f in excl if f.pattern.strip()) or r"(?!x)x", re.I)
         regular = [e for e in regular if not pat.search(e.description)]
     regular.sort(key=lambda e: (e.cash_date, e.num))
     scheduled = [c for c in explicit_flows if c.kind == "scheduled" and c.amount > 0 and events_by_id.get(c.source_id) and events_by_id[c.source_id].event_type == "income"]
@@ -183,6 +184,10 @@ def detect_salary_series(history: list[Event], explicit_flows: list[CashFlow], e
         if key in kinds and kinds[key].amount is not None:
             stated = kinds[key].amount
             eff = kinds[key].effective_date
+            if stated <= 0 or (regular and stated > amount * config.SALARY_PLAUSIBILITY_FACTOR):
+                # a stated level far outside the settled history is treated as unconfirmed evidence
+                notes.append(f"salary amount {stated} stated by {kinds[key].source_id} is implausible vs history {amount}; ignored")
+                break
             if key == "salary_remaining" or config.SALARY_MESSAGE_AMOUNTS or stated < amount:
                 # an explicitly remaining/reduced salary is adopted; a stated increase is not counted
                 # until it settles (financially safer interpretation of an unsettled claim) ...

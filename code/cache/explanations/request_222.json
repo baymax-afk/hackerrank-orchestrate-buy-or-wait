@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_222",
-  "content_sha256": "ffd68fdac93b42be4eb414d0a26e66c993d88beee16caf525894957b71254ef5",
+  "content_sha256": "840bd1c59660fb43358ea712d657879a9f66c0ed197c8ea5c0d3231aeaad7388",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full ZAR 34,078 education request today, 5 January 2026, while still keeping at least ZAR 27,300 available over the next 90 days, so no spending changes are needed."
+    "explanation": "You can pay the full ZAR 34,078 education request today, 5 January 2026, in one payment while keeping at least ZAR 27,300 available."
   },
   "usage": {
-    "input_tokens": 566,
-    "output_tokens": 72
+    "input_tokens": 753,
+    "output_tokens": 58
   },
-  "timestamp": "2026-09-13T03:32:19.293936+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:36.237146+00:00"
 }

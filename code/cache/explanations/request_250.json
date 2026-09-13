@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_250",
-  "content_sha256": "9dd821a7422a5860f6f8df444335fc194d6285f175d32d54ce5609ce1e755107",
+  "content_sha256": "648bd9bc474a6e81802e046410b737e3dea55f5ad30f33fa658ee119b8b48dbf",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "We can't safely pay the requested ZAR 124,278 by 18 January 2025 while keeping the required ZAR 35,300 balance; only ZAR 15,737.38 is currently safe to pay, and no full payment is expected within 90 days, so we recommend not proceeding."
+    "explanation": "The requested ZAR 124,278 debt repayment cannot be safely completed by 18 January 2025 while keeping at least ZAR 35,300 available; only ZAR 15,737.38 can be safely paid today, so the payment should not proceed."
   },
   "usage": {
-    "input_tokens": 565,
-    "output_tokens": 102
+    "input_tokens": 776,
+    "output_tokens": 91
   },
-  "timestamp": "2026-09-13T03:33:18.772331+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:43.561866+00:00"
 }

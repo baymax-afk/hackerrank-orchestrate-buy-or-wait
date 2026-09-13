@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_260",
-  "content_sha256": "2a09133603310ac6d52e9b15d3bd7cc847f99c91b3f15fa846d725f735aa9368",
+  "content_sha256": "f6c0204ab494c3176e5a1fd5d94f65676b01495328ac3829bf7b7e4ebe9fe860",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The requested IDR 52,079,000 for request_260 can't be safely paid, since only IDR 6,357,907.07 is available today while keeping the required IDR 20,727,700 minimum balance, and full payment isn't achievable within 90 days, so this payment is not recommended."
+    "explanation": "The request for IDR 52,079,000 due by 18 April 2025 cannot be safely funded while keeping at least IDR 20,727,700 available; only IDR 6,357,907.07 is currently safe to pay, so proceeding now is not recommended and no full payment date falls within the forecast period."
   },
   "usage": {
-    "input_tokens": 570,
-    "output_tokens": 101
+    "input_tokens": 793,
+    "output_tokens": 107
   },
-  "timestamp": "2026-09-13T03:33:40.473433+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:44.869104+00:00"
 }

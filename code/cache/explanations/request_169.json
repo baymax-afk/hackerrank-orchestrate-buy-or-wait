@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_169",
-  "content_sha256": "a71dc64f92ab78e8331493de95637311432505cfe75792a1b3101a15759d7752",
+  "content_sha256": "0985f7ab85c377a18e67a0101c81b0412610f095207c14e78d1a05b08c7140cf",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full ZAR 41,976 education request today, 4 March 2024, while still keeping at least ZAR 18,700 in reserve over the next 90 days, so no spending changes are needed."
+    "explanation": "You can pay the full ZAR 41,976 education request today, 4 March 2024, ahead of the 16 May 2024 deadline, while keeping at least ZAR 18,700 available."
   },
   "usage": {
-    "input_tokens": 566,
-    "output_tokens": 75
+    "input_tokens": 762,
+    "output_tokens": 71
   },
-  "timestamp": "2026-09-13T03:30:26.648910+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:25.390406+00:00"
 }

@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_112",
-  "content_sha256": "c190a427f5b7ba4ba1a97add84ee361985bbeb5b72992c7558a4ae012c140d2e",
+  "content_sha256": "72ab017115ed508f736044b5cfb52df7649676b142ded3871ab99851f4adf7ee",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full EUR 271.70 today for request_112, and this still keeps at least EUR 500 available over the next 90 days, ahead of the 14 June 2024 deadline."
+    "explanation": "You can pay the full EUR 271.70 family transfer today, 5 June 2024, ahead of the 14 June 2024 deadline, while keeping at least EUR 500 available."
   },
   "usage": {
-    "input_tokens": 561,
-    "output_tokens": 70
+    "input_tokens": 755,
+    "output_tokens": 69
   },
-  "timestamp": "2026-09-13T03:28:21.473134+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:13.877634+00:00"
 }

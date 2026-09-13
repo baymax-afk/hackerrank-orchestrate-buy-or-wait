@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_47",
-  "content_sha256": "dcc66ccc70c53073c26756cfb2eb9699b3bdefa08842bab983708c6cf9233275",
+  "content_sha256": "b6a728bff22c51abd94b6318118f074cfcd7cf193a75092bae0bb0c2a4012707",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Request_47's emergency expense of IDR 38,114,000 due by 19 June 2025 cannot be paid without dropping below the required minimum balance of IDR 30,049,000, so this payment is not recommended and no payment plan is available within 90 days."
+    "explanation": "The emergency expense request for IDR 38,114,000 by 19 June 2025 cannot be paid, since doing so would drop the balance below the required minimum of IDR 30,049,000 that must be kept available, so payment is not recommended."
   },
   "usage": {
-    "input_tokens": 555,
-    "output_tokens": 93
+    "input_tokens": 763,
+    "output_tokens": 87
   },
-  "timestamp": "2026-09-13T03:26:04.975296+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:23:57.564563+00:00"
 }

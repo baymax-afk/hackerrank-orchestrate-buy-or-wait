@@ -1,9 +1,9 @@
 # Token usage and cost report
 
-Generated: 2026-09-13T03:50:24.899982+00:00
-Dataset run: 250 requests (dataset/requests.csv). Provider: anthropic. Prompt version: v1.
+Generated: 2026-09-13T04:25:13.706002+00:00 (run id 20260913T042513Z-5854a5)
+Dataset run: 3 requests (dataset/requests.csv). Provider: anthropic. Prompt version: v1.
 
-Model calls are made only by the bounded evidence/explanation agents (image OCR, message extraction fallback, explanation drafting, optional audit). All forecasting, plan generation, ranking and validation are deterministic Python. Cache hits make no API call and consume no tokens.
+Model calls are made only by the bounded evidence/explanation agents (image OCR, message extraction fallback, explanation drafting). All forecasting, plan generation, ranking and validation are deterministic Python. Cache hits make no API call and consume no tokens.
 
 ## Final full-dataset run: model work behind the shipped output.csv
 
@@ -11,12 +11,12 @@ Each shipped row is built from cached, provenance-tracked model outputs (image O
 
 | Model | Calls | Input tokens | Output tokens | Total tokens | Est. cost (USD) |
 |---|---:|---:|---:|---:|---:|
-| claude-sonnet-5 | 269 | 184090 | 23833 | 207923 | 0.6065 |
-| **All models** | 269 | 184090 | 23833 | 207923 | 0.6065 |
+| claude-sonnet-5 | 22 | 42331 | 3706 | 46037 | 0.1217 |
+| **All models** | 22 | 42331 | 3706 | 46037 | 0.1217 |
 
-- Total tokens: 207923; average per request: 831.7
-- Estimated total cost: USD 0.6065; average per request: USD 0.002426
-- Calls per agent: {'explain_agent': 250, 'image_agent': 16, 'message_agent': 3}
+- Total tokens: 46037; average per request: 15345.7
+- Estimated total cost: USD 0.1217; average per request: USD 0.040574
+- Calls per agent: {'explain_agent': 3, 'image_agent': 16, 'message_agent': 3}
 
 ## API calls made during this run (cache misses only)
 
@@ -27,15 +27,6 @@ Each shipped row is built from cached, provenance-tracked model outputs (image O
 - Total tokens: 0; average per request: 0.0
 - Estimated total cost: USD 0.0000; average per request: USD 0.000000
 - Calls per agent: {}
-
-## Cumulative calls that built the shipped evidence caches (all runs)
-
-| Model | Calls | Failed | Input tokens | Output tokens | Total tokens | Est. cost (USD) |
-|---|---:|---:|---:|---:|---:|---:|
-| claude-sonnet-5 | 690 | 6 | 416550 | 57553 | 474103 | 1.4086 |
-| **All models** | 690 | | 416550 | 57553 | 474103 | 1.4086 |
-
-- Cumulative tokens: 474103; per request: 1896.4; cumulative cost: USD 1.4086 (USD 0.005635 per request)
 
 ## Pricing assumptions (USD per million tokens)
 

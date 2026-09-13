@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_171",
-  "content_sha256": "9f483285570e1e4a856d212c07707c65d8b3d9bebd35caa3297614834f69af11",
+  "content_sha256": "e5ab1305725c139a2c9ecd0b28ccb36309f61d8632b18cf7c4d356cc30a9752f",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The EUR 1,878.80 investment requested for 3 July 2026 is not affordable; only EUR 32.78 can safely be paid today, so this payment is not recommended and should not be made by 10 September 2026, as no option preserves the EUR 500 minimum balance."
+    "explanation": "The EUR 1,878.80 investment request cannot be paid by 10 September 2026 while keeping at least EUR 500 available, so no payment plan is recommended and no payment date is set."
   },
   "usage": {
-    "input_tokens": 539,
-    "output_tokens": 99
+    "input_tokens": 751,
+    "output_tokens": 71
   },
-  "timestamp": "2026-09-13T03:30:31.139420+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:25.609324+00:00"
 }

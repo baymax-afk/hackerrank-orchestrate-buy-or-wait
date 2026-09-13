@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_42",
-  "content_sha256": "8da7de20704bee09478d6d7689684ef2cd218b03f99438dea132f6623ab8ef09",
+  "content_sha256": "017de3cdc3ce1dc9d20975b546c7be9303d6853a304ced99f522238d5a4ce982",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can fully cover the INR 52,100 emergency expense today, 5 January 2026, while still keeping at least INR 113,100 in reserve, so no spending changes are needed."
+    "explanation": "You can pay the full INR 52,100 emergency expense today, 5 January 2026, while keeping at least INR 113,100 available, so no waiting until the 15 March 2026 deadline is needed."
   },
   "usage": {
-    "input_tokens": 559,
-    "output_tokens": 68
+    "input_tokens": 764,
+    "output_tokens": 75
   },
-  "timestamp": "2026-09-13T03:25:54.082667+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:23:57.590710+00:00"
 }

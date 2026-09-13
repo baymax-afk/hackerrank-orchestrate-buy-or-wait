@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_229",
-  "content_sha256": "7c819812fa396b5725dbffd21027a1d12ff58a4ffdc633e12b3109d57da08403",
+  "content_sha256": "ae394791ad1fd2e7d25e1fe9c08b47183d64e12c856161f8d8aba899c9b03790",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The EUR 1,526.80 travel request due 23 May 2024 can't be paid without dropping below the required EUR 1,000 minimum balance, so only EUR 368.17 is safe to pay today and no full payment date is available within 90 days."
+    "explanation": "The EUR 1,526.80 travel request due by 23 May 2024 cannot be paid, since doing so would drop the balance below the EUR 1,000 minimum you must keep available; only EUR 368.17 is currently safe to pay, and no full-payment date is available."
   },
   "usage": {
-    "input_tokens": 543,
-    "output_tokens": 90
+    "input_tokens": 762,
+    "output_tokens": 98
   },
-  "timestamp": "2026-09-13T03:32:33.678931+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:37.990354+00:00"
 }

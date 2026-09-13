@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_182",
-  "content_sha256": "0ddd4a6c3393ec9d402d819f28e360c6f24cef4cdf2e8d8e2d42098436947c7f",
+  "content_sha256": "869d0b23fa5aa3c8be40ea9cb20e6277e11fb5aef95f43b110301e4f3327a166",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full ZAR 65,714 today, 5 August 2025, and still keep at least ZAR 31,100 available over the next 90 days, so the debt is settled in one payment."
+    "explanation": "You can pay the full ZAR 65,714 today, on 5 August 2025, to fully settle request_182, while keeping at least ZAR 31,100 available in your account, with no spending changes needed."
   },
   "usage": {
-    "input_tokens": 571,
-    "output_tokens": 71
+    "input_tokens": 762,
+    "output_tokens": 74
   },
-  "timestamp": "2026-09-13T03:30:54.814559+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:29.153941+00:00"
 }

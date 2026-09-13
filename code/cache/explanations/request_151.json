@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_151",
-  "content_sha256": "02d421170d83685d22f0081e74b2c044be1ff3c6fd210a6259e24c3e512c0186",
+  "content_sha256": "c47689983592f12415a59a7058bb9073dd09fcba59c16e0ac31e409779c676b7",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can fully pay the IDR 26,999,000 housing request today, 3 September 2024, while keeping at least IDR 31,633,600 in reserve over the next 90 days."
+    "explanation": "You can pay the full IDR 26,999,000 housing request today, 3 September 2024, while keeping at least IDR 31,633,600 available."
   },
   "usage": {
-    "input_tokens": 574,
-    "output_tokens": 68
+    "input_tokens": 763,
+    "output_tokens": 57
   },
-  "timestamp": "2026-09-13T03:29:46.437533+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:21.386874+00:00"
 }

@@ -1,7 +1,6 @@
 """Deterministic output validation (row + file level). Every rule cites the contract."""
 from __future__ import annotations
 
-import csv
 import re
 from dataclasses import dataclass
 from datetime import date, timedelta
@@ -235,14 +234,3 @@ def validate_rows(rows: list[dict], ds: Dataset, requests: Optional[list[Request
         out.extend(validate_row(row, req, ds.profiles[req.user_id], ds.options_by_request.get(req.request_id, []), ds.events_by_id))
     return out
 
-
-def validate_file(path: Path, ds: Dataset) -> list[Violation]:
-    with open(path, encoding="utf-8", newline="") as fh:
-        raw = fh.read()
-    if "\r\n" not in raw:
-        pass  # LF is acceptable; CRLF mirrors the organiser files
-    reader = csv.DictReader(raw.splitlines())
-    if reader.fieldnames != config.OUTPUT_COLUMNS:
-        return [Violation("*", "*", "HEADER", "error", f"{reader.fieldnames}")]
-    rows = [dict(r) for r in reader]
-    return validate_rows(rows, ds)

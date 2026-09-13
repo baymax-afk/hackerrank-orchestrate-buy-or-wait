@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_48",
-  "content_sha256": "bde80b6eddd287a956799edd3fb6c33aee65e974510c379de4f95fc66237f81c",
+  "content_sha256": "74b223516363e55820f045ff5b9d21a766d505e89229e43bb12227aef92e7193",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full INR 45,700 family transfer today, 25 July 2026, since your balance will still stay above the required minimum of INR 71,300 over the next 90 days."
+    "explanation": "You can pay the full INR 45,700 family transfer today, 25 July 2026, while keeping at least INR 71,300 available."
   },
   "usage": {
-    "input_tokens": 558,
-    "output_tokens": 67
+    "input_tokens": 742,
+    "output_tokens": 52
   },
-  "timestamp": "2026-09-13T03:26:07.309011+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:23:57.658317+00:00"
 }

@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_239",
-  "content_sha256": "0f812947333b969e559a83b893825f776fa69f660f36094f8ebc7712978ccfb6",
+  "content_sha256": "7ac7778df80bd775b17a68ac9ab5590017ce4926df71288d87cc32969d375729",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can invest USD 642 today, 4 May 2025, in full, while still keeping at least USD 600 available over the next 90 days."
+    "explanation": "You can pay the full USD 642 today, 4 May 2025, while keeping at least USD 600 available."
   },
   "usage": {
-    "input_tokens": 542,
-    "output_tokens": 53
+    "input_tokens": 718,
+    "output_tokens": 44
   },
-  "timestamp": "2026-09-13T03:32:54.864514+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:39.983439+00:00"
 }

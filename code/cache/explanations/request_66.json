@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_66",
-  "content_sha256": "fe767cf900064dfe09cecdf9f147ac2d193d7e0cb9a62f69e6bb1dc1f151007c",
+  "content_sha256": "0332bc1057a17ad22b5441e30bd11b942cd0fb279db747813ec293e684945373",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full INR 22,200 for this emergency expense today, 3 April 2026, while still keeping at least INR 80,700 in reserve over the next 90 days."
+    "explanation": "You can pay the full INR 22,200 for this emergency expense today, 3 April 2026, while keeping at least INR 80,700 available."
   },
   "usage": {
-    "input_tokens": 559,
-    "output_tokens": 66
+    "input_tokens": 746,
+    "output_tokens": 55
   },
-  "timestamp": "2026-09-13T03:26:43.382607+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:03.418101+00:00"
 }

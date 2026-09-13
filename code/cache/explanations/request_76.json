@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_76",
-  "content_sha256": "5deb74a4c3bbc7ff05ad5f89602256dcbc6d2c63f096e8764ca02a0fc9feb053",
+  "content_sha256": "7a21f1ac863f3fdd259bee190e409b0c844839390701ddbbcfdcd6e000a439fb",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Paying the requested USD 4,455.60 by 30 July 2024 isn't affordable since it would breach the USD 1,800 minimum balance you need to keep, so no payment method is recommended and only USD 353.43 is safe to pay today."
+    "explanation": "The requested USD 4,455.60 payment cannot be made by 30 July 2024 while keeping at least USD 1,800 available, so it is marked not affordable, with at most USD 353.43 safe to pay today and no plan protecting that minimum."
   },
   "usage": {
-    "input_tokens": 538,
-    "output_tokens": 90
+    "input_tokens": 762,
+    "output_tokens": 91
   },
-  "timestamp": "2026-09-13T03:27:05.175916+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:06.003408+00:00"
 }

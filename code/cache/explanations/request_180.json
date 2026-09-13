@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_180",
-  "content_sha256": "d405d0222bc887d9e67155160967d134191df6ddc31d7b1464860076cb35318b",
+  "content_sha256": "2489888bf4de72a9b516e5c5efeb05783a62962c12e8e2e143b303d7bd9af5d0",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full INR 66,500 today, 6 July 2026, while still keeping at least INR 37,300 in reserve over the next 90 days, so no changes to spending are needed."
+    "explanation": "You can pay the full INR 66,500 today, 6 July 2026, ahead of the 2 September 2026 deadline, while keeping at least INR 37,300 available, with no spending changes needed."
   },
   "usage": {
-    "input_tokens": 559,
-    "output_tokens": 70
+    "input_tokens": 760,
+    "output_tokens": 74
   },
-  "timestamp": "2026-09-13T03:30:50.463941+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:28.042221+00:00"
 }

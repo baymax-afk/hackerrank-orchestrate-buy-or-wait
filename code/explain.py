@@ -29,10 +29,10 @@ def explain(request: Request, profile: Profile, cand: Candidate | None, safe_tod
     if cand is None:
         if Decimal(0) < safe_today < request.requested_amount and "partial_payment" in profile.methods and request.allows_partial_payment:
             return (f"Do not proceed with the {req} request. Although {fmt_money(cur, safe_today)} is available today, "
-                    f"the full amount cannot be completed safely within 90 days.")
+                    f"the full amount cannot be completed safely within the forecast period.")
         return f"Do not make this payment by {deadline}. None of the available options keeps the {minimum} minimum protected."
     if cand.method == "full_payment" and cand.status == "affordable_now":
-        return f"Pay {req} today. This leaves at least {minimum} available over the next 90 days."
+        return f"Pay {req} today. This leaves at least {minimum} available throughout the forecast period."
     if cand.method == "full_payment":
         return f"{_describe_changes(cand, cur)}, then pay {req} today. This leaves at least {minimum} available."
     if cand.method == "installments":

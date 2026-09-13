@@ -88,19 +88,21 @@ def embodied_records(request_ids: list[str] | None, cache_dir: Path = config.CAC
 
 
 def write_report(n_requests: int, run_start: str | None = None, usage_log: Path = config.USAGE_LOG, out: Path = config.USAGE_REPORT,
-                 request_ids: list[str] | None = None) -> Path:
+                 request_ids: list[str] | None = None, run_id: str | None = None) -> Path:
     records = _load(usage_log)
-    run_records = [r for r in records if run_start is None or r.get("ts", "") >= run_start]
+    if run_id:
+        run_records = [r for r in records if r.get("run_id") == run_id]
+    else:
+        run_records = [r for r in records if run_start is None or r.get("ts", "") >= run_start]
     run = summarise(run_records)
-    cumulative = summarise(records)
     n = max(n_requests, 1)
     lines = [
         "# Token usage and cost report",
         "",
-        f"Generated: {datetime.now(timezone.utc).isoformat()}",
+        f"Generated: {datetime.now(timezone.utc).isoformat()}" + (f" (run id {run_id})" if run_id else ""),
         f"Dataset run: {n_requests} requests (dataset/requests.csv). Provider: {config.PROVIDER}. Prompt version: {config.PROMPT_VERSION}.",
         "",
-        "Model calls are made only by the bounded evidence/explanation agents (image OCR, message extraction fallback, explanation drafting, optional audit). "
+        "Model calls are made only by the bounded evidence/explanation agents (image OCR, message extraction fallback, explanation drafting). "
         "All forecasting, plan generation, ranking and validation are deterministic Python. Cache hits make no API call and consume no tokens.",
         "",
         "## Final full-dataset run: model work behind the shipped output.csv",
@@ -139,20 +141,6 @@ def write_report(n_requests: int, run_start: str | None = None, usage_log: Path 
         f"- Total tokens: {tt}; average per request: {tt / n:.1f}",
         f"- Estimated total cost: USD {t['cost']:.4f}; average per request: USD {t['cost'] / n:.6f}",
         f"- Calls per agent: {dict(sorted(run['per_agent'].items()))}",
-        "",
-        "## Cumulative calls that built the shipped evidence caches (all runs)",
-        "",
-        "| Model | Calls | Failed | Input tokens | Output tokens | Total tokens | Est. cost (USD) |",
-        "|---|---:|---:|---:|---:|---:|---:|",
-    ]
-    for m, d in sorted(cumulative["per_model"].items()):
-        lines.append(f"| {m} | {d['calls']} | {d['failed']} | {d['input_tokens']} | {d['output_tokens']} | {d['input_tokens'] + d['output_tokens']} | {d['cost']:.4f} |")
-    c = cumulative["total"]
-    ct = c["input_tokens"] + c["output_tokens"]
-    lines += [
-        f"| **All models** | {c['calls']} | | {c['input_tokens']} | {c['output_tokens']} | {ct} | {c['cost']:.4f} |",
-        "",
-        f"- Cumulative tokens: {ct}; per request: {ct / n:.1f}; cumulative cost: USD {c['cost']:.4f} (USD {c['cost'] / n:.6f} per request)",
         "",
         "## Pricing assumptions (USD per million tokens)",
         "",

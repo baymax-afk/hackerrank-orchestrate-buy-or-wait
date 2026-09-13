@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_165",
-  "content_sha256": "47407c9a32813fe604ba8a92a26eb8a296c2dcf0174da8ff636bb07f477ece06",
+  "content_sha256": "21cb45aadc6a689d77ad6fb7dd6ed735ca391bc2f83fbb174e9f1f7ed5e56406",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Your travel request of INR 80,600 can be paid in full today, 6 April 2026, while still keeping at least INR 95,000 in reserve, so no spending changes are needed."
+    "explanation": "You can pay the full INR 80,600 travel request today, 6 April 2026, while keeping at least INR 95,000 available."
   },
   "usage": {
-    "input_tokens": 555,
-    "output_tokens": 68
+    "input_tokens": 738,
+    "output_tokens": 51
   },
-  "timestamp": "2026-09-13T03:30:17.887075+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:24.061413+00:00"
 }

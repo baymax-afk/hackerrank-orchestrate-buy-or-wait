@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_231",
-  "content_sha256": "72893ef30195b70f7f9996fc4be5d3073841c1d74296d36521f250055e2fad27",
+  "content_sha256": "09519a54beb6a7eae34d3caf2ac060b750beb1018a2b5ddb2f09d5a7ffb7a6fe",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The requested ZAR 35,706 purchase due 17 March 2026 cannot be made without dropping below the required ZAR 24,300 minimum balance, so payment is not recommended and no payment plan is available at this time."
+    "explanation": "The requested ZAR 35,706 purchase due 17 March 2026 is not affordable, since paying it would drop the balance below the ZAR 24,300 minimum that must be kept available, so this payment is not recommended."
   },
   "usage": {
-    "input_tokens": 548,
+    "input_tokens": 765,
     "output_tokens": 81
   },
-  "timestamp": "2026-09-13T03:32:38.014570+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:38.174795+00:00"
 }

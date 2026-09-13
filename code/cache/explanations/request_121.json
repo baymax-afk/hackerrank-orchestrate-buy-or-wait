@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_121",
-  "content_sha256": "7fbc9bd37baa6f431b528000ad4f4a328e1ad10666ee2c427879b10886c3d30a",
+  "content_sha256": "f0391eb20bb084ffb4844866dac02272223b389810bf969d7bc6b7b78536d8dd",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full USD 633.60 today, 3 March 2024, ahead of the 14 March 2024 deadline, while still keeping at least USD 800 available over the next 90 days."
+    "explanation": "You can pay the full USD 633.60 on 3 March 2024, ahead of the 14 March 2024 deadline, while keeping at least USD 800 available."
   },
   "usage": {
-    "input_tokens": 556,
-    "output_tokens": 71
+    "input_tokens": 741,
+    "output_tokens": 62
   },
-  "timestamp": "2026-09-13T03:28:40.187178+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:16.312223+00:00"
 }

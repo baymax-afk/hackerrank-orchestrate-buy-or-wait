@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_235",
-  "content_sha256": "1a62d31d945dfd30ad026e943522cc47cf23b7c1de9292bbb8c7a0711913e7c6",
+  "content_sha256": "7554ce57b543ec250ad8a0741869ae8109422f3475edbbfcc2fdeeffe5e617f1",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can fully pay the USD 967.20 education request today, 6 September 2024, while still keeping at least USD 700 in reserve over the next 90 days."
+    "explanation": "You can pay the full USD 967.20 education request today, 6 September 2024, ahead of the 25 October 2024 deadline, while keeping at least USD 700 available."
   },
   "usage": {
-    "input_tokens": 551,
-    "output_tokens": 60
+    "input_tokens": 741,
+    "output_tokens": 65
   },
-  "timestamp": "2026-09-13T03:32:46.139064+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:38.377669+00:00"
 }

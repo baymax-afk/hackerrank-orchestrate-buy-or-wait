@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_275",
-  "content_sha256": "544c927964d098d158baee3eb0dfea002bc3929bd95a478711763f1c4fb11b48",
+  "content_sha256": "0ec7acecab97c313d5e886fdcf7c02c7b148ab991a7d6b7ce8a776bfe20b248e",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can fully cover the IDR 15,884,000 emergency expense on 6 May 2025 while still keeping at least IDR 12,760,100 in reserve over the next 90 days, so no spending changes are needed."
+    "explanation": "You can pay the full IDR 15,884,000 for this emergency expense today, 6 May 2025, while keeping at least IDR 12,760,100 available, with no spending changes needed."
   },
   "usage": {
-    "input_tokens": 578,
-    "output_tokens": 80
+    "input_tokens": 780,
+    "output_tokens": 70
   },
-  "timestamp": "2026-09-13T03:34:14.600841+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:47.644677+00:00"
 }

@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_274",
-  "content_sha256": "e31bc334c81463466c4a9423ad8e88fd3132117447f64bd38496deca79834f88",
+  "content_sha256": "e2e0dcdd4b97a062dbba748ca7e35ab51b3a8afcde3fa65d5dda89fe604a007c",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Paying the requested EUR 2,713.70 by 11 February 2025 isn't possible without dropping below your protected minimum balance of EUR 1,800, so this payment is not recommended and no plan or schedule has been set."
+    "explanation": "The requested debt payment of EUR 2,713.70 due by 11 February 2025 is not affordable, as it would drop your balance below the EUR 1,800 minimum you need to keep available, so no payment plan is recommended at this time."
   },
   "usage": {
-    "input_tokens": 549,
-    "output_tokens": 83
+    "input_tokens": 770,
+    "output_tokens": 86
   },
-  "timestamp": "2026-09-13T03:34:12.318169+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:47.441762+00:00"
 }

@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_63",
-  "content_sha256": "571c37ec9bd84bc2ae4d13b9ca6837adc62cda1e194f586eeb10888085f9cc44",
+  "content_sha256": "7df0dba88f9be9adf0d4183c11260eedf802d293f58f3c862a3010b834ff38c4",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The request for INR 343,900 made on 7 July 2026 cannot proceed, since only INR 37,348.21 can be safely paid today while keeping the required INR 153,500 minimum balance, and no safe path completes the full payment within 90 days before the 17 September 2026 deadline."
+    "explanation": "The INR 343,900 purchase requested on 7 July 2026 cannot be safely afforded; although INR 37,348.21 is available today, the full amount can't be completed while keeping at least INR 153,500 available, so it is not recommended and no payment plan is set."
   },
   "usage": {
-    "input_tokens": 552,
-    "output_tokens": 104
+    "input_tokens": 769,
+    "output_tokens": 96
   },
-  "timestamp": "2026-09-13T03:26:38.203066+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:02.879500+00:00"
 }

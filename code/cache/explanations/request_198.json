@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_198",
-  "content_sha256": "91fba5a144fe50baf86ffc0ecbccd50f49d8fea132aff6bd49a14b64195a937a",
+  "content_sha256": "23e5d75bfbbe03d2b6783d428682483e878cec7115763f0474447c09d7bf0a0b",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full INR 185,800 education request today, 7 July 2026, while still keeping at least INR 124,300 in reserve for the next 90 days, so no spending changes are needed."
+    "explanation": "You can pay the full INR 185,800 education request today, 7 July 2026, ahead of the 21 September 2026 deadline, while keeping at least INR 124,300 available."
   },
   "usage": {
-    "input_tokens": 554,
-    "output_tokens": 71
+    "input_tokens": 746,
+    "output_tokens": 67
   },
-  "timestamp": "2026-09-13T03:31:27.405086+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:31.609553+00:00"
 }

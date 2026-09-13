@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_142",
-  "content_sha256": "4b4cee8352959d18c17e4b35edafbc15952539a91c0e52dfe442ae80178f350a",
+  "content_sha256": "fc147720affea985ef7362253166e2054978d7875534d8ed77c0ae4d66638607",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can fully invest USD 1,263.60 today, 5 December 2024, while still keeping at least USD 1,700 available over the next 90 days, so no spending changes are needed."
+    "explanation": "You can pay the USD 1,263.60 investment request in full on 5 December 2024, while still keeping at least USD 1,700 available."
   },
   "usage": {
-    "input_tokens": 565,
-    "output_tokens": 68
+    "input_tokens": 756,
+    "output_tokens": 54
   },
-  "timestamp": "2026-09-13T03:29:27.153125+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:20.041365+00:00"
 }

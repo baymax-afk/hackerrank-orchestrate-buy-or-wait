@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_255",
-  "content_sha256": "fe9442f9babd182ddbdd0a517616b52c8f22817e02500808af43ae39440aaa1b",
+  "content_sha256": "23894ed010922522f85ebc667f86fa75675a382bb467d2ad544809bd639994b3",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full IDR 3,345,000 family transfer today, 6 April 2026, while still keeping at least IDR 9,813,900 in reserve, so no changes to spending are needed."
+    "explanation": "You can pay the full IDR 3,345,000 for this family transfer on 6 April 2026, while keeping at least IDR 9,813,900 available."
   },
   "usage": {
-    "input_tokens": 577,
-    "output_tokens": 73
+    "input_tokens": 772,
+    "output_tokens": 59
   },
-  "timestamp": "2026-09-13T03:33:29.090936+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:43.706651+00:00"
 }

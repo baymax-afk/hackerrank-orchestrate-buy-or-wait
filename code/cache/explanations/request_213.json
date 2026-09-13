@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_213",
-  "content_sha256": "35e88ac18a04b2c495c1e5a6d1137db681f4c9c2f7f1acd6f46ea727ed171b93",
+  "content_sha256": "7e0931a839743a2f785977ead479887e1ef5de2245426b915f5dcd1e283dce31",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The requested USD 3,362.40 transfer for request_213 cannot be made by 22 March 2026, since paying it would drop your balance below the required USD 2,100 minimum, and only USD 2,508.81 is currently safe to use, so no payment plan is recommended at this time."
+    "explanation": "The requested USD 3,362.40 family transfer cannot be made by 22 March 2026, since doing so would drop your balance below the USD 2,100 minimum you need to keep available, and no safe payment plan exists to cover it."
   },
   "usage": {
-    "input_tokens": 544,
-    "output_tokens": 101
+    "input_tokens": 743,
+    "output_tokens": 84
   },
-  "timestamp": "2026-09-13T03:31:58.940777+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:34.230657+00:00"
 }

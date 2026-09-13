@@ -9,6 +9,7 @@ from __future__ import annotations
 import json
 import logging
 import os
+import threading
 import time
 from datetime import datetime, timezone
 from typing import Any, Optional
@@ -32,14 +33,32 @@ class LLMClient:
                 log.warning("anthropic SDK unavailable: %s", exc)
                 self._client = None
         self.calls = 0
+        self.consecutive_failures = 0
+        self.tripped = False
+        self._lock = threading.Lock()
 
     def available(self) -> bool:
-        return self._client is not None
+        return self._client is not None and not self.tripped
 
     def _log_usage(self, record: dict[str, Any]) -> None:
-        config.EVALUATION_DIR.mkdir(parents=True, exist_ok=True)
-        with open(config.USAGE_LOG, "a", encoding="utf-8") as fh:
-            fh.write(json.dumps(record, ensure_ascii=False) + "\n")
+        record = {"run_id": config.RUN_ID, **record}
+        with self._lock:
+            config.EVALUATION_DIR.mkdir(parents=True, exist_ok=True)
+            with open(config.USAGE_LOG, "a", encoding="utf-8") as fh:
+                fh.write(json.dumps(record, ensure_ascii=False) + "\n")
+
+    def _failure(self, agent: str, source_id: str, why: str) -> None:
+        with self._lock:
+            self.consecutive_failures += 1
+            if self.consecutive_failures >= config.LLM_CIRCUIT_BREAKER and not self.tripped:
+                self.tripped = True
+                log.error("%d consecutive API failures (last: %s %s %s); circuit open, continuing deterministically",
+                          self.consecutive_failures, agent, source_id, why)
+
+    def _success(self) -> None:
+        with self._lock:
+            self.consecutive_failures = 0
+            self.calls += 1
 
     def json_call(self, *, agent: str, source_id: str, system: str, content: list[dict], schema: dict,
                   model: Optional[str] = None, max_tokens: int = 2048, effort: str = "low") -> Optional[dict]:
@@ -60,6 +79,7 @@ class LLMClient:
             log.warning("%s %s: API call failed: %s", agent, source_id, type(exc).__name__)
             self._log_usage({"ts": datetime.now(timezone.utc).isoformat(), "agent": agent, "source_id": source_id, "provider": config.PROVIDER,
                              "model": model, "ok": False, "error": type(exc).__name__, "input_tokens": 0, "output_tokens": 0})
+            self._failure(agent, source_id, type(exc).__name__)
             return None
         usage = getattr(resp, "usage", None)
         rec = {
@@ -76,12 +96,14 @@ class LLMClient:
             "stop_reason": getattr(resp, "stop_reason", None),
         }
         self._log_usage(rec)
-        self.calls += 1
+        self._success()
         if getattr(resp, "stop_reason", None) == "refusal":
             return None
         try:
             text = next(b.text for b in resp.content if getattr(b, "type", "") == "text")
             data = json.loads(text)
+            if not isinstance(data, dict):
+                raise ValueError("top-level JSON is not an object")
         except Exception as exc:
             log.warning("%s %s: unparseable model output: %s", agent, source_id, exc)
             return None

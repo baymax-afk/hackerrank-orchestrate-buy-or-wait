@@ -51,7 +51,18 @@ def gather_facts(request: Request, ds: Dataset, svc: Services, trace: Trace) -> 
     return facts
 
 
+def check_request(request: Request) -> None:
+    """Contract preconditions; a violation is raised so main can isolate the row."""
+    if request.requested_amount <= 0:
+        raise ValueError(f"{request.request_id}: requested_amount must be positive, got {request.requested_amount}")
+    if request.requested_amount.as_tuple().exponent < -2:
+        raise ValueError(f"{request.request_id}: requested_amount has more than 2 decimals")
+    if request.desired_completion_date < request.request_date:
+        raise ValueError(f"{request.request_id}: desired_completion_date precedes request_date")
+
+
 def decide_request(request: Request, ds: Dataset, svc: Services) -> tuple[Decision, Trace]:
+    check_request(request)
     trace = Trace(request.request_id)
     profile = ds.profiles[request.user_id]
     events = ds.events_by_user.get(request.user_id, [])

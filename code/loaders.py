@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import csv
+import logging
+import re
 from collections import defaultdict
 from dataclasses import dataclass, field
 from datetime import date
@@ -11,6 +13,8 @@ from typing import Iterable, Optional
 
 import config
 from models import Event, ImageRef, Message, PaymentOption, Profile, Request, numeric_id
+
+log = logging.getLogger("bow.load")
 
 SCHEMAS = {
     "financial_profiles.csv": [
@@ -100,7 +104,6 @@ class Dataset:
     messages: list[Message]
     messages_by_user: dict[str, list[Message]]
     images: list[ImageRef]
-    images_by_event: dict[str, ImageRef]
     images_by_user: dict[str, list[ImageRef]] = field(default_factory=dict)
     dataset_dir: Path = config.DATASET_DIR
 
@@ -195,13 +198,17 @@ def load_options(path: Path) -> dict[str, list[PaymentOption]]:
     by_req: dict[str, list[PaymentOption]] = defaultdict(list)
     for r in _read(path, SCHEMAS["request_payment_options.csv"]):
         freq = r["payment_frequency_days"].strip()
+        n_pay = int(r["number_of_payments"])
+        if r["payment_method"].strip() == "installments" and n_pay > 1 and not freq:
+            log.warning("%s: installment option without payment_frequency_days; ignored", r["payment_option_id"])
+            continue
         opt = PaymentOption(
             payment_option_id=r["payment_option_id"].strip(),
             request_id=r["request_id"].strip(),
             payment_method=_enum(r["payment_method"].strip(), ("full_payment", "installments", "partial_payment"), "option method"),
             payment_amount=_dec(r["payment_amount"], "payment_amount"),
             payment_amount_text=r["payment_amount"].strip(),
-            number_of_payments=int(r["number_of_payments"]),
+            number_of_payments=n_pay,
             first_payment_date=_date(r["first_payment_date"], "first_payment_date"),
             payment_frequency_days=int(freq) if freq else None,
             financing_fee=_dec(r["financing_fee"] or "0", "financing_fee"),
@@ -231,10 +238,17 @@ def load_messages(path: Path) -> list[Message]:
     return out
 
 
+IMAGE_ID = re.compile(r"^image_\d+$")
+
+
 def load_images(path: Path, media_dir: Path) -> list[ImageRef]:
     out = []
     for r in _read(path, SCHEMAS["images.csv"]):
         iid = r["image_id"].strip()
+        if not IMAGE_ID.match(iid):
+            # the id becomes a file name under media_dir; anything else is ignored (no path traversal)
+            log.warning("images.csv: ignoring image id %r (not of the form image_<n>)", iid)
+            continue
         out.append(
             ImageRef(
                 image_id=iid,
@@ -280,7 +294,6 @@ def load_dataset(dataset_dir: Path = config.DATASET_DIR, requests_file: str = "r
         messages=messages,
         messages_by_user=dict(msgs_by_user),
         images=images,
-        images_by_event={i.related_event_id: i for i in images if i.related_event_id},
         images_by_user=dict(imgs_by_user),
         dataset_dir=dataset_dir,
     )

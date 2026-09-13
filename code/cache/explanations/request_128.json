@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_128",
-  "content_sha256": "fb0a13efa3e823860d70feae386de2c2efb5febbfb24337da8b18a911e04d5cd",
+  "content_sha256": "bba1128fde6fd35ed050508f29932ac54dfa761aee8dbb3f108654141122822d",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full ZAR 25,168 education request today, 7 February 2025, while keeping at least ZAR 42,600 in reserve, with no changes needed to your spending."
+    "explanation": "Your education payment of ZAR 25,168 can be paid in full today, 7 February 2025, ahead of the 14 February 2025 deadline, while keeping at least ZAR 42,600 available throughout."
   },
   "usage": {
-    "input_tokens": 566,
-    "output_tokens": 68
+    "input_tokens": 770,
+    "output_tokens": 78
   },
-  "timestamp": "2026-09-13T03:28:54.260060+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:17.595533+00:00"
 }

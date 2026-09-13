@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_109",
-  "content_sha256": "6e72aed92cd92e26805bf52c3fb58f1b0e85bd16fdbe7f12473aaecc52d8137b",
+  "content_sha256": "04cd9a0b436281c0d682a5a8cbb00bb02ead1f699f83eba6997ce4225e5f301e",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The requested EUR 1,863.40 family transfer due by 26 May 2024 isn't affordable while keeping the required EUR 1,700 minimum balance, so paying it is not recommended, and only EUR 468.52 can safely be paid today."
+    "explanation": "The EUR 1,863.40 family transfer requested by 26 May 2024 cannot be made, as no option keeps at least EUR 1,700 available; today only EUR 468.52 can safely be sent, with no full payment date possible."
   },
   "usage": {
-    "input_tokens": 546,
-    "output_tokens": 91
+    "input_tokens": 762,
+    "output_tokens": 86
   },
-  "timestamp": "2026-09-13T03:28:14.869855+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:14.249961+00:00"
 }

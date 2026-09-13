@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_59",
-  "content_sha256": "e3151e39ec66a6feb5f3b78bf54bcc979614ee41c8bad00a986a1fd40ca1c618",
+  "content_sha256": "3e6755e0b9de23fb5d6c806da0314cec08c30957f6223ffb36091591eac29a01",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The INR 140,600 investment requested for 4 May 2025 is not affordable by the 2 July 2025 deadline, since paying it would drop your balance below the required minimum of INR 132,600, so this payment is not recommended and no payment plan is available."
+    "explanation": "The requested investment of INR 140,600 cannot be made by 2 July 2025, since paying it would drop your balance below the required minimum of INR 132,600, so this payment is not recommended at this time."
   },
   "usage": {
-    "input_tokens": 539,
-    "output_tokens": 92
+    "input_tokens": 553,
+    "output_tokens": 74
   },
-  "timestamp": "2026-09-13T03:26:29.791475+00:00"
+  "timestamp": "2026-09-13T04:20:18.484245+00:00"
 }

@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_237",
-  "content_sha256": "2d3caaa2e8cbb2d1bf45e1216e4aa7208335539305a11d00d813e1763d46d91a",
+  "content_sha256": "06fc6a7ec6b7068abaa03de5fb7d5588330da0705fdd6fef7934874efa05b7e2",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can fully pay the IDR 23,826,000 request today, 5 April 2026, since doing so still leaves at least IDR 22,431,500 available over the next 90 days, well ahead of the 20 May 2026 deadline."
+    "explanation": "You can pay the full IDR 23,826,000 today, 5 April 2026, ahead of the 20 May 2026 deadline, while keeping at least IDR 22,431,500 available."
   },
   "usage": {
-    "input_tokens": 573,
-    "output_tokens": 85
+    "input_tokens": 776,
+    "output_tokens": 71
   },
-  "timestamp": "2026-09-13T03:32:51.105988+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:39.544300+00:00"
 }

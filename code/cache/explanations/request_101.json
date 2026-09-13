@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_101",
-  "content_sha256": "6cffa8d87bc7b09c22a34c735b712ef444a913aa77d1fd4ddf25ba2f7153d80d",
+  "content_sha256": "f8eceb585857eaece966525cf47e77e9478830b5b492a6db604fe344a09c7adb",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can invest INR 143,500 in full today, 3 November 2025, while still keeping at least INR 187,400 available over the next 90 days, so no spending changes are needed."
+    "explanation": "You can pay the full INR 143,500 investment on 3 November 2025, ahead of the 14 November 2025 deadline, while keeping at least INR 187,400 available."
   },
   "usage": {
-    "input_tokens": 555,
+    "input_tokens": 755,
     "output_tokens": 66
   },
-  "timestamp": "2026-09-13T03:27:57.305336+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:12.175158+00:00"
 }

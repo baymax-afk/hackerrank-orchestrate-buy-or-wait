@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_244",
-  "content_sha256": "d74a4584939d9b23fd6762d2b372427288dd25219675596377ed15a3a0c182dc",
+  "content_sha256": "ba4514dab1c5b4bd5a1c0cfb3795d757316e26725cbe8672151634d5509bc02d",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full ZAR 49,918 today, 4 June 2024, since it still leaves at least ZAR 45,900 available over the next 90 days, well ahead of the 16 July 2024 deadline."
+    "explanation": "You can pay the full ZAR 49,918 today, 4 June 2024, since doing so keeps at least ZAR 45,900 available."
   },
   "usage": {
-    "input_tokens": 570,
-    "output_tokens": 79
+    "input_tokens": 754,
+    "output_tokens": 55
   },
-  "timestamp": "2026-09-13T03:33:05.907566+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:41.875226+00:00"
 }

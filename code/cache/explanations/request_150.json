@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_150",
-  "content_sha256": "1225efc6d94582d4f44184f4e4466648c1963069f0d0b2a559bbed1d0745a454",
+  "content_sha256": "41064844a700ff1487b0389c0a049dda24cfd4415dac1e9c22de3ab336a3a4af",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The education request for EUR 496.10 due by 16 March 2026 is not affordable, since paying it would drop your balance below the required EUR 700 minimum, so no payment method or plan is recommended at this time."
+    "explanation": "The education request for EUR 496.10 due by 16 March 2026 cannot be made, since paying it would keep less than EUR 700 available; at most EUR 255.95 could safely go toward it now, with no full-payment date found."
   },
   "usage": {
-    "input_tokens": 536,
-    "output_tokens": 77
+    "input_tokens": 738,
+    "output_tokens": 83
   },
-  "timestamp": "2026-09-13T03:29:44.185989+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:22.230642+00:00"
 }

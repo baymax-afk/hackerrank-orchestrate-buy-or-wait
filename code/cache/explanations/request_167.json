@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_167",
-  "content_sha256": "736bcac217286870c113b315898f7f8b00099cf7f2cd6e349efbd61eec7db5c9",
+  "content_sha256": "6c9fc400cfc6eaa2139c63a7c243bcc5f06f14fd82500a9ab7148c8a40eefd74",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full ZAR 43,802 housing request today, 5 May 2025, and still keep at least ZAR 31,200 available over the next 90 days."
+    "explanation": "Your housing request of ZAR 43,802 can be paid in full today, 5 May 2025, while keeping at least ZAR 31,200 available."
   },
   "usage": {
-    "input_tokens": 567,
-    "output_tokens": 62
+    "input_tokens": 757,
+    "output_tokens": 58
   },
-  "timestamp": "2026-09-13T03:30:22.091920+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:25.352717+00:00"
 }

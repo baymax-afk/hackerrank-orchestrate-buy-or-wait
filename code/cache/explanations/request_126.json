@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_126",
-  "content_sha256": "74fe0c52da57dea65f4490bce0d0b593f6a99ff45f41c9dddf515a829d9a6a47",
+  "content_sha256": "98ff943af6835505672d52cd35d7568288a6028db9a8e766628364f280a3d727",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full INR 159,600 emergency expense today, 3 July 2026, since it still leaves at least INR 129,700 available over the next 90 days, with no changes to your spending needed."
+    "explanation": "You can pay the full INR 159,600 emergency expense on 3 July 2026, keeping at least INR 129,700 available, with no spending changes needed."
   },
   "usage": {
-    "input_tokens": 559,
-    "output_tokens": 73
+    "input_tokens": 745,
+    "output_tokens": 60
   },
-  "timestamp": "2026-09-13T03:28:49.932703+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:16.975821+00:00"
 }

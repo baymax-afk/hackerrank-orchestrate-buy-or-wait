@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_217",
-  "content_sha256": "ae8b32420f200f5c5fafbec8415defb7cde9093d0f33eaf5a16fa14150c5d029",
+  "content_sha256": "2a7446ac2fad0ddbcf2a7d3ad447e152c8d2d2323b815946866174fe7724b7c7",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The ZAR 37,180 travel request due 21 May 2024 cannot be paid without dropping below the required ZAR 26,800 minimum balance, so it is marked not affordable and no payment method or plan is recommended."
+    "explanation": "The requested travel payment of ZAR 37,180 cannot be made by 21 May 2024 because no option keeps at least ZAR 26,800 available, so this payment is not recommended and no payment plan is set."
   },
   "usage": {
-    "input_tokens": 547,
-    "output_tokens": 82
+    "input_tokens": 747,
+    "output_tokens": 78
   },
-  "timestamp": "2026-09-13T03:32:07.834228+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:34.722501+00:00"
 }

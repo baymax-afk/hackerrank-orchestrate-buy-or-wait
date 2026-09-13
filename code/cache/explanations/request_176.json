@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_176",
-  "content_sha256": "9f9d27b37fe1c72de019f73ccd4da6d81c15dd9bc10e0b1467752d047e4827cc",
+  "content_sha256": "b58a22be84fb3c387a6e7a9ae5b4596af67afdc118880127014e8292935aaddc",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The EUR 1,239.70 travel request due 27 February 2025 cannot be paid without dropping below the required EUR 600 minimum balance, so payment is not recommended and no payment plan is currently available."
+    "explanation": "The travel request for EUR 1,239.70 due by 27 February 2025 cannot be paid while keeping at least EUR 600 available, so it is marked not affordable with no payment method recommended and no payment plan scheduled."
   },
   "usage": {
-    "input_tokens": 539,
-    "output_tokens": 77
+    "input_tokens": 737,
+    "output_tokens": 83
   },
-  "timestamp": "2026-09-13T03:30:41.713227+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:26.935936+00:00"
 }

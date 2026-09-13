@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_123",
-  "content_sha256": "aefdf95a2b57f19035ee726af18ac5bae1717861d898e55848c91d6e17cc89f7",
+  "content_sha256": "6232b244e10c9bab782863f99f4e82ff0d52c8bb89d9a066a1593391069f47cb",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full IDR 4,076,000 investment request today, 7 January 2026, while still keeping at least IDR 18,091,200 available, so no spending changes are needed."
+    "explanation": "You can pay the full IDR 4,076,000 investment on 7 January 2026, ahead of the 28 March 2026 deadline, while keeping at least IDR 18,091,200 available."
   },
   "usage": {
-    "input_tokens": 574,
-    "output_tokens": 68
+    "input_tokens": 774,
+    "output_tokens": 72
   },
-  "timestamp": "2026-09-13T03:28:44.325059+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:16.205353+00:00"
 }

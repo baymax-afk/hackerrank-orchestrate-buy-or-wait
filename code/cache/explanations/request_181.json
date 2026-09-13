@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_181",
-  "content_sha256": "0bd097c5d8d3d12254ae637b4ef9217678a4dbc5078b4f5f291e0a59a4d1f30a",
+  "content_sha256": "87356a213142d0dcab74a7060e1f90d3e20028c00cb0c2e7c59b3861250ec588",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "This USD 5,059.20 investment request due 7 April 2024 cannot be made because paying it would drop the balance below the required USD 2,000 minimum; only USD 187.85 is safe to pay today, and no affordable payment plan exists within 90 days."
+    "explanation": "The requested USD 5,059.20 investment cannot be made by 7 April 2024, since paying it would drop the balance below the minimum of USD 2,000 that must stay available, so this payment is not recommended."
   },
   "usage": {
-    "input_tokens": 539,
-    "output_tokens": 94
+    "input_tokens": 745,
+    "output_tokens": 77
   },
-  "timestamp": "2026-09-13T03:44:25.026171+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:27.466918+00:00"
 }

@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_129",
-  "content_sha256": "3282f8d2816682ac2c725e4f6911538ecccc8a2adc8f2ed06edba90463077195",
+  "content_sha256": "73400d39667aa2b67afb1a395ba9ea2cca7edd57bd8182f1ed2ebc49d9efbbc8",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The USD 2,668.80 education request due 18 June 2026 isn't affordable; only USD 113.01 could safely be paid today, so no payment method is recommended since every option would breach the required USD 800 minimum balance."
+    "explanation": "The USD 2,668.80 education payment due 18 June 2026 is not affordable; only USD 113.01 can safely be paid today while keeping at least USD 800 available, and no date within the forecast allows full payment, so it is not recommended."
   },
   "usage": {
-    "input_tokens": 534,
-    "output_tokens": 82
+    "input_tokens": 743,
+    "output_tokens": 88
   },
-  "timestamp": "2026-09-13T03:28:57.199585+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:18.194644+00:00"
 }

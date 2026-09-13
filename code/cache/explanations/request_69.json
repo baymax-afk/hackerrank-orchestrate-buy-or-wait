@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_69",
-  "content_sha256": "90309d8eff1c0a107888a3fc74b99a5829454f6b97aec8793178958fa2e85498",
+  "content_sha256": "54a075ded5fcf768716af20113b5ed2c3d758cf5a7afe936683e0706d897c3b7",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can fully invest EUR 529.10 today, 4 January 2026, while still keeping at least EUR 700 in reserve over the next 90 days."
+    "explanation": "You can pay the full EUR 529.10 investment request today, 4 January 2026, in one payment while keeping at least EUR 700 available, so no changes to spending are needed."
   },
   "usage": {
-    "input_tokens": 558,
-    "output_tokens": 59
+    "input_tokens": 748,
+    "output_tokens": 66
   },
-  "timestamp": "2026-09-13T03:26:50.129986+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:04.474879+00:00"
 }

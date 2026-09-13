@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_195",
-  "content_sha256": "22085a2056583e01e6594f41f7dac48399bbe4e4d4f3419ed4633b06c4162df1",
+  "content_sha256": "c0eaaba1317c5ffd08b65b9435bd0baaf0d2b33b86b70fc85b427f8e9aaf5278",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The EUR 1,170.40 purchase requested on 6 January 2026 can't be paid by its 11 March 2026 deadline without dropping below the required EUR 700 minimum balance, so payment is not recommended at this time."
+    "explanation": "The requested purchase of EUR 1,170.40 cannot be made by 11 March 2026, since no option keeps at least EUR 700 available, so this payment is not recommended."
   },
   "usage": {
-    "input_tokens": 540,
-    "output_tokens": 84
+    "input_tokens": 743,
+    "output_tokens": 67
   },
-  "timestamp": "2026-09-13T03:31:20.934632+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:30.600010+00:00"
 }

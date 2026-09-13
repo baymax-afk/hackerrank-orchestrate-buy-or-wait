@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_107",
-  "content_sha256": "6c9610af4b70a4c1b12b651cf36afdc4833e168b94b87d80e01f0ad9a68b1790",
+  "content_sha256": "594b33aa28961298414d36d4e10332ecead3e95cf00631a1cb48d0c470a63410",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The housing request for EUR 2,534.40 due by 4 July 2025 isn't affordable right now, since paying it would drop your balance below the required EUR 1,600 minimum, so payment isn't recommended and no full payment is possible within the next 90 days."
+    "explanation": "The EUR 2,534.40 housing request due 4 July 2025 cannot be paid, since no option keeps at least EUR 1,600 available; no payment plan or full payment date exists within the forecast."
   },
   "usage": {
-    "input_tokens": 545,
-    "output_tokens": 94
+    "input_tokens": 766,
+    "output_tokens": 76
   },
-  "timestamp": "2026-09-13T03:43:52.249234+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:12.366057+00:00"
 }

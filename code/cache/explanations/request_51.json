@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_51",
-  "content_sha256": "314b49c524a536d03894dd25d5cfd9c80ea5ad70181efb5b911c6c7cdde33f1f",
+  "content_sha256": "a333ab80e0905bfc21f151b7a2df9755638d5908faca6b1d984be02a261b4ab0",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can afford to pay the full IDR 2,191,000 investment today, 3 January 2026, while still keeping at least IDR 7,811,000 in reserve over the next 90 days."
+    "explanation": "You can pay the full IDR 2,191,000 investment request today, 3 January 2026, while keeping at least IDR 7,811,000 available."
   },
   "usage": {
-    "input_tokens": 574,
-    "output_tokens": 70
+    "input_tokens": 764,
+    "output_tokens": 57
   },
-  "timestamp": "2026-09-13T03:26:13.465562+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:23:58.912407+00:00"
 }

@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_27",
-  "content_sha256": "9231fb2412244ec453618ed425d54eea83d1fc994a5dec6bb7391431bc4651de",
+  "content_sha256": "e38e3db4a3e04fd44366e99001fdc39cb399eaeb1cdf838f27084dea894e41dc",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full ZAR 6,670 for this purchase today, 5 July 2026, while still keeping at least ZAR 20,500 in reserve over the next 90 days."
+    "explanation": "You can pay the full ZAR 6,670 today for request_27, on 5 July 2026, while keeping at least ZAR 20,500 available."
   },
   "usage": {
-    "input_tokens": 568,
-    "output_tokens": 68
+    "input_tokens": 756,
+    "output_tokens": 57
   },
-  "timestamp": "2026-09-13T03:25:22.289353+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:23:55.367792+00:00"
 }

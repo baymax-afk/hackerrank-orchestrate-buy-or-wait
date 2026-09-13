@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_265",
-  "content_sha256": "7f3ecbb002c5fa9d077874082527a9fc9c984b2bdd6761636e7771fbe315c48c",
+  "content_sha256": "ba420cc5da3de1546c9c7d006ec956f4503a1fcf45b5f30f0ceee4bb20cf70a2",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full INR 45,970 family transfer today, 6 March 2024, while keeping at least INR 189,700 in reserve over the next 90 days."
+    "explanation": "You can pay the full INR 45,970 family transfer today, 6 March 2024, ahead of the 21 March 2024 deadline, while keeping at least INR 189,700 available."
   },
   "usage": {
-    "input_tokens": 558,
-    "output_tokens": 62
+    "input_tokens": 755,
+    "output_tokens": 69
   },
-  "timestamp": "2026-09-13T03:33:50.600425+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:46.434672+00:00"
 }

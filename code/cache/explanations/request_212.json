@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_212",
-  "content_sha256": "951066cf5e4eb4e3ff05ed68de3494b8ba07de23cbae392fcf39c42291b83c6d",
+  "content_sha256": "34809ba73c7f7f20217312cb21295c7dde8757ac79a00deed47cf4eafbe205a7",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The IDR 71,934,000 request made on 5 February 2025 can't be safely paid by the 28 February 2025 deadline while keeping the required IDR 29,579,800 minimum balance; only IDR 2,837,414.94 is available today, and full payment isn't achievable within 90 days, so it is not recommended."
+    "explanation": "The IDR 71,934,000 request cannot be completed safely; only IDR 2,837,414.94 is available today, and the plan keeps at least IDR 29,579,800 available, with no full payment possible before the 28 February 2025 deadline."
   },
   "usage": {
-    "input_tokens": 565,
-    "output_tokens": 115
+    "input_tokens": 796,
+    "output_tokens": 90
   },
-  "timestamp": "2026-09-13T03:44:29.228653+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:33.644712+00:00"
 }

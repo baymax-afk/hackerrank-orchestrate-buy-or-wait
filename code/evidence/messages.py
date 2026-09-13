@@ -114,9 +114,3 @@ def parse_message(m: Message) -> list[EvidenceFact]:
             return [EvidenceFact("no_effect", rationale="informational; already reflected in event statuses", **src)]
     return [EvidenceFact("unknown", confidence=0.0, rationale="no rule matched", **src)]
 
-
-def parse_all(messages: list[Message]) -> list[EvidenceFact]:
-    facts: list[EvidenceFact] = []
-    for m in messages:
-        facts.extend(parse_message(m))
-    return facts

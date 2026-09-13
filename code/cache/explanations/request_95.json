@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_95",
-  "content_sha256": "e32f2133ef39f2bb8b10e636e24e3176a04bcdd1c182f3fac29070ee2546e3a1",
+  "content_sha256": "9cc40d00641093f0348141b4bbd371f66607d08ccc853fd1a7f5848e6e2abbd4",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The requested INR 553,000 education payment due 14 July 2025 isn't affordable right now, since paying it would drop your balance below the required minimum of INR 145,500, so no payment method or plan is recommended at this time."
+    "explanation": "Paying the INR 553,000 education request by 14 July 2025 isn't affordable, since no option leaves the required INR 145,500 minimum balance protected, so only about INR 4,925.72 can safely be paid today."
   },
   "usage": {
-    "input_tokens": 538,
-    "output_tokens": 81
+    "input_tokens": 552,
+    "output_tokens": 82
   },
-  "timestamp": "2026-09-13T03:27:44.786394+00:00"
+  "timestamp": "2026-09-13T04:20:30.503909+00:00"
 }

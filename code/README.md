@@ -18,7 +18,6 @@ python code/main.py                     # full run -> ./output.csv + code/evalua
 python code/main.py --no-llm            # fully deterministic run (caches + reviewed image table + rule-based messages)
 python code/main.py --sample-check      # score against dataset/sample_requests.csv (calibration only)
 python code/main.py --explain request_42 --no-llm   # print the ledger, timeline and candidates for one request
-python code/main.py --audit             # additionally run the read-only audit agent (evaluation/audit_findings.jsonl)
 python -m pytest tests -q               # tests (single test: python -m pytest tests/test_core.py::test_fx_exact_date_and_direction -q)
 python code/tools/build_zip.py          # package code.zip
 ```
@@ -40,3 +39,49 @@ On Windows use `python` (or `py`), not `python3`.
 Agents (`agents/`): image OCR, message fallback, explanation drafting, optional audit. They never write a financial recommendation; all outputs are schema-validated, cached with provenance under `code/cache/`, and reproducible without an API key.
 
 Configuration knobs live in `config.py` (`ESTIMATOR`, `HORIZON_DAYS`, model names, price table).
+
+## Robustness contract
+
+- Every request is decided inside its own fault boundary. An exception (or a request that violates the
+  contract preconditions, e.g. a non-positive amount) yields a contract-valid fallback row
+  (`not_affordable / not_recommended`, amount 0, explanation naming the reason), the error is logged, and
+  the process exits non-zero. One bad row can never lose the run.
+- Every row is validated against the output contract before it is written; a row with errors is replaced
+  by the fallback row and the original is kept in its trace (`code/traces/<request_id>.json`, written by
+  default, gitignored).
+- Model calls: schema-constrained JSON, `max_retries=2`, and a circuit breaker (`LLM_CIRCUIT_BREAKER`
+  consecutive failures → the client stops calling and the run continues deterministically). Model-supplied
+  strings are never interpreted as regex (`re.escape`), and a message-stated salary above
+  `SALARY_PLAUSIBILITY_FACTOR` × the settled level is treated as unconfirmed.
+- Missing exchange rate: a foreign-currency debit uses the nearest dated rate for the pair (noted); a credit
+  is excluded (safer). Image ids must match `image_<n>` (no path traversal); installment options without a
+  frequency are ignored.
+- Every usage record and trace carries the `run_id` printed at the start of the run.
+
+## Evidence policy (what the model may and may not do)
+
+The model never sets an output column. It is used for three bounded jobs, each cached under `code/cache/`
+with the content hash it was computed from:
+
+1. reading one amount from one image (blank event amounts);
+2. classifying a message that no rule matched into the same closed fact schema the rules emit;
+3. drafting the explanation sentence from the verified numbers (accepted only if every figure matches).
+
+`evidence/images.py` also carries a small **reviewed table**: the 16 dataset images transcribed by hand,
+each pinned to the sha256 of the PNG it was read from. It cross-checks the model reading (a verified
+reviewed total wins; otherwise the financially safer value is taken) and makes the run reproducible without
+an API key. It is a transcription of evidence that ships with the dataset, not of any output label, and it
+is never applied to a file whose hash differs.
+
+## Calibrated constants (read before changing)
+
+Three forecasting choices were calibrated on the 25 solved samples rather than taken literally from the
+specification. Each is documented in `research/synthesis.md` with the sample evidence, and each can be
+reverted with an environment variable:
+
+| Constant | Shipped | Spec-literal | Override |
+|---|---|---|---|
+| `HORIZON_DAYS` | 86 (labels ignore day-87+ monthly flows) | 90 | `BOW_HORIZON_DAYS=90` |
+| `INTRADAY_DEBITS_FIRST` | on (variable spending precedes payday credit; monthly bills net) | end-of-day netting | `BOW_INTRADAY_DEBITS_FIRST=0` |
+| spending-change selection | smallest total cut | (unspecified) | — |
+

@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_261",
-  "content_sha256": "c1a466aad6ea3f6b991014afcd6ee4dd90bbbb149e112bf128c3bec2cf5df7ef",
+  "content_sha256": "cdc6250da2bc30be021f00acd827337b9771360fcb726c0e36a222f2b2d5bc47",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full EUR 1,830.40 housing request today, 3 July 2026, while still keeping at least EUR 1,500 available over the next 90 days."
+    "explanation": "You can pay the full EUR 1,830.40 housing request today, 3 July 2026, while keeping at least EUR 1,500 available."
   },
   "usage": {
-    "input_tokens": 571,
-    "output_tokens": 63
+    "input_tokens": 758,
+    "output_tokens": 55
   },
-  "timestamp": "2026-09-13T03:33:42.393840+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:45.536922+00:00"
 }

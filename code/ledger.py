@@ -12,7 +12,8 @@ from decimal import Decimal
 from typing import Optional
 
 import config
-from fx import FxMissing, convert
+from formatting import q2
+from fx import FxMissing, convert, nearest_rate
 from models import CashFlow, Event, EvidenceFact, Profile
 
 LIFECYCLE_KINDS = {"amount", "amend_event_date", "amend_event_amount", "retry_failed_debit", "salary_date"}
@@ -34,8 +35,16 @@ def _home(event: Event, profile: Profile, rates: dict, notes: list[str]) -> Opti
     try:
         return convert(event.amount, event.currency, profile.home_currency, on, rates)
     except FxMissing as exc:
-        notes.append(f"{event.event_id}: {exc}; excluded from cash (safer for a credit) / kept raw for a debit")
-        return None if event.direction == "credit" else event.amount
+        if event.direction == "credit":
+            notes.append(f"{event.event_id}: {exc}; credit excluded from cash (safer)")
+            return None
+        near = nearest_rate(event.currency, profile.home_currency, on, rates)
+        if near is None:
+            notes.append(f"{event.event_id}: {exc} and no rate for the pair at all; debit amount unknown")
+            return None
+        rate, d = near
+        notes.append(f"{event.event_id}: {exc}; debit converted with the nearest dated rate ({d.isoformat()})")
+        return q2(event.amount * rate)
 
 
 def apply_event_facts(events: list[Event], facts: list[EvidenceFact], notes: list[str]) -> list[Event]:

@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_96",
-  "content_sha256": "732e00212724162f142ee2e7b1e5f13c52deeeff48fbd26ed31204d9febf5b8b",
+  "content_sha256": "3384427e3bb94f09b803389202032b28102bdc90bbc682c1fd1e51d8208ab4fd",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You shouldn't make the INR 90,200 purchase by 12 March 2026, since paying it would drop you below the required INR 56,500 minimum balance, and no plan can safely cover the full amount within that time."
+    "explanation": "The requested purchase of INR 90,200 cannot be made by 12 March 2026, because no option keeps at least INR 56,500 available, so this payment is not recommended and there is no payment plan."
   },
   "usage": {
-    "input_tokens": 540,
-    "output_tokens": 78
+    "input_tokens": 747,
+    "output_tokens": 73
   },
-  "timestamp": "2026-09-13T03:43:41.716122+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:10.704917+00:00"
 }

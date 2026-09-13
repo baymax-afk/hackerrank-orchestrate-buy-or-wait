@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_90",
-  "content_sha256": "9fbb821cb5d80293ce0314c3ee0f9f5bcc5b87b2c5c5df2fd845a3d60af3d7c4",
+  "content_sha256": "d851a99bdb43ac299da0841798b3359a21eef73fac33e9c0917b34e282dc863c",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full ZAR 2,560 debt today, 6 July 2026, while still keeping at least ZAR 7,600 available, so no spending changes are needed before the 23 September 2026 deadline."
+    "explanation": "You can pay the full ZAR 2,560 debt today, 6 July 2026, while keeping at least ZAR 7,600 available."
   },
   "usage": {
-    "input_tokens": 571,
-    "output_tokens": 78
+    "input_tokens": 765,
+    "output_tokens": 54
   },
-  "timestamp": "2026-09-13T03:27:35.457434+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:08.577396+00:00"
 }

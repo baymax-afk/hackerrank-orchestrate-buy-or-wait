@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_65",
-  "content_sha256": "fe700a9f7e71242759bf88893dd1087039ee9853d4ed2dac5472e7f6a611bfc9",
+  "content_sha256": "9ca8ddf5fc16eab9d72fc66c9dd49d2815fd2380c55f31f7491158959c4dc69e",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The ZAR 54,340 request made on 6 November 2025 cannot be paid because only ZAR 5,852.66 is safely available today while keeping the required ZAR 15,500 minimum balance, and no full payment is possible within 90 days, so it is not recommended to proceed."
+    "explanation": "The request for ZAR 54,340 cannot proceed; only ZAR 5,852.66 is safely available today while keeping at least ZAR 15,500 available, so full payment isn't achievable within the forecast period."
   },
   "usage": {
-    "input_tokens": 560,
-    "output_tokens": 102
+    "input_tokens": 768,
+    "output_tokens": 80
   },
-  "timestamp": "2026-09-13T03:26:41.514308+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:03.401337+00:00"
 }

@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_220",
-  "content_sha256": "b3fafbd69e159722b2e3dbe708d3cee02106064f39afb4f5898454c12c6cc6d9",
+  "content_sha256": "fb7a6ab6e20d56442862f141e012a8ed81e6a67a44943cdf9e914b24164dbd9d",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The EUR 3,118.50 investment requested on 6 June 2024 cannot be made safely; while EUR 75.77 is available today while keeping the EUR 1,100 minimum balance, the full amount isn't achievable within 90 days, so this request is not recommended."
+    "explanation": "The EUR 3,118.50 investment request cannot be safely funded before 3 July 2024 while keeping at least EUR 1,100 available; although EUR 75.77 is available today, no payment plan can complete the full amount within the forecast period, so it should not proceed."
   },
   "usage": {
-    "input_tokens": 556,
-    "output_tokens": 98
+    "input_tokens": 772,
+    "output_tokens": 97
   },
-  "timestamp": "2026-09-13T03:32:15.038926+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:34.997686+00:00"
 }

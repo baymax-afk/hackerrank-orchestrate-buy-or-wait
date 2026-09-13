@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_188",
-  "content_sha256": "4b219653f8db23c5bb1729db4ec8ddff9c611eff3de69df55021b4307dec8cf8",
+  "content_sha256": "697d3351fcaa9d74b23e870e817991099f14a98fd854782ee58a8cb0fd5f83b8",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The request for EUR 2,464 by 4 March 2025 cannot be made because it would drop the balance below the required EUR 900 minimum, and no payment plan can fully cover it within 90 days; only EUR 107.55 is currently safe to pay."
+    "explanation": "The requested EUR 2,464 transfer cannot be safely made by 4 March 2025, since paying it would drop the balance below the required EUR 900 minimum, and currently only EUR 107.55 can be paid without breaching that limit."
   },
   "usage": {
-    "input_tokens": 540,
-    "output_tokens": 92
+    "input_tokens": 554,
+    "output_tokens": 87
   },
-  "timestamp": "2026-09-13T03:31:06.929784+00:00"
+  "timestamp": "2026-09-13T04:20:53.280276+00:00"
 }

@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_81",
-  "content_sha256": "6d94c0530be1a4ae88226a46f6202d778762320b393ad2f52f3341116bb2ef2b",
+  "content_sha256": "de5595e8635ab76bc8f065a9c0cfba978fbf2d969aaad282b09f536e6743d89b",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can fully cover the USD 2,076 travel request today, 3 July 2026, while still keeping at least USD 1,600 in reserve for the next 90 days."
+    "explanation": "You can pay the full USD 2,076 for this travel request today, 3 July 2026, while keeping at least USD 1,600 available."
   },
   "usage": {
-    "input_tokens": 555,
-    "output_tokens": 63
+    "input_tokens": 739,
+    "output_tokens": 53
   },
-  "timestamp": "2026-09-13T03:27:15.970083+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:07.856485+00:00"
 }

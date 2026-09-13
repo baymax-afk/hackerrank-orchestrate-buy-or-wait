@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_34",
-  "content_sha256": "46df27b2767c75588f2ada206cb50cff10124cb04456a232a2a2b8c04aab945e",
+  "content_sha256": "3d0ad8f753198f7230fcdb01768c94b38cea291bf3f59fc972f292808d48d58e",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Your travel request of INR 129,400 can be paid in full today, 4 December 2024, while still keeping at least INR 138,500 in reserve over the next 90 days."
+    "explanation": "You can pay the full travel request of INR 129,400 today, 4 December 2024, well ahead of the 28 January 2025 deadline, while keeping at least INR 138,500 available."
   },
   "usage": {
-    "input_tokens": 555,
-    "output_tokens": 65
+    "input_tokens": 749,
+    "output_tokens": 70
   },
-  "timestamp": "2026-09-13T03:25:36.877462+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:23:57.435010+00:00"
 }

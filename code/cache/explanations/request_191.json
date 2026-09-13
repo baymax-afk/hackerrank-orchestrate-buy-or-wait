@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_191",
-  "content_sha256": "a8725f2d115478a0140efa29cf5ce565d0197cf436a3b1215f644851e826d54c",
+  "content_sha256": "11b536c1461c8330c808be3bc9c4af089cfc5e3f7227f995f9f12e84407f46aa",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can invest EUR 664.40 today in full, and doing so still leaves at least EUR 500 in your account over the next 90 days."
+    "explanation": "You can pay the full EUR 664.40 investment today, 3 May 2025, while keeping at least EUR 500 available throughout."
   },
   "usage": {
-    "input_tokens": 558,
+    "input_tokens": 740,
     "output_tokens": 53
   },
-  "timestamp": "2026-09-13T03:31:12.236481+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:30.737240+00:00"
 }

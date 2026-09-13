@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_230",
-  "content_sha256": "99ab0ddfa9cf2a5e79317b738c13cc015b205d84dec1b60e8bdb0b54f35c7e55",
+  "content_sha256": "1c33ced46baeb1bfb1856e91b1d44266ca7b893208e7a52022fd6a98fb39d2c8",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full EUR 3,537.60 today, 6 August 2025, and still keep at least EUR 2,000 available over the next 90 days, so no schedule changes are needed."
+    "explanation": "You can pay the full EUR 3,537.60 today, 6 August 2025, well ahead of the 4 October 2025 deadline, while keeping at least EUR 2,000 available."
   },
   "usage": {
-    "input_tokens": 575,
+    "input_tokens": 775,
     "output_tokens": 70
   },
-  "timestamp": "2026-09-13T03:32:35.794836+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:37.830127+00:00"
 }

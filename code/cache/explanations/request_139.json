@@ -1,16 +1,17 @@
 {
   "source_file": "decision",
   "source_id": "request_139",
-  "content_sha256": "f294c5fcc22bcdc9c6c2105b809f86169dede2f2631dd748b4e2614e495f63ff",
+  "content_sha256": "6f4a5b280992b022601a40b0058aee9e1368f1520f5ccb265d4a8e3d5d857811",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Your USD 2,316 housing request due 17 November 2024 isn't affordable right now; paying it would break the USD 1,500 minimum balance you need to keep, so no payment or plan is recommended at this time."
+    "explanation": "The USD 2,316 housing request due 17 November 2024 cannot be safely paid, since doing so would drop below the USD 1,500 minimum balance you need to keep available; no payment plan or full-payment date is currently possible."
   },
   "usage": {
-    "input_tokens": 539,
-    "output_tokens": 79
+    "input_tokens": 759,
+    "output_tokens": 84
   },
-  "timestamp": "2026-09-13T03:29:19.733380+00:00"
+  "attempts": 2,
+  "timestamp": "2026-09-13T04:24:19.867897+00:00"
 }
