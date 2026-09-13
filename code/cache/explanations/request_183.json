@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_183",
-  "content_sha256": "e47f7235491623fc301941af472b297766d41a6d9cca648168323cd8837cce7d",
+  "content_sha256": "8cc3d2bd1e4d02832209aa6a4d8c87461db811ff9daefe1f919ff426d395a139",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Your emergency expense of IDR 26,866,000 will be covered through 3 installments of IDR 9,313,546.67 starting 10 April 2026, keeping at least IDR 11,878,300 in your account throughout."
+    "explanation": "Paying the IDR 26,866,000 emergency expense by 18 June 2026 isn't affordable, since only IDR 22,968,412.09 can safely be paid out today without dropping below the required minimum balance of IDR 11,878,300, so the payment is not recommended at this time."
   },
   "usage": {
-    "input_tokens": 595,
-    "output_tokens": 83
+    "input_tokens": 555,
+    "output_tokens": 103
   },
-  "timestamp": "2026-09-12T23:36:41.777372+00:00"
+  "timestamp": "2026-09-13T03:30:57.066479+00:00"
 }

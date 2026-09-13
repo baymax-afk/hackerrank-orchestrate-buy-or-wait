@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_189",
-  "content_sha256": "2dba8d00ff49dd5e0a833fa69104a2b01869ac93844bd235013dd724ca6c1197",
+  "content_sha256": "31fdc784f268a5cf80efc68d29dc84446a0fd2c809df0685ca42de5a1862b3a8",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full EUR 488.40 debt today, 4 July 2026, since this still leaves at least EUR 400 available in your account over the next 90 days."
+    "explanation": "You can fully repay the EUR 488.40 debt today, 4 July 2026, since doing so still leaves at least EUR 400 available in your account over the next 90 days."
   },
   "usage": {
-    "input_tokens": 542,
-    "output_tokens": 62
+    "input_tokens": 562,
+    "output_tokens": 65
   },
-  "timestamp": "2026-09-12T23:36:56.788806+00:00"
+  "timestamp": "2026-09-13T03:31:08.702476+00:00"
 }

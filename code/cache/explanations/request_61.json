@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_61",
-  "content_sha256": "47c41d27be7916515f2c30ad4d5a91c77350aaba18d4562773a51ee748fe55d6",
+  "content_sha256": "8f9978e49f86de6173965a844ed2250af033027585b1e9959ad771c860216edf",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Your ZAR 29,062 purchase can be covered through 3 installments of ZAR 10,074.83 on 17 March, 17 April and 18 May 2024, keeping at least ZAR 36,700 in your account throughout."
+    "explanation": "Your purchase of ZAR 29,062 can be covered through 3 installments of ZAR 10,074.83 on 17 March 2024, 17 April 2024 and 18 May 2024, while keeping at least ZAR 36,700 in your account."
   },
   "usage": {
-    "input_tokens": 582,
-    "output_tokens": 86
+    "input_tokens": 643,
+    "output_tokens": 92
   },
-  "timestamp": "2026-09-12T23:16:21.015296+00:00"
+  "timestamp": "2026-09-13T03:26:34.095113+00:00"
 }

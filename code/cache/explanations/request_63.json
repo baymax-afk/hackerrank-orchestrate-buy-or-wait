@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_63",
-  "content_sha256": "05f5fd1e47a1ee7adc88a49d6f17ac6d65f82909df6d4231c420c651f01d2bc8",
+  "content_sha256": "571c37ec9bd84bc2ae4d13b9ca6837adc62cda1e194f586eeb10888085f9cc44",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "To cover the INR 343,900 purchase while keeping your INR 153,500 minimum balance safe, pay INR 52,157.50 now and the remaining INR 291,742.50 on 15 September 2026, ahead of the 17 September 2026 deadline."
+    "explanation": "The request for INR 343,900 made on 7 July 2026 cannot proceed, since only INR 37,348.21 can be safely paid today while keeping the required INR 153,500 minimum balance, and no safe path completes the full payment within 90 days before the 17 September 2026 deadline."
   },
   "usage": {
-    "input_tokens": 583,
-    "output_tokens": 96
+    "input_tokens": 552,
+    "output_tokens": 104
   },
-  "timestamp": "2026-09-13T03:09:11.054253+00:00"
+  "timestamp": "2026-09-13T03:26:38.203066+00:00"
 }

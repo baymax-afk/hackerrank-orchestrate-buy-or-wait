@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_127",
-  "content_sha256": "7fce7b849f9768a157e94028267e67ffbb65206c25b5ad4e64006f953da79b56",
+  "content_sha256": "a5a706e125e4a22efe7552873835d0e5c0d63c9aa2527abd6696defa35f7f1e4",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The requested ZAR 23,980 family transfer due 18 October 2024 cannot be paid, as doing so would breach the required ZAR 41,000 minimum balance; no partial payment or payment plan is currently available."
+    "explanation": "Paying the full ZAR 23,980 now would drop your balance below the required ZAR 41,000 minimum, so the plan is to wait and pay it in full on 15 November 2024, ahead of the 18 October 2024 deadline consideration."
   },
   "usage": {
-    "input_tokens": 540,
-    "output_tokens": 81
+    "input_tokens": 581,
+    "output_tokens": 90
   },
-  "timestamp": "2026-09-12T23:33:51.013314+00:00"
+  "timestamp": "2026-09-13T03:28:52.093085+00:00"
 }

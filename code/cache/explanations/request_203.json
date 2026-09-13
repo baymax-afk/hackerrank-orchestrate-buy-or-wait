@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_203",
-  "content_sha256": "3f6c5c426b817a7571cef74229a4c8292e699cbf7aaf37bb946f2995bd6b6dc3",
+  "content_sha256": "1a5228ef1979578c83d748854c8f1303c1cb71a4bd78b0e074e645c7154d1f60",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Your EUR 1,442.10 emergency expense for request_203 will be paid in 3 installments of EUR 499.93 each, starting 10 May 2025, keeping at least EUR 1,400 available throughout."
+    "explanation": "Your emergency expense of EUR 1,442.10 can be covered through 3 installments of EUR 499.93 on 10 May 2025, 7 June 2025 and 5 July 2025, keeping at least EUR 1,400 in your account throughout."
   },
   "usage": {
-    "input_tokens": 579,
-    "output_tokens": 81
+    "input_tokens": 631,
+    "output_tokens": 93
   },
-  "timestamp": "2026-09-13T03:09:37.980160+00:00"
+  "timestamp": "2026-09-13T03:31:37.443851+00:00"
 }

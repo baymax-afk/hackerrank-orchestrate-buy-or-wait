@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_231",
-  "content_sha256": "1f6afb3f07fa4f9f058ac8e10a9a4baeb517120ba954c2de1721677990e26ed8",
+  "content_sha256": "72893ef30195b70f7f9996fc4be5d3073841c1d74296d36521f250055e2fad27",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Your ZAR 35,706 purchase will be paid in 3 installments of ZAR 12,378.08 starting 6 January 2026, keeping at least ZAR 24,300 in your account throughout, with everything settled well before the 17 March 2026 deadline."
+    "explanation": "The requested ZAR 35,706 purchase due 17 March 2026 cannot be made without dropping below the required ZAR 24,300 minimum balance, so payment is not recommended and no payment plan is available at this time."
   },
   "usage": {
-    "input_tokens": 582,
-    "output_tokens": 97
+    "input_tokens": 548,
+    "output_tokens": 81
   },
-  "timestamp": "2026-09-12T23:39:17.254471+00:00"
+  "timestamp": "2026-09-13T03:32:38.014570+00:00"
 }

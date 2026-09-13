@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_138",
-  "content_sha256": "2de237278028ff9dacfbde575123ab2449e1a44e9ad3d4285e1fe67ff466c371",
+  "content_sha256": "a929ba57d931e38d223bfa464fbf4e222bf950c4fba1f1800f7fe4e93c7f4983",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Pay EUR 864.63 today and the remaining EUR 392.31 on 15 April 2026 to fully cover the EUR 1,256.94 purchase while keeping your EUR 2,300 minimum balance intact."
+    "explanation": "To cover the EUR 1,256.94 purchase while keeping the required EUR 2,300 balance safe, you'll pay EUR 756.20 today, 7 April 2026, and the remaining EUR 500.74 on 15 April 2026, fully settling the request."
   },
   "usage": {
-    "input_tokens": 583,
-    "output_tokens": 84
+    "input_tokens": 619,
+    "output_tokens": 98
   },
-  "timestamp": "2026-09-12T23:34:25.222437+00:00"
+  "timestamp": "2026-09-13T03:29:17.547344+00:00"
 }

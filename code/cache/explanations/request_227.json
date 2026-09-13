@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_227",
-  "content_sha256": "aef8f4e5ee71387547015bda2bcffc28c20479c067be78637d3edca44e1604ee",
+  "content_sha256": "9cd3cdfe2599e99eed17f3e0f8799006e9aa6448ad7e4cac31ed29f90b166239",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Paying the full INR 259,700 debt by 20 June 2025 isn't recommended because it would breach your required minimum balance of INR 62,900; at most, only INR 11,056.25 can be safely paid today, with no full-payment plan currently viable within 90 days."
+    "explanation": "You should not make the INR 259,700 debt repayment by 20 June 2025, since paying it would drop your balance below the required minimum of INR 62,900; only INR 7,133.15 is currently safe to pay, and no full repayment is achievable within 90 days."
   },
   "usage": {
-    "input_tokens": 537,
-    "output_tokens": 98
+    "input_tokens": 543,
+    "output_tokens": 95
   },
-  "timestamp": "2026-09-12T23:39:04.869510+00:00"
+  "timestamp": "2026-09-13T03:32:29.691020+00:00"
 }

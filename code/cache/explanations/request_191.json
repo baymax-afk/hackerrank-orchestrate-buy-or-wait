@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_191",
-  "content_sha256": "9a8d5d8735ce365987fd2d812cc27f55165a7b85825f5ecc5c2acbd435b78636",
+  "content_sha256": "a8725f2d115478a0140efa29cf5ce565d0197cf436a3b1215f644851e826d54c",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can fully invest EUR 664.40 on 3 May 2025 while still keeping at least EUR 500 available over the next 90 days, so no spending changes are needed."
+    "explanation": "You can invest EUR 664.40 today in full, and doing so still leaves at least EUR 500 in your account over the next 90 days."
   },
   "usage": {
-    "input_tokens": 538,
-    "output_tokens": 65
+    "input_tokens": 558,
+    "output_tokens": 53
   },
-  "timestamp": "2026-09-12T23:37:01.968658+00:00"
+  "timestamp": "2026-09-13T03:31:12.236481+00:00"
 }

@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_104",
-  "content_sha256": "be6ac131a486140d1b749506098519874ec6fc7496dad2f19dec3af33ba41eba",
+  "content_sha256": "71b02151ea2b552b6ded9cc599ca7ba38ee8d9323addfe760d5687373bade814",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The requested purchase of ZAR 17,204 due by 15 April 2025 cannot be made because paying it would drop your balance below the required minimum of ZAR 24,700; only ZAR 6,941.13 is safe to use today, so no payment plan is recommended at this time."
+    "explanation": "The ZAR 17,204 purchase requested on 4 February 2025 cannot be made by the 15 April 2025 deadline, since paying it would drop the balance below the required ZAR 24,700 minimum; only ZAR 6,941.13 is currently safe to pay, so the payment is not recommended at this time."
   },
   "usage": {
-    "input_tokens": 542,
-    "output_tokens": 100
+    "input_tokens": 548,
+    "output_tokens": 113
   },
-  "timestamp": "2026-09-12T23:28:11.417152+00:00"
+  "timestamp": "2026-09-13T03:28:03.857568+00:00"
 }

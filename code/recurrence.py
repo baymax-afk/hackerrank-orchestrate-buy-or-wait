@@ -161,7 +161,9 @@ def detect_salary_series(history: list[Event], explicit_flows: list[CashFlow], e
     elif regular:
         dates = [e.cash_date for e in regular]
         cadence, _ = _cadence(dates)
-        if cadence != "monthly" and len(regular) >= 2:
+        if cadence != "monthly" and len(regular) >= 2 and "salary_first" not in kinds:
+            # an irregular history (e.g. unpaid leave) is not projected unless the employer
+            # confirms the resumed salary and its date (handled by salary_first below)
             notes.append("salary history is not monthly; not projected")
             return None
         anchor = dates[-1]
@@ -176,21 +178,28 @@ def detect_salary_series(history: list[Event], explicit_flows: list[CashFlow], e
     if regular and not scheduled:
         # the most common settled amount is the confirmed regular salary (a single deviating month is not a new level)
         amount = _mode([e.amount for e in regular])
+    amount_after = None
     for key in ("salary_remaining", "salary_amount", "salary_next_amount"):
         if key in kinds and kinds[key].amount is not None:
             stated = kinds[key].amount
+            eff = kinds[key].effective_date
             if key == "salary_remaining" or config.SALARY_MESSAGE_AMOUNTS or stated < amount:
                 # an explicitly remaining/reduced salary is adopted; a stated increase is not counted
-                # until it settles (financially safer interpretation of an unsettled claim)
+                # until it settles (financially safer interpretation of an unsettled claim) ...
                 amount = stated
                 notes.append(f"salary amount {amount} from {kinds[key].source_id} ({key})")
+            elif eff is not None and eff > request_date:
+                # ... unless the employer confirms the new level with an explicit effective date: the
+                # rise is then a confirmed change applied from that payroll date onwards, not before.
+                amount_after = (eff, q2(stated))
+                notes.append(f"salary rises to {stated} from {eff} per {kinds[key].source_id}; {amount} until then")
             else:
                 notes.append(f"salary amount {stated} stated by {kinds[key].source_id} not adopted (history {amount}, not yet settled)")
             break
     if "salary_date" in kinds and kinds["salary_date"].effective_date and not scheduled:
         anchor = add_months(kinds["salary_date"].effective_date, -1)
     rep = regular[-1].event_id if regular else (scheduled[-1].source_id if scheduled else "salary")
-    return RecurringSeries(rep, "salary", "salary", "monthly", None, anchor, q2(amount), True, "fixed", None, len(regular))
+    return RecurringSeries(rep, "salary", "salary", "monthly", None, anchor, q2(amount), True, "fixed", None, len(regular), amount_after)
 
 
 def project_series(series: list[RecurringSeries], request_date: date, facts: list[EvidenceFact]) -> list[CashFlow]:
@@ -205,5 +214,6 @@ def project_series(series: list[RecurringSeries], request_date: date, facts: lis
         if rent_scale and not s.is_income and s.category in ("rent", "housing"):
             amount = q2(amount * rent_scale)
         for d in _project(s.anchor, s.cadence, s.step_days, request_date, end):
-            flows.append(CashFlow(d, amount if s.is_income else -amount, "recurring_income" if s.is_income else "recurring", s.series_id, s.series_id, s.category, s.description))
+            amt = s.amount_after[1] if s.amount_after and d >= s.amount_after[0] else amount
+            flows.append(CashFlow(d, amt if s.is_income else -amt, "recurring_income" if s.is_income else "recurring", s.series_id, s.series_id, s.category, s.description))
     return flows

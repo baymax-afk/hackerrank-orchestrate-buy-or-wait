@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_242",
-  "content_sha256": "434dd7eea40d315d9cb6cdde5506011af037acf01d3e10e12143482c148da637",
+  "content_sha256": "ee87a1708c2c9a025c614cb81a0d56705154a6da017456f9a52df1dea0c1d5a9",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The requested payment of EUR 1,966.80 due 25 August 2025 isn't affordable while keeping the required EUR 600 minimum balance, so only EUR 24.38 is safe to pay today and no payment plan or full-payment date is currently available."
+    "explanation": "You can't safely pay the EUR 1,966.80 debt request by 25 August 2025, since only EUR 24.38 is available today without dropping below the required EUR 600 minimum balance, and no full-payment date is possible within 90 days."
   },
   "usage": {
-    "input_tokens": 537,
-    "output_tokens": 93
+    "input_tokens": 543,
+    "output_tokens": 88
   },
-  "timestamp": "2026-09-12T23:39:48.755004+00:00"
+  "timestamp": "2026-09-13T03:33:02.108958+00:00"
 }

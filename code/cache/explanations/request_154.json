@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_154",
-  "content_sha256": "f0d46cb951f293b42dd977fe1b7788becf54f51f87880dbab8d20efaebbe7138",
+  "content_sha256": "dab53c7229dcee24c76aeb701c23784a6daafdb80b7645bc7901fee9f16b6b67",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Your EUR 1,625.80 travel request can be covered by paying it off in 3 installments of EUR 563.61 starting 4 December 2024, with dates through 4 February 2025, while keeping at least EUR 1,300 in your account."
+    "explanation": "Your EUR 1,625.80 travel request can be covered by paying it in 3 installments of EUR 563.61 on 4 December 2024, 4 January 2025 and 4 February 2025, while keeping at least EUR 1,300 in your account throughout."
   },
   "usage": {
-    "input_tokens": 575,
-    "output_tokens": 89
+    "input_tokens": 627,
+    "output_tokens": 95
   },
-  "timestamp": "2026-09-12T23:35:29.736712+00:00"
+  "timestamp": "2026-09-13T03:29:53.942965+00:00"
 }

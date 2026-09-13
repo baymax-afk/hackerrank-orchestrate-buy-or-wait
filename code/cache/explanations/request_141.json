@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_141",
-  "content_sha256": "9824c2d86e5f1be45691e2945f1b4d3327f5cb624f0d348e487bbc4043bcd258",
+  "content_sha256": "88d3d48ffd3e9780e4c795ad36ca624ee4594d811b95a87a1d0e32efbab2076c",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The INR 171,600 request made on 3 January 2026 cannot be paid safely; only INR 26,291.17 is available today while keeping the required minimum balance of INR 67,300, and full payment isn't achievable within 90 days, so it is not recommended before the 12 February 2026 deadline."
+    "explanation": "The INR 171,600 request made on 3 January 2026 cannot be paid safely; only INR 18,717.93 is available today while keeping the required INR 67,300 minimum balance, and no full payment is possible within 90 days, so this request is not recommended."
   },
   "usage": {
-    "input_tokens": 544,
-    "output_tokens": 107
+    "input_tokens": 550,
+    "output_tokens": 93
   },
-  "timestamp": "2026-09-12T23:34:32.019178+00:00"
+  "timestamp": "2026-09-13T03:29:25.002592+00:00"
 }

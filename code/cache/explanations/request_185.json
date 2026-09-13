@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_185",
-  "content_sha256": "16cb2476e4d6cb025b8bd6fc531f51429cf80be51c91f077034b6ab5bf18c314",
+  "content_sha256": "46ffb045fc9d7e468ec8336ae1c7cad0a7a174037ac98b9b8eb0f3508d114858",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Because paying the EUR 1,257.30 travel request now would drop your balance below the required EUR 1,300 minimum, it will instead be paid in full on 15 January 2026."
+    "explanation": "Your travel request for EUR 1,257.30 will be paid in full on 15 January 2026, since paying it sooner would drop your balance below the required EUR 1,300 minimum."
   },
   "usage": {
-    "input_tokens": 556,
-    "output_tokens": 68
+    "input_tokens": 578,
+    "output_tokens": 69
   },
-  "timestamp": "2026-09-13T03:09:35.471828+00:00"
+  "timestamp": "2026-09-13T03:31:01.046653+00:00"
 }

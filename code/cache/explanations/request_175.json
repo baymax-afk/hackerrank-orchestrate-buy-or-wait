@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_175",
-  "content_sha256": "f55af48ec278f767096cf79ea15d743c9288eff59e260952d09dad2973963ce3",
+  "content_sha256": "f23ff9fbab2eb709bfb3e2cde8e3fc827390651ae84ad965d26bdee5a12bc274",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can fully cover the EUR 2,346.30 emergency expense today, 6 September 2024, while still keeping at least EUR 1,700 on hand over the next 90 days."
+    "explanation": "You can pay the full EUR 2,346.30 today, 6 September 2024, and still keep at least EUR 1,700 available over the next 90 days."
   },
   "usage": {
-    "input_tokens": 553,
-    "output_tokens": 68
+    "input_tokens": 575,
+    "output_tokens": 59
   },
-  "timestamp": "2026-09-12T23:36:22.627924+00:00"
+  "timestamp": "2026-09-13T03:30:39.812868+00:00"
 }

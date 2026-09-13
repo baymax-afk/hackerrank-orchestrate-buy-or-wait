@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_186",
-  "content_sha256": "1073bde9cd69c08f9fb4dc10b2c05ea50f96d20157e768776c0b0a4d99952620",
+  "content_sha256": "2b2ad7ab6932b5a8ade57738b6ff1e505f3b51c77a24d9cf3991e4ddcdefe23d",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can afford this ZAR 26,554 investment only if you wait: paying it in full on 15 February 2026 keeps your balance from dropping below the required ZAR 22,000 minimum before the 15 March 2026 deadline."
+    "explanation": "You should wait and pay the full ZAR 26,554 on 15 March 2026, since paying sooner would drop your balance below the required ZAR 22,000 minimum."
   },
   "usage": {
-    "input_tokens": 557,
-    "output_tokens": 85
+    "input_tokens": 578,
+    "output_tokens": 65
   },
-  "timestamp": "2026-09-12T23:36:49.403039+00:00"
+  "timestamp": "2026-09-13T03:31:03.049003+00:00"
 }

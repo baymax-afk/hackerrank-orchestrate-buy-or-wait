@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_251",
-  "content_sha256": "1a2d1928b7ed64998a0b855cfafbe94e5325405fba9fa29c626b85cf812e7c0f",
+  "content_sha256": "b13e67107203d833bc918443fc56f186db1782abdbe62cad966c25e9c22c7dc6",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The EUR 1,513.60 education request due 6 June 2025 cannot be paid without dropping below the required EUR 1,300 minimum balance, so no payment method is recommended and only EUR 151.53 is considered safe to pay today."
+    "explanation": "Paying the EUR 1,513.60 education request by 6 June 2025 would drop your balance below the EUR 1,300 minimum you need to keep, so this payment is marked as not affordable and not recommended, with no payment plan currently available."
   },
   "usage": {
-    "input_tokens": 536,
+    "input_tokens": 542,
     "output_tokens": 88
   },
-  "timestamp": "2026-09-13T03:09:44.809850+00:00"
+  "timestamp": "2026-09-13T03:33:21.029532+00:00"
 }

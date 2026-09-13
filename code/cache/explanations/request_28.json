@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_28",
-  "content_sha256": "29443047ee42e65e26e207d99e5b8429179484422b08a831765fc212e6d9c47c",
+  "content_sha256": "5f945298fe1da4beee2bc036a71b8d86e3323e4fc98461f69c52d473cae33043",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You should wait and pay the full EUR 1,302.40 on 15 July 2024, since paying any earlier would drop your balance below the required EUR 1,100 minimum."
+    "explanation": "You'll pay the full EUR 1,302.40 investment on 15 July 2024, since paying any sooner would drop your balance below the required EUR 1,100 minimum."
   },
   "usage": {
-    "input_tokens": 556,
+    "input_tokens": 578,
     "output_tokens": 66
   },
-  "timestamp": "2026-09-12T23:11:36.860518+00:00"
+  "timestamp": "2026-09-13T03:25:24.260346+00:00"
 }

@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_91",
-  "content_sha256": "7b3f593f4dff4331056d100778f14d808093415d897ba322b47ab49d77f23f0e",
+  "content_sha256": "c511ea2a2ce0da739f48d42b0d4ef9c07830811c28dd914b270d780a0b6e3422",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Since paying now would drop the balance below the required EUR 2,100 minimum, the plan is to wait and pay the full EUR 1,927.20 on 15 November 2024."
+    "explanation": "Since only EUR 121.15 can be paid today without dropping below the EUR 2,100 minimum balance, the full EUR 1,927.20 will instead be paid on 15 November 2024, the deadline for this emergency expense."
   },
   "usage": {
-    "input_tokens": 560,
-    "output_tokens": 67
+    "input_tokens": 582,
+    "output_tokens": 85
   },
-  "timestamp": "2026-09-12T23:24:25.637643+00:00"
+  "timestamp": "2026-09-13T03:27:37.244151+00:00"
 }

@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_202",
-  "content_sha256": "aeb8919a71b2af72e64592940fc5a3a252b92dee4d5378c91e200dc022ea2a52",
+  "content_sha256": "c2304e0a1027569c31a056c94777d2a7a8017f9862183bf92a4cd63829af7156",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full INR 123,900 family transfer today, 5 December 2024, while still keeping at least INR 147,800 in reserve over the next 90 days, so no spending changes are needed."
+    "explanation": "You can pay the full INR 123,900 family transfer today, 5 December 2024, while still keeping at least INR 147,800 in reserve over the next 90 days."
   },
   "usage": {
-    "input_tokens": 539,
-    "output_tokens": 73
+    "input_tokens": 558,
+    "output_tokens": 63
   },
-  "timestamp": "2026-09-12T23:37:45.169585+00:00"
+  "timestamp": "2026-09-13T03:31:35.231881+00:00"
 }

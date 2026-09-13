@@ -43,6 +43,7 @@ class ExplainAgent:
             "payment_plan": decision.payment_plan,
             "earliest_full_payment_date": fmt_long_date(decision.earliest_date_for_full_payment) if decision.earliest_date_for_full_payment else "none within 90 days",
             "spending_changes": decision.spending_changes_needed,
+            "schedule": self._schedule(decision.payment_plan, cur),
             "template_version": fallback,
         }
         key_text = "|".join(f"{k}={v}" for k, v in facts.items())
@@ -60,6 +61,20 @@ class ExplainAgent:
         if self._grounded(text, facts, decision, cur):
             return text
         return fallback
+
+    @staticmethod
+    def _schedule(plan: str, cur: str) -> str:
+        """Long-form '7 August 2025: INR 84,101.33, ...' so drafts may cite the plan dates."""
+        if not plan or plan == "none":
+            return "none"
+        parts = []
+        for item in plan.split("|"):
+            try:
+                d, a = item.split(":", 1)
+                parts.append(f"{fmt_long_date(__import__('datetime').date.fromisoformat(d))}: {fmt_money(cur, Decimal(a))}")
+            except (ValueError, ArithmeticError):
+                parts.append(item)
+        return ", ".join(parts)
 
     @staticmethod
     def _grounded(text: str, facts: dict, decision: Decision, cur: str) -> bool:

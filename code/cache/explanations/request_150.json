@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_150",
-  "content_sha256": "80d35641d94deeebde73247932231ebda8686e417401234a13bbeba733d9b69e",
+  "content_sha256": "1225efc6d94582d4f44184f4e4466648c1963069f0d0b2a559bbed1d0745a454",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Your EUR 496.10 education request will be paid in 3 installments of EUR 171.98 starting 6 January 2026, on 5 February 2026 and 7 March 2026, keeping at least EUR 700 in your account."
+    "explanation": "The education request for EUR 496.10 due by 16 March 2026 is not affordable, since paying it would drop your balance below the required EUR 700 minimum, so no payment method or plan is recommended at this time."
   },
   "usage": {
-    "input_tokens": 566,
-    "output_tokens": 84
+    "input_tokens": 536,
+    "output_tokens": 77
   },
-  "timestamp": "2026-09-12T23:35:05.001692+00:00"
+  "timestamp": "2026-09-13T03:29:44.185989+00:00"
 }

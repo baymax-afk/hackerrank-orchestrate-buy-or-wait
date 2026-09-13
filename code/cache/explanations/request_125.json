@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_125",
-  "content_sha256": "bbab0bb4f301cbc3a7aedebf5c8bc81161afb0254141c02051c1274a656230b5",
+  "content_sha256": "570e3bf36469c69f6ff5b18a880f294d90ecc5b1fd3659becad9848405b315c5",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full ZAR 6,468 travel request today, 6 November 2025, while still keeping at least ZAR 11,300 available over the next 90 days, with no changes to your spending needed."
+    "explanation": "Your ZAR 6,468 travel request can't be fully paid today without dropping below the ZAR 11,300 minimum balance, so it's scheduled to be paid in full on 15 November 2025."
   },
   "usage": {
-    "input_tokens": 546,
-    "output_tokens": 74
+    "input_tokens": 578,
+    "output_tokens": 75
   },
-  "timestamp": "2026-09-12T23:33:45.375904+00:00"
+  "timestamp": "2026-09-13T03:28:48.513825+00:00"
 }

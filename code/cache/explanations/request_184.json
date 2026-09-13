@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_184",
-  "content_sha256": "44e221691586f893acfbcc1633dfdcc339795cb0c4a74a3ff38f9c30aa5987ae",
+  "content_sha256": "fbd65ad553c88e325c37119d254bbd263b25086fd1c05d3c01b7f9c3c873ac78",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Paying INR 251,900 toward this debt by 30 July 2024 isn't affordable, since only INR 17,569.20 can safely be paid today while keeping your required minimum balance of INR 110,800 protected, so no payment plan is recommended right now."
+    "explanation": "You cannot afford to pay INR 251,900 toward this debt by 30 July 2024 while keeping the required INR 110,800 minimum balance protected, so only up to INR 7,499.24 is safe to pay today and no payment plan is recommended."
   },
   "usage": {
-    "input_tokens": 537,
-    "output_tokens": 94
+    "input_tokens": 543,
+    "output_tokens": 92
   },
-  "timestamp": "2026-09-12T23:36:43.685094+00:00"
+  "timestamp": "2026-09-13T03:30:59.395462+00:00"
 }

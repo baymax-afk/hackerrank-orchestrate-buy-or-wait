@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_132",
-  "content_sha256": "e8a907d3f4b1bc45f7ceff2f4dbf88c91169f55bc236d2e14c4ca46fdf3e3b32",
+  "content_sha256": "8b5840c7ff1218f35d12e9294ebc2260a4bd1c3a4d54ae8b235c123fa6d97bc3",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full USD 379.86 family transfer on 15 January 2026; paying any sooner would drop your balance below the required minimum of USD 1,100."
+    "explanation": "You can pay the full USD 379.86 on 15 January 2026, since paying earlier would drop your balance below the required USD 1,100 minimum."
   },
   "usage": {
-    "input_tokens": 549,
-    "output_tokens": 62
+    "input_tokens": 568,
+    "output_tokens": 58
   },
-  "timestamp": "2026-09-12T23:34:07.595434+00:00"
+  "timestamp": "2026-09-13T03:29:04.602536+00:00"
 }

@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_218",
-  "content_sha256": "8059aae9cf6f18c761f00f0fd00b341c19f84eaaa5b8a84b6c48b11a74c8158d",
+  "content_sha256": "88bcd8b4002963798354643b272c494ee379369e368e17b2806f180ff57c77ee",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "To cover the IDR 61,142,000 purchase while keeping at least IDR 34,477,200 in reserve, the plan splits payment into 3 installments of IDR 21,195,893.33 each, starting 7 August 2025, with the final installment on 2 October 2025."
+    "explanation": "To afford the IDR 61,142,000 purchase by 6 October 2025 while keeping at least IDR 34,477,200 in reserve, the plan splits payment into 3 installments of IDR 21,195,893.33 on 7 August, 4 September, and 2 October 2025."
   },
   "usage": {
-    "input_tokens": 592,
-    "output_tokens": 100
+    "input_tokens": 656,
+    "output_tokens": 103
   },
-  "timestamp": "2026-09-12T23:38:34.856226+00:00"
+  "timestamp": "2026-09-13T03:32:10.311329+00:00"
 }

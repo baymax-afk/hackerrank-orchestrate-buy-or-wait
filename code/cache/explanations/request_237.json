@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_237",
-  "content_sha256": "bd7f3b0afd1d0bc41a6ccc27042d901c02f1fe5f791754f8f8622d67ed57e242",
+  "content_sha256": "2d3caaa2e8cbb2d1bf45e1216e4aa7208335539305a11d00d813e1763d46d91a",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full IDR 23,826,000 today, 5 April 2026, since it's fully affordable now, and you'll still keep at least IDR 22,431,500 available over the next 90 days without any spending changes."
+    "explanation": "You can fully pay the IDR 23,826,000 request today, 5 April 2026, since doing so still leaves at least IDR 22,431,500 available over the next 90 days, well ahead of the 20 May 2026 deadline."
   },
   "usage": {
-    "input_tokens": 551,
-    "output_tokens": 80
+    "input_tokens": 573,
+    "output_tokens": 85
   },
-  "timestamp": "2026-09-12T23:39:34.508165+00:00"
+  "timestamp": "2026-09-13T03:32:51.105988+00:00"
 }

@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_261",
-  "content_sha256": "a82dd7e6d3a86a69b7ba09a0e6e8f9d47ba89c7e50004152f2f222298c1ce75b",
+  "content_sha256": "c1a466aad6ea3f6b991014afcd6ee4dd90bbbb149e112bf128c3bec2cf5df7ef",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Your housing payment of EUR 1,830.40 can be paid in full today, 3 July 2026, while keeping at least EUR 1,500 available over the next 90 days, so no spending changes are needed."
+    "explanation": "You can pay the full EUR 1,830.40 housing request today, 3 July 2026, while still keeping at least EUR 1,500 available over the next 90 days."
   },
   "usage": {
-    "input_tokens": 549,
-    "output_tokens": 76
+    "input_tokens": 571,
+    "output_tokens": 63
   },
-  "timestamp": "2026-09-12T23:41:08.720056+00:00"
+  "timestamp": "2026-09-13T03:33:42.393840+00:00"
 }

@@ -235,3 +235,40 @@ def test_minimum_balance_protected_end_of_day():
 def test_add_months_clamps_day():
     assert add_months(date(2026, 1, 31), 1) == date(2026, 2, 28)
     assert add_months(date(2025, 12, 15), 1) == date(2026, 1, 15)
+
+
+def test_resumed_salary_message_overrides_irregular_history():
+    """An employer message confirming the resumed salary and its date projects income even when
+    the settled history has a leave gap (otherwise the non-monthly guard drops the series)."""
+    from datetime import date as _d
+
+    from models import EvidenceFact
+    from recurrence import detect_salary_series
+
+    hist = [
+        make_event(event_id="s1", event_type="income", direction="credit", category="salary", description="Payroll before leave", event_date=_d(2025, 3, 15), amount=D("2717")),
+        make_event(event_id="s2", event_type="income", direction="credit", category="salary", description="Payroll before leave", event_date=_d(2025, 4, 15), amount=D("2717")),
+        make_event(event_id="s3", event_type="income", direction="credit", category="salary", description="Payroll after returning from leave", event_date=_d(2025, 7, 15), amount=D("2717")),
+    ]
+    notes: list[str] = []
+    assert detect_salary_series(hist, [], {}, [], _d(2025, 8, 4), notes) is None
+    fact = EvidenceFact("salary_first", "message", "m1", "messages.csv", amount=D("2717"), currency="EUR", effective_date=_d(2025, 8, 15))
+    s = detect_salary_series(hist, [], {}, [fact], _d(2025, 8, 4), notes)
+    assert s is not None and s.amount == D("2717") and s.anchor == _d(2025, 7, 15)
+
+
+def test_salary_rise_with_effective_date_applies_from_that_payroll():
+    from datetime import date as _d
+
+    from models import EvidenceFact
+    from recurrence import detect_salary_series, project_series
+
+    hist = [make_event(event_id=f"s{i}", event_type="income", direction="credit", category="salary", description="Payroll credit", event_date=_d(2025, i, 15), amount=D("100")) for i in range(3, 8)]
+    notes: list[str] = []
+    dated = EvidenceFact("salary_amount", "message", "m1", "messages.csv", amount=D("150"), currency="EUR", effective_date=_d(2025, 9, 15))
+    s = detect_salary_series(hist, [], {}, [dated], _d(2025, 8, 5), notes)
+    flows = {f.date: f.amount for f in project_series([s], _d(2025, 8, 5), [])}
+    assert flows[_d(2025, 8, 15)] == D("100") and flows[_d(2025, 9, 15)] == D("150")
+    undated = EvidenceFact("salary_amount", "message", "m2", "messages.csv", amount=D("150"), currency="EUR")
+    s2 = detect_salary_series(hist, [], {}, [undated], _d(2025, 8, 5), notes)
+    assert s2.amount == D("100") and s2.amount_after is None

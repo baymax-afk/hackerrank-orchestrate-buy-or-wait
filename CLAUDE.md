@@ -10,7 +10,7 @@ AGENTS.md (imported above) is authoritative for session-start behavior, per-turn
 
 Starter for the "Buy or Wait?" hackathon task: for each of the 250 rows in `dataset/requests.csv`, decide whether the user should pay in full, pay partially, use a seller-provided installment option, wait, or not proceed, and write one row per request to the root-level `output.csv`. `problem_statement.md` is the full spec; `README.md` restates it with a suggested workflow.
 
-Current state: the solution is implemented under `code/` (see `code/README.md` for the module map) with pytest tests under `tests/`, research notes under `research/`, and the calibrated deterministic core scoring 22/25 statuses and 25/25 methods on the samples (`python code/main.py --sample-check --no-llm`).
+Current state: the solution is implemented under `code/` (see `code/README.md` for the module map) with pytest tests under `tests/`, research notes under `research/`, and the calibrated deterministic core scoring 22/25 statuses, 23/25 methods and 23/25 earliest dates on the samples (mean amount error 3.2%) (`python code/main.py --sample-check --no-llm`).
 
 ## Commands
 

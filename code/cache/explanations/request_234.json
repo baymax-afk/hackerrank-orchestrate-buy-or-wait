@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_234",
-  "content_sha256": "44f99904718485a7ef71134428af0a19fdc72b924926fb43c1b8d246345c93af",
+  "content_sha256": "42432898ba669d0575fb513b55e28a340f1c0cf05052467be9e43d9de3d2c459",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can safely pay the full EUR 1,213.30 on 15 August 2026, since paying sooner would drop your balance below the required EUR 700 minimum."
+    "explanation": "You can safely pay only EUR 180.61 today, so the full EUR 1,213.30 debt repayment should wait until 15 September 2026 to keep your balance above the EUR 700 minimum."
   },
   "usage": {
-    "input_tokens": 556,
-    "output_tokens": 62
+    "input_tokens": 578,
+    "output_tokens": 75
   },
-  "timestamp": "2026-09-12T23:39:26.993504+00:00"
+  "timestamp": "2026-09-13T03:32:44.030386+00:00"
 }

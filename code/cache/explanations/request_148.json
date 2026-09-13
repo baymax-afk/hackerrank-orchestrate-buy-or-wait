@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_148",
-  "content_sha256": "365b0c7cd26b6c12a01774ffd1e484f86e0b8b0a87d56570001fb57a9469931b",
+  "content_sha256": "84baf05d2ed7e91f0e5c5fbf558cf3cb9d1ffda3ba3515d77a91e77b484ece22",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The requested ZAR 22,242 purchase can't be safely made by 18 August 2024, since paying it would drop your balance below the required ZAR 20,000 minimum, so this payment is not recommended and no payment plan is available."
+    "explanation": "The ZAR 22,242 purchase requested on 7 June 2024 cannot be paid by the 18 August 2024 deadline, since doing so would break your required minimum balance of ZAR 20,000; only ZAR 7,133.30 can safely go toward it today, so no payment plan is currently possible."
   },
   "usage": {
-    "input_tokens": 542,
-    "output_tokens": 84
+    "input_tokens": 548,
+    "output_tokens": 110
   },
-  "timestamp": "2026-09-12T23:34:56.994219+00:00"
+  "timestamp": "2026-09-13T03:29:39.937383+00:00"
 }

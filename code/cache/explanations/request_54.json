@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_54",
-  "content_sha256": "893f799c69e4de5010b08a20438baddd65795fe8e439f9118fb15d34ff5de5d8",
+  "content_sha256": "89df53c152d5919b0c3798c40d5cd079a1baf8f6733ae312b2a3ef188d949456",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The ZAR 121,528 housing request due 21 August 2026 cannot be paid without dropping below the required ZAR 37,000 minimum balance, so payment is not recommended and only ZAR 3,471.75 is safe to allocate today."
+    "explanation": "The ZAR 121,528 housing payment requested on 4 July 2026 isn't affordable before its 21 August 2026 deadline, since paying it would drop your balance below the required ZAR 37,000 minimum, so no payment method or plan is recommended at this time."
   },
   "usage": {
-    "input_tokens": 541,
-    "output_tokens": 90
+    "input_tokens": 547,
+    "output_tokens": 97
   },
-  "timestamp": "2026-09-12T23:15:34.082185+00:00"
+  "timestamp": "2026-09-13T03:26:19.671486+00:00"
 }

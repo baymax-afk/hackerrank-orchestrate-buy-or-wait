@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_50",
-  "content_sha256": "21ed090dc5111f846fb9572617e95c52f65db6a13a7ae9f11732adf91054eb55",
+  "content_sha256": "ab4d2dfe6520b256c49bec68e318c0b80e613f6f63b19e7272d99d713e4337aa",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full INR 43,900 travel request today, 6 August 2025, and still keep at least INR 99,700 available over the next 90 days, with no changes needed to your spending."
+    "explanation": "You can fully pay the INR 43,900 travel request on 6 August 2025 while still keeping at least INR 99,700 in reserve over the next 90 days."
   },
   "usage": {
-    "input_tokens": 536,
-    "output_tokens": 69
+    "input_tokens": 555,
+    "output_tokens": 62
   },
-  "timestamp": "2026-09-12T23:15:21.995873+00:00"
+  "timestamp": "2026-09-13T03:26:11.788967+00:00"
 }

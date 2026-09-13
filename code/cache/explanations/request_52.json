@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_52",
-  "content_sha256": "12e26c4fff82885a967f4b83102322851bdc901c071cda7761fff160c5e1f840",
+  "content_sha256": "ab98b52e163fe49c80499020e4acaabca9f22cc9c20cb205798b2a8356cb056a",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You should pay the full INR 28,870 on 15 June 2024, since paying any sooner would drop your balance below the required minimum of INR 41,500."
+    "explanation": "Your INR 28,870 emergency expense can be paid in full on 15 June 2024, since paying any earlier would drop your balance below the required INR 41,500 minimum."
   },
   "usage": {
-    "input_tokens": 551,
-    "output_tokens": 59
+    "input_tokens": 570,
+    "output_tokens": 66
   },
-  "timestamp": "2026-09-12T23:15:29.103348+00:00"
+  "timestamp": "2026-09-13T03:26:15.487537+00:00"
 }

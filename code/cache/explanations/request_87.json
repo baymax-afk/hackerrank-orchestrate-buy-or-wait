@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_87",
-  "content_sha256": "b1973b2745b2bade1d2317035b984919a1c5e68b5756bea199b828d7771e548b",
+  "content_sha256": "03dcfda453403bb1d64050cc7acbf2366f845e37f0b24bd0520d75dcbdb54dcc",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The requested INR 487,900 payment due 15 March 2026 cannot be made without dropping below the required minimum balance of INR 185,900, so no payment is recommended at this time, not even a partial one."
+    "explanation": "You can't afford the INR 487,900 request by 15 March 2026 while keeping your required minimum balance of INR 185,900, so paying only INR 16,721.95 today is deemed safe and no payment plan is recommended at this time."
   },
   "usage": {
-    "input_tokens": 528,
-    "output_tokens": 75
+    "input_tokens": 538,
+    "output_tokens": 86
   },
-  "timestamp": "2026-09-12T23:24:13.430354+00:00"
+  "timestamp": "2026-09-13T03:27:29.119170+00:00"
 }

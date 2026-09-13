@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_263",
-  "content_sha256": "ef77d9ba0f089d8bad32358fac6a7ca5b0636787e3c8f83bf466d18409db9286",
+  "content_sha256": "4a274bfd8954e21e0a0153f2d6f63285e59fdfb957f00fb76451c2be16c62a56",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The ZAR 51,546 education request made on 7 May 2025 is not affordable; while ZAR 8,514.53 could be paid today while keeping the required ZAR 24,100 minimum balance, the full amount cannot be safely completed within 90 days, so payment is not recommended."
+    "explanation": "The ZAR 51,546 education request made on 7 May 2025 isn't affordable: while ZAR 5,765.07 could be paid today while keeping the ZAR 24,100 minimum balance, the full amount can't be safely completed within 90 days, so payment is not recommended."
   },
   "usage": {
-    "input_tokens": 554,
-    "output_tokens": 103
+    "input_tokens": 560,
+    "output_tokens": 102
   },
-  "timestamp": "2026-09-12T23:41:15.120952+00:00"
+  "timestamp": "2026-09-13T03:33:47.034729+00:00"
 }

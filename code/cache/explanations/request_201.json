@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_201",
-  "content_sha256": "040596dfcab08c919209a6c3e45f36556078a784a080d624727508db2bf36b9b",
+  "content_sha256": "89185e07e46f1f20db8c4657751b53da19347625bbbc688c8efd154ba6be496c",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full IDR 23,997,000 today, 3 April 2026, while still keeping at least IDR 17,304,500 in reserve over the next 90 days, so no spending changes are needed."
+    "explanation": "You can pay the full IDR 23,997,000 debt today, 3 April 2026, while still keeping at least IDR 17,304,500 in reserve over the next 90 days."
   },
   "usage": {
-    "input_tokens": 556,
-    "output_tokens": 75
+    "input_tokens": 578,
+    "output_tokens": 67
   },
-  "timestamp": "2026-09-12T23:37:42.709251+00:00"
+  "timestamp": "2026-09-13T03:31:32.960877+00:00"
 }

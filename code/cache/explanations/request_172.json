@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_172",
-  "content_sha256": "dc7f1538ca36cdff954ef67b5a26158190eef46b13180f3eb1097558254bc686",
+  "content_sha256": "63ee5bc91f83bf54ed1e2c94ac354be3f25ebb9f97249ff23ea2dca49e347bda",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Pay ZAR 9,149.93 today and the remaining ZAR 1,050.07 on 15 June 2024 to fully cover the ZAR 10,200 education request while keeping your ZAR 27,200 minimum balance protected."
+    "explanation": "Pay ZAR 9,149.93 today and the remaining ZAR 1,050.07 on 15 June 2024 to cover the ZAR 10,200 education request in full while keeping the required ZAR 27,200 minimum balance protected."
   },
   "usage": {
-    "input_tokens": 593,
-    "output_tokens": 89
+    "input_tokens": 635,
+    "output_tokens": 90
   },
-  "timestamp": "2026-09-12T23:36:16.547199+00:00"
+  "timestamp": "2026-09-13T03:30:33.464154+00:00"
 }

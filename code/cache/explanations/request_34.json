@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_34",
-  "content_sha256": "b781053eb0d82fa3b89486ca2fa49f21dc3c0834b82777da6e299ca7f76f53cf",
+  "content_sha256": "46df27b2767c75588f2ada206cb50cff10124cb04456a232a2a2b8c04aab945e",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Your travel request of INR 129,400 is affordable now, so pay it in full on 4 December 2024, leaving at least INR 138,500 available over the next 90 days."
+    "explanation": "Your travel request of INR 129,400 can be paid in full today, 4 December 2024, while still keeping at least INR 138,500 in reserve over the next 90 days."
   },
   "usage": {
-    "input_tokens": 536,
+    "input_tokens": 555,
     "output_tokens": 65
   },
-  "timestamp": "2026-09-12T23:12:42.909597+00:00"
+  "timestamp": "2026-09-13T03:25:36.877462+00:00"
 }

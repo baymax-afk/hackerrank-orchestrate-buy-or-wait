@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_267",
-  "content_sha256": "693e9e0ced8f9880704a3df5fd69f447e3d0ad75d6a516c6090f23dff2d7388d",
+  "content_sha256": "9adb88030d0a23e527190911f7fac00f025500e270412ba467208bd4a21cfe98",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Your EUR 1,925 housing payment will be split into 3 installments of EUR 667.33, starting 8 January 2026, with further payments on 7 February and 9 March 2026, keeping at least EUR 1,500 in your account throughout."
+    "explanation": "Your EUR 1,925 housing payment can be handled by paying it in 3 installments of EUR 667.33 on 8 January 2026, 7 February 2026, and 9 March 2026, keeping at least EUR 1,500 available throughout."
   },
   "usage": {
-    "input_tokens": 573,
-    "output_tokens": 90
+    "input_tokens": 625,
+    "output_tokens": 91
   },
-  "timestamp": "2026-09-12T23:41:34.001062+00:00"
+  "timestamp": "2026-09-13T03:33:55.120538+00:00"
 }

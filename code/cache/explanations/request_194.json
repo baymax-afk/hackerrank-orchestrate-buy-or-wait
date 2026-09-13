@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_194",
-  "content_sha256": "3e2a6758043dff131f368bbf5aad15d4438650dbdb2c17e5e0a9a73324c84842",
+  "content_sha256": "a535074a4f73fec725dd9412bfc16c2236ce096a27b0ba2d809adad1340adbd0",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You should wait and pay the full INR 132,800 on 23 October 2025, since paying any earlier would drop your balance below the required INR 113,600 minimum."
+    "explanation": "Since paying the full INR 132,800 now would drop the balance below the required INR 113,600 minimum, the plan is to wait and pay the full amount on 23 October 2025, the deadline for this housing request."
   },
   "usage": {
-    "input_tokens": 547,
-    "output_tokens": 62
+    "input_tokens": 566,
+    "output_tokens": 77
   },
-  "timestamp": "2026-09-12T23:37:09.539492+00:00"
+  "timestamp": "2026-09-13T03:31:18.693604+00:00"
 }

@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_114",
-  "content_sha256": "cccb9eda1289a79cc6211911a2b188a7975e4ca8bdcd57ae5b3427a7c06b7811",
+  "content_sha256": "6d914307bf141c842bc8f6bd8e7e300978f74bb958c7aba043f3d50348162d95",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full INR 65,300 today, 4 January 2026, since it's affordable now and will still leave at least INR 113,400 available over the next 90 days."
+    "explanation": "Paying the full INR 65,300 now would drop your balance below the required INR 113,400 minimum, so the plan is to wait and pay it in full on 15 January 2026."
   },
   "usage": {
-    "input_tokens": 535,
-    "output_tokens": 63
+    "input_tokens": 565,
+    "output_tokens": 66
   },
-  "timestamp": "2026-09-12T23:32:51.597523+00:00"
+  "timestamp": "2026-09-13T03:28:25.747797+00:00"
 }

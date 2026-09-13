@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_38",
-  "content_sha256": "86be901e383c42bf0ca371fea4cbaa55a8ab47f7aac7c5bbea02794408f7e297",
+  "content_sha256": "37f9d8ee679a5ad61986b5756fe1dc7807441a06c8a752694b62e2ca22d23c79",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can safely pay the full EUR 971.30 on 15 September 2025, since paying it sooner would drop your balance below the required EUR 400 minimum."
+    "explanation": "You can safely pay only EUR 171.80 today, so the full EUR 971.30 for this emergency expense will be paid on 15 October 2025, since paying sooner would drop your balance below the EUR 400 minimum."
   },
   "usage": {
-    "input_tokens": 551,
-    "output_tokens": 61
+    "input_tokens": 571,
+    "output_tokens": 82
   },
-  "timestamp": "2026-09-12T23:13:46.345485+00:00"
+  "timestamp": "2026-09-13T03:25:45.617468+00:00"
 }

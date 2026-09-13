@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_240",
-  "content_sha256": "cd1bd93126f00af9a49abd2ec25309513233620523c1780337f8abd1d22a8106",
+  "content_sha256": "28ecd87814ab362c4e7579e8cdf5bf80452be57db376399fc81cb1c13323146c",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The INR 101,200 travel request made on 6 January 2026 cannot be approved because only INR 13,958.68 can be safely paid today while keeping the required INR 52,800 minimum balance, and no full payment is possible within 90 days."
+    "explanation": "The INR 101,200 travel request made on 6 January 2026 isn't affordable right now; only INR 13,958.68 can be safely paid today while keeping the required INR 52,800 minimum balance, and full payment isn't possible within 90 days, so it's not recommended to proceed."
   },
   "usage": {
-    "input_tokens": 545,
-    "output_tokens": 88
+    "input_tokens": 551,
+    "output_tokens": 103
   },
-  "timestamp": "2026-09-12T23:39:42.819703+00:00"
+  "timestamp": "2026-09-13T03:32:57.426495+00:00"
 }

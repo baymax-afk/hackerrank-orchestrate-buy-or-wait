@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_39",
-  "content_sha256": "7b94d551c1e0a7b3bd3c393b537f5e4ffd8f3490d38553fbc98df3dff1ca7456",
+  "content_sha256": "df50667c8c0b0401aeb825df16b7f5603f9649e1baeacd91b1febd3794eabdf5",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Your INR 208,600 housing payment should wait until 15 May 2026, since paying it any earlier would drop your balance below the required minimum of INR 213,400."
+    "explanation": "Since paying the full INR 208,600 now would drop your balance below the required INR 213,400 minimum, it's best to wait and pay the full amount on 15 June 2026."
   },
   "usage": {
-    "input_tokens": 547,
-    "output_tokens": 63
+    "input_tokens": 566,
+    "output_tokens": 66
   },
-  "timestamp": "2026-09-12T23:13:48.750000+00:00"
+  "timestamp": "2026-09-13T03:25:47.839253+00:00"
 }

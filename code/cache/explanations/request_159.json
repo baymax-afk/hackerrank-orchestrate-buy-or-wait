@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_159",
-  "content_sha256": "5d8469e5041b474a7437e1ee872fb2b9933740693e6c53c9854872c0b4751885",
+  "content_sha256": "70ef1b6c988d3c3b8ab0ea90f3c5a31474fd11375b3aa67f2be6bdf0676bd799",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "We can't move forward with the ZAR 13,398 investment request made on 4 January 2026; only ZAR 507.38 can safely be set aside today while keeping the ZAR 8,700 minimum balance, and there's no way to reach the full amount within 90 days before the 20 March 2026 deadline."
+    "explanation": "Investment request_159 for ZAR 13,398 isn't affordable right now; only ZAR 507.38 is safely available today, and there's no way to reach the full amount within 90 days while keeping the required ZAR 8,700 minimum balance, so it's not recommended to proceed."
   },
   "usage": {
-    "input_tokens": 551,
-    "output_tokens": 109
+    "input_tokens": 557,
+    "output_tokens": 102
   },
-  "timestamp": "2026-09-13T03:09:33.485244+00:00"
+  "timestamp": "2026-09-13T03:30:05.025402+00:00"
 }

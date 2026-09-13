@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_178",
-  "content_sha256": "fa2dc61cfce8bd359d4631027b731a558bfbadb1db23226c15f1dfb3f59cf94e",
+  "content_sha256": "0db8a063ec4b16286a4e382e0532fa534f7fa18d90d20be5419b1a30048e60f1",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The EUR 2,938.10 investment request can be covered through 3 installments of EUR 1,018.54 starting 7 December 2024, keeping at least EUR 1,400 in reserve throughout."
+    "explanation": "You can fund the EUR 2,938.10 investment request by paying it in three installments of EUR 1,018.54 on 7 December 2024, 7 January 2025 and 7 February 2025, while always keeping at least EUR 1,400 in your account."
   },
   "usage": {
-    "input_tokens": 580,
-    "output_tokens": 76
+    "input_tokens": 638,
+    "output_tokens": 92
   },
-  "timestamp": "2026-09-12T23:36:29.545932+00:00"
+  "timestamp": "2026-09-13T03:30:46.064365+00:00"
 }

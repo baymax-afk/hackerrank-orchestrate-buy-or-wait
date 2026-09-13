@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_135",
-  "content_sha256": "2434c6f5da14ca9deffd7753a2468a37a2b90781603ca9e3849b1f56e5f8e5cd",
+  "content_sha256": "ef858c85851e0a2e988e84d575fafc17702a9460b7054179b4e8441277dab4c4",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full USD 304.80 housing request today, 6 July 2026, since it's affordable now and still leaves at least USD 500 available over the next 90 days."
+    "explanation": "Stop the video streaming plan, then pay USD 304.80 today toward your housing request, which still leaves at least USD 500 in your account."
   },
   "usage": {
-    "input_tokens": 533,
-    "output_tokens": 64
+    "input_tokens": 565,
+    "output_tokens": 57
   },
-  "timestamp": "2026-09-12T23:34:16.875728+00:00"
+  "timestamp": "2026-09-13T03:29:11.327668+00:00"
 }

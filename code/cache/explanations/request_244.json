@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_244",
-  "content_sha256": "d63c8baac5c35466b58a9572bdd0a8d03d154845b53e099a20d6643687ab9bae",
+  "content_sha256": "d74a4584939d9b23fd6762d2b372427288dd25219675596377ed15a3a0c182dc",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full ZAR 49,918 today, 4 June 2024, and still keep at least ZAR 45,900 in reserve over the next 90 days, well ahead of the 16 July 2024 deadline."
+    "explanation": "You can pay the full ZAR 49,918 today, 4 June 2024, since it still leaves at least ZAR 45,900 available over the next 90 days, well ahead of the 16 July 2024 deadline."
   },
   "usage": {
-    "input_tokens": 549,
-    "output_tokens": 80
+    "input_tokens": 570,
+    "output_tokens": 79
   },
-  "timestamp": "2026-09-12T23:39:55.768744+00:00"
+  "timestamp": "2026-09-13T03:33:05.907566+00:00"
 }

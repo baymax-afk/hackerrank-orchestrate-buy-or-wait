@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_239",
-  "content_sha256": "312bec6d6440d507707b392940b610fd52fe5020147de077e27253b3878c0842",
+  "content_sha256": "0f812947333b969e559a83b893825f776fa69f660f36094f8ebc7712978ccfb6",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can fully fund the USD 642 investment today, 4 May 2025, while still keeping at least USD 600 in reserve over the next 90 days."
+    "explanation": "You can invest USD 642 today, 4 May 2025, in full, while still keeping at least USD 600 available over the next 90 days."
   },
   "usage": {
-    "input_tokens": 525,
-    "output_tokens": 58
+    "input_tokens": 542,
+    "output_tokens": 53
   },
-  "timestamp": "2026-09-12T23:39:39.956955+00:00"
+  "timestamp": "2026-09-13T03:32:54.864514+00:00"
 }

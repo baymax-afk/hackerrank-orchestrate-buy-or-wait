@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_273",
-  "content_sha256": "d624689d107b2616684303f6824bc62fd45da22fabcc8bd090680fea8ff0b043",
+  "content_sha256": "752bdf64a29feabd28838a24f0f0443fd9afd3a5264de8cc8e651cd5eaddde93",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Pay IDR 10,764,260.96 today toward the education request and the remaining IDR 5,096,739.04 on 15 April 2026, fully covering the IDR 15,861,000 needed while keeping your IDR 18,774,600 minimum balance protected."
+    "explanation": "To cover the IDR 15,861,000 education request by 15 June 2026 while keeping your IDR 18,774,600 minimum balance safe, pay IDR 9,561,673.15 today and the remaining IDR 6,299,326.85 on 15 April 2026."
   },
   "usage": {
-    "input_tokens": 601,
-    "output_tokens": 97
+    "input_tokens": 645,
+    "output_tokens": 99
   },
-  "timestamp": "2026-09-12T23:41:49.876127+00:00"
+  "timestamp": "2026-09-13T03:34:09.985964+00:00"
 }

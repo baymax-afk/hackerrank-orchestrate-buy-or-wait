@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_74",
-  "content_sha256": "0da9d4e2ef2584b35c427f38077e249c235d1957af69aed4dc2a34f9c27e60d7",
+  "content_sha256": "13d3af69ddfb4789cce7a94696171889453ee40676638ceccb6503b231af7519",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full ZAR 5,010 today, 4 August 2025, since doing so still leaves at least ZAR 21,900 available over the next 90 days, with no changes needed to your spending."
+    "explanation": "You can pay the full ZAR 5,010 today, 4 August 2025, since it still leaves at least ZAR 21,900 available over the next 90 days, so no changes to spending are needed."
   },
   "usage": {
-    "input_tokens": 550,
-    "output_tokens": 74
+    "input_tokens": 571,
+    "output_tokens": 72
   },
-  "timestamp": "2026-09-12T23:20:40.255847+00:00"
+  "timestamp": "2026-09-13T03:27:00.670293+00:00"
 }

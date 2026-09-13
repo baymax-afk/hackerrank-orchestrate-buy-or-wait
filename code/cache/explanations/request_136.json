@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_136",
-  "content_sha256": "8c49b106b1170de8bafc40f500bf1e088b99af98ef1d1dd02ec2bd6f96ad8b68",
+  "content_sha256": "3704456de3b96f653b64c7a82f6f87313ffa1dc96fcff5b9df83a5151959978e",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "By reducing household shopping to USD 27.20, you can pay the full USD 560.40 education request today, 3 June 2024, while keeping at least USD 1,100 in reserve."
+    "explanation": "Reduce household shopping spending to USD 27.20, then pay the full USD 560.40 education request on 3 June 2024, keeping at least USD 1,100 in reserve."
   },
   "usage": {
-    "input_tokens": 562,
-    "output_tokens": 69
+    "input_tokens": 581,
+    "output_tokens": 68
   },
-  "timestamp": "2026-09-12T23:34:19.139972+00:00"
+  "timestamp": "2026-09-13T03:29:13.864554+00:00"
 }

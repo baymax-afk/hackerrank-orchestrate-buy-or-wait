@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_110",
-  "content_sha256": "22e3e5a4ff5503efff32cc1e0b6dce7926075db870d778c5e68a582077c2b361",
+  "content_sha256": "a6c516a7eb00c1ce2a122c2470a45a38c02113612856eeee236ac41b534bd693",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Your ZAR 22,352 family transfer can be covered through three installments of ZAR 7,748.69 each, starting 6 August 2025 and continuing through 1 October 2025, while keeping at least ZAR 11,200 in reserve."
+    "explanation": "You can cover the ZAR 22,352 family transfer by paying in 3 installments of ZAR 7,748.69 on 6 August 2025, 3 September 2025 and 1 October 2025, keeping at least ZAR 11,200 in your account throughout."
   },
   "usage": {
-    "input_tokens": 584,
-    "output_tokens": 90
+    "input_tokens": 645,
+    "output_tokens": 96
   },
-  "timestamp": "2026-09-12T23:31:30.735198+00:00"
+  "timestamp": "2026-09-13T03:28:17.084911+00:00"
 }

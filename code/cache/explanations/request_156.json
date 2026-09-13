@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_156",
-  "content_sha256": "5f2578ba4be2c1e912fd431eaa7ffcdc5e9ac9aa630923b47731cd1bb268dad5",
+  "content_sha256": "a07adbdd8da6e5de37c759cbe05e58678722becb204f4b21a49c548610798472",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Your ZAR 43,076 education request should wait until 15 May 2026, when it can be paid in full without dropping your balance below the ZAR 26,900 minimum you want to keep."
+    "explanation": "Paying the full ZAR 43,076 education request now would drop your balance below the required minimum of ZAR 26,900, so the plan is to wait and pay it in full on 15 June 2026."
   },
   "usage": {
-    "input_tokens": 556,
-    "output_tokens": 70
+    "input_tokens": 577,
+    "output_tokens": 72
   },
-  "timestamp": "2026-09-12T23:35:34.458967+00:00"
+  "timestamp": "2026-09-13T03:29:58.303144+00:00"
 }

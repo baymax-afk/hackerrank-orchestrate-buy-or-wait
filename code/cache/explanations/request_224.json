@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_224",
-  "content_sha256": "e0704dcb528c9d0da034d8d6041360b5900d22699f8e6613337e39064b828e94",
+  "content_sha256": "ba85a1250ad980c5d55a22f5ef03b8163c0d0aff2dba7ebc24424bdb3e8158bc",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Pay IDR 10,077,298.66 today and the remaining IDR 249,701.34 on 15 February 2025 to fully cover the IDR 10,327,000 travel request while keeping the IDR 22,187,600 minimum balance protected."
+    "explanation": "Pay IDR 10,077,298.66 today and the remaining IDR 249,701.34 on 15 February 2025, which covers the full IDR 10,327,000 travel request by its 16 March 2025 deadline while keeping the IDR 22,187,600 minimum balance protected."
   },
   "usage": {
-    "input_tokens": 599,
-    "output_tokens": 92
+    "input_tokens": 641,
+    "output_tokens": 104
   },
-  "timestamp": "2026-09-12T23:38:51.849167+00:00"
+  "timestamp": "2026-09-13T03:32:23.596001+00:00"
 }

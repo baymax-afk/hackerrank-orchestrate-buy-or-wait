@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_33",
-  "content_sha256": "0a2c20c3d4966c24930ecef8fff008c0b8e6b3fb34b5fb3c2798ccbd1bc8f20e",
+  "content_sha256": "304437b76fb0b16e683761925d4c042fcec232a1ba384adc7a28476b661b9de3",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You should pay the full INR 118,000 for this housing request on 15 February 2026 rather than sooner, since paying earlier would drop your balance below the required minimum of INR 102,100."
+    "explanation": "Your INR 118,000 housing payment should wait until 15 March 2026, since paying it any sooner would drop your balance below the required INR 102,100 minimum."
   },
   "usage": {
-    "input_tokens": 547,
-    "output_tokens": 70
+    "input_tokens": 566,
+    "output_tokens": 63
   },
-  "timestamp": "2026-09-12T23:12:40.572098+00:00"
+  "timestamp": "2026-09-13T03:25:34.761231+00:00"
 }

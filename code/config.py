@@ -50,9 +50,15 @@ ESTIMATOR = os.environ.get("BOW_ESTIMATOR", "median")
 # Minimum number of historical occurrences before a series counts as recurring.
 MIN_OCCURRENCES = 3
 # Interval windows (days) that map to a cadence.
+# name -> (min median interval, max median interval, step days; None = calendar month).
+# 5-, 10- and 21-day cycles are common in the dataset (transport every 5 or 21 days,
+# groceries every 10 days) and are essential spending, so they are projected too.
 CADENCES = {
+    "every_5_days": (4, 5.5, 5),
     "weekly": (6, 8, 7),
+    "every_10_days": (9, 11, 10),
     "biweekly": (13, 15, 14),
+    "every_3_weeks": (20, 22, 21),
     "monthly": (27, 32, None),
 }
 # Income descriptions that are never projected forward (one-off or unconfirmed).
@@ -62,6 +68,10 @@ NON_RECURRING_INCOME_PATTERN = (
     r"project payment|contract payment|milestone|invoice|retainer|independent work"
 )
 # Whether message-stated salary amounts override the settled history (False = history mode wins; messages still move dates/stop series).
+# Experiment: apply same-day debits before same-day credits when looking for the balance
+# minimum. Off by default: it reproduces two samples exactly but breaks two others (see
+# research/synthesis.md addendum), so end-of-day netting stays the shipped behaviour.
+INTRADAY_DEBITS_FIRST = os.environ.get("BOW_INTRADAY_DEBITS_FIRST", "0") == "1"
 SALARY_MESSAGE_AMOUNTS = os.environ.get("BOW_SALARY_MESSAGE_AMOUNTS", "0") == "1"
 # Income descriptions that end a salary series.
 FINAL_INCOME_PATTERN = r"final"

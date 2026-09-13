@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_200",
-  "content_sha256": "ecaf06557986cf648281ca59d6ad41aa25ba76ed093cbfa876a6776bf0119d48",
+  "content_sha256": "029dd28effe876475d909e284ab420ebd1f66adfadd51919b3d236317b76b26b",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full IDR 21,717,000 today, 6 February 2025, and still keep at least IDR 20,114,600 available over the next 90 days, so no spending changes are needed."
+    "explanation": "You can pay the full IDR 21,717,000 purchase today, 6 February 2025, while still keeping at least IDR 20,114,600 in reserve over the next 90 days."
   },
   "usage": {
-    "input_tokens": 553,
-    "output_tokens": 71
+    "input_tokens": 575,
+    "output_tokens": 68
   },
-  "timestamp": "2026-09-12T23:37:39.970551+00:00"
+  "timestamp": "2026-09-13T03:31:31.496681+00:00"
 }

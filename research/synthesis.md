@@ -137,3 +137,25 @@ only passes when that rent is outside the window). request_10's amount also show
 on day 84 *is* counted. No sample separates 84 from 86, so `HORIZON_DAYS = 86`, the longest
 (financially safest) window consistent with every sample, is shipped; the deterministic
 explanations keep the specification's "90 days" wording.
+
+## Addendum (2026-09-13, later): recurrence cadences, salary evidence, intra-day ordering
+
+* **5-, 10- and 21-day cadences.** Dataset-wide, 131 grocery series recur every 10 days, 148
+  transport series every 21 days and 46 every 5 days (perfect gaps over 16-36 occurrences). They
+  were silently dropped by the weekly/biweekly/monthly detector. Projecting them makes request_03
+  (1.20M -> 875k vs 873k) and request_24 (18.5k -> 13.6k vs 13.4k) near-exact and moves 02/07/11/
+  18/20 toward the labels; 06 and 25 overshoot by about one occurrence (realisation noise). With
+  all three cadences the 90-day horizon would score 17/25 on status; 86 days scores 21-22/25.
+* **Salary messages.** An employer notice that states the new level *and* an effective date
+  ("naik menjadi ... berlaku mulai 2025-08-15", request_02) is adopted from that payroll date
+  onwards (`RecurringSeries.amount_after`); a bare "confirmed base salary" that contradicts the
+  settled history and has no effective date (request_11, message_08) is not. A confirmed
+  *resumed* salary (`salary_first`, request_14) now overrides the non-monthly-history guard that
+  previously suppressed the whole income series after a leave gap.
+* **Intra-day ordering** (`INTRADAY_DEBITS_FIRST`, off). Applying same-day debits before the
+  salary credit reproduces request_04 and request_13 exactly (weekly series on payday) but breaks
+  request_19 and request_23 (monthly family support on payday, where the label is above even the
+  end-of-day estimate). Mean amount error 0.031 -> 0.045, so end-of-day netting is shipped.
+
+Sample agreement after these changes: status 22/25, method 23/25, plan 22/25, earliest 23/25,
+changes 22/25, mean relative amount error 0.0315 (from 20/23/20/18 and 0.041 at session start).

@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_49",
-  "content_sha256": "7fe8f63fb86bf32f5bd960f5709b7d76c0796a0c3c926018bcf5e8cf61d7b370",
+  "content_sha256": "6b6d4b80085647b7c3f08dfe355ec410896bedb895eb18c811ca40345dea912d",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The IDR 34,333,000 travel request due 22 May 2024 cannot be paid without dropping below the required IDR 20,275,700 minimum balance, so payment is not recommended and no payment plan is available within 90 days."
+    "explanation": "Your travel request for IDR 34,333,000 due 22 May 2024 cannot be paid without dropping below the required minimum balance of IDR 20,275,700, so no payment method is recommended and only IDR 12,740,772.14 is currently safe to use."
   },
   "usage": {
-    "input_tokens": 545,
-    "output_tokens": 84
+    "input_tokens": 551,
+    "output_tokens": 95
   },
-  "timestamp": "2026-09-12T23:15:18.571330+00:00"
+  "timestamp": "2026-09-13T03:26:09.642286+00:00"
 }

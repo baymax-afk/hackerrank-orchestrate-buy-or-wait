@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_192",
-  "content_sha256": "c6363ff4c29751d5739e2e2036a8cd0186da8d77bb4bb69a4138b6140ecc9cde",
+  "content_sha256": "71e9f55d60bf95966a9a6599e0997e39b665730dffec9b8f24d9bfaf333710b3",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Your USD 2,046 education request due 11 May 2026 can't be safely paid, as doing so would drop your balance below the required USD 1,000 minimum; even paying just USD 221.77 today isn't recommended, and no full-payment date is available within 90 days."
+    "explanation": "Your education request for USD 2,046 due 11 May 2026 cannot be paid, since only USD 81.84 is safe to use today without dropping below the required USD 1,000 minimum balance, so no payment plan or full payment date could be arranged."
   },
   "usage": {
-    "input_tokens": 530,
-    "output_tokens": 96
+    "input_tokens": 536,
+    "output_tokens": 90
   },
-  "timestamp": "2026-09-12T23:37:04.298692+00:00"
+  "timestamp": "2026-09-13T03:31:14.285349+00:00"
 }

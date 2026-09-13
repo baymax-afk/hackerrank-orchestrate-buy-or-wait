@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_99",
-  "content_sha256": "71a243042e70807a2f3d544afdfdf163656cbea533ed2de5f7ad990feabc2fff",
+  "content_sha256": "5d067acf4abd3128269040742ecbc10dd9ddfbcced044d98afa11a2aaa87b876",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full ZAR 18,062 emergency expense today, 4 July 2026, while still keeping at least ZAR 49,100 in reserve over the next 90 days, with no changes to your spending needed."
+    "explanation": "By stopping the family streaming plan, you can pay the full ZAR 18,062 emergency expense today, 4 July 2026, while keeping at least ZAR 49,100 in reserve."
   },
   "usage": {
-    "input_tokens": 550,
-    "output_tokens": 79
+    "input_tokens": 586,
+    "output_tokens": 72
   },
-  "timestamp": "2026-09-12T23:24:52.893357+00:00"
+  "timestamp": "2026-09-13T03:27:53.186126+00:00"
 }

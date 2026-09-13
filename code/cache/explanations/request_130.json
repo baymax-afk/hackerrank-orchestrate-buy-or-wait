@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_130",
-  "content_sha256": "c3db90d5b640ad492bc77809a049038b634b48335c9ced11bc9a231ea60ad1a9",
+  "content_sha256": "b4c9c3daf9f6d0c1c9c73ce796fc2359ca1285c9bf53c58056538369510b4529",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Because paying now would drop your balance below the USD 1,400 minimum you need to keep, this USD 1,978.80 family transfer is scheduled to be paid in full on 15 February 2025 instead."
+    "explanation": "You can safely send only USD 360.60 today without dipping below the USD 1,400 minimum balance, so the full USD 1,978.80 family transfer will instead be paid on 15 February 2025."
   },
   "usage": {
-    "input_tokens": 554,
-    "output_tokens": 76
+    "input_tokens": 575,
+    "output_tokens": 74
   },
-  "timestamp": "2026-09-12T23:33:59.197440+00:00"
+  "timestamp": "2026-09-13T03:28:58.983861+00:00"
 }

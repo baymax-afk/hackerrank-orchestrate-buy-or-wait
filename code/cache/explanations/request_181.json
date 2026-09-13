@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_181",
-  "content_sha256": "50c6dfe00945efc8ce8fe8f7fbf837489d4452c183521e380ee0170f7d3151fb",
+  "content_sha256": "d117c04e68722a39d0f544461d354348b91c895a4167f4c509854dd5dc7db6b1",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "We can't recommend making the USD 5,059.20 investment payment by 7 April 2024, since doing so would drop your balance below the required USD 2,000 minimum; only USD 286.75 is safe to allocate today, with no viable payment plan available."
+    "explanation": "You can't afford the USD 5,059.20 investment request due by 7 April 2024, since paying it would drop you below the required USD 2,000 minimum balance, so no payment method is recommended at this time."
   },
   "usage": {
-    "input_tokens": 533,
-    "output_tokens": 91
+    "input_tokens": 539,
+    "output_tokens": 75
   },
-  "timestamp": "2026-09-12T23:36:36.790980+00:00"
+  "timestamp": "2026-09-13T03:30:52.689447+00:00"
 }

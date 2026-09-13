@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_116",
-  "content_sha256": "76be9f409565a0cf2ee24b05af58aaae3c2b98d9e28ff005bec080df2ddbc219",
+  "content_sha256": "077d1501f8c77f2c096b6403af2cec3f5fd7e847a324fb9b0cd9f2f925f5ee55",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The requested family transfer of INR 241,200 by 16 April 2025 is not affordable, since paying it would drop your balance below the required INR 80,300 minimum; only INR 9,875.95 can safely be paid today, so no payment plan or full-payment date within 90 days is available."
+    "explanation": "The requested family transfer of INR 241,200 due by 16 April 2025 cannot be made without dropping below the required INR 80,300 minimum balance, so only INR 9,875.95 is safe to pay today and no payment plan is recommended."
   },
   "usage": {
-    "input_tokens": 536,
-    "output_tokens": 102
+    "input_tokens": 542,
+    "output_tokens": 89
   },
-  "timestamp": "2026-09-12T23:32:56.889468+00:00"
+  "timestamp": "2026-09-13T03:28:30.095984+00:00"
 }

@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_140",
-  "content_sha256": "f58102d0c93c9b330559e7619f7f505465b163305163c0f3789d605d2124e545",
+  "content_sha256": "1b302b0052b4fc8e1320668bc491ab4f45829eab2e69df3c935b80525589857b",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You requested ZAR 62,832 for an emergency expense by 4 March 2025, but only ZAR 1,348.69 can be safely paid today, so this payment is not affordable and is not recommended, as it would breach the required ZAR 21,600 minimum balance."
+    "explanation": "Your emergency expense request for ZAR 62,832 due 4 March 2025 cannot be paid without dropping below the required ZAR 21,600 minimum balance, so payment is not recommended and only ZAR 1,348.69 is safe to pay today, with no full payment possible within 90 days."
   },
   "usage": {
-    "input_tokens": 545,
-    "output_tokens": 97
+    "input_tokens": 551,
+    "output_tokens": 107
   },
-  "timestamp": "2026-09-12T23:34:30.274876+00:00"
+  "timestamp": "2026-09-13T03:29:22.067219+00:00"
 }

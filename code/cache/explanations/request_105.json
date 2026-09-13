@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_105",
-  "content_sha256": "2dcb10ef12e9d351f2c38c6f833f6a7c3163f8ba50d33656a626858568d67aa0",
+  "content_sha256": "b9572e547aa411cf4027cc01a8b7fc6ecf9387bb78b0a677218e0a5bf82ac564",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full INR 53,500 debt today, 8 June 2026, while still keeping at least INR 73,900 in reserve for the next 90 days, so no spending changes are needed."
+    "explanation": "By trimming household shopping to INR 1,632 and entertainment to INR 1,720, you can pay the full INR 53,500 debt today, 8 June 2026, while keeping at least INR 73,900 in reserve."
   },
   "usage": {
-    "input_tokens": 540,
-    "output_tokens": 71
+    "input_tokens": 622,
+    "output_tokens": 82
   },
-  "timestamp": "2026-09-12T23:31:15.944966+00:00"
+  "timestamp": "2026-09-13T03:28:05.763697+00:00"
 }

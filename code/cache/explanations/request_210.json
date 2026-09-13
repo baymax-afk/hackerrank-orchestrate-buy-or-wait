@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_210",
-  "content_sha256": "5c42a088288a5d8c9e2d4e22e11242841abc59dbfca08eb0f1938c37ab01e3b2",
+  "content_sha256": "8a39156230c92859ff3711c280d864822e7e99bebf34df787ecd4622428712bb",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "To cover the USD 1,360.02 emergency expense while keeping the USD 2,000 minimum balance intact, pay USD 954.88 today, 6 April 2026, and the remaining USD 405.14 on 15 April 2026, fully settling the request."
+    "explanation": "Pay USD 838.09 today and the remaining USD 521.93 on 15 April 2026 to cover the USD 1,360.02 emergency expense in full, while keeping your USD 2,000 minimum balance protected."
   },
   "usage": {
-    "input_tokens": 580,
-    "output_tokens": 95
+    "input_tokens": 614,
+    "output_tokens": 83
   },
-  "timestamp": "2026-09-12T23:38:07.401208+00:00"
+  "timestamp": "2026-09-13T03:31:52.605146+00:00"
 }

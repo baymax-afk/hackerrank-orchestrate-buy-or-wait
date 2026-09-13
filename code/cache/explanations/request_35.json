@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_35",
-  "content_sha256": "38ff0ac18ca91ff4cf06e22d6d0000d7efe47756133b99f6b3da6ee55fa33abb",
+  "content_sha256": "8cc6fced00d8f6d17767e1a281eff473a5c85746f58b4a013a527c404f06eee6",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You should wait and pay the full INR 212,000 on 15 January 2026, since paying it sooner would drop your balance below the required minimum of INR 106,400."
+    "explanation": "You'll need to wait and pay the full INR 212,000 on 15 January 2026, since paying any sooner would drop your balance below the required INR 106,400 minimum."
   },
   "usage": {
-    "input_tokens": 547,
-    "output_tokens": 62
+    "input_tokens": 566,
+    "output_tokens": 65
   },
-  "timestamp": "2026-09-12T23:13:38.905357+00:00"
+  "timestamp": "2026-09-13T03:25:38.994583+00:00"
 }

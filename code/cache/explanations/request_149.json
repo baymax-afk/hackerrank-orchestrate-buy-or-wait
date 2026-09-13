@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_149",
-  "content_sha256": "dd7b2752011344b7e17d2d7f2e825f037089307c6e21c78cdaa4604d968190c0",
+  "content_sha256": "9532c313b087032c2fd6da732fcfcb3784a78fc3a84e9ea9b3fda71e0d7df616",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Your ZAR 36,652 travel request can be covered through 3 installments of ZAR 12,706.03 on 18 November 2025, 16 December 2025 and 13 January 2026, keeping at least ZAR 42,100 in your account throughout."
+    "explanation": "Your ZAR 36,652 travel request can be covered by paying in 3 installments of ZAR 12,706.03 each on 18 November 2025, 16 December 2025, and 13 January 2026, while keeping at least ZAR 42,100 in your account."
   },
   "usage": {
-    "input_tokens": 583,
-    "output_tokens": 93
+    "input_tokens": 644,
+    "output_tokens": 95
   },
-  "timestamp": "2026-09-12T23:35:00.463125+00:00"
+  "timestamp": "2026-09-13T03:29:42.088146+00:00"
 }

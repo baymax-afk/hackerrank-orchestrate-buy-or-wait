@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_257",
-  "content_sha256": "af64efcc59d18377207cf5b6ccfbf83b397db36d80ab95a9e16f40b28c99e753",
+  "content_sha256": "9c90d34eb12d02d3a4a787160e60458b1f2a3f7b05d4018653d3a3eb26e3b84e",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You'll pay USD 1,352.40 in full on 15 December 2025, since paying sooner would drop your balance below the required USD 1,600 minimum, and this stays within the 15 January 2026 deadline."
+    "explanation": "You should wait and pay the full USD 1,352.40 on 15 January 2026, since paying any sooner would drop your balance below the required minimum of USD 1,600."
   },
   "usage": {
-    "input_tokens": 550,
-    "output_tokens": 79
+    "input_tokens": 571,
+    "output_tokens": 64
   },
-  "timestamp": "2026-09-12T23:40:33.149398+00:00"
+  "timestamp": "2026-09-13T03:33:33.610273+00:00"
 }

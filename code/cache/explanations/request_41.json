@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_41",
-  "content_sha256": "392c9744905b33e2adf3c2a60542e3d4395b25bf2a3409e539ace95159767345",
+  "content_sha256": "8accc8e26a803dd79cbd4814c77d898399bdbacf7a5d46e74d697ca0fe5679f2",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The full IDR 38,760,000 payment should wait until 15 December 2025, since paying it sooner would drop the balance below the required minimum of IDR 25,366,600."
+    "explanation": "The full IDR 38,760,000 payment for request_41 will wait until 15 January 2026, since paying any sooner would drop the balance below the required minimum of IDR 25,366,600."
   },
   "usage": {
-    "input_tokens": 567,
-    "output_tokens": 66
+    "input_tokens": 589,
+    "output_tokens": 71
   },
-  "timestamp": "2026-09-12T23:13:56.261127+00:00"
+  "timestamp": "2026-09-13T03:25:51.911394+00:00"
 }

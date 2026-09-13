@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_270",
-  "content_sha256": "e2033d2fd70a750d4e6f82b1c353709b087a0532dcef8fb10a3c78d722d626bc",
+  "content_sha256": "c96bba77f9b9391aa2a8bc55187e783f9de1e415ac35e5f09621e3eefccd3a53",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Investing USD 3,028.80 by 30 August 2026 isn't recommended, since even the safe-to-pay amount of USD 164.05 today can't protect your required USD 1,400 minimum balance, and no full-payment date is possible within 90 days."
+    "explanation": "The USD 3,028.80 investment requested by 30 August 2026 isn't affordable, since only USD 100.88 can be safely paid today without breaching the required USD 1,400 minimum balance, so this payment is not recommended and no payment plan is available."
   },
   "usage": {
-    "input_tokens": 533,
-    "output_tokens": 94
+    "input_tokens": 539,
+    "output_tokens": 93
   },
-  "timestamp": "2026-09-12T23:41:42.876006+00:00"
+  "timestamp": "2026-09-13T03:34:01.683726+00:00"
 }

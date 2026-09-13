@@ -83,7 +83,7 @@ def decide_request(request: Request, ds: Dataset, svc: Services) -> tuple[Decisi
     bal = profile.current_available_balance
     minimum = profile.minimum_balance_to_keep
     tl = build_timeline(bal, flows)
-    trace.timeline = [(d.isoformat(), str(b)) for d, b in tl.points]
+    trace.timeline = [(d.isoformat(), str(b)) for d, _, b in tl.points]
     safe = amount_safe_today(tl, request.request_date, minimum, request.requested_amount)
     earliest = earliest_full_payment(tl, request.request_date, minimum, request.requested_amount)
 

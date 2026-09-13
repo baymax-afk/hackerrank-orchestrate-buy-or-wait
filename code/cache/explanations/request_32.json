@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_32",
-  "content_sha256": "f27cf73aa1516f9441d243c36a66a4cf09fa5761a93f1bff89f3ab1652df6d49",
+  "content_sha256": "39430d4ad63533fcd542a46323a1ba18fe5097a70fd8bf2eda348211252df35a",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Your ZAR 40,018 travel request can't be paid today without dropping below the ZAR 35,700 minimum balance, so the plan is to wait and pay it in full on 15 April 2025."
+    "explanation": "You can safely pay ZAR 40,018 in full only by 15 April 2025, since paying sooner would drop your balance below the required minimum of ZAR 35,700; no spending changes are needed."
   },
   "usage": {
-    "input_tokens": 557,
+    "input_tokens": 578,
     "output_tokens": 74
   },
-  "timestamp": "2026-09-12T23:11:48.205302+00:00"
+  "timestamp": "2026-09-13T03:25:32.611763+00:00"
 }

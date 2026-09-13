@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_117",
-  "content_sha256": "79bc7c0afd9143fa3304cc813ba9e462e06a0737b601f32f3b84041c6c1af22b",
+  "content_sha256": "459212beddc8b377e132a1513adea58db5456496b9459f0aa1e350368d3bc42d",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full EUR 880 housing request today, 5 July 2026, since it's affordable now and still leaves at least EUR 1,000 available over the next 90 days."
+    "explanation": "To cover the EUR 880 housing payment due 5 July 2026, stop the family streaming plan and cut bakery and snacks spending to EUR 20.50, which lets you pay in full today while keeping the required EUR 1,000 minimum balance."
   },
   "usage": {
-    "input_tokens": 534,
-    "output_tokens": 66
+    "input_tokens": 602,
+    "output_tokens": 92
   },
-  "timestamp": "2026-09-12T23:33:18.923824+00:00"
+  "timestamp": "2026-09-13T03:28:32.073512+00:00"
 }

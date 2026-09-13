@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_77",
-  "content_sha256": "6e088c4e7e9d414bdf40e8ab53367fb275057095b0f7eef6db81c6cd2e574ca1",
+  "content_sha256": "b5406ea642af3bad6ff371bb33fa62256aef9abd8a33245403a6c70739b82a24",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Your INR 60,700 housing payment should wait until 15 November 2025, since paying it sooner would drop your balance below the required INR 82,200 minimum."
+    "explanation": "Your INR 60,700 housing payment will be made in full on 15 November 2025, since paying it any earlier would drop your balance below the required minimum of INR 82,200."
   },
   "usage": {
-    "input_tokens": 547,
-    "output_tokens": 62
+    "input_tokens": 566,
+    "output_tokens": 65
   },
-  "timestamp": "2026-09-12T23:20:50.635064+00:00"
+  "timestamp": "2026-09-13T03:27:07.085485+00:00"
 }

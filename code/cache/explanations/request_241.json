@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_241",
-  "content_sha256": "f25eebf79f215be0f2e5cb2f229a635fadd38eec2e4045ab3dc2e15488635552",
+  "content_sha256": "abf28f22353a000b67b3375e4e7c940eac53d3aa3f058776e544750a7fc876a1",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Request_241's family transfer of IDR 21,052,000 can be covered by paying in 3 installments of IDR 7,298,026.67 starting 17 March 2024, with the last due 18 May 2024, while always keeping at least IDR 19,252,000 in the account."
+    "explanation": "You can cover the IDR 21,052,000 family transfer by paying it in 3 installments of IDR 7,298,026.67 on 17 March 2024, 17 April 2024 and 18 May 2024, while keeping at least IDR 19,252,000 in your account throughout."
   },
   "usage": {
-    "input_tokens": 592,
-    "output_tokens": 99
+    "input_tokens": 656,
+    "output_tokens": 101
   },
-  "timestamp": "2026-09-12T23:39:45.919286+00:00"
+  "timestamp": "2026-09-13T03:32:59.807462+00:00"
 }

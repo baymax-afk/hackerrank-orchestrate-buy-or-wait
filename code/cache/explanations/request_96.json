@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_96",
-  "content_sha256": "c9b88761f3731ddad97a1e57d2d4e65b47327291968831c0f02ecce98cbbe62c",
+  "content_sha256": "89774021123468923c00714358ed04c4ea07024a257ab62cadcd96ca502cc111",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can't afford the INR 90,200 purchase by 12 March 2026 without dipping below the required INR 56,500 minimum balance, so this payment is not recommended at this time."
+    "explanation": "You shouldn't make the INR 90,200 purchase by 12 March 2026, since paying it would drop you below the required minimum balance of INR 56,500; only INR 72,489.96 can safely be paid today, so no payment plan is currently recommended."
   },
   "usage": {
-    "input_tokens": 534,
-    "output_tokens": 68
+    "input_tokens": 540,
+    "output_tokens": 92
   },
-  "timestamp": "2026-09-12T23:24:43.614197+00:00"
+  "timestamp": "2026-09-13T03:27:47.256309+00:00"
 }

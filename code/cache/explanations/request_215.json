@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_215",
-  "content_sha256": "f76b0a5d29163ff7d93491ccbec05f4af6b84a64fb1b17fe7a47e9669933d28f",
+  "content_sha256": "986d1dbf45fed8ebb9f9e190b0e1c4c7bf0d5574c2fec9bbec068d517c6c8fa1",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Your ZAR 29,986 investment request can be funded through 3 installments of ZAR 10,395.15 starting 9 May 2025, on 9 May, 6 June, and 4 July 2025, while keeping at least ZAR 15,700 in your account."
+    "explanation": "Your ZAR 29,986 investment request can be covered by paying in 3 installments of ZAR 10,395.15 on 9 May 2025, 6 June 2025, and 4 July 2025, all while keeping at least ZAR 15,700 in your account."
   },
   "usage": {
-    "input_tokens": 581,
+    "input_tokens": 642,
     "output_tokens": 95
   },
-  "timestamp": "2026-09-13T03:09:40.332273+00:00"
+  "timestamp": "2026-09-13T03:32:03.586995+00:00"
 }

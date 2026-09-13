@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_113",
-  "content_sha256": "230b0200b15f6008d5e85854f43572134ce90fc890b8991879f62c3830508d8a",
+  "content_sha256": "f30663f04dab8031859d24f76810b97dbc84a42064d0e0687d91809c614af6b2",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Paying the full INR 36,500 today would drop your balance below the required INR 82,300 minimum, so the plan is to wait and pay it in full on 15 September 2026, ahead of the 19 October 2026 deadline."
+    "explanation": "You should wait and pay the full INR 36,500 on 15 October 2026, since paying sooner would drop your balance below the required minimum of INR 82,300."
   },
   "usage": {
-    "input_tokens": 551,
-    "output_tokens": 83
+    "input_tokens": 570,
+    "output_tokens": 61
   },
-  "timestamp": "2026-09-12T23:32:49.216311+00:00"
+  "timestamp": "2026-09-13T03:28:23.628375+00:00"
 }

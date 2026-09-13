@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_73",
-  "content_sha256": "d3c3630b42c91e20aef3192f9ac9cfe55ec12e9f52cf7657e6e9a8dd92d498b4",
+  "content_sha256": "02b7be063d2bc17af051cb10b2f408e6cdedaea7451b90c94b26d7c3a21e0ec6",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Since your emergency expense of INR 71,400 is affordable now, it will be paid in full on 20 January 2023, keeping at least INR 103,200 available over the next 90 days."
+    "explanation": "Your emergency expense of INR 71,400 can be paid in full today, 20 January 2023, while keeping at least INR 103,200 available over the next 90 days."
   },
   "usage": {
-    "input_tokens": 540,
-    "output_tokens": 69
+    "input_tokens": 559,
+    "output_tokens": 63
   },
-  "timestamp": "2026-09-12T23:20:37.727300+00:00"
+  "timestamp": "2026-09-13T03:26:58.520200+00:00"
 }

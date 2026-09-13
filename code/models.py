@@ -181,6 +181,8 @@ class RecurringSeries:
     flexibility: str
     minimum_allowed_amount: Optional[Decimal]
     occurrences: int
+    # optional step change: occurrences on/after this date use amount_after (e.g. a confirmed salary rise)
+    amount_after: Optional[tuple[date, Decimal]] = None
 
 
 @dataclass(frozen=True)

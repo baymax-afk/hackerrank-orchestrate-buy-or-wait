@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_188",
-  "content_sha256": "ed6cbb41b4adff77d85d54327513f8485974246b5dfe53996e9ef207c10732bd",
+  "content_sha256": "4b219653f8db23c5bb1729db4ec8ddff9c611eff3de69df55021b4307dec8cf8",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You requested EUR 2,464 for the family transfer due 4 March 2025, but paying it would drop your balance below the required EUR 900 minimum, so only EUR 107.55 is safe to pay today and this payment is not recommended at this time."
+    "explanation": "The request for EUR 2,464 by 4 March 2025 cannot be made because it would drop the balance below the required EUR 900 minimum, and no payment plan can fully cover it within 90 days; only EUR 107.55 is currently safe to pay."
   },
   "usage": {
-    "input_tokens": 534,
-    "output_tokens": 89
+    "input_tokens": 540,
+    "output_tokens": 92
   },
-  "timestamp": "2026-09-12T23:36:54.013771+00:00"
+  "timestamp": "2026-09-13T03:31:06.929784+00:00"
 }

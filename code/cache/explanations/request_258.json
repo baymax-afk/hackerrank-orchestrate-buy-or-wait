@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_258",
-  "content_sha256": "562d863bc068ab3af52c2ae228978c7267099b4706c751979d8cd25755803bbe",
+  "content_sha256": "3417305623596b3247253f3cc9eb4af95df3b870f8c5b116199718f8bed89072",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can fully invest USD 1,113.60 on 7 January 2026 while still keeping at least USD 500 in reserve over the next 90 days, so the full payment is being made today."
+    "explanation": "You can fully invest USD 1,113.60 today, 7 January 2026, well ahead of the 22 January 2026 deadline, while still keeping at least USD 500 available over the next 90 days."
   },
   "usage": {
-    "input_tokens": 540,
-    "output_tokens": 68
+    "input_tokens": 561,
+    "output_tokens": 74
   },
-  "timestamp": "2026-09-12T23:40:35.744615+00:00"
+  "timestamp": "2026-09-13T03:33:35.788191+00:00"
 }

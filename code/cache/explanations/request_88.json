@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_88",
-  "content_sha256": "5f5b22c36277f345a1f7ebb42a1971f84382c68217e9495ec7ac6fd54b06feac",
+  "content_sha256": "fd09941e5baa9bed4ac901bfece7e948d8625b393024bb14a88a04e0e787c3b1",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "To cover the ZAR 26,092 housing request by 25 August 2024 while keeping at least ZAR 25,800 available, the plan splits payment into 3 installments of ZAR 9,045.23 each, starting 14 June 2024, then 15 July 2024 and 15 August 2024."
+    "explanation": "To cover the ZAR 26,092 housing request by 25 August 2024 while keeping at least ZAR 25,800 available, the plan splits payment into three installments of ZAR 9,045.23 on 14 June, 15 July and 15 August 2024."
   },
   "usage": {
-    "input_tokens": 583,
-    "output_tokens": 107
+    "input_tokens": 644,
+    "output_tokens": 94
   },
-  "timestamp": "2026-09-12T23:24:16.090342+00:00"
+  "timestamp": "2026-09-13T03:27:31.251645+00:00"
 }

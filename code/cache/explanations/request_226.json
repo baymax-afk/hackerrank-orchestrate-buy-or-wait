@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_226",
-  "content_sha256": "14743ba14d051195b0cf4b03d0da37679d9e1bef2a47e23400ba5800edc46832",
+  "content_sha256": "5abc7399c1fbae90a5fa96fbbf360cf04ce427b32f94b77940b3826cda418483",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full INR 157,000 today, 3 December 2024, well ahead of the 15 January 2025 deadline, while still keeping at least INR 209,400 in reserve over the next 90 days."
+    "explanation": "You can pay the full INR 157,000 today, 3 December 2024, well ahead of the 15 January 2025 deadline, while still keeping at least INR 209,400 available over the next 90 days."
   },
   "usage": {
-    "input_tokens": 535,
-    "output_tokens": 77
+    "input_tokens": 554,
+    "output_tokens": 74
   },
-  "timestamp": "2026-09-12T23:39:01.302634+00:00"
+  "timestamp": "2026-09-13T03:32:27.373145+00:00"
 }

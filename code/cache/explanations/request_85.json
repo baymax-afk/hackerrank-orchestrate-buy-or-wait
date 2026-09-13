@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_85",
-  "content_sha256": "4860ac8949fe0e2ab0f8e7355162f4aefa23917798aa03eff7522c0ef4245380",
+  "content_sha256": "b1457eaaedc8e6376744cf87678d5271ec55676a90da24b882068da746139cd0",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The housing request for IDR 19,304,000 due 26 April 2024 cannot be paid because doing so would drop your balance below the required minimum of IDR 6,396,300, so no payment is recommended and only IDR 370,165.51 is currently safe to use."
+    "explanation": "The IDR 19,304,000 housing request due 26 April 2024 isn't affordable, since paying it would drop your balance below the required minimum of IDR 6,396,300, so this payment is not recommended and no payment plan is currently available."
   },
   "usage": {
-    "input_tokens": 543,
-    "output_tokens": 95
+    "input_tokens": 549,
+    "output_tokens": 87
   },
-  "timestamp": "2026-09-12T23:24:08.216973+00:00"
+  "timestamp": "2026-09-13T03:27:24.811226+00:00"
 }

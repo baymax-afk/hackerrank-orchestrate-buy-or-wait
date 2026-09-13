@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_269",
-  "content_sha256": "1f33f4e0547ce530a48729f9bac206f09c0257f41482412fcebd9364ad2bd75e",
+  "content_sha256": "c7859c777a712c9abc1c99b513e93e3bc40ae1412a1eef0eac53c43386160780",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can safely pay the full ZAR 15,490 family transfer on 15 November 2025, since paying any earlier would drop your balance below the required ZAR 23,100 minimum."
+    "explanation": "The full ZAR 15,490 family transfer should be paid on 15 November 2025, since paying it any sooner would drop the balance below the required minimum of ZAR 23,100."
   },
   "usage": {
-    "input_tokens": 560,
-    "output_tokens": 69
+    "input_tokens": 581,
+    "output_tokens": 68
   },
-  "timestamp": "2026-09-12T23:41:39.893061+00:00"
+  "timestamp": "2026-09-13T03:33:59.380250+00:00"
 }
