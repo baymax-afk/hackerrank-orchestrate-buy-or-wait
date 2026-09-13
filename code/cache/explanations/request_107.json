@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_107",
-  "content_sha256": "04faa4b6b80a35a146b559ed08c51ac2ff8df34aa3c7a2e717c4719da3f264d8",
+  "content_sha256": "6c9610af4b70a4c1b12b651cf36afdc4833e168b94b87d80e01f0ad9a68b1790",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The housing request for EUR 2,534.40 due 4 July 2025 cannot be paid without dropping below the required EUR 1,600 minimum balance, so no payment is recommended and no full payment date is available within 90 days."
+    "explanation": "The housing request for EUR 2,534.40 due by 4 July 2025 isn't affordable right now, since paying it would drop your balance below the required EUR 1,600 minimum, so payment isn't recommended and no full payment is possible within the next 90 days."
   },
   "usage": {
     "input_tokens": 545,
-    "output_tokens": 83
+    "output_tokens": 94
   },
-  "timestamp": "2026-09-13T03:28:10.334057+00:00"
+  "timestamp": "2026-09-13T03:43:52.249234+00:00"
 }

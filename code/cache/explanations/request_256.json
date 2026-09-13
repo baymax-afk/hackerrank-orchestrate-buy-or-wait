@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_256",
-  "content_sha256": "0f428f84dd4d9f45deeebb26484cfad26c998fedbec48ba8bc0bc0f0b1f44eab",
+  "content_sha256": "026bc5aeffde558ba935d0afc0f1a9dcef8e4851f20671b742498c100c3ca61d",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "To fund the INR 218,700 investment by 19 August 2024, pay it off in 3 installments of INR 75,816 starting 10 June 2024, then 11 July 2024 and 11 August 2024, keeping at least INR 168,600 in reserve throughout."
+    "explanation": "To fund the INR 218,700 investment by 19 August 2024, you'll pay in 3 installments of INR 75,816 on 10 June, 11 July and 11 August 2024, keeping at least INR 168,600 in reserve throughout, with no other spending changes needed."
   },
   "usage": {
     "input_tokens": 614,
-    "output_tokens": 98
+    "output_tokens": 100
   },
-  "timestamp": "2026-09-13T03:33:31.341565+00:00"
+  "timestamp": "2026-09-13T03:44:47.977248+00:00"
 }

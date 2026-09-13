@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_44",
-  "content_sha256": "569e4b0d3477c8cfe7fe868a86d398bc9d1f54868edb31e9d313b3b7c93d8fba",
+  "content_sha256": "969c01adbf657c34c0a30fb1e3a8bbfe02898cb5e148513c351e7538b3fca020",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Since paying the INR 95,800 education request now would drop your balance below the INR 82,900 minimum, it's best to wait and pay the full amount on 15 April 2025."
+    "explanation": "Since paying the full INR 95,800 now would drop your balance below the required INR 82,900 minimum, it's best to wait and pay the full amount on 15 April 2025."
   },
   "usage": {
     "input_tokens": 565,
     "output_tokens": 66
   },
-  "timestamp": "2026-09-13T03:25:58.324586+00:00"
+  "timestamp": "2026-09-13T03:43:16.698714+00:00"
 }

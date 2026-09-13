@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_204",
-  "content_sha256": "554f78fcef38e9fc9279d829669843c6a7b25435a7bdd8827af9a458e3596ec8",
+  "content_sha256": "f692b1d823ddc01319ad36589ebc0a90035406c6b5f5274bdaa37b1e2f0c7e1f",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Your EUR 588.74 housing payment will be made in full on 15 January 2026, since paying it sooner would drop your balance below the required EUR 1,300 minimum."
+    "explanation": "You should wait and pay the full EUR 588.74 housing request on 15 January 2026, since paying any earlier would drop your balance below the required EUR 1,300 minimum."
   },
   "usage": {
     "input_tokens": 571,
-    "output_tokens": 66
+    "output_tokens": 67
   },
-  "timestamp": "2026-09-13T03:31:39.695095+00:00"
+  "timestamp": "2026-09-13T03:44:26.689298+00:00"
 }

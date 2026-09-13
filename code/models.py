@@ -166,6 +166,9 @@ class CashFlow:
     series_id: Optional[str] = None
     category: str = ""
     description: str = ""
+    # True for debits that are paid out of the same day's credits (monthly bills co-dated with
+    # payday); False for variable spending that must be covered by the balance carried into the day
+    after_credits: bool = False
 
 
 @dataclass(frozen=True)

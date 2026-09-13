@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_153",
-  "content_sha256": "f11bd3844dc9ced8e159925a00b25c6eb33db7fabe0b295b52ba18c6de6a2af7",
+  "content_sha256": "4e236ef9d4f0a021ff0a5b59c4b9626c34370f2c467d981b1bc7e81e8280f10e",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Request_153, a USD 2,830.80 purchase due 24 September 2026, can't be paid — with only USD 8.57 safely available today, any payment would break the required USD 1,400 minimum balance, so no plan or full payment date is recommended within 90 days."
+    "explanation": "You can't afford the USD 2,830.80 purchase by 24 September 2026, since paying it would drop your balance below the required USD 1,400 minimum, so this payment is not recommended at this time."
   },
   "usage": {
-    "input_tokens": 540,
-    "output_tokens": 96
+    "input_tokens": 538,
+    "output_tokens": 74
   },
-  "timestamp": "2026-09-13T03:29:50.313193+00:00"
+  "timestamp": "2026-09-13T03:44:13.937698+00:00"
 }

@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_119",
-  "content_sha256": "f6a52857ddf78d5127dc0b200f0fc2c6e4a44fe9ccc61d17be36cd8ae15b9109",
+  "content_sha256": "72db6af49ad53426640de0e14c873d2ae8c1d06c9ee43bcb259e553cdc73180c",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You requested INR 203,500 for education by 17 July 2025, but paying this would drop your balance below the required INR 151,200 minimum, so the payment is currently not recommended and only INR 58,982.44 can be safely paid today."
+    "explanation": "You requested INR 203,500 for education by 17 July 2025, but paying it would drop you below your required minimum balance of INR 151,200, so this payment is not recommended and no full-payment date is available within 90 days."
   },
   "usage": {
     "input_tokens": 538,
-    "output_tokens": 85
+    "output_tokens": 79
   },
-  "timestamp": "2026-09-13T03:28:35.933695+00:00"
+  "timestamp": "2026-09-13T03:44:01.273389+00:00"
 }

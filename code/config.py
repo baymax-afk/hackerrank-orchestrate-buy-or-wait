@@ -68,10 +68,11 @@ NON_RECURRING_INCOME_PATTERN = (
     r"project payment|contract payment|milestone|invoice|retainer|independent work"
 )
 # Whether message-stated salary amounts override the settled history (False = history mode wins; messages still move dates/stop series).
-# Experiment: apply same-day debits before same-day credits when looking for the balance
-# minimum. Off by default: it reproduces two samples exactly but breaks two others (see
-# research/synthesis.md addendum), so end-of-day netting stays the shipped behaviour.
-INTRADAY_DEBITS_FIRST = os.environ.get("BOW_INTRADAY_DEBITS_FIRST", "0") == "1"
+# Within a day, variable spending (sub-monthly series) is applied before that day's credits,
+# while monthly bills co-dated with payday are paid out of the salary (CashFlow.after_credits).
+# Calibrated on the samples (research/synthesis.md addendum): reproduces request_04/13 without
+# breaking request_19/23; set BOW_INTRADAY_DEBITS_FIRST=0 for plain end-of-day netting.
+INTRADAY_DEBITS_FIRST = os.environ.get("BOW_INTRADAY_DEBITS_FIRST", "1") == "1"
 SALARY_MESSAGE_AMOUNTS = os.environ.get("BOW_SALARY_MESSAGE_AMOUNTS", "0") == "1"
 # Income descriptions that end a salary series.
 FINAL_INCOME_PATTERN = r"final"

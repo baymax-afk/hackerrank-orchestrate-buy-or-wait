@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_73",
-  "content_sha256": "02b7be063d2bc17af051cb10b2f408e6cdedaea7451b90c94b26d7c3a21e0ec6",
+  "content_sha256": "2c4ae93c2cb6e39bdcb80450ed2018a9795de7a3f7056acdea7804235beab9f7",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Your emergency expense of INR 71,400 can be paid in full today, 20 January 2023, while keeping at least INR 103,200 available over the next 90 days."
+    "explanation": "To keep your balance above the required minimum of INR 103,200, the full INR 71,400 emergency expense will be paid on 15 February 2023 rather than by the 13 February 2023 deadline, as paying earlier isn't affordable."
   },
   "usage": {
-    "input_tokens": 559,
-    "output_tokens": 63
+    "input_tokens": 570,
+    "output_tokens": 87
   },
-  "timestamp": "2026-09-13T03:26:58.520200+00:00"
+  "timestamp": "2026-09-13T03:43:28.625652+00:00"
 }

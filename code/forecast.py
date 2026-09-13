@@ -44,7 +44,7 @@ def build_timeline(start_balance: Decimal, flows: Iterable[CashFlow], extra: Ite
     debits: dict[date, Decimal] = defaultdict(Decimal)
     for f in flows:
         by_day[f.date] += f.amount
-        if f.amount < 0:
+        if f.amount < 0 and not f.after_credits:
             debits[f.date] += f.amount
     for d, amt in extra:
         # plan payments are made once the day's credits have landed (end of day)

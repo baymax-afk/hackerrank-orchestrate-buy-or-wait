@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_103",
-  "content_sha256": "82fa8a493d27bfaf4533a598f16494208abb23dd3d00c20af9bf6ca973e10d17",
+  "content_sha256": "f5ddbd6e962d0769222cd7d887d482d4abbfa8280cd04ed96e56c916d73a0d84",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The requested travel payment of INR 368,300 due by 7 October 2024 cannot be made without dropping below the required minimum balance of INR 125,500, so it is marked not affordable with no recommended payment method or plan at this time."
+    "explanation": "You cannot afford the INR 368,300 travel payment requested on 7 September 2024 by the 7 October 2024 deadline, since no payment option keeps your required minimum balance of INR 125,500 protected, so no payment is recommended at this time."
   },
   "usage": {
-    "input_tokens": 539,
-    "output_tokens": 84
+    "input_tokens": 535,
+    "output_tokens": 91
   },
-  "timestamp": "2026-09-13T03:28:01.861835+00:00"
+  "timestamp": "2026-09-13T03:43:47.730582+00:00"
 }

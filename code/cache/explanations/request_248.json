@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_248",
-  "content_sha256": "f137d5dd90f388bfb6de8c7edea05c4b805d577ce18a72adbef0a4f50146a734",
+  "content_sha256": "e1efbf552856d773c1b024fd4239ab3c0be427f3749c75eacfe657aafc129d01",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The USD 1,965.60 investment request made on 7 February 2025 isn't affordable; while USD 366.40 is safely available today, funding the full amount within 90 days would breach the required minimum balance of USD 1,300, so proceeding is not recommended."
+    "explanation": "The USD 1,965.60 investment request made on 7 February 2025 cannot be approved because, after keeping the required USD 1,300 minimum balance, only USD 309.36 is safely available today and the full amount cannot be paid within 90 days, so it is not affordable."
   },
   "usage": {
     "input_tokens": 551,
-    "output_tokens": 94
+    "output_tokens": 98
   },
-  "timestamp": "2026-09-13T03:33:14.144094+00:00"
+  "timestamp": "2026-09-13T03:44:45.661670+00:00"
 }

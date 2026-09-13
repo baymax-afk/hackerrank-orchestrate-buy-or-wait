@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_245",
-  "content_sha256": "c31096d8c5ebdc21a56aab609aff7c96cb7a7fbcbc1e9abc89a1245f75dfa11b",
+  "content_sha256": "e616738a09a72eb476b40227daad8d29671e396df59d52d65f08249d884605b3",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can pay the full INR 128,500 on 15 January 2026, since paying it earlier would drop your balance below the required minimum of INR 94,600."
+    "explanation": "The full INR 128,500 emergency expense will be paid on 15 January 2026, since paying it sooner would drop your balance below the required minimum of INR 94,600."
   },
   "usage": {
     "input_tokens": 570,
-    "output_tokens": 59
+    "output_tokens": 64
   },
-  "timestamp": "2026-09-13T03:33:08.009918+00:00"
+  "timestamp": "2026-09-13T03:44:43.329673+00:00"
 }

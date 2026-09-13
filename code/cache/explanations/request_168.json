@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_168",
-  "content_sha256": "d94903f3a9a46601a706e88551e158c3cedfee542190b5b99b147f38c0b4ce29",
+  "content_sha256": "af6612ccc99181eff613aa92767b7d0c104aa757bd4761ce2cbbf75162ad8906",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Your INR 49,380 housing request will be paid in two parts while keeping your INR 114,400 minimum balance safe: INR 30,785.54 today, 7 January 2026, and the remaining INR 18,594.46 on 15 February 2026, completing the payment before the 16 March 2026 deadline."
+    "explanation": "Since paying the full INR 49,380 now would dip below your required INR 114,400 balance, pay INR 27,714.48 today and the remaining INR 21,665.52 on 15 February 2026 to fully cover the housing request while keeping your minimum balance protected."
   },
   "usage": {
     "input_tokens": 620,
-    "output_tokens": 111
+    "output_tokens": 97
   },
-  "timestamp": "2026-09-13T03:30:24.367204+00:00"
+  "timestamp": "2026-09-13T03:44:22.949785+00:00"
 }

@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_86",
-  "content_sha256": "6722f873d3ba0e884f6d9ca99423993fbbdcfaca72d675e99adf2a6a1c129593",
+  "content_sha256": "9eea2b81c65e98296ee0cb696f2b0a7b3c5e0be1b942403e522d2c187dce52bb",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can fully pay the INR 46,300 travel request today, 3 August 2025, while still keeping at least INR 84,900 in reserve, so no spending changes are needed."
+    "explanation": "By trimming the online retail purchases down to INR 2,360, you can pay the full INR 46,300 travel request today (3 August 2025) while keeping at least INR 84,900 in reserve."
   },
   "usage": {
-    "input_tokens": 555,
-    "output_tokens": 66
+    "input_tokens": 584,
+    "output_tokens": 73
   },
-  "timestamp": "2026-09-13T03:27:26.904029+00:00"
+  "timestamp": "2026-09-13T03:43:39.367202+00:00"
 }

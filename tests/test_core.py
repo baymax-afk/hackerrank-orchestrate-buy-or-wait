@@ -225,11 +225,15 @@ def test_minimum_balance_protected_end_of_day():
     from models import CashFlow
 
     rd = date(2026, 3, 3)
-    flows = [CashFlow(date(2026, 3, 10), D("-2500"), "recurring", "e1"), CashFlow(date(2026, 3, 10), D("2500"), "recurring_income", "e2")]
+    # a monthly bill co-dated with payday is paid out of that salary (nets end-of-day) ...
+    flows = [CashFlow(date(2026, 3, 10), D("-2500"), "recurring", "e1", after_credits=True), CashFlow(date(2026, 3, 10), D("2500"), "recurring_income", "e2")]
     ok, m = plan_is_safe(D("3000"), flows, [(rd, D("2000"))], rd, D("1000"))
     assert ok and m == D("1000")
     ok2, _ = plan_is_safe(D("3000"), flows, [(rd, D("2001"))], rd, D("1000"))
     assert not ok2
+    # ... while variable spending on payday must be covered by the balance carried into the day
+    variable = [CashFlow(date(2026, 3, 10), D("-2500"), "recurring", "e1"), flows[1]]
+    assert not plan_is_safe(D("3000"), variable, [(rd, D("2000"))], rd, D("1000"))[0]
 
 
 def test_add_months_clamps_day():
@@ -272,3 +276,22 @@ def test_salary_rise_with_effective_date_applies_from_that_payroll():
     undated = EvidenceFact("salary_amount", "message", "m2", "messages.csv", amount=D("150"), currency="EUR")
     s2 = detect_salary_series(hist, [], {}, [undated], _d(2025, 8, 5), notes)
     assert s2.amount == D("100") and s2.amount_after is None
+
+
+def test_intraday_variable_spending_precedes_payday_credit_but_monthly_bills_do_not():
+    from datetime import date as _d
+
+    from forecast import build_timeline
+    from models import CashFlow
+
+    config.INTRADAY_DEBITS_FIRST = True
+    payday = _d(2026, 3, 15)
+    salary = CashFlow(payday, D("1000"), "recurring_income", "s")
+    groceries = CashFlow(payday, D("-100"), "recurring", "g", after_credits=False)
+    childcare = CashFlow(payday, D("-200"), "recurring", "c", after_credits=True)
+    tl = build_timeline(D("500"), [salary, groceries, childcare])
+    # groceries must be covered by the 500 carried in; childcare is paid from the salary
+    assert tl.min_from(_d(2026, 3, 1)) == D("400") and tl.balance_on(payday) == D("1200")
+    config.INTRADAY_DEBITS_FIRST = False
+    assert build_timeline(D("500"), [salary, groceries, childcare]).min_from(_d(2026, 3, 1)) == D("500")
+    config.INTRADAY_DEBITS_FIRST = True

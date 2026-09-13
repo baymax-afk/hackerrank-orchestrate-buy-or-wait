@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_39",
-  "content_sha256": "df50667c8c0b0401aeb825df16b7f5603f9649e1baeacd91b1febd3794eabdf5",
+  "content_sha256": "f24009ec28c274852f75831c7fe3857e0a7ddc75e86d659383e78984b7d7a7c6",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Since paying the full INR 208,600 now would drop your balance below the required INR 213,400 minimum, it's best to wait and pay the full amount on 15 June 2026."
+    "explanation": "Your housing payment of INR 208,600 is best made in full on 15 June 2026, since paying it any earlier would drop your balance below the required minimum of INR 213,400."
   },
   "usage": {
     "input_tokens": 566,
     "output_tokens": 66
   },
-  "timestamp": "2026-09-13T03:25:47.839253+00:00"
+  "timestamp": "2026-09-13T03:43:14.485724+00:00"
 }

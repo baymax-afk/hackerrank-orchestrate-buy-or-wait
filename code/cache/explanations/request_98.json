@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_98",
-  "content_sha256": "dc95d341058674e27726f2e97377c10d15db52d8d443019e04fe3057796a0809",
+  "content_sha256": "e5aaff54ff1e30cd6c504f24f6bbee18063a3e5d6302055ff9841661a14ce11c",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Since paying the full ZAR 27,148 now would drop your balance below the required ZAR 30,000 minimum, it's best to wait and pay the full amount on 15 October 2025, the deadline."
+    "explanation": "Your ZAR 27,148 travel request from 7 August 2025 will be paid in full on 15 October 2025, since paying any sooner would drop your balance below the required minimum of ZAR 30,000."
   },
   "usage": {
     "input_tokens": 578,
-    "output_tokens": 75
+    "output_tokens": 77
   },
-  "timestamp": "2026-09-13T03:27:51.035552+00:00"
+  "timestamp": "2026-09-13T03:43:44.352607+00:00"
 }

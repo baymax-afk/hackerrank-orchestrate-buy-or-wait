@@ -215,5 +215,6 @@ def project_series(series: list[RecurringSeries], request_date: date, facts: lis
             amount = q2(amount * rent_scale)
         for d in _project(s.anchor, s.cadence, s.step_days, request_date, end):
             amt = s.amount_after[1] if s.amount_after and d >= s.amount_after[0] else amount
-            flows.append(CashFlow(d, amt if s.is_income else -amt, "recurring_income" if s.is_income else "recurring", s.series_id, s.series_id, s.category, s.description))
+            flows.append(CashFlow(d, amt if s.is_income else -amt, "recurring_income" if s.is_income else "recurring", s.series_id, s.series_id, s.category, s.description,
+                                  after_credits=(not s.is_income and s.cadence == "monthly")))
     return flows

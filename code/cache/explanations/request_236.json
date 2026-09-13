@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_236",
-  "content_sha256": "16c6c173006c4d0d7a8e9caa93a433cf4df4fb1ab2f813d20ddf003b3e9b5b99",
+  "content_sha256": "8fd70736a7bc48d2834e95961b400e5d24316c78e668d238a992626da60dae18",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The requested IDR 52,383,000 housing payment due by 23 February 2025 isn't affordable; only IDR 5,829,585.58 can safely be paid today while keeping the required IDR 16,768,600 minimum balance, and full payment isn't feasible within 90 days, so it's not recommended to proceed."
+    "explanation": "The housing request of IDR 52,383,000 due by 23 February 2025 isn't affordable; only IDR 4,968,130.55 can be safely paid today while keeping the required IDR 16,768,600 minimum balance, and the full amount can't be completed within 90 days, so no payment is recommended."
   },
   "usage": {
     "input_tokens": 566,
-    "output_tokens": 114
+    "output_tokens": 109
   },
-  "timestamp": "2026-09-13T03:32:48.752246+00:00"
+  "timestamp": "2026-09-13T03:44:41.149086+00:00"
 }

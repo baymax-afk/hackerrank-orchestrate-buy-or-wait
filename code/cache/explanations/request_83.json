@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_83",
-  "content_sha256": "3cd00faccd3a2cf9187eacb0aa86ff9c74c045ea0fa1557194c08fc21c6f73cb",
+  "content_sha256": "8be26a726886a7552beed982dfd4f143c93108043d1ab7136461e7fd6438b4f1",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The family transfer of INR 156,200 requested for 7 May 2025 cannot be made by the 17 June 2025 deadline, since only INR 7,528.95 can be safely paid today while keeping the required minimum balance of INR 37,800 protected."
+    "explanation": "The requested INR 156,200 family transfer due by 17 June 2025 cannot be made safely, since paying it would breach the required minimum balance of INR 37,800; even paying today only INR 5,683.55 is safe, so no payment plan is recommended."
   },
   "usage": {
     "input_tokens": 542,
     "output_tokens": 93
   },
-  "timestamp": "2026-09-13T03:27:20.409878+00:00"
+  "timestamp": "2026-09-13T03:43:37.134731+00:00"
 }

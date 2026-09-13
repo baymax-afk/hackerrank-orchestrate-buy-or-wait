@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_232",
-  "content_sha256": "3093459fc1fd268fe6550630ad99ef6859503db66a1e7d7965818b69bd80913b",
+  "content_sha256": "8893160254da9fb0de8c7c9095ef6d021f58de12ed4e842b30dce9414861018d",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You should wait and pay the full EUR 1,970.10 travel request on 15 August 2024, since paying any sooner would drop your balance below the required EUR 2,400 minimum."
+    "explanation": "Since paying the EUR 1,970.10 travel request now would drop your balance below the EUR 2,400 minimum, it's best to wait and pay the full amount on 15 August 2024."
   },
   "usage": {
     "input_tokens": 578,
-    "output_tokens": 69
+    "output_tokens": 71
   },
-  "timestamp": "2026-09-13T03:32:39.977274+00:00"
+  "timestamp": "2026-09-13T03:44:38.782525+00:00"
 }

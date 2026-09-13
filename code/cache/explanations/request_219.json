@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_219",
-  "content_sha256": "64f320adbe1ad6d506379105a15290d5160a6c59d094401856d323471678f0f4",
+  "content_sha256": "389876e893a802b13ea128a49db1b93b69dfe6579aeb556696ec0a89a6d92603",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "To cover the EUR 1,673.10 education request by 13 June 2026 while keeping at least EUR 1,100 in reserve, the plan splits payment into 3 installments of EUR 580.01 on 7 April, 7 May, and 6 June 2026."
+    "explanation": "Since the full EUR 1,673.10 isn't safely available at once while keeping the EUR 1,100 minimum balance, the education request will be paid in 3 installments of EUR 580.01 each, starting 7 April 2026, with the remaining payments on 7 May 2026 and 6 June 2026, before the 13 June 2026 deadline."
   },
   "usage": {
     "input_tokens": 624,
-    "output_tokens": 96
+    "output_tokens": 124
   },
-  "timestamp": "2026-09-13T03:32:12.747378+00:00"
+  "timestamp": "2026-09-13T03:44:34.356365+00:00"
 }

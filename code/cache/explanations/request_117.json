@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_117",
-  "content_sha256": "459212beddc8b377e132a1513adea58db5456496b9459f0aa1e350368d3bc42d",
+  "content_sha256": "544fce51de20ad6b3a1986b4c1bcaf82e05da5cd9698f47bc74aff285c20a132",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "To cover the EUR 880 housing payment due 5 July 2026, stop the family streaming plan and cut bakery and snacks spending to EUR 20.50, which lets you pay in full today while keeping the required EUR 1,000 minimum balance."
+    "explanation": "By trimming the family streaming plan to EUR 11 and bakery/snacks spending to EUR 20.50, you can pay the full EUR 880 housing request on 5 July 2026 while keeping at least EUR 1,000 in reserve."
   },
   "usage": {
-    "input_tokens": 602,
-    "output_tokens": 92
+    "input_tokens": 615,
+    "output_tokens": 90
   },
-  "timestamp": "2026-09-13T03:28:32.073512+00:00"
+  "timestamp": "2026-09-13T03:43:56.486020+00:00"
 }

@@ -241,3 +241,17 @@ def test_explanation_grounding_ignores_trailing_separators():
     ok = ExplainAgent._grounded("Wait and pay EUR 1,302.40 on 15 July 2024, since paying earlier drops below the EUR 1,100 minimum.", facts, d, "EUR")
     invented = ExplainAgent._grounded("Wait and pay EUR 1,302.40 on 15 July 2024, keeping EUR 1,250 spare above the EUR 1,100 minimum.", facts, d, "EUR")
     assert ok and not invented
+
+
+def test_search_changes_prefers_the_smallest_total_cut():
+    """Stopping a small subscription plus trimming another beats stopping a larger one outright
+    when both make the plan safe (sample request_21)."""
+    prof = make_profile(reduce=frozenset({"streaming"}), stop=frozenset({"streaming", "cloud_storage"}))
+    series = [_series("streaming", "47", "reducible_or_stoppable", "23.5"), _series("cloud_storage", "11", "stoppable")]
+    flows = _flows_for(series)
+    n = len([f for f in flows if f.series_id == "event_streaming"])
+    # shortfall of 31 per occurrence: stop streaming (47) works, but stop cloud (11) + reduce streaming (23.5) cuts less
+    payment = D("3000") - D("1000") - (D("58") * n) + D("31") * n
+    best = search_changes(flows, series, prof, [(date(2026, 3, 3), payment)], date(2026, 3, 3), D("1000"), D("3000"))
+    assert best is not None
+    assert [c.render() for c in best[0]] == ["stop:event_cloud_storage", "reduce_to:event_streaming:23.50"]

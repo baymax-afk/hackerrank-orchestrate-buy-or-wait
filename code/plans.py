@@ -124,7 +124,7 @@ def apply_changes(flows: list[CashFlow], changes: tuple[Change, ...]) -> list[Ca
         elif c.action == "stop":
             continue
         else:
-            out.append(CashFlow(f.date, -c.new_amount, f.kind, f.source_id, f.series_id, f.category, f.description))
+            out.append(CashFlow(f.date, -c.new_amount, f.kind, f.source_id, f.series_id, f.category, f.description, f.after_credits))
     return out
 
 
@@ -137,21 +137,33 @@ def _saving(change: Change, flows: list[CashFlow]) -> Decimal:
 
 
 def search_changes(flows, series, profile, payments, request_date, minimum, start_balance) -> Optional[tuple[tuple[Change, ...], Decimal]]:
+    """Smallest permitted set of spending changes (<= 3) that makes the payments safe.
+
+    Among the safe combinations the one that cuts the least total spending over the horizon wins
+    (the samples prefer stopping a small subscription plus trimming another over stopping a
+    larger one outright); ties go to fewer changes, then to the deterministic id order.
+    """
     acts = permitted_actions(series, profile)
     if not acts:
         return None
     # deterministic order: stops before reductions, larger savings first, then event id
     acts.sort(key=lambda a: (0 if a.action == "stop" else 1, -_saving(a, flows), a.event_id))
     tried = 0
+    best: Optional[tuple[tuple[Decimal, int, tuple[str, ...]], tuple[Change, ...], Decimal]] = None
     for k in (1, 2, 3):
         for combo in itertools.combinations(acts, k):
             if len({c.event_id for c in combo}) < k:
                 continue  # never stop and reduce the same event
             tried += 1
             if tried > config.MAX_CHANGE_COMBINATIONS:
-                return None
+                break
             ok, m = plan_is_safe(start_balance, apply_changes(flows, combo), payments, request_date, minimum)
-            if ok:
-                ordered = tuple(sorted(combo, key=lambda c: (0 if c.action == "stop" else 1, c.event_id)))
-                return ordered, m
-    return None
+            if not ok:
+                continue
+            ordered = tuple(sorted(combo, key=lambda c: (0 if c.action == "stop" else 1, c.event_id)))
+            key = (sum((_saving(c, flows) for c in combo), Decimal(0)), k, tuple(c.event_id for c in ordered))
+            if best is None or key < best[0]:
+                best = (key, ordered, m)
+        if tried > config.MAX_CHANGE_COMBINATIONS:
+            break
+    return (best[1], best[2]) if best else None

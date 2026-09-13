@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_144",
-  "content_sha256": "f98343c57c393e613211bc01b15d7a659b67b790e350dec1bcaecc8a19b91603",
+  "content_sha256": "143cd53dd88de10fc3ade6492ad8dba0ba6048db1daf09d57be98074b7e75c77",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You can fully invest USD 233.34 on 4 July 2026 while still keeping at least USD 600 available over the next 90 days, so no schedule changes or spending cuts are needed."
+    "explanation": "You can pay the full USD 233.34 investment on 15 July 2026, since paying any sooner would drop your balance below the required USD 600 minimum."
   },
   "usage": {
-    "input_tokens": 552,
-    "output_tokens": 70
+    "input_tokens": 561,
+    "output_tokens": 59
   },
-  "timestamp": "2026-09-13T03:29:31.165271+00:00"
+  "timestamp": "2026-09-13T03:44:11.602917+00:00"
 }

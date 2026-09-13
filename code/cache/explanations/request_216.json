@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_216",
-  "content_sha256": "687a17c4c2a66eac3dc2c0e9053298c80d57e3cfc3214eb6edf2ce460b275e53",
+  "content_sha256": "45d98337469f1150e4e5cabffbb655a2a35a23f7dc0224cbca30f566fd55b9f2",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Your USD 3,332.40 travel request can't be paid in full right now without dropping below the USD 1,800 minimum balance, so it's scheduled to be paid in full on 15 September 2026."
+    "explanation": "Since paying the full USD 3,332.40 travel request now would drop your balance below the USD 1,800 minimum, it's best to wait and pay the entire amount on 15 September 2026."
   },
   "usage": {
     "input_tokens": 572,
-    "output_tokens": 74
+    "output_tokens": 71
   },
-  "timestamp": "2026-09-13T03:32:05.522249+00:00"
+  "timestamp": "2026-09-13T03:44:31.461472+00:00"
 }

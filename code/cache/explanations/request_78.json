@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_78",
-  "content_sha256": "3b09d4ceb704ab3cbdd6e46326f58eb941497a95f8777da15cceff9ff1320de6",
+  "content_sha256": "574bfbeaee59b268cda0d142017addab50a55dad0a23b2e19c49b636f513589f",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You should pay the full INR 50,200 on 15 October 2025, since paying earlier would drop your balance below the required minimum of INR 55,200."
+    "explanation": "You can pay the full INR 50,200 on 15 November 2025; paying any sooner would drop your balance below the required minimum of INR 55,200."
   },
   "usage": {
     "input_tokens": 567,
     "output_tokens": 58
   },
-  "timestamp": "2026-09-13T03:27:09.581495+00:00"
+  "timestamp": "2026-09-13T03:43:30.747602+00:00"
 }

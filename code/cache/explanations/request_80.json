@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_80",
-  "content_sha256": "11587f8e1dd22ac6fc49980cf1764ea387eddccf51a66293507d548776058b09",
+  "content_sha256": "7c7d6e5641d85126f40215804430862e8e469a3c7e0b31704d9e8c7d31ce1e2f",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You requested INR 217,500 for debt repayment by 21 February 2025, but paying that would drop your balance below the required INR 121,300 minimum, so this payment is not recommended, with only INR 24,645.51 currently safe to pay and no viable payment plan within 90 days."
+    "explanation": "You can't afford the INR 217,500 debt payment by 21 February 2025 without dropping below your required minimum balance of INR 121,300, so this payment is not recommended, and no full repayment date is available within 90 days."
   },
   "usage": {
     "input_tokens": 543,
-    "output_tokens": 101
+    "output_tokens": 81
   },
-  "timestamp": "2026-09-13T03:27:13.852401+00:00"
+  "timestamp": "2026-09-13T03:43:34.967696+00:00"
 }

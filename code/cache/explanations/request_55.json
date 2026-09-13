@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_55",
-  "content_sha256": "dd355584c46bc43b7cf0d03e20315f58f4c6fb638602bb8b5dd8d789b568318f",
+  "content_sha256": "93a204825cd95647981c1711e8479fb9a0bd07d381e3d32b0daee03e4f5b68f4",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Paying the requested INR 218,600 by 22 August 2026 isn't recommended, since doing so would drop your balance below the required minimum of INR 124,300, and only INR 115,323.48 can safely be paid today."
+    "explanation": "Paying the requested INR 218,600 by 22 August 2026 is not recommended because it would drop your balance below the required minimum of INR 124,300; today only INR 106,306.84 can be safely paid, and no plan achieves full payment within 90 days while keeping that minimum protected."
   },
   "usage": {
     "input_tokens": 542,
-    "output_tokens": 82
+    "output_tokens": 103
   },
-  "timestamp": "2026-09-13T03:26:21.757172+00:00"
+  "timestamp": "2026-09-13T03:43:21.765818+00:00"
 }

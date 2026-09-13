@@ -152,10 +152,17 @@ explanations keep the specification's "90 days" wording.
   settled history and has no effective date (request_11, message_08) is not. A confirmed
   *resumed* salary (`salary_first`, request_14) now overrides the non-monthly-history guard that
   previously suppressed the whole income series after a leave gap.
-* **Intra-day ordering** (`INTRADAY_DEBITS_FIRST`, off). Applying same-day debits before the
-  salary credit reproduces request_04 and request_13 exactly (weekly series on payday) but breaks
-  request_19 and request_23 (monthly family support on payday, where the label is above even the
-  end-of-day estimate). Mean amount error 0.031 -> 0.045, so end-of-day netting is shipped.
+* **Intra-day ordering** (`INTRADAY_DEBITS_FIRST`, on). Applying *all* same-day debits before
+  the salary credit reproduces request_04 and request_13 (weekly series landing on payday) but
+  breaks request_19 and request_23, whose monthly childcare contribution has always shared the
+  payday and is recorded after the salary. The shipped rule therefore treats monthly debit series
+  as paid out of the same day's credits (`CashFlow.after_credits`) and sub-monthly variable
+  spending as needing cover from the balance carried into the day: all four samples agree and
+  the mean amount error falls 0.0315 -> 0.0251 with categorical agreement unchanged.
 
 Sample agreement after these changes: status 22/25, method 23/25, plan 22/25, earliest 23/25,
-changes 22/25, mean relative amount error 0.0315 (from 20/23/20/18 and 0.041 at session start).
+changes 22/25, mean relative amount error 0.0251 (from 20/23/20/18 and 0.041 at session start).
+* **Spending-change selection.** At the label's shortfall on request_21 the label chooses
+  `stop:event_1815|reduce_to:event_1816:23.50` (cut 34.50) over stopping the streaming plan
+  outright (cut 47), so `search_changes` now returns the safe combination with the smallest total
+  cut over the horizon (ties: fewer changes, then id order) instead of the first safe one found.

@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_163",
-  "content_sha256": "ec6913ab290d546c2a8780af1e749da2081a24f32023c4ee82a0fb46b30b6678",
+  "content_sha256": "7e7938764d0e773f4a47b20b8e6a2221da248f7b6452815df6c877f4b909886a",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "To cover the IDR 19,304,000 request by 15 November 2024 while keeping at least IDR 26,728,700 in reserve, the plan splits payment into 3 installments of IDR 6,692,053.33 each, due 10 September, 11 October, and 11 November 2024."
+    "explanation": "To cover the IDR 19,304,000 request by 15 November 2024 while keeping at least IDR 26,728,700 in reserve, the plan splits payment into 3 installments of IDR 6,692,053.33 on 10 September, 11 October, and 11 November 2024."
   },
   "usage": {
     "input_tokens": 654,
-    "output_tokens": 103
+    "output_tokens": 101
   },
-  "timestamp": "2026-09-13T03:30:13.457842+00:00"
+  "timestamp": "2026-09-13T03:44:20.523316+00:00"
 }

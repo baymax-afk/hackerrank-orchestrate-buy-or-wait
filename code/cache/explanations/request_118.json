@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_118",
-  "content_sha256": "1a398fd24ff7f66a864f3915dcd700dd82912ce8dbda49638e026052c26b0116",
+  "content_sha256": "3c5420792a01c0b4c7f964cd33487640d9a978dc6ee079be3971bd53c8e1b34d",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Your EUR 738.10 housing request will be paid in 3 installments of EUR 255.87 starting 7 December 2024, then 7 January 2025 and 7 February 2025, keeping at least EUR 600 in your account throughout."
+    "explanation": "Your EUR 738.10 housing payment will be split into 3 installments of EUR 255.87 starting 7 December 2024, with further payments on 7 January 2025 and 7 February 2025, keeping at least EUR 600 in your account throughout."
   },
   "usage": {
     "input_tokens": 619,
-    "output_tokens": 88
+    "output_tokens": 92
   },
-  "timestamp": "2026-09-13T03:28:33.797166+00:00"
+  "timestamp": "2026-09-13T03:43:58.775451+00:00"
 }

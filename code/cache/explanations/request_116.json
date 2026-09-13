@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_116",
-  "content_sha256": "077d1501f8c77f2c096b6403af2cec3f5fd7e847a324fb9b0cd9f2f925f5ee55",
+  "content_sha256": "bf464fe7770a9e4230c2df9aba62127714017067e48be82b0018962e52a5ede4",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The requested family transfer of INR 241,200 due by 16 April 2025 cannot be made without dropping below the required INR 80,300 minimum balance, so only INR 9,875.95 is safe to pay today and no payment plan is recommended."
+    "explanation": "The requested family transfer of INR 241,200 due by 16 April 2025 cannot be made because paying it would drop the balance below the required minimum of INR 80,300; only INR 6,826.09 is safe to pay today, so no payment plan is recommended at this time."
   },
   "usage": {
     "input_tokens": 542,
-    "output_tokens": 89
+    "output_tokens": 96
   },
-  "timestamp": "2026-09-13T03:28:30.095984+00:00"
+  "timestamp": "2026-09-13T03:43:54.208958+00:00"
 }

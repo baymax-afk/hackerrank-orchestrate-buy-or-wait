@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_36",
-  "content_sha256": "44ba66d848ef14e4f2b3717f9e11564e85f5b111f01b11e61e61477957c2334b",
+  "content_sha256": "6e8a39d1b655da3683601e512c5164da46119fd509a9e10a43cf7b6af102b4bf",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Your USD 3,954 education payment should wait until 15 September 2026, since paying it sooner would drop your balance below the required USD 2,400 minimum."
+    "explanation": "Your USD 3,954 education request should wait until 15 September 2026, when it can be paid in full without dropping your balance below the USD 2,400 minimum you need to keep."
   },
   "usage": {
     "input_tokens": 563,
-    "output_tokens": 61
+    "output_tokens": 66
   },
-  "timestamp": "2026-09-13T03:25:41.224663+00:00"
+  "timestamp": "2026-09-13T03:43:12.222306+00:00"
 }
