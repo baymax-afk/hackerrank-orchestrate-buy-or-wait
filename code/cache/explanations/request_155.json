@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_155",
+  "content_sha256": "2e3c052c9df4ba3ff56c82eed7814d3e4d3d2b333852dcd833672e02c4351064",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You shouldn't make the INR 112,500 purchase payment by 20 May 2025, since paying it would drop your balance below the required minimum of INR 56,300 to keep protected."
+  },
+  "usage": {
+    "input_tokens": 534,
+    "output_tokens": 69
+  },
+  "timestamp": "2026-09-12T23:35:32.127806+00:00"
+}

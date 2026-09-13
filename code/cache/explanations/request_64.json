@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_64",
+  "content_sha256": "644d860c08841c258e8d94fe75f63bb70862d7870bd50da6dceb1b577e4ef2ee",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Paying the INR 63,700 request by 16 August 2024 isn't affordable right now, since doing so would break your required minimum balance of INR 36,100, so no payment is recommended and none can be safely made today."
+  },
+  "usage": {
+    "input_tokens": 528,
+    "output_tokens": 78
+  },
+  "timestamp": "2026-09-12T23:19:30.378724+00:00"
+}

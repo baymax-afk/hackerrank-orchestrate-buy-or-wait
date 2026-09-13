@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_167",
+  "content_sha256": "4fc0fad958c0a6b7dbd61faf2fbc4f22cff6cfad6e718500a5096c97e19b085f",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Your ZAR 43,802 housing payment can be paid in full today, 5 May 2025, while still keeping at least ZAR 31,200 available over the next 90 days, so no spending changes are needed."
+  },
+  "usage": {
+    "input_tokens": 546,
+    "output_tokens": 76
+  },
+  "timestamp": "2026-09-12T23:36:05.108540+00:00"
+}

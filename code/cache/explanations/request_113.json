@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_113",
+  "content_sha256": "230b0200b15f6008d5e85854f43572134ce90fc890b8991879f62c3830508d8a",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Paying the full INR 36,500 today would drop your balance below the required INR 82,300 minimum, so the plan is to wait and pay it in full on 15 September 2026, ahead of the 19 October 2026 deadline."
+  },
+  "usage": {
+    "input_tokens": 551,
+    "output_tokens": 83
+  },
+  "timestamp": "2026-09-12T23:32:49.216311+00:00"
+}

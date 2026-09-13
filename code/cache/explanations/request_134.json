@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_134",
+  "content_sha256": "064c22a0b5ecbdcc4e8595955dd1f965bf79a68153e66d584a0cab192ea59157",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Pay IDR 21,831,000 in full on 15 October 2025, since paying earlier would drop your balance below the required minimum of IDR 15,902,500."
+  },
+  "usage": {
+    "input_tokens": 564,
+    "output_tokens": 63
+  },
+  "timestamp": "2026-09-12T23:34:13.502589+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_150",
+  "content_sha256": "80d35641d94deeebde73247932231ebda8686e417401234a13bbeba733d9b69e",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Your EUR 496.10 education request will be paid in 3 installments of EUR 171.98 starting 6 January 2026, on 5 February 2026 and 7 March 2026, keeping at least EUR 700 in your account."
+  },
+  "usage": {
+    "input_tokens": 566,
+    "output_tokens": 84
+  },
+  "timestamp": "2026-09-12T23:35:05.001692+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_144",
+  "content_sha256": "6d950706b173c3a6ad4dd58867aac9e1cb7138f7b6b548f07b7be4a6b2424ac4",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can invest USD 233.34 today in full, since doing so still keeps at least USD 600 available over the next 90 days, no spending changes needed."
+  },
+  "usage": {
+    "input_tokens": 533,
+    "output_tokens": 57
+  },
+  "timestamp": "2026-09-12T23:34:41.377558+00:00"
+}

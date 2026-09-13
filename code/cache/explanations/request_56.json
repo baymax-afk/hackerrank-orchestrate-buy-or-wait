@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_56",
+  "content_sha256": "21f62db5fe7391164dc75252db647e5ecd234515e91d4e41f3179244d6d69c27",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Pay USD 734.51 today and the remaining USD 147.05 on 15 February 2025 to complete the USD 881.56 purchase, keeping your USD 2,100 minimum balance protected throughout."
+  },
+  "usage": {
+    "input_tokens": 575,
+    "output_tokens": 79
+  },
+  "timestamp": "2026-09-12T23:16:09.409685+00:00"
+}

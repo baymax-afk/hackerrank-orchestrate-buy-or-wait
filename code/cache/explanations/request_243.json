@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_243",
+  "content_sha256": "5209170450cf33398c8323917854d2c81283ef2cefb397fe6302a8ba31540290",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full ZAR 17,468 emergency expense today, 7 July 2026, while still keeping at least ZAR 19,900 in reserve over the next 90 days, so no spending changes are needed."
+  },
+  "usage": {
+    "input_tokens": 550,
+    "output_tokens": 78
+  },
+  "timestamp": "2026-09-12T23:39:52.601016+00:00"
+}

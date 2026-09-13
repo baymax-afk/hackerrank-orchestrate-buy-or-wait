@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_14",
+  "content_sha256": "62c39f7ddb0545285c0551ddb3967175faf4acc4c9146435dfdf554a366a8da1",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You shouldn't make the EUR 5,414.20 payment by 4 October 2025, since paying it would drop your balance below the required EUR 2,200 minimum, so no safe payment amount or plan is currently available."
+  },
+  "usage": {
+    "input_tokens": 539,
+    "output_tokens": 80
+  },
+  "timestamp": "2026-09-12T22:57:56.645952+00:00"
+}

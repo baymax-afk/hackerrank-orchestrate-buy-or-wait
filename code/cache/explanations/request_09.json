@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_09",
+  "content_sha256": "98a5d9467a7c2df0ca0f32c9e85bd0ad635817a470e0c3029f8b92e0ccaef04c",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full EUR 166.61 today, 4 July 2026, and still keep at least EUR 600 in reserve over the next 90 days."
+  },
+  "usage": {
+    "input_tokens": 537,
+    "output_tokens": 58
+  },
+  "timestamp": "2026-09-12T22:57:45.767478+00:00"
+}

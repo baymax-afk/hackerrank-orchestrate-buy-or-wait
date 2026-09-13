@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_30",
+  "content_sha256": "5a0c02d0a7157d2eb828a42351d345797bc02e18799916fb0c031fef0273411d",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can cover the USD 775.20 debt by paying it off in 3 installments of USD 268.74 each, starting 6 April 2026, while always keeping at least USD 900 available."
+  },
+  "usage": {
+    "input_tokens": 566,
+    "output_tokens": 69
+  },
+  "timestamp": "2026-09-12T23:11:42.736347+00:00"
+}

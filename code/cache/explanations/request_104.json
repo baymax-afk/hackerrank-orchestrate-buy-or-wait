@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_104",
+  "content_sha256": "be6ac131a486140d1b749506098519874ec6fc7496dad2f19dec3af33ba41eba",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The requested purchase of ZAR 17,204 due by 15 April 2025 cannot be made because paying it would drop your balance below the required minimum of ZAR 24,700; only ZAR 6,941.13 is safe to use today, so no payment plan is recommended at this time."
+  },
+  "usage": {
+    "input_tokens": 542,
+    "output_tokens": 100
+  },
+  "timestamp": "2026-09-12T23:28:11.417152+00:00"
+}

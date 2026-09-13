@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_259",
+  "content_sha256": "9fa090437451670332d4c908811fb9847c426108a592d0b3adc21781d90a88e4",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You should pay the full EUR 935 on 15 November 2024, since paying any earlier would drop your balance below the required EUR 600 minimum."
+  },
+  "usage": {
+    "input_tokens": 540,
+    "output_tokens": 57
+  },
+  "timestamp": "2026-09-12T23:40:39.209584+00:00"
+}

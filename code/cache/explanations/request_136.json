@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_136",
+  "content_sha256": "8c49b106b1170de8bafc40f500bf1e088b99af98ef1d1dd02ec2bd6f96ad8b68",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "By reducing household shopping to USD 27.20, you can pay the full USD 560.40 education request today, 3 June 2024, while keeping at least USD 1,100 in reserve."
+  },
+  "usage": {
+    "input_tokens": 562,
+    "output_tokens": 69
+  },
+  "timestamp": "2026-09-12T23:34:19.139972+00:00"
+}

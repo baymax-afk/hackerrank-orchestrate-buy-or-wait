@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_271",
+  "content_sha256": "450489fb1e3b3110bc5db7703590f024e8aa57d8fd4c0fd902dbd1cc1aa350c7",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You'll need to wait until 15 November 2024 to pay the full INR 91,300 for this travel request, since paying sooner would drop your balance below the required INR 58,200 minimum."
+  },
+  "usage": {
+    "input_tokens": 547,
+    "output_tokens": 70
+  },
+  "timestamp": "2026-09-12T23:41:45.248123+00:00"
+}

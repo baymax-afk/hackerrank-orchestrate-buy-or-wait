@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_233",
+  "content_sha256": "0c55fe8bb747f25ca16575629ec06d225991339d552632bfb93e5cd49c5963dc",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "To cover the IDR 6,241,000 housing request while keeping your IDR 10,365,700 minimum balance safe, pay IDR 3,755,304.60 today and the remaining IDR 2,485,695.40 on 15 November 2025."
+  },
+  "usage": {
+    "input_tokens": 602,
+    "output_tokens": 91
+  },
+  "timestamp": "2026-09-12T23:39:23.662877+00:00"
+}

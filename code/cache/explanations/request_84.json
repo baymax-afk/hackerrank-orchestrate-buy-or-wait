@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_84",
+  "content_sha256": "6237559698fe891305b5deff4c28117faaf44b31ecfb3c6e8e9b0933ece43f52",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You should wait and pay the full INR 95,400 education request on 15 May 2026, since paying any sooner would drop your balance below the required minimum of INR 91,300."
+  },
+  "usage": {
+    "input_tokens": 546,
+    "output_tokens": 64
+  },
+  "timestamp": "2026-09-12T23:24:04.686973+00:00"
+}

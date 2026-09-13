@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_13",
+  "content_sha256": "61a71aa13c462a43fa925db950f6fa9d57a42239ad468269884055f1345007cd",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The requested EUR 941.60 family transfer due 15 May 2024 cannot be made because paying it would drop the balance below the required EUR 1,300 minimum, so this payment is not recommended and no payment plan is available."
+  },
+  "usage": {
+    "input_tokens": 538,
+    "output_tokens": 82
+  },
+  "timestamp": "2026-09-12T22:57:54.161457+00:00"
+}

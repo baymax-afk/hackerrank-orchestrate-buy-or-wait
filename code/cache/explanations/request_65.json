@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_65",
+  "content_sha256": "14b2677fe977f52f176cc44231e80936a2076a7364815bcea7d1b44e72223990",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The requested ZAR 54,340 cannot be paid by 25 November 2025 while keeping the required ZAR 15,500 minimum balance; only ZAR 6,718.43 is safely available today, so this payment is not recommended and no full-payment date is expected within 90 days."
+  },
+  "usage": {
+    "input_tokens": 554,
+    "output_tokens": 101
+  },
+  "timestamp": "2026-09-12T23:19:32.849507+00:00"
+}

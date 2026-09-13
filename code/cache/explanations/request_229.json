@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_229",
+  "content_sha256": "e86706c356ad3025932c46a2292f3f6ca622571600430fdabca04ee83ac87129",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Your EUR 1,526.80 travel request due 23 May 2024 can't be paid without dropping below the required EUR 1,000 minimum balance, so it's marked not affordable and no payment method or plan is recommended at this time."
+  },
+  "usage": {
+    "input_tokens": 537,
+    "output_tokens": 85
+  },
+  "timestamp": "2026-09-12T23:39:12.461870+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_230",
+  "content_sha256": "47bcc5084f7a75e9b7d655f51c1cd9e42447ef4caeccd3d223829f9b73c75c1f",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full EUR 3,537.60 today, 6 August 2025, and still keep at least EUR 2,000 available over the next 90 days."
+  },
+  "usage": {
+    "input_tokens": 553,
+    "output_tokens": 59
+  },
+  "timestamp": "2026-09-12T23:39:14.628774+00:00"
+}

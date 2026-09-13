@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_48",
+  "content_sha256": "53dfb2e4a09ab8095a3ae9b544710434bd095dfbc346330b7fff69c5b414a82a",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full INR 45,700 family transfer today, 25 July 2026, while keeping at least INR 71,300 in reserve over the next 90 days, so no spending changes are needed."
+  },
+  "usage": {
+    "input_tokens": 539,
+    "output_tokens": 72
+  },
+  "timestamp": "2026-09-12T23:15:15.191032+00:00"
+}

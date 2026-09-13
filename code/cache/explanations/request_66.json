@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_66",
+  "content_sha256": "42ba4c2705747c9bed816e7dedacb66e6d07d2053a4152e8f12f52a3add923f6",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full INR 22,200 emergency expense today, 3 April 2026, while still keeping at least INR 80,700 available over the next 90 days, so no spending changes are needed."
+  },
+  "usage": {
+    "input_tokens": 540,
+    "output_tokens": 71
+  },
+  "timestamp": "2026-09-12T23:19:35.589384+00:00"
+}

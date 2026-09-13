@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_15",
+  "content_sha256": "9d399b66b01259eaf5c74e4a30b89c1f314690468a4eab4b68cd8ddc377474b0",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The EUR 3,685 investment requested on 6 January 2026 isn't affordable by the 1 February 2026 deadline, since only EUR 9.27 can safely be paid today while keeping the required EUR 1,200 minimum balance protected, so no payment plan is recommended."
+  },
+  "usage": {
+    "input_tokens": 535,
+    "output_tokens": 102
+  },
+  "timestamp": "2026-09-12T22:57:59.055167+00:00"
+}

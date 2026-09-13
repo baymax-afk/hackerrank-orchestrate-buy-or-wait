@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_72",
+  "content_sha256": "a9712a018a9e88d372451bd0d56ce0d414696193d7533785f875b4521ffea32c",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full ZAR 11,330 family transfer today, 5 July 2026, while still keeping at least ZAR 12,200 available over the next 90 days."
+  },
+  "usage": {
+    "input_tokens": 549,
+    "output_tokens": 64
+  },
+  "timestamp": "2026-09-12T23:19:50.176944+00:00"
+}

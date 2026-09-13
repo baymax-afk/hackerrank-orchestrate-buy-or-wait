@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_03",
+  "content_sha256": "c9f6a82b8c4934e8701f6a157850445f110de29b47bc40b2a2eadc01b532a065",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Pay IDR 5,491,000 in full on 15 October 2019, ahead of the 15 November 2019 deadline, since paying any earlier would drop your balance below the required minimum of IDR 2,668,700."
+  },
+  "usage": {
+    "input_tokens": 562,
+    "output_tokens": 81
+  },
+  "timestamp": "2026-09-12T22:57:32.522614+00:00"
+}

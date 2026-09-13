@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_256",
+  "content_sha256": "01523775c5b5271bf0359a67ed78c9e061fefc729fd7e7aef74c9068cedf3d19",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "To fund the INR 218,700 investment by 19 August 2024, we recommend paying it in three installments of INR 75,816 on 10 June 2024, 11 July 2024, and 11 August 2024, keeping at least INR 168,600 in reserve throughout."
+  },
+  "usage": {
+    "input_tokens": 565,
+    "output_tokens": 97
+  },
+  "timestamp": "2026-09-12T23:40:29.039215+00:00"
+}

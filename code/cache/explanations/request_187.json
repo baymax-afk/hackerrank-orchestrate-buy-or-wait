@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_187",
+  "content_sha256": "42cf21c1187fb84fd50e1d54c0c3aa198ce7ec5f5a7d230d6f675c96b85f8102",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You should wait and pay the full INR 187,500 on 15 November 2024, since paying any earlier would drop your balance below the required INR 128,300 minimum."
+  },
+  "usage": {
+    "input_tokens": 546,
+    "output_tokens": 62
+  },
+  "timestamp": "2026-09-12T23:36:51.646315+00:00"
+}

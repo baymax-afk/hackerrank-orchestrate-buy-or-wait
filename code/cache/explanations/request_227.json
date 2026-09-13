@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_227",
+  "content_sha256": "aef8f4e5ee71387547015bda2bcffc28c20479c067be78637d3edca44e1604ee",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Paying the full INR 259,700 debt by 20 June 2025 isn't recommended because it would breach your required minimum balance of INR 62,900; at most, only INR 11,056.25 can be safely paid today, with no full-payment plan currently viable within 90 days."
+  },
+  "usage": {
+    "input_tokens": 537,
+    "output_tokens": 98
+  },
+  "timestamp": "2026-09-12T23:39:04.869510+00:00"
+}

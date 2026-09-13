@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_69",
+  "content_sha256": "18b8757867bebd184cf8951d3295cefa2d5259aac48c3a223e84f6836252eb20",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can invest EUR 529.10 in full today, 4 January 2026, since this keeps at least EUR 700 available over the next 90 days."
+  },
+  "usage": {
+    "input_tokens": 538,
+    "output_tokens": 56
+  },
+  "timestamp": "2026-09-12T23:19:43.153482+00:00"
+}

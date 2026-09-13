@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_111",
+  "content_sha256": "b2a40444b456ad59c9f9dae41a77117b9b84f81cd16a7ba08b0b7ac9b51ddf34",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can fully pay off the IDR 16,625,000 debt today, 3 April 2026, while still keeping at least IDR 23,022,800 available over the next 90 days, so no spending changes are needed."
+  },
+  "usage": {
+    "input_tokens": 556,
+    "output_tokens": 76
+  },
+  "timestamp": "2026-09-12T23:31:33.315771+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_254",
+  "content_sha256": "ca6ec44de335c9e8d5d5b7411153b25d38cfb5caa7f621f300e94c3f9a76df62",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full USD 3,535.20 on 15 September 2025, since paying it sooner would drop your balance below the required USD 2,500 minimum."
+  },
+  "usage": {
+    "input_tokens": 550,
+    "output_tokens": 61
+  },
+  "timestamp": "2026-09-12T23:40:22.679129+00:00"
+}

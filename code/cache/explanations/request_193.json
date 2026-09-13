@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_193",
+  "content_sha256": "fee5c93018d87d46ce6f7dae23187d89ac874304c4525bb72fa93bae43c318db",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "To cover the EUR 1,212.20 request by the 28 May 2024 deadline while keeping at least EUR 1,000 in reserve, the plan splits payment into 3 installments of EUR 420.23 starting 21 March 2024, with the final payment on 22 May 2024."
+  },
+  "usage": {
+    "input_tokens": 572,
+    "output_tokens": 103
+  },
+  "timestamp": "2026-09-12T23:37:06.556977+00:00"
+}

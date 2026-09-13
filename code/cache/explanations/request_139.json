@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_139",
+  "content_sha256": "79948bd763d6b923eca9e9c62b017894219bbc8d249b431fe6914805e90b54ef",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You shouldn't pay the USD 2,316 housing request by 17 November 2024, since doing so would drop your balance below the required USD 1,500 minimum, leaving only USD 1,242.60 that could safely be paid today with no viable full-payment plan."
+  },
+  "usage": {
+    "input_tokens": 533,
+    "output_tokens": 94
+  },
+  "timestamp": "2026-09-12T23:34:27.691119+00:00"
+}

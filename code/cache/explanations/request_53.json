@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_53",
+  "content_sha256": "e5ddf55467740ee9ebd3430813efa30aa3c9aeeb3ddf5e9301396d9c9315e975",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "To cover the USD 1,699.20 purchase while keeping at least USD 2,100 in reserve, the plan splits payment into 3 installments of USD 589.06 each, due 21 November 2025, 19 December 2025, and 16 January 2026."
+  },
+  "usage": {
+    "input_tokens": 569,
+    "output_tokens": 93
+  },
+  "timestamp": "2026-09-12T23:15:31.803776+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_205",
+  "content_sha256": "222117769ba676a4e26845ec162a2fec8c3cc194c17ac87f7edb3028bc84cf87",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full IDR 10,621,000 debt today, 6 March 2024, since your balance will still stay above the required minimum of IDR 13,994,300 over the next 90 days, with no changes needed to your spending."
+  },
+  "usage": {
+    "input_tokens": 556,
+    "output_tokens": 82
+  },
+  "timestamp": "2026-09-12T23:37:53.728620+00:00"
+}

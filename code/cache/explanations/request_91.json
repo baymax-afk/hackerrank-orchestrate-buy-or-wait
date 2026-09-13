@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_91",
+  "content_sha256": "7b3f593f4dff4331056d100778f14d808093415d897ba322b47ab49d77f23f0e",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Since paying now would drop the balance below the required EUR 2,100 minimum, the plan is to wait and pay the full EUR 1,927.20 on 15 November 2024."
+  },
+  "usage": {
+    "input_tokens": 560,
+    "output_tokens": 67
+  },
+  "timestamp": "2026-09-12T23:24:25.637643+00:00"
+}

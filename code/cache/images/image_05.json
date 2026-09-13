@@ -1,0 +1,22 @@
+{
+  "source_file": "dataset/media/images/image_05.png",
+  "source_id": "image_05",
+  "target_event_id": "event_1786",
+  "content_sha256": "9abcda5647afb3dcdf91613253ac0160bd722333af33a4b952dfc96fea6ff97b",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "amount": 704.05,
+    "currency": "INR",
+    "field_used": "Amount due till 06-Feb-2026",
+    "document_type": "telecom bill"
+  },
+  "confidence": 0.9,
+  "rationale": "The row is an outstanding telecom bill dated 2026-02-06, matching the 'Amount due till 06-Feb-2026' figure of 704.05, which is also confirmed by the total charges section (704.05).",
+  "usage": {
+    "input_tokens": 2600,
+    "output_tokens": 201
+  },
+  "timestamp": "2026-09-12T23:00:50.389217+00:00"
+}

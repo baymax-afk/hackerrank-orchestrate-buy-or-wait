@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_264",
+  "content_sha256": "a05d420e8abf8c869e84f56542a3f3fa43c03780e9d53dbcb62271863efa580e",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You should pay the full INR 111,300 on 15 May 2026, since paying any sooner would drop your balance below the required minimum of INR 59,500."
+  },
+  "usage": {
+    "input_tokens": 551,
+    "output_tokens": 59
+  },
+  "timestamp": "2026-09-12T23:41:26.554798+00:00"
+}

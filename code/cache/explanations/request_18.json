@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_18",
+  "content_sha256": "0dd0b1536db1d76bdaaaa9a18021a94a54fef087d3cfc06730cc4b54b8773e1f",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You should wait and pay the full EUR 3,246.10 on 15 August 2026, since paying sooner would drop your balance below the required EUR 1,400 minimum."
+  },
+  "usage": {
+    "input_tokens": 555,
+    "output_tokens": 65
+  },
+  "timestamp": "2026-09-12T22:59:07.898832+00:00"
+}

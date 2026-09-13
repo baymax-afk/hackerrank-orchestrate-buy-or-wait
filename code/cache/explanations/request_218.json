@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_218",
+  "content_sha256": "8059aae9cf6f18c761f00f0fd00b341c19f84eaaa5b8a84b6c48b11a74c8158d",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "To cover the IDR 61,142,000 purchase while keeping at least IDR 34,477,200 in reserve, the plan splits payment into 3 installments of IDR 21,195,893.33 each, starting 7 August 2025, with the final installment on 2 October 2025."
+  },
+  "usage": {
+    "input_tokens": 592,
+    "output_tokens": 100
+  },
+  "timestamp": "2026-09-12T23:38:34.856226+00:00"
+}

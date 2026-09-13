@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_105",
+  "content_sha256": "2dcb10ef12e9d351f2c38c6f833f6a7c3163f8ba50d33656a626858568d67aa0",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full INR 53,500 debt today, 8 June 2026, while still keeping at least INR 73,900 in reserve for the next 90 days, so no spending changes are needed."
+  },
+  "usage": {
+    "input_tokens": 540,
+    "output_tokens": 71
+  },
+  "timestamp": "2026-09-12T23:31:15.944966+00:00"
+}

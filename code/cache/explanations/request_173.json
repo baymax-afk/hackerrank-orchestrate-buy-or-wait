@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_173",
+  "content_sha256": "78ef7d24a4779a1f53c5e1cfd5551121198d06e1cd40b1bfecf8bc1a54dc70d5",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "To cover the INR 113,000 family transfer while keeping at least INR 79,100 in reserve, the plan splits payments into 3 installments of INR 39,173.33 on 21 November 2025, 19 December 2025, and 16 January 2026, ahead of the 17 January 2026 deadline."
+  },
+  "usage": {
+    "input_tokens": 576,
+    "output_tokens": 109
+  },
+  "timestamp": "2026-09-12T23:36:18.725866+00:00"
+}

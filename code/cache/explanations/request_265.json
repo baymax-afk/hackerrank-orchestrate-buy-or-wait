@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_265",
+  "content_sha256": "e47ec5c9ba2ee6fd48af3c04ed5d1af9e0e485450f4ceac1a3efa58c82659b85",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The requested family transfer of INR 45,970 cannot be paid by 21 March 2024, since doing so would drop your balance below the required minimum of INR 189,700, so no amount is safe to pay today and no payment plan is recommended."
+  },
+  "usage": {
+    "input_tokens": 532,
+    "output_tokens": 86
+  },
+  "timestamp": "2026-09-12T23:41:29.342926+00:00"
+}

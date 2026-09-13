@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_141",
+  "content_sha256": "9824c2d86e5f1be45691e2945f1b4d3327f5cb624f0d348e487bbc4043bcd258",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The INR 171,600 request made on 3 January 2026 cannot be paid safely; only INR 26,291.17 is available today while keeping the required minimum balance of INR 67,300, and full payment isn't achievable within 90 days, so it is not recommended before the 12 February 2026 deadline."
+  },
+  "usage": {
+    "input_tokens": 544,
+    "output_tokens": 107
+  },
+  "timestamp": "2026-09-12T23:34:32.019178+00:00"
+}

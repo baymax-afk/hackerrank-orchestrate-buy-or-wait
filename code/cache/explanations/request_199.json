@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_199",
+  "content_sha256": "0001e27eeefdb40b4cee96f5e19362c55bda708aade3c43af111356d9e323061",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Your housing payment of IDR 23,674,000 will be paid in 3 installments of IDR 8,206,986.67 starting 7 September 2024, keeping at least IDR 25,359,500 in your account throughout."
+  },
+  "usage": {
+    "input_tokens": 589,
+    "output_tokens": 82
+  },
+  "timestamp": "2026-09-12T23:37:37.910035+00:00"
+}

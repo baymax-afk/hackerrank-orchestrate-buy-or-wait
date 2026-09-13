@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_223",
+  "content_sha256": "b3af2f41a1693af2bf2c889a61274ab4ee6c7b89dd76a942db16ebc86c487603",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full EUR 898.70 today for request_223, since doing so still leaves at least EUR 800 in your account over the next 90 days."
+  },
+  "usage": {
+    "input_tokens": 539,
+    "output_tokens": 57
+  },
+  "timestamp": "2026-09-12T23:38:48.341108+00:00"
+}

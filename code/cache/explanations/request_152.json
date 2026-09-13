@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_152",
+  "content_sha256": "436bd0a7fb12048d55435036d9da3449eb56d4daf5044e6d8ec0acede6576ee2",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Paying the ZAR 13,882 emergency expense by 13 April 2025 isn't recommended, as no option lets you cover it while keeping the required ZAR 11,900 minimum balance protected."
+  },
+  "usage": {
+    "input_tokens": 545,
+    "output_tokens": 76
+  },
+  "timestamp": "2026-09-12T23:35:12.773212+00:00"
+}

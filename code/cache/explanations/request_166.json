@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_166",
+  "content_sha256": "a88ef948fbd00e23f512263dd539575307c4b3e82fd816048fa541600c2d3811",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can cover the USD 2,907.60 request by paying in 3 installments of USD 1,007.97 starting 3 December 2024, keeping at least USD 1,700 in your account throughout, with no changes to spending needed."
+  },
+  "usage": {
+    "input_tokens": 574,
+    "output_tokens": 83
+  },
+  "timestamp": "2026-09-12T23:36:02.906088+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_203",
+  "content_sha256": "b0c4e5157899527ebde83f9d362c38fa9010bd904fbabf28d139c3fc3c784abf",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Request_203's emergency expense of EUR 1,442.10 due 8 July 2025 can't be paid without dropping below the EUR 1,400 minimum balance, so payment is not recommended and no plan is currently feasible."
+  },
+  "usage": {
+    "input_tokens": 541,
+    "output_tokens": 84
+  },
+  "timestamp": "2026-09-12T23:37:48.763840+00:00"
+}

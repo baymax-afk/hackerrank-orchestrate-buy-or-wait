@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_118",
+  "content_sha256": "96b638319c67d7af1687548feb8c2982c355eb384a8d8945c258367dc312a6e3",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Your housing request of EUR 738.10 will be paid in 3 installments of EUR 255.87 starting 7 December 2024, keeping at least EUR 600 available in your account throughout."
+  },
+  "usage": {
+    "input_tokens": 567,
+    "output_tokens": 72
+  },
+  "timestamp": "2026-09-12T23:33:22.156023+00:00"
+}

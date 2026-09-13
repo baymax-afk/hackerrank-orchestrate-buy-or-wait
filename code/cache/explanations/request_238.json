@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_238",
+  "content_sha256": "3486c82773a736a5d4ab76cc9883739f7af03a6c15872739363b13f352261c4d",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can fund the USD 663.60 investment by paying it off in 3 installments of USD 230.05 starting 7 December 2024, keeping at least USD 700 in your account throughout, with no changes to your spending needed."
+  },
+  "usage": {
+    "input_tokens": 562,
+    "output_tokens": 81
+  },
+  "timestamp": "2026-09-12T23:39:37.766891+00:00"
+}

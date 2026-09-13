@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_164",
+  "content_sha256": "c1e326aa6bb20014db46e9cf16247aa30e8a63236a8219e736aa19c5c33a4b03",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can cover the IDR 27,018,000 request by paying in 3 installments of IDR 9,366,240 on 11 February, 11 March, and 8 April 2025, while keeping at least IDR 29,550,500 in your account, before the 15 April 2025 deadline."
+  },
+  "usage": {
+    "input_tokens": 580,
+    "output_tokens": 100
+  },
+  "timestamp": "2026-09-12T23:35:58.756295+00:00"
+}

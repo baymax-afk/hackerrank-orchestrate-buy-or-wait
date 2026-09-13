@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_133",
+  "content_sha256": "1cce015283819ba5a5eab04fac23ad8154e683c2b3b60dd335b02fb3e1b70930",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Paying the IDR 15,770,000 request by 29 March 2024 isn't affordable, since it would drop the balance below the required minimum of IDR 9,986,200, so this payment is not recommended and no payment plan is available."
+  },
+  "usage": {
+    "input_tokens": 546,
+    "output_tokens": 84
+  },
+  "timestamp": "2026-09-12T23:34:10.169516+00:00"
+}

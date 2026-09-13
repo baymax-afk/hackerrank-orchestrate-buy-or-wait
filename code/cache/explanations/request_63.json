@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_63",
+  "content_sha256": "4e41d1a37b133b6e2ed5b050bf4b9f16a2583e91ad71c5ecb2df45d3c80755d1",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The INR 343,900 purchase requested on 7 July 2026 cannot proceed, since only INR 52,157.50 is safely available today and the full amount can't be reached within 90 days while keeping the required minimum balance of INR 153,500."
+  },
+  "usage": {
+    "input_tokens": 546,
+    "output_tokens": 89
+  },
+  "timestamp": "2026-09-12T23:16:25.811657+00:00"
+}

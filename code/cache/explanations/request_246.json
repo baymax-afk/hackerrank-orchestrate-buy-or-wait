@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_246",
+  "content_sha256": "e436b41d90ff0d765d142cf5f5870320664f98ddf0153ad29c922dce23875b11",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Your ZAR 64,086 education request can be covered through 3 installments of ZAR 22,216.48, starting 3 April 2026, with payments on 3 April, 3 May and 2 June 2026, while keeping at least ZAR 39,300 in your account."
+  },
+  "usage": {
+    "input_tokens": 580,
+    "output_tokens": 96
+  },
+  "timestamp": "2026-09-12T23:40:01.417240+00:00"
+}

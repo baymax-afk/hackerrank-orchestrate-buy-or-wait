@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_11",
+  "content_sha256": "acd4b551f19976c05a97b7b249374c13af066e45e9248a4e2af7ebdfe83edd50",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Your travel request of IDR 13,110,000 can be paid in full today, 3 May 2025, while still keeping at least IDR 34,140,600 available over the next 90 days."
+  },
+  "usage": {
+    "input_tokens": 552,
+    "output_tokens": 68
+  },
+  "timestamp": "2026-09-12T22:57:50.150479+00:00"
+}

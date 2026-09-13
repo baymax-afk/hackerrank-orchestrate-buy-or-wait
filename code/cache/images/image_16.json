@@ -1,0 +1,22 @@
+{
+  "source_file": "dataset/media/images/image_16.png",
+  "source_id": "image_16",
+  "target_event_id": "event_10521",
+  "content_sha256": "2665cf731a861ddb217be5b8082fbd390850a7a98feec018519b6fda0b30b4f8",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "amount": 393.22,
+    "currency": "INR",
+    "field_used": "Total",
+    "document_type": "EV charging invoice"
+  },
+  "confidence": 0.98,
+  "rationale": "The invoice's Total field (393.22 INR) matches the wallet payment debit for EV charging, inclusive of energy cost and taxes.",
+  "usage": {
+    "input_tokens": 2720,
+    "output_tokens": 172
+  },
+  "timestamp": "2026-09-12T23:32:46.952503+00:00"
+}

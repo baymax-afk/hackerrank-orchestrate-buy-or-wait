@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_51",
+  "content_sha256": "a63b6c40c7c59fb8b52d8ccb9e8b3c2a4838419cfe17828e008b2b61a78b437a",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The IDR 2,191,000 investment request made on 3 January 2026 is not recommended, since although IDR 2,081,235.83 is available today, funding the full amount while keeping the required IDR 7,811,000 minimum balance isn't possible within 90 days."
+  },
+  "usage": {
+    "input_tokens": 560,
+    "output_tokens": 96
+  },
+  "timestamp": "2026-09-12T23:15:25.696550+00:00"
+}

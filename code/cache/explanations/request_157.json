@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_157",
+  "content_sha256": "f323b82b725b90407c1ab6d38c0f20d01d3e4410370d3d6ff84d3026ad9350ab",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Investment request_157 for IDR 23,503,000 should be paid in full on 15 May 2024, since paying sooner would drop the balance below the required minimum of IDR 15,714,100."
+  },
+  "usage": {
+    "input_tokens": 563,
+    "output_tokens": 72
+  },
+  "timestamp": "2026-09-12T23:35:36.945481+00:00"
+}

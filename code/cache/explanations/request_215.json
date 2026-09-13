@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_215",
+  "content_sha256": "9685fc37339416dfcca579bfd9712ca741bd16045489a54d5101559c4e121c56",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The requested ZAR 29,986 investment due by 10 July 2025 cannot be made because doing so would drop the balance below the required ZAR 15,700 minimum, so this payment is not recommended at this time."
+  },
+  "usage": {
+    "input_tokens": 541,
+    "output_tokens": 78
+  },
+  "timestamp": "2026-09-12T23:38:25.255741+00:00"
+}

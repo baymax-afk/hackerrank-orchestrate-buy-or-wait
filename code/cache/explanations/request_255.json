@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_255",
+  "content_sha256": "82028b63e0b4ab0a36041f44ebe3ce4f3be0f51215359c1cc36a5c1af718174a",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full IDR 3,345,000 today, 6 April 2026, for this family transfer while still keeping at least IDR 9,813,900 in reserve over the next 90 days."
+  },
+  "usage": {
+    "input_tokens": 555,
+    "output_tokens": 71
+  },
+  "timestamp": "2026-09-12T23:40:26.396365+00:00"
+}

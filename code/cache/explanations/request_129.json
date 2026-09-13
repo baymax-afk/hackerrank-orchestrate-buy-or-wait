@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_129",
+  "content_sha256": "5d9f035eb0d465ae6c4a54f7a7c682ccac78ab2b0a105c6740350cde96cea7ba",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You cannot afford the USD 2,668.80 education payment due 18 June 2026; even paying USD 159.01 today would still risk your protected USD 800 minimum balance, so no payment method is recommended at this time."
+  },
+  "usage": {
+    "input_tokens": 528,
+    "output_tokens": 80
+  },
+  "timestamp": "2026-09-12T23:33:56.711163+00:00"
+}

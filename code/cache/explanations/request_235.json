@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_235",
+  "content_sha256": "0aeb591d01733d61543a769138acd368d7824c2ae34bf9567bd927a48eda1c04",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full USD 967.20 education request today, 6 September 2024, while still keeping at least USD 700 in reserve over the next 90 days, so no spending changes are needed before the 25 October 2024 deadline."
+  },
+  "usage": {
+    "input_tokens": 532,
+    "output_tokens": 82
+  },
+  "timestamp": "2026-09-12T23:39:29.498873+00:00"
+}

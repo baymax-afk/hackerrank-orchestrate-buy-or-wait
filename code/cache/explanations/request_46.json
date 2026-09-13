@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_46",
+  "content_sha256": "be1c15cb4131664170641ae2b7e0f16472ed3d02f3d369a890d3d3ab89f5dd88",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Pay INR 35,119.14 today and the remaining INR 14,330.86 on 15 December 2024 to fully settle the INR 49,450 request by 9 January 2025, while keeping your INR 84,000 minimum balance protected."
+  },
+  "usage": {
+    "input_tokens": 586,
+    "output_tokens": 89
+  },
+  "timestamp": "2026-09-12T23:14:12.128488+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_158",
+  "content_sha256": "0687cde7c1e0a8b161d0b98e81481d42fab549bd35a501450262b298e02ad21b",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Your INR 242,600 emergency expense can be covered through 3 installments of INR 84,101.33 each, starting 7 August 2025, on 4 September 2025, and on 2 October 2025, while keeping at least INR 131,400 in your account throughout."
+  },
+  "usage": {
+    "input_tokens": 575,
+    "output_tokens": 95
+  },
+  "timestamp": "2026-09-12T23:35:39.644712+00:00"
+}

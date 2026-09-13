@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_41",
+  "content_sha256": "392c9744905b33e2adf3c2a60542e3d4395b25bf2a3409e539ace95159767345",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The full IDR 38,760,000 payment should wait until 15 December 2025, since paying it sooner would drop the balance below the required minimum of IDR 25,366,600."
+  },
+  "usage": {
+    "input_tokens": 567,
+    "output_tokens": 66
+  },
+  "timestamp": "2026-09-12T23:13:56.261127+00:00"
+}

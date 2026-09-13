@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_60",
+  "content_sha256": "791bf494609e0fc944be7c09db532b54a9d60570e3e2addf8c7213fc39c4546a",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Your USD 199.89 housing payment should wait until 15 January 2026, since paying it any earlier would drop your balance below the required USD 400 minimum, and no spending changes are needed."
+  },
+  "usage": {
+    "input_tokens": 542,
+    "output_tokens": 71
+  },
+  "timestamp": "2026-09-12T23:16:18.627230+00:00"
+}

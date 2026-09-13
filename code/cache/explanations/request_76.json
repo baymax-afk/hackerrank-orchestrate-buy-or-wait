@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_76",
+  "content_sha256": "edf29948e367a085d2f2c86a442f002a199b4ee2a4a6cf89724607520f7d117f",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You cannot afford to pay the requested USD 4,455.60 by 30 July 2024, since doing so would drop your balance below the required USD 1,800 minimum, so no payment is recommended at this time."
+  },
+  "usage": {
+    "input_tokens": 532,
+    "output_tokens": 76
+  },
+  "timestamp": "2026-09-12T23:20:45.884787+00:00"
+}

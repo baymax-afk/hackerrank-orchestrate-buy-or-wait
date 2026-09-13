@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_195",
+  "content_sha256": "9afb310e77277390f76f000fb290d02af85c45136c9e27d0c361077035d90d07",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "To cover the EUR 1,170.40 purchase while keeping at least EUR 700 in reserve, the plan splits payment into 3 installments of EUR 405.74 starting 9 January 2026, with the final one due 10 March 2026."
+  },
+  "usage": {
+    "input_tokens": 572,
+    "output_tokens": 89
+  },
+  "timestamp": "2026-09-12T23:37:12.083383+00:00"
+}

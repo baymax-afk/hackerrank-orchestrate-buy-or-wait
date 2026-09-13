@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_168",
+  "content_sha256": "e6b7ed6da725ef2ee55b180342ac999908b5169655940c1e1d27b78f451be003",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Pay INR 39,306.41 today and the remaining INR 10,073.59 on 15 January 2026 to cover the full INR 49,380 housing request, while keeping your INR 114,400 minimum balance protected."
+  },
+  "usage": {
+    "input_tokens": 582,
+    "output_tokens": 82
+  },
+  "timestamp": "2026-09-12T23:36:07.280726+00:00"
+}

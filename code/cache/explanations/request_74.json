@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_74",
+  "content_sha256": "0da9d4e2ef2584b35c427f38077e249c235d1957af69aed4dc2a34f9c27e60d7",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full ZAR 5,010 today, 4 August 2025, since doing so still leaves at least ZAR 21,900 available over the next 90 days, with no changes needed to your spending."
+  },
+  "usage": {
+    "input_tokens": 550,
+    "output_tokens": 74
+  },
+  "timestamp": "2026-09-12T23:20:40.255847+00:00"
+}

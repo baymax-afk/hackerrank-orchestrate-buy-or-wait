@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_36",
+  "content_sha256": "1e6a696d588fab4094afe7cafe0a5df15b4eb60bcf2a4ea30c190542d5f6ad92",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Pay USD 3,954 in full on 15 September 2026, since paying earlier would drop your balance below the required minimum of USD 2,400."
+  },
+  "usage": {
+    "input_tokens": 544,
+    "output_tokens": 57
+  },
+  "timestamp": "2026-09-12T23:13:41.177699+00:00"
+}

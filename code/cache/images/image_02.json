@@ -1,0 +1,22 @@
+{
+  "source_file": "dataset/media/images/image_02.png",
+  "source_id": "image_02",
+  "target_event_id": "event_1442",
+  "content_sha256": "ccd779e5382b1bcfacfb47d4ccf346ffd667a34c8b94d0cfd48aa4a609bd117d",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "amount": 100000.0,
+    "currency": "INR",
+    "field_used": "Balance Due",
+    "document_type": "Rent Receipt"
+  },
+  "confidence": 0.9,
+  "rationale": "The ledger row is 'Outstanding rent balance', which corresponds directly to the 'Balance Due' field of 1,00,000.00 shown on the receipt, distinct from the total amount or the amount already received.",
+  "usage": {
+    "input_tokens": 2814,
+    "output_tokens": 213
+  },
+  "timestamp": "2026-09-12T22:58:24.472281+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_94",
+  "content_sha256": "1abff9fb49b3a335ece7c09797d59d2fe8f414a72243109eb4def880adb050ff",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Your EUR 572 housing request can be paid in full today, 4 December 2024, while still keeping at least EUR 600 available over the next 90 days."
+  },
+  "usage": {
+    "input_tokens": 530,
+    "output_tokens": 59
+  },
+  "timestamp": "2026-09-12T23:24:38.697270+00:00"
+}

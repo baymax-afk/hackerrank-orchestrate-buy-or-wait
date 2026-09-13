@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_34",
+  "content_sha256": "b781053eb0d82fa3b89486ca2fa49f21dc3c0834b82777da6e299ca7f76f53cf",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Your travel request of INR 129,400 is affordable now, so pay it in full on 4 December 2024, leaving at least INR 138,500 available over the next 90 days."
+  },
+  "usage": {
+    "input_tokens": 536,
+    "output_tokens": 65
+  },
+  "timestamp": "2026-09-12T23:12:42.909597+00:00"
+}

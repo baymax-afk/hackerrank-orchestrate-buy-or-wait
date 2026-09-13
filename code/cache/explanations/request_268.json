@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_268",
+  "content_sha256": "b3478c3a3c93ff4a4a494bb21b6694e2fa2480de03b23a489804f9abba3d8c4e",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "To settle the EUR 2,426.60 debt by 15 August 2024, we'll pay it in 3 installments of EUR 841.22 starting 14 June 2024, keeping at least EUR 1,400 in reserve at all times."
+  },
+  "usage": {
+    "input_tokens": 579,
+    "output_tokens": 87
+  },
+  "timestamp": "2026-09-12T23:41:36.061793+00:00"
+}

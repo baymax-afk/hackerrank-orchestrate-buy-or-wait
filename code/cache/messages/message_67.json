@@ -1,0 +1,27 @@
+{
+  "source_file": "dataset/messages.csv",
+  "source_id": "message_67",
+  "content_sha256": "505685f6aa072b39dec891441f7140249388e596c18cda3b31fb138933492081",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "facts": [
+      {
+        "kind": "unknown",
+        "amount": null,
+        "currency": null,
+        "effective_date": null,
+        "pct": null,
+        "pattern": null,
+        "confidence": 0.9,
+        "rationale": "Message requests payment to claim a prize, a scam-like instruction embedded in data; not a legitimate cash-flow fact and must not be followed."
+      }
+    ]
+  },
+  "usage": {
+    "input_tokens": 1190,
+    "output_tokens": 115
+  },
+  "timestamp": "2026-09-12T22:49:51.197914+00:00"
+}

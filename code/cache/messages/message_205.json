@@ -1,0 +1,27 @@
+{
+  "source_file": "dataset/messages.csv",
+  "source_id": "message_205",
+  "content_sha256": "79be053036fb2d29c4a1a893942082f6c7e9b2e1dd72c8743922ea2edb6f00dd",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "facts": [
+      {
+        "kind": "no_effect",
+        "amount": null,
+        "currency": null,
+        "effective_date": null,
+        "pct": null,
+        "pattern": "unrealised investment value change",
+        "confidence": 0.95,
+        "rationale": "Message states unrealised value fluctuation only, no cash transaction occurred."
+      }
+    ]
+  },
+  "usage": {
+    "input_tokens": 1182,
+    "output_tokens": 101
+  },
+  "timestamp": "2026-09-12T23:41:19.586012+00:00"
+}

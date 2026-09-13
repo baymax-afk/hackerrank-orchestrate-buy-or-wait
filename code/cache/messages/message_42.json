@@ -1,0 +1,27 @@
+{
+  "source_file": "dataset/messages.csv",
+  "source_id": "message_42",
+  "content_sha256": "12821869593802e63ddfb000c657e402378ba9074fbd7ef81724ef9d2ae0ee20",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "facts": [
+      {
+        "kind": "salary_remaining",
+        "amount": 25840000,
+        "currency": "IDR",
+        "effective_date": null,
+        "pct": null,
+        "pattern": null,
+        "confidence": 0.9,
+        "rationale": "One household income source ended; remaining confirmed monthly salary stated as IDR 25,840,000."
+      }
+    ]
+  },
+  "usage": {
+    "input_tokens": 1237,
+    "output_tokens": 107
+  },
+  "timestamp": "2026-09-12T22:49:53.729371+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_112",
+  "content_sha256": "b8c534860291899ccc3833d20e0e68fb59bff5e6b58802ef6a07c3dcf9c4c52d",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full EUR 271.70 family transfer today, 5 June 2024, since it's affordable now and still leaves at least EUR 500 available over the next 90 days."
+  },
+  "usage": {
+    "input_tokens": 541,
+    "output_tokens": 67
+  },
+  "timestamp": "2026-09-12T23:31:36.703663+00:00"
+}

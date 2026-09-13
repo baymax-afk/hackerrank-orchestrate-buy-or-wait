@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_120",
+  "content_sha256": "d8b1e6dcea708944e966c9aaf783db30c51537f092574a4d5150c97ad7f60cf5",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full IDR 7,714,000 for this investment today, 6 April 2026, while keeping at least IDR 20,050,300 in reserve over the next 90 days."
+  },
+  "usage": {
+    "input_tokens": 552,
+    "output_tokens": 68
+  },
+  "timestamp": "2026-09-12T23:33:27.560712+00:00"
+}

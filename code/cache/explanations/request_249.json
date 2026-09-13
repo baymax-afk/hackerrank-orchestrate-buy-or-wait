@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_249",
+  "content_sha256": "e2619fec92f3fd6398417cd9b5243fb5cf9495d486bbc0aee0180897ced7454c",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You should wait and pay the full USD 643.20 on 15 February 2026, since paying any earlier would drop your balance below the required USD 600 minimum."
+  },
+  "usage": {
+    "input_tokens": 541,
+    "output_tokens": 60
+  },
+  "timestamp": "2026-09-12T23:40:10.298821+00:00"
+}

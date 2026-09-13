@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_55",
+  "content_sha256": "23bb6d8f9c06dd11d9adf05db01c89b5fa3b4e9772db371c9e0dd1ddaf5f4692",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The requested INR 218,600 family transfer cannot be safely paid by 22 August 2026, since doing so would breach the required minimum balance of INR 124,300, so no payment method or plan is recommended at this time."
+  },
+  "usage": {
+    "input_tokens": 536,
+    "output_tokens": 79
+  },
+  "timestamp": "2026-09-12T23:16:06.983782+00:00"
+}

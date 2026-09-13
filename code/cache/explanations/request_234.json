@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_234",
+  "content_sha256": "44f99904718485a7ef71134428af0a19fdc72b924926fb43c1b8d246345c93af",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can safely pay the full EUR 1,213.30 on 15 August 2026, since paying sooner would drop your balance below the required EUR 700 minimum."
+  },
+  "usage": {
+    "input_tokens": 556,
+    "output_tokens": 62
+  },
+  "timestamp": "2026-09-12T23:39:26.993504+00:00"
+}

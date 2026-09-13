@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_174",
+  "content_sha256": "ad2bbe1f47f8ab9d86b7f8ce3df60558b8d63fc92cf86f6fcda3c2c3175028f9",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "To fund the EUR 1,146.20 investment request by the 7 June 2026 deadline, the plan splits it into 3 installments of EUR 397.35 starting 4 April 2026, keeping at least EUR 700 in reserve throughout."
+  },
+  "usage": {
+    "input_tokens": 571,
+    "output_tokens": 91
+  },
+  "timestamp": "2026-09-12T23:36:20.887966+00:00"
+}

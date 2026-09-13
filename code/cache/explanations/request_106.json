@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_106",
+  "content_sha256": "e3ea464b166428fa7697217d867562b9ae8c8b54bd5823b5de75b6cf73c59a99",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Since paying the EUR 2,207.70 education request now would drop the balance below the required EUR 1,200 minimum, it's best to wait and pay it in full on 15 February 2025."
+  },
+  "usage": {
+    "input_tokens": 553,
+    "output_tokens": 70
+  },
+  "timestamp": "2026-09-12T23:31:19.437568+00:00"
+}

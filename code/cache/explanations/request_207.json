@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_207",
+  "content_sha256": "56e05ef9056213623e22d05130fa72f36d79406d892b8569485c69a43feb0f2b",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The full ZAR 11,830 family transfer requested on 5 July 2026 should be paid on 15 July 2026, since paying earlier would drop the balance below the required minimum of ZAR 13,600."
+  },
+  "usage": {
+    "input_tokens": 560,
+    "output_tokens": 77
+  },
+  "timestamp": "2026-09-12T23:37:58.197077+00:00"
+}

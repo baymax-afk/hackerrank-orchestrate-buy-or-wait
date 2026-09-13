@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_21",
+  "content_sha256": "04845b442e15b00717d94a6d28eaf873ca69a54bb51bde336acf060c11ecbd80",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full USD 1,574.40 education request today, 3 April 2026, while still keeping at least USD 1,800 available over the next 90 days."
+  },
+  "usage": {
+    "input_tokens": 543,
+    "output_tokens": 60
+  },
+  "timestamp": "2026-09-12T23:00:55.330080+00:00"
+}

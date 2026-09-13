@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_165",
+  "content_sha256": "5a5a2140985c4c9fe8b21fa07df836853f4d24247df4d643adbcd4d779d11a18",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Your INR 80,600 travel request can be paid in full today, 6 April 2026, while keeping at least INR 95,000 available over the next 90 days."
+  },
+  "usage": {
+    "input_tokens": 536,
+    "output_tokens": 60
+  },
+  "timestamp": "2026-09-12T23:36:00.693415+00:00"
+}

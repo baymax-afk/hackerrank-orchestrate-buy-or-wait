@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_217",
+  "content_sha256": "f6d17b9cfcac57e5089d3cfcf68d9f13632c4f335b6ecd91d6ef526008159f8e",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The ZAR 37,180 travel request cannot be paid by 21 May 2024, since doing so would drop the balance below the required ZAR 26,800 minimum; only ZAR 19,458.76 is safe to pay today, so the payment is not recommended and no payment plan is available."
+  },
+  "usage": {
+    "input_tokens": 541,
+    "output_tokens": 102
+  },
+  "timestamp": "2026-09-12T23:38:32.419121+00:00"
+}

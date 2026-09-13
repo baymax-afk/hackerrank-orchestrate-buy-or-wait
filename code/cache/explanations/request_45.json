@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_45",
+  "content_sha256": "cd3da32d30b04a6fefae1eab9a3f2b74421adc5558a60c80b8e827f639dabca6",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Pay IDR 21,983,000 in full on 15 September 2026, since paying earlier would drop the balance below the required minimum of IDR 11,149,800."
+  },
+  "usage": {
+    "input_tokens": 564,
+    "output_tokens": 63
+  },
+  "timestamp": "2026-09-12T23:14:08.659723+00:00"
+}

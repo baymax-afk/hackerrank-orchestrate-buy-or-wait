@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_131",
+  "content_sha256": "9a1e87bcd7411dd44a893c411f74d15c87e8a25f67fed2eb45b1fce3307d33b3",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The USD 1,855.20 education payment due 8 July 2025 is not affordable right now, since paying it would drop you below the required USD 1,100 minimum balance, so no payment method is recommended at this time."
+  },
+  "usage": {
+    "input_tokens": 534,
+    "output_tokens": 77
+  },
+  "timestamp": "2026-09-12T23:34:03.337732+00:00"
+}

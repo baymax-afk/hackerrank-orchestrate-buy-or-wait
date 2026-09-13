@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_253",
+  "content_sha256": "80d604e6a9638dc98fd8aea905ad1f5d95aff164ccc3f2da9f766690e1393ec2",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Paying the EUR 2,840.20 housing request by 1 June 2024 isn't recommended because doing so would drop your balance below the required EUR 2,300 minimum, so this payment should not be made at this time."
+  },
+  "usage": {
+    "input_tokens": 539,
+    "output_tokens": 79
+  },
+  "timestamp": "2026-09-12T23:40:20.394673+00:00"
+}

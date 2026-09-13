@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_23",
+  "content_sha256": "cb0c07230708dadf6fb7d7346052984f383e905b5aae5a8bd47b8e87b00fddc9",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You should wait and pay the full ZAR 38,016 on 15 July 2025, since paying any sooner would drop your balance below the required minimum of ZAR 27,000."
+  },
+  "usage": {
+    "input_tokens": 561,
+    "output_tokens": 66
+  },
+  "timestamp": "2026-09-12T23:01:00.557908+00:00"
+}

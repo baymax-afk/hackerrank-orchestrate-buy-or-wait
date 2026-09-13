@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_160",
+  "content_sha256": "857107dae0d9854d5e74a5e4ae1d26dcbd4d8ba72df30be64e3c3a47769f6c82",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Your EUR 1,246.30 travel request will be covered through 3 installments of EUR 432.05 on 13 June, 14 July and 14 August 2024, keeping your balance at or above EUR 1,200 throughout."
+  },
+  "usage": {
+    "input_tokens": 573,
+    "output_tokens": 84
+  },
+  "timestamp": "2026-09-12T23:35:49.021233+00:00"
+}

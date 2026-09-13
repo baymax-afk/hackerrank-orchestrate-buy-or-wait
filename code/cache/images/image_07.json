@@ -1,0 +1,22 @@
+{
+  "source_file": "dataset/media/images/image_07.png",
+  "source_id": "image_07",
+  "target_event_id": "event_3231",
+  "content_sha256": "f6d30a74355224c0b5cda2d7f96399a7b1a0afe4f9fe59ea048bbecb1a21311e",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "amount": 8528.1,
+    "currency": "INR",
+    "field_used": "Total",
+    "document_type": "tax invoice (restaurant receipt)"
+  },
+  "confidence": 0.9,
+  "rationale": "The receipt shows SubTotal 8122.00 plus SGST and CGST, giving Total: 8528.10, which is marked as PAID. The 'Grand Total (RS): 8528' is a rounded version of this same figure. The Total of 8528.10 is the precise final amount for this dining transaction.",
+  "usage": {
+    "input_tokens": 1386,
+    "output_tokens": 226
+  },
+  "timestamp": "2026-09-12T23:13:36.502571+00:00"
+}

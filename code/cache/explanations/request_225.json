@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_225",
+  "content_sha256": "7ffe6cdc55ceaec2f6a22871d27e4f897dce8f6efe12b4dcb9155494f6783bb7",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The emergency expense request for IDR 22,059,000 due 21 September 2026 cannot be paid, since doing so would drop your balance below the required minimum of IDR 17,670,700, so no payment method or plan is currently recommended."
+  },
+  "usage": {
+    "input_tokens": 549,
+    "output_tokens": 86
+  },
+  "timestamp": "2026-09-12T23:38:56.021481+00:00"
+}

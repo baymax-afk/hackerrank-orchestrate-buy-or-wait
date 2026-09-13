@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_114",
+  "content_sha256": "cccb9eda1289a79cc6211911a2b188a7975e4ca8bdcd57ae5b3427a7c06b7811",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full INR 65,300 today, 4 January 2026, since it's affordable now and will still leave at least INR 113,400 available over the next 90 days."
+  },
+  "usage": {
+    "input_tokens": 535,
+    "output_tokens": 63
+  },
+  "timestamp": "2026-09-12T23:32:51.597523+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_137",
+  "content_sha256": "fd0b14dfd154dc3bc6e9749117a39f0f23e7cbfdc55c9a0ac2687ed1fe0a8e22",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You requested INR 80,100 for a purchase by 15 January 2026, but paying this now would drop your balance below the required INR 71,800 minimum, so the system recommends not making this payment; only INR 25,817.12 is currently safe to use."
+  },
+  "usage": {
+    "input_tokens": 534,
+    "output_tokens": 89
+  },
+  "timestamp": "2026-09-12T23:34:22.316948+00:00"
+}

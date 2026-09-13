@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_224",
+  "content_sha256": "e0704dcb528c9d0da034d8d6041360b5900d22699f8e6613337e39064b828e94",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Pay IDR 10,077,298.66 today and the remaining IDR 249,701.34 on 15 February 2025 to fully cover the IDR 10,327,000 travel request while keeping the IDR 22,187,600 minimum balance protected."
+  },
+  "usage": {
+    "input_tokens": 599,
+    "output_tokens": 92
+  },
+  "timestamp": "2026-09-12T23:38:51.849167+00:00"
+}

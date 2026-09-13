@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_242",
+  "content_sha256": "434dd7eea40d315d9cb6cdde5506011af037acf01d3e10e12143482c148da637",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The requested payment of EUR 1,966.80 due 25 August 2025 isn't affordable while keeping the required EUR 600 minimum balance, so only EUR 24.38 is safe to pay today and no payment plan or full-payment date is currently available."
+  },
+  "usage": {
+    "input_tokens": 537,
+    "output_tokens": 93
+  },
+  "timestamp": "2026-09-12T23:39:48.755004+00:00"
+}

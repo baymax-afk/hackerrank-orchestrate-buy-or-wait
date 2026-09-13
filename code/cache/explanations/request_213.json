@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_213",
+  "content_sha256": "6c36f26bbcca870c80233ef2b72d26c8886bcc59f8ee42a97db59a0a15f61c8a",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can cover the full USD 3,362.40 family transfer by paying it in 3 installments of USD 1,165.63 on 21 January 2026, 20 February 2026 and 22 March 2026, while always keeping at least USD 2,100 in reserve."
+  },
+  "usage": {
+    "input_tokens": 578,
+    "output_tokens": 94
+  },
+  "timestamp": "2026-09-12T23:38:19.609756+00:00"
+}

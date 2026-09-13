@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_96",
+  "content_sha256": "c9b88761f3731ddad97a1e57d2d4e65b47327291968831c0f02ecce98cbbe62c",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can't afford the INR 90,200 purchase by 12 March 2026 without dipping below the required INR 56,500 minimum balance, so this payment is not recommended at this time."
+  },
+  "usage": {
+    "input_tokens": 534,
+    "output_tokens": 68
+  },
+  "timestamp": "2026-09-12T23:24:43.614197+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_83",
+  "content_sha256": "477ea16dd0a2644b84e7145a2d45230f14b01b7d29350bb7deb5ca799cf8cb14",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The requested transfer of INR 156,200 for request_83 cannot be paid by 17 June 2025, since no option keeps the required minimum balance of INR 37,800 protected, so no payment is recommended at this time."
+  },
+  "usage": {
+    "input_tokens": 532,
+    "output_tokens": 80
+  },
+  "timestamp": "2026-09-12T23:23:44.403847+00:00"
+}

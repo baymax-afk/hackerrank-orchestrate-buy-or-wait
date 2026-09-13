@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_189",
+  "content_sha256": "2dba8d00ff49dd5e0a833fa69104a2b01869ac93844bd235013dd724ca6c1197",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full EUR 488.40 debt today, 4 July 2026, since this still leaves at least EUR 400 available in your account over the next 90 days."
+  },
+  "usage": {
+    "input_tokens": 542,
+    "output_tokens": 62
+  },
+  "timestamp": "2026-09-12T23:36:56.788806+00:00"
+}

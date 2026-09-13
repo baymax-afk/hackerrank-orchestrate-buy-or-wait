@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_101",
+  "content_sha256": "9979ca90fc10f78ea34479c7f9135d9b761f5039a837f5b7b5c358639675b857",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can invest INR 143,500 in full today, 3 November 2025, ahead of the 14 November 2025 deadline, while still keeping at least INR 187,400 available over the next 90 days, so no spending changes are needed."
+  },
+  "usage": {
+    "input_tokens": 536,
+    "output_tokens": 83
+  },
+  "timestamp": "2026-09-12T23:28:02.780608+00:00"
+}

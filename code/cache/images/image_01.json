@@ -1,0 +1,22 @@
+{
+  "source_file": "dataset/media/images/image_01.png",
+  "source_id": "image_01",
+  "target_event_id": "event_253",
+  "content_sha256": "f37b40e6af42c664846057252cac89ad41b7d029dfe8dacff2db8cceb79fa5ba",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "amount": 4365000,
+    "currency": "IDR",
+    "field_used": "Net Pay",
+    "document_type": "payslip"
+  },
+  "confidence": 0.98,
+  "rationale": "The row describes 'August 2019 net salary'; the payslip's Net Pay field (IDR 4,365,000) directly corresponds to this, matching the transfer amount stated at the bottom of the document.",
+  "usage": {
+    "input_tokens": 3686,
+    "output_tokens": 178
+  },
+  "timestamp": "2026-09-12T22:57:30.322599+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_151",
+  "content_sha256": "eaf4ca41157757c47a84bd9570cdb44e2a0f7ed60a0a0b221c4b7021f1ef49a0",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full IDR 26,999,000 housing request today, 3 September 2024, well ahead of the 14 September 2024 deadline, while keeping at least IDR 31,633,600 in reserve over the next 90 days."
+  },
+  "usage": {
+    "input_tokens": 552,
+    "output_tokens": 85
+  },
+  "timestamp": "2026-09-12T23:35:08.542090+00:00"
+}

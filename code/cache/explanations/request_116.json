@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_116",
+  "content_sha256": "76be9f409565a0cf2ee24b05af58aaae3c2b98d9e28ff005bec080df2ddbc219",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The requested family transfer of INR 241,200 by 16 April 2025 is not affordable, since paying it would drop your balance below the required INR 80,300 minimum; only INR 9,875.95 can safely be paid today, so no payment plan or full-payment date within 90 days is available."
+  },
+  "usage": {
+    "input_tokens": 536,
+    "output_tokens": 102
+  },
+  "timestamp": "2026-09-12T23:32:56.889468+00:00"
+}

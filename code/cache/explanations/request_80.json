@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_80",
+  "content_sha256": "7b8cedb04ecec465a529d00f6f7b8282509b22b2880efe89da712ed0f1294bd9",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You requested INR 217,500 for debt repayment by 21 February 2025, but paying it would drop your balance below the required INR 121,300 minimum, so only INR 1,479.20 is safe to pay today and no full payment is recommended within 90 days."
+  },
+  "usage": {
+    "input_tokens": 537,
+    "output_tokens": 92
+  },
+  "timestamp": "2026-09-12T23:23:32.122719+00:00"
+}

@@ -1,0 +1,22 @@
+{
+  "source_file": "dataset/media/images/image_09.png",
+  "source_id": "image_09",
+  "target_event_id": "event_5170",
+  "content_sha256": "e0e74e14425d923ff8a5c6db26ec6f4f26ee4697bfd257e414ba05c947a75ba8",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "amount": 723.0,
+    "currency": "INR",
+    "field_used": "Total Amount Received",
+    "document_type": "receipt"
+  },
+  "confidence": 0.97,
+  "rationale": "The receipt shows a water bill payment of ₹723.00 charged on 07-06-2026, matching the ledger row's date and description of 'Water bill due'. The Total Amount Received field confirms this as the settled amount.",
+  "usage": {
+    "input_tokens": 2113,
+    "output_tokens": 183
+  },
+  "timestamp": "2026-09-12T23:16:04.578301+00:00"
+}

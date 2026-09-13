@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_250",
+  "content_sha256": "73f5c56d4d150470ccbcc05f5a9c9ac78976c8f7a924cb820121e5acdfeb768b",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The requested ZAR 124,278 debt repayment cannot be made safely; only ZAR 15,737.38 is currently available while keeping the ZAR 35,300 minimum balance, and there is no way to complete the full payment within 90 days of the 6 December 2024 request, so it is not recommended by the 18 January 2025 deadline."
+  },
+  "usage": {
+    "input_tokens": 559,
+    "output_tokens": 121
+  },
+  "timestamp": "2026-09-12T23:40:12.873350+00:00"
+}

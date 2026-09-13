@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_143",
+  "content_sha256": "6ce5d887fbb64ad6add3660feee99a633ab0d3bdf03f8802476961e7bb73a874",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can safely pay only ZAR 2,518.78 of the ZAR 12,584 emergency expense today, so the plan is to wait and pay the full amount on 15 July 2025, since paying sooner would drop your balance below the required ZAR 11,300 minimum."
+  },
+  "usage": {
+    "input_tokens": 561,
+    "output_tokens": 98
+  },
+  "timestamp": "2026-09-12T23:34:37.912003+00:00"
+}

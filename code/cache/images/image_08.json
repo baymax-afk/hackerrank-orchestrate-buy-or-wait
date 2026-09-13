@@ -1,0 +1,22 @@
+{
+  "source_file": "dataset/media/images/image_08.png",
+  "source_id": "image_08",
+  "target_event_id": "event_4535",
+  "content_sha256": "e28592ad8b4dacd03055e0b1ebc46670c83fbfa1162af07bdef33bb226bf63c8",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "amount": 15339.0,
+    "currency": "INR",
+    "field_used": "Total Amount Received",
+    "document_type": "receipt"
+  },
+  "confidence": 0.95,
+  "rationale": "The receipt shows a maintenance invoice payment with itemized charges summing to the Total Amount Received of ₹15,339.00, which matches the ledger row for a property maintenance invoice debit.",
+  "usage": {
+    "input_tokens": 2700,
+    "output_tokens": 207
+  },
+  "timestamp": "2026-09-12T23:15:12.738070+00:00"
+}

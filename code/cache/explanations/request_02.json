@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_02",
+  "content_sha256": "43f668d43ad3064475da0974989974734efe887d78b9642cba15f81fd0eb00cf",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "To cover the IDR 46,018,000 travel request by 10 October 2025, pay it in 3 installments of IDR 15,952,906.67 starting 8 August 2025, then 7 September 2025 and 7 October 2025, keeping at least IDR 29,158,400 in your account throughout."
+  },
+  "usage": {
+    "input_tokens": 591,
+    "output_tokens": 108
+  },
+  "timestamp": "2026-09-12T22:57:15.247098+00:00"
+}

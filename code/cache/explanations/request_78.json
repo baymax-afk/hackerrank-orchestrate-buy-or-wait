@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_78",
+  "content_sha256": "f63bfb1eefb0449c1e786d3dfd7c7154556a945eba1b7d7c4de0b6afb96ef5c5",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full INR 50,200 today for request_78, and doing so still leaves at least INR 55,200 in reserve over the next 90 days, so no changes to spending are needed."
+  },
+  "usage": {
+    "input_tokens": 537,
+    "output_tokens": 69
+  },
+  "timestamp": "2026-09-12T23:23:21.912797+00:00"
+}

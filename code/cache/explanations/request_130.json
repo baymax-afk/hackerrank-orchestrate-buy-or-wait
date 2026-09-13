@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_130",
+  "content_sha256": "c3db90d5b640ad492bc77809a049038b634b48335c9ced11bc9a231ea60ad1a9",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Because paying now would drop your balance below the USD 1,400 minimum you need to keep, this USD 1,978.80 family transfer is scheduled to be paid in full on 15 February 2025 instead."
+  },
+  "usage": {
+    "input_tokens": 554,
+    "output_tokens": 76
+  },
+  "timestamp": "2026-09-12T23:33:59.197440+00:00"
+}

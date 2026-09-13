@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_16",
+  "content_sha256": "0f7d9381387dc0d7910c5d6e11ea5439cae81643ba06e691d8733ab868de7542",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full INR 122,500 housing request today, 12 August 2023, while still keeping at least INR 122,400 available over the next 90 days."
+  },
+  "usage": {
+    "input_tokens": 536,
+    "output_tokens": 59
+  },
+  "timestamp": "2026-09-12T22:58:26.488975+00:00"
+}

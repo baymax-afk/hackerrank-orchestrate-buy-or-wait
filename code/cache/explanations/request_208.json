@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_208",
+  "content_sha256": "33d0941a675e08a97bdaedcf6a1d23c21dd4e874874a9cbc2b6a5ae281168ac0",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Your travel request for IDR 4,413,000 will be paid in full on 15 June 2024, since paying it sooner would drop your balance below the required minimum of IDR 10,470,700."
+  },
+  "usage": {
+    "input_tokens": 563,
+    "output_tokens": 71
+  },
+  "timestamp": "2026-09-12T23:38:00.979082+00:00"
+}

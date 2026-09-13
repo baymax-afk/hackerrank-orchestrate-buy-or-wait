@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_92",
+  "content_sha256": "828fa5a680e2d23554694760b512ca05f5a00dfe4a84bb6892b54c285eca0b1a",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can fully pay the ZAR 34,034 education request today, 5 February 2025, while still keeping at least ZAR 28,100 available over the next 90 days, well ahead of the 14 February 2025 deadline."
+  },
+  "usage": {
+    "input_tokens": 545,
+    "output_tokens": 81
+  },
+  "timestamp": "2026-09-12T23:24:28.052373+00:00"
+}

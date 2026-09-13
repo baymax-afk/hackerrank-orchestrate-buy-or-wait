@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_185",
+  "content_sha256": "c7ea6e9843c4e5521943c79df5f8c22769db6175b1535cdccf32eb67dd8c9880",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The EUR 1,257.30 travel request cannot be paid by 15 January 2026, since doing so would drop your balance below the required EUR 1,300 minimum, so this payment is not recommended at this time."
+  },
+  "usage": {
+    "input_tokens": 537,
+    "output_tokens": 77
+  },
+  "timestamp": "2026-09-12T23:36:46.541556+00:00"
+}

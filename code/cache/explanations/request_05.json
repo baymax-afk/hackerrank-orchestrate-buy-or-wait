@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_05",
+  "content_sha256": "a0ec291e3b53831dd04268862474c4deea2103b0b9cdf8be07f66b804247f9f4",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The requested payment of ZAR 15,488 cannot be made by 12 January 2026, since no option leaves the required minimum balance of ZAR 13,100 protected, so no payment is recommended at this time."
+  },
+  "usage": {
+    "input_tokens": 541,
+    "output_tokens": 77
+  },
+  "timestamp": "2026-09-12T22:57:36.847769+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_146",
+  "content_sha256": "8fe830ef6b50342febfb25c98dbf3ed79d40f48775a40fd58ff46dfb8e244f7b",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Paying the INR 449,400 housing request by 17 October 2025 isn't recommended, since doing so would drop your balance below the required INR 108,600 minimum; only INR 23,027.08 can safely be paid today and no full-payment date is available within 90 days."
+  },
+  "usage": {
+    "input_tokens": 533,
+    "output_tokens": 96
+  },
+  "timestamp": "2026-09-12T23:34:49.250035+00:00"
+}

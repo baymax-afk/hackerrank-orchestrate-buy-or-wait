@@ -1,0 +1,22 @@
+{
+  "source_file": "dataset/media/images/image_13.png",
+  "source_id": "image_13",
+  "target_event_id": "event_7941",
+  "content_sha256": "1ae54b378a9556d94b753093ba80e7117caf86fab4d3fe11ec84e3dd2f6d6dd8",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "amount": 2298,
+    "currency": "INR",
+    "field_used": "Total paid",
+    "document_type": "order receipt"
+  },
+  "confidence": 0.95,
+  "rationale": "The 'Total paid' field of ₹2,298 matches the debit amount for the tote bag order, including taxes and free delivery. No document date was printed on the receipt.",
+  "usage": {
+    "input_tokens": 2330,
+    "output_tokens": 138
+  },
+  "timestamp": "2026-09-12T23:24:02.564650+00:00"
+}

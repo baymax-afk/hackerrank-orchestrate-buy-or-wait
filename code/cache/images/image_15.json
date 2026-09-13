@@ -1,0 +1,22 @@
+{
+  "source_file": "dataset/media/images/image_15.png",
+  "source_id": "image_15",
+  "target_event_id": "event_9806",
+  "content_sha256": "0c0fe3d79e670f2b423bbb2aafc0b5601d3eb4e659ac64058cd189abf7792ee1",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "amount": 9968.0,
+    "currency": "INR",
+    "field_used": "Grand Total (Incl Taxes)",
+    "document_type": "airline invoice"
+  },
+  "confidence": 0.9,
+  "rationale": "The ledger row represents an airline ticket purchase debit; the document's Grand Total (Incl Taxes) of 9,968.00 INR is the total amount charged to the passenger, matching the full transaction amount for the debit entry.",
+  "usage": {
+    "input_tokens": 3136,
+    "output_tokens": 245
+  },
+  "timestamp": "2026-09-12T23:31:12.395319+00:00"
+}

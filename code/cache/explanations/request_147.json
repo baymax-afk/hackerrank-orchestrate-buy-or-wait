@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_147",
+  "content_sha256": "12cd433bd04ba7c25c77e8c783b4945ca60acef646920ce55dbe4c1d3f3b4694",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The EUR 1,129.70 travel request made on 5 April 2026 cannot be paid by the 7 June 2026 deadline, since doing so would breach the required EUR 900 minimum balance, so no payment or plan is recommended at this time."
+  },
+  "usage": {
+    "input_tokens": 531,
+    "output_tokens": 90
+  },
+  "timestamp": "2026-09-12T23:34:53.531299+00:00"
+}

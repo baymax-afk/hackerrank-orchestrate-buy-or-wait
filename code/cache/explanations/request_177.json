@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_177",
+  "content_sha256": "e9b9bf36c05a2f04e72ce995ffdb13883a72e0d89d682fb7bf6e89601f4e25a4",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Your emergency expense of USD 1,017.60 can be paid in full today, 5 January 2026, while still keeping at least USD 1,300 in reserve over the next 90 days."
+  },
+  "usage": {
+    "input_tokens": 548,
+    "output_tokens": 69
+  },
+  "timestamp": "2026-09-12T23:36:26.627153+00:00"
+}

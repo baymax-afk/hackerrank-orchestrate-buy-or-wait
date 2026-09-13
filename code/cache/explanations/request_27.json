@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_27",
+  "content_sha256": "1a919013992bc2fc1cc7b8c0bedd96e8e72b34cb56079fdfd6f9b926c8c323fa",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full ZAR 6,670 today, 5 July 2026, for this purchase while still keeping at least ZAR 20,500 available over the next 90 days."
+  },
+  "usage": {
+    "input_tokens": 547,
+    "output_tokens": 65
+  },
+  "timestamp": "2026-09-12T23:11:33.244196+00:00"
+}

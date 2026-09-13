@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_209",
+  "content_sha256": "54e3df21bd8f3c0e6e0a1a6cc5c46a0ed8d7fed1f5d146bed42f4de882704944",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The ZAR 56,914 travel request due 25 November 2025 cannot be paid, since doing so would drop the balance below the required ZAR 18,400 minimum, even with only ZAR 2,504.34 currently safe to use; no payment plan or full-payment date is available within 90 days."
+  },
+  "usage": {
+    "input_tokens": 541,
+    "output_tokens": 105
+  },
+  "timestamp": "2026-09-12T23:38:03.698890+00:00"
+}

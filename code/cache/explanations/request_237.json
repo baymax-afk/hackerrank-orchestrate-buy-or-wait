@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_237",
+  "content_sha256": "bd7f3b0afd1d0bc41a6ccc27042d901c02f1fe5f791754f8f8622d67ed57e242",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full IDR 23,826,000 today, 5 April 2026, since it's fully affordable now, and you'll still keep at least IDR 22,431,500 available over the next 90 days without any spending changes."
+  },
+  "usage": {
+    "input_tokens": 551,
+    "output_tokens": 80
+  },
+  "timestamp": "2026-09-12T23:39:34.508165+00:00"
+}

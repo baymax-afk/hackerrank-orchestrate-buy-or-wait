@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_38",
+  "content_sha256": "86be901e383c42bf0ca371fea4cbaa55a8ab47f7aac7c5bbea02794408f7e297",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can safely pay the full EUR 971.30 on 15 September 2025, since paying it sooner would drop your balance below the required EUR 400 minimum."
+  },
+  "usage": {
+    "input_tokens": 551,
+    "output_tokens": 61
+  },
+  "timestamp": "2026-09-12T23:13:46.345485+00:00"
+}

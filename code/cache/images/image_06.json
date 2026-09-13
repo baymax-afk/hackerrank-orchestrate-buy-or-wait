@@ -1,0 +1,22 @@
+{
+  "source_file": "dataset/media/images/image_06.png",
+  "source_id": "image_06",
+  "target_event_id": "event_3051",
+  "content_sha256": "9055551fbe5940feb01b947e1f18ccfed093192d103b1e930a56df0ea7cd3cb4",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "amount": 1995.0,
+    "currency": "INR",
+    "field_used": "Total",
+    "document_type": "invoice"
+  },
+  "confidence": 0.95,
+  "rationale": "The invoice's Total row shows 1995.00 as the grand total matching the amount in words 'One Thousand And Nine Hundred And Ninety-Five Rupees', which represents the full grocery tax invoice amount for this debit transaction.",
+  "usage": {
+    "input_tokens": 2351,
+    "output_tokens": 205
+  },
+  "timestamp": "2026-09-12T23:12:37.881354+00:00"
+}

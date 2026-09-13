@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_149",
+  "content_sha256": "dd7b2752011344b7e17d2d7f2e825f037089307c6e21c78cdaa4604d968190c0",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Your ZAR 36,652 travel request can be covered through 3 installments of ZAR 12,706.03 on 18 November 2025, 16 December 2025 and 13 January 2026, keeping at least ZAR 42,100 in your account throughout."
+  },
+  "usage": {
+    "input_tokens": 583,
+    "output_tokens": 93
+  },
+  "timestamp": "2026-09-12T23:35:00.463125+00:00"
+}

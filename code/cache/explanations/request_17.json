@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_17",
+  "content_sha256": "89cf19410027cfb79de6e4ba31c28b217eeae420f1888b6c7a29e208aad080dd",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "To cover the INR 274,600 emergency expense by 4 May 2026, pay in 3 installments of INR 95,194.67 on 1 March, 31 March, and 30 April 2026, keeping at least INR 166,100 in reserve throughout."
+  },
+  "usage": {
+    "input_tokens": 577,
+    "output_tokens": 93
+  },
+  "timestamp": "2026-09-12T22:59:05.521517+00:00"
+}

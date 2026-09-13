@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_90",
+  "content_sha256": "408ece23fa05dc05eb680772b0262856027c262eb04d492801e397b396bc7738",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full ZAR 2,560 today, 6 July 2026, since this still leaves at least ZAR 7,600 available over the next 90 days, so no spending changes are needed."
+  },
+  "usage": {
+    "input_tokens": 550,
+    "output_tokens": 71
+  },
+  "timestamp": "2026-09-12T23:24:22.135003+00:00"
+}

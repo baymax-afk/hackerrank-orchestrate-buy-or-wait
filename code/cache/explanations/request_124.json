@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_124",
+  "content_sha256": "02c5439802416d99c5a7d83fe8d2af37ad03cab55b04480a0fa667943cd471cf",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Since paying the full EUR 3,104.20 at once would dip below the EUR 1,600 minimum balance, the plan splits it into 3 installments of EUR 1,076.12 starting 11 June 2024, with the last due 12 August 2024, before the 20 August 2024 deadline."
+  },
+  "usage": {
+    "input_tokens": 579,
+    "output_tokens": 106
+  },
+  "timestamp": "2026-09-12T23:33:40.364152+00:00"
+}

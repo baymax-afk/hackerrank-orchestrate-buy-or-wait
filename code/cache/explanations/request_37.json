@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_37",
+  "content_sha256": "2d9db0becfdb7c77e30c78d21198b4b73b7ec788544589bd880f538f7c5d8c1b",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full IDR 14,649,000 family transfer on 15 May 2024, since paying it sooner would drop your balance below the required minimum of IDR 17,056,200."
+  },
+  "usage": {
+    "input_tokens": 566,
+    "output_tokens": 69
+  },
+  "timestamp": "2026-09-12T23:13:44.100747+00:00"
+}

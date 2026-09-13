@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_40",
+  "content_sha256": "89764d1f6d33a223c40fe2f0a961eef442663d4ea98fba26e85b571a836cd2a1",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You should wait and pay the full EUR 1,290.30 education request on 15 August 2024, since paying it sooner would drop your balance below the required EUR 1,500 minimum."
+  },
+  "usage": {
+    "input_tokens": 555,
+    "output_tokens": 68
+  },
+  "timestamp": "2026-09-12T23:13:52.082775+00:00"
+}

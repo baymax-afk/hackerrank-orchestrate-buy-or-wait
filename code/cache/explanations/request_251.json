@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_251",
+  "content_sha256": "210dcf0f29b5984c0c039a43c3a547dc6b1070c67aee841379b2f7f4c9648e18",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can't afford the EUR 1,513.60 education payment due by 6 June 2025 without dropping below your EUR 1,300 minimum balance, so only EUR 106.72 is safe to pay today and this payment isn't recommended at this time."
+  },
+  "usage": {
+    "input_tokens": 536,
+    "output_tokens": 90
+  },
+  "timestamp": "2026-09-12T23:40:15.501166+00:00"
+}

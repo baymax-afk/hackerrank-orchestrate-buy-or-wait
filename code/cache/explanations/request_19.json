@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_19",
+  "content_sha256": "b74e951ae48288757b0ab707b481927426edcc5c69a3665755f348752d3f794c",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "To cover the INR 39,660 purchase while keeping the INR 92,800 minimum balance safe, pay INR 25,542.47 today and the remaining INR 14,117.53 on 15 September 2024, completing the request before the 4 October 2024 deadline."
+  },
+  "usage": {
+    "input_tokens": 583,
+    "output_tokens": 97
+  },
+  "timestamp": "2026-09-12T22:59:54.907245+00:00"
+}

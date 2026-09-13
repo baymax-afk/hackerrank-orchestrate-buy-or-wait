@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_260",
+  "content_sha256": "e32eca0cec0326c989abd0c458ea80a52f84be464ef0a16176a20516f9228595",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "This IDR 52,079,000 emergency request submitted on 6 February 2025 cannot be safely covered even though IDR 8,717,458.19 is available today, since paying it would breach the required minimum balance of IDR 20,727,700 and no full payment is possible within 90 days, so the request is not recommended."
+  },
+  "usage": {
+    "input_tokens": 564,
+    "output_tokens": 111
+  },
+  "timestamp": "2026-09-12T23:40:41.962453+00:00"
+}

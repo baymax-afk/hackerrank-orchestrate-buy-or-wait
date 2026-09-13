@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_42",
+  "content_sha256": "82d3533f8683931fcdc9b2c4222d131ba2d0bde2fa4b6f4705baba9963d140c0",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full INR 52,100 emergency expense today, 5 January 2026, while keeping at least INR 113,100 in reserve over the next 90 days, so no changes to spending are needed."
+  },
+  "usage": {
+    "input_tokens": 540,
+    "output_tokens": 74
+  },
+  "timestamp": "2026-09-12T23:13:58.483877+00:00"
+}

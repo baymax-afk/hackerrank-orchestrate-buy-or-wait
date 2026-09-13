@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_100",
+  "content_sha256": "5f05dfd0b807d08e125a564b5c64257d7149563ffb97d3820758f3de6338720a",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The requested ZAR 37,114 purchase due by 16 August 2024 can't be made safely, since paying it would drop your balance below the required ZAR 32,500 minimum, so it is not recommended and no payment plan is available."
+  },
+  "usage": {
+    "input_tokens": 542,
+    "output_tokens": 84
+  },
+  "timestamp": "2026-09-12T23:24:55.253447+00:00"
+}

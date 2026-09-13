@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_262",
+  "content_sha256": "5bd0378f8ada478ec78f2a4bf55cb24c16d54cd96a5e1b87cabb3d992af6f768",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full IDR 9,236,000 education request today, 5 December 2024, while still keeping at least IDR 31,018,500 available over the next 90 days, with no changes to your spending needed."
+  },
+  "usage": {
+    "input_tokens": 551,
+    "output_tokens": 75
+  },
+  "timestamp": "2026-09-12T23:41:12.955112+00:00"
+}

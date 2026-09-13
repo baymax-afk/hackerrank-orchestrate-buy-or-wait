@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_194",
+  "content_sha256": "3e2a6758043dff131f368bbf5aad15d4438650dbdb2c17e5e0a9a73324c84842",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You should wait and pay the full INR 132,800 on 23 October 2025, since paying any earlier would drop your balance below the required INR 113,600 minimum."
+  },
+  "usage": {
+    "input_tokens": 547,
+    "output_tokens": 62
+  },
+  "timestamp": "2026-09-12T23:37:09.539492+00:00"
+}

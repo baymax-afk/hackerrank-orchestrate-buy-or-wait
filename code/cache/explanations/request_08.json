@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_08",
+  "content_sha256": "5ae57d8a15f4aed965deacf7daee035739e41e9a7eb54ea454638f0fe1524d38",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Paying the full EUR 996.60 emergency expense by 15 April 2025 isn't possible without dropping below the required EUR 800 minimum balance, so this payment is not recommended and only EUR 289.98 is currently safe to pay."
+  },
+  "usage": {
+    "input_tokens": 535,
+    "output_tokens": 89
+  },
+  "timestamp": "2026-09-12T22:57:43.849740+00:00"
+}

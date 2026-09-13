@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_135",
+  "content_sha256": "2434c6f5da14ca9deffd7753a2468a37a2b90781603ca9e3849b1f56e5f8e5cd",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full USD 304.80 housing request today, 6 July 2026, since it's affordable now and still leaves at least USD 500 available over the next 90 days."
+  },
+  "usage": {
+    "input_tokens": 533,
+    "output_tokens": 64
+  },
+  "timestamp": "2026-09-12T23:34:16.875728+00:00"
+}

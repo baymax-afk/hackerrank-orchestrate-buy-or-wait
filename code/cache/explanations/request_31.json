@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_31",
+  "content_sha256": "370c9f61868b71adee890d9dd03f84fe4921b9145398ae1b5ed0df57709917f2",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Wait until 15 November 2024 to pay the full IDR 18,164,000, since paying sooner would drop your balance below the required minimum of IDR 16,588,900."
+  },
+  "usage": {
+    "input_tokens": 564,
+    "output_tokens": 66
+  },
+  "timestamp": "2026-09-12T23:11:45.055782+00:00"
+}

@@ -1,0 +1,2 @@
+anthropic>=1.3.0   # optional: enables the image/message/explanation agents (set ANTHROPIC_API_KEY)
+pytest>=8          # dev: python -m pytest tests -q

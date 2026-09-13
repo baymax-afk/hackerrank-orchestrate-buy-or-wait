@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_159",
+  "content_sha256": "df2fa2849fc8717503bb108064d2d94f8a8386e367eb0f1f788d41f87c0a65f0",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can't afford to invest ZAR 13,398 by 20 March 2026, since doing so would drop you below the required ZAR 8,700 minimum balance, so this investment isn't recommended right now."
+  },
+  "usage": {
+    "input_tokens": 537,
+    "output_tokens": 75
+  },
+  "timestamp": "2026-09-12T23:35:46.731381+00:00"
+}

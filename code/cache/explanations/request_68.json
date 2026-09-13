@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_68",
+  "content_sha256": "2ab4184d9bc354547e389812b1ea5446f4f5be00a2bc7fd481d0884ba484019a",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "To repay the USD 2,091.60 debt by 16 April 2025 while keeping at least USD 1,500 available, the plan splits payments into 3 installments of USD 725.09 each, starting 14 February 2025 and ending 11 April 2025."
+  },
+  "usage": {
+    "input_tokens": 574,
+    "output_tokens": 93
+  },
+  "timestamp": "2026-09-12T23:19:40.889295+00:00"
+}

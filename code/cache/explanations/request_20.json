@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_20",
+  "content_sha256": "6e3c85717c02ee2ccad49955c25d3369b131beb4ca29cf694e8f29a51a4ba328",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You cannot afford the INR 303,700 travel request by 22 February 2026, since paying it would break the required INR 64,500 minimum balance; only INR 12,355.52 can safely be paid today, so no payment is recommended at this time."
+  },
+  "usage": {
+    "input_tokens": 533,
+    "output_tokens": 87
+  },
+  "timestamp": "2026-09-12T23:00:52.879007+00:00"
+}

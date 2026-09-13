@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_71",
+  "content_sha256": "b8f6a9296e0a95753789ef6ecb9a4f2722462c0db51450d17e93dd096c453736",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The requested IDR 21,451,000 housing payment due 28 May 2025 cannot be made without dropping below your required minimum balance of IDR 8,884,800, so this payment is not recommended and no payment plan is currently available."
+  },
+  "usage": {
+    "input_tokens": 545,
+    "output_tokens": 84
+  },
+  "timestamp": "2026-09-12T23:19:47.976003+00:00"
+}

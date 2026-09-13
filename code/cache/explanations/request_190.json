@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_190",
+  "content_sha256": "f4b5eb3e99a7f9a0c60b543800b197e2d649923a3efaba1f78e6791f8dee339c",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You'll need to wait to pay EUR 2,557.50 in full on 15 February 2025, since paying any sooner would drop your balance below the required EUR 1,600 minimum."
+  },
+  "usage": {
+    "input_tokens": 557,
+    "output_tokens": 69
+  },
+  "timestamp": "2026-09-12T23:36:59.204271+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_24",
+  "content_sha256": "290ad87a26d65191ea01dbef7568e37a7a9b775f6ae97bfe6fbcea3163e3f6ae",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The INR 109,600 investment requested on 4 January 2026 isn't affordable while keeping the required INR 51,000 minimum balance; only INR 18,500.91 can safely be paid today, and no full payment is possible within 90 days, so it's not recommended."
+  },
+  "usage": {
+    "input_tokens": 545,
+    "output_tokens": 96
+  },
+  "timestamp": "2026-09-12T23:01:03.146918+00:00"
+}

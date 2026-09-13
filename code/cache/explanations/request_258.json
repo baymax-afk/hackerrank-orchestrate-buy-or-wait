@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_258",
+  "content_sha256": "562d863bc068ab3af52c2ae228978c7267099b4706c751979d8cd25755803bbe",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can fully invest USD 1,113.60 on 7 January 2026 while still keeping at least USD 500 in reserve over the next 90 days, so the full payment is being made today."
+  },
+  "usage": {
+    "input_tokens": 540,
+    "output_tokens": 68
+  },
+  "timestamp": "2026-09-12T23:40:35.744615+00:00"
+}

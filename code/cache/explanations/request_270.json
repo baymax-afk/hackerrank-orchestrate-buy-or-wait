@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_270",
+  "content_sha256": "e2033d2fd70a750d4e6f82b1c353709b087a0532dcef8fb10a3c78d722d626bc",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Investing USD 3,028.80 by 30 August 2026 isn't recommended, since even the safe-to-pay amount of USD 164.05 today can't protect your required USD 1,400 minimum balance, and no full-payment date is possible within 90 days."
+  },
+  "usage": {
+    "input_tokens": 533,
+    "output_tokens": 94
+  },
+  "timestamp": "2026-09-12T23:41:42.876006+00:00"
+}

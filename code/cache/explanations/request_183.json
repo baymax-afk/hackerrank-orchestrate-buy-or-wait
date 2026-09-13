@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_183",
+  "content_sha256": "e47f7235491623fc301941af472b297766d41a6d9cca648168323cd8837cce7d",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Your emergency expense of IDR 26,866,000 will be covered through 3 installments of IDR 9,313,546.67 starting 10 April 2026, keeping at least IDR 11,878,300 in your account throughout."
+  },
+  "usage": {
+    "input_tokens": 595,
+    "output_tokens": 83
+  },
+  "timestamp": "2026-09-12T23:36:41.777372+00:00"
+}

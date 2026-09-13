@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_93",
+  "content_sha256": "5bb9155b1e414545fb3a9d9cbcac408532d3e5f565213cd934f534dd2e243ca0",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Your travel request of USD 1,729.20 can be paid in full today, 7 April 2026, while still keeping at least USD 1,900 available over the next 90 days, so no spending changes are needed."
+  },
+  "usage": {
+    "input_tokens": 544,
+    "output_tokens": 74
+  },
+  "timestamp": "2026-09-12T23:24:31.492270+00:00"
+}

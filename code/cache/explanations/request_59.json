@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_59",
+  "content_sha256": "cd69902308b8650338743474e980e911a05e6fe3787da5b1b3ba63f5159542ae",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You requested INR 140,600 for investment by 2 July 2025, but making this payment isn't recommended because it would breach the required INR 132,600 minimum balance, and no payment plan can achieve full payment within 90 days while protecting that balance."
+  },
+  "usage": {
+    "input_tokens": 533,
+    "output_tokens": 89
+  },
+  "timestamp": "2026-09-12T23:16:16.100034+00:00"
+}

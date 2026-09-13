@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_67",
+  "content_sha256": "0420fb1b37016964a863df5564fde41ea3c2069b0043e7a12ac4f7017b2b89a0",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You should wait and pay the full USD 2,094 on 15 November 2024, since paying any sooner would drop your balance below the required USD 1,200 minimum."
+  },
+  "usage": {
+    "input_tokens": 549,
+    "output_tokens": 62
+  },
+  "timestamp": "2026-09-12T23:19:37.836487+00:00"
+}

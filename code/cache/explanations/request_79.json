@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_79",
+  "content_sha256": "3700e9a001dfdb29d1e116a7e329e1b4d74edee560d020f3c266b38f12f78d81",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The EUR 2,151.60 purchase requested on 4 September 2024 cannot proceed, since only EUR 429.84 can be safely paid today while keeping the EUR 1,000 minimum balance, and the full amount can't be completed safely within 90 days."
+  },
+  "usage": {
+    "input_tokens": 551,
+    "output_tokens": 96
+  },
+  "timestamp": "2026-09-12T23:23:27.880957+00:00"
+}

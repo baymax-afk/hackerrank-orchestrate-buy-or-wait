@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_82",
+  "content_sha256": "4fe22030cb7571428546bcd18ee0618d923bf8f895e62c343fc2636de8206ed5",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Pay the full USD 1,405.20 on 15 December 2024, since paying any sooner would drop your balance below the required USD 1,100 minimum."
+  },
+  "usage": {
+    "input_tokens": 554,
+    "output_tokens": 60
+  },
+  "timestamp": "2026-09-12T23:23:41.167859+00:00"
+}

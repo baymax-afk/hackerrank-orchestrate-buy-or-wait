@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_211",
+  "content_sha256": "7222364915871e66781e9d7e3ee65cfedff2ac31c728f9cb6bb7bf3c4b472187",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Only EUR 265.36 is safely available now, so the full EUR 1,788.60 payment for request_211 will wait until 15 November 2024 to keep your balance above the EUR 1,500 minimum."
+  },
+  "usage": {
+    "input_tokens": 555,
+    "output_tokens": 78
+  },
+  "timestamp": "2026-09-12T23:38:11.861162+00:00"
+}

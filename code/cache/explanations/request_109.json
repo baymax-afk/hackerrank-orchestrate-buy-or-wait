@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_109",
+  "content_sha256": "79ed309fefaa97ba39680476cbbd0a73c958463b75658114424050aa50f7eb82",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can cover the EUR 1,863.40 family transfer by paying it in 3 installments of EUR 645.98, starting 18 March 2024 and finishing 19 May 2024, which keeps at least EUR 1,700 in your account throughout."
+  },
+  "usage": {
+    "input_tokens": 576,
+    "output_tokens": 91
+  },
+  "timestamp": "2026-09-12T23:31:26.975490+00:00"
+}

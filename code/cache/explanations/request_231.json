@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_231",
+  "content_sha256": "1f6afb3f07fa4f9f058ac8e10a9a4baeb517120ba954c2de1721677990e26ed8",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Your ZAR 35,706 purchase will be paid in 3 installments of ZAR 12,378.08 starting 6 January 2026, keeping at least ZAR 24,300 in your account throughout, with everything settled well before the 17 March 2026 deadline."
+  },
+  "usage": {
+    "input_tokens": 582,
+    "output_tokens": 97
+  },
+  "timestamp": "2026-09-12T23:39:17.254471+00:00"
+}

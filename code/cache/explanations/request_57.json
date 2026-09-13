@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_57",
+  "content_sha256": "084c19d7679c1255f3261be6882d5f1b44416799d66579572ce1139c800f38bf",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Your ZAR 61,446 education request can't be paid today without dropping below the ZAR 42,700 minimum balance, so the plan is to wait and pay the full amount on 15 May 2026, ahead of the 15 June 2026 deadline."
+  },
+  "usage": {
+    "input_tokens": 556,
+    "output_tokens": 91
+  },
+  "timestamp": "2026-09-12T23:16:11.729605+00:00"
+}

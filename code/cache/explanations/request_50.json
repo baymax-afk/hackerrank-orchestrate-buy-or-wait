@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_50",
+  "content_sha256": "21ed090dc5111f846fb9572617e95c52f65db6a13a7ae9f11732adf91054eb55",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full INR 43,900 travel request today, 6 August 2025, and still keep at least INR 99,700 available over the next 90 days, with no changes needed to your spending."
+  },
+  "usage": {
+    "input_tokens": 536,
+    "output_tokens": 69
+  },
+  "timestamp": "2026-09-12T23:15:21.995873+00:00"
+}

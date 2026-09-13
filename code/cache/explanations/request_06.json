@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_06",
+  "content_sha256": "5ac44665e1669d147cd1963e1a0848fd9cfdd874887298f1e77dfd9cfad52d15",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full EUR 620.40 investment today, 3 January 2026, while still keeping at least EUR 800 available over the next 90 days."
+  },
+  "usage": {
+    "input_tokens": 538,
+    "output_tokens": 58
+  },
+  "timestamp": "2026-09-12T22:57:39.110886+00:00"
+}

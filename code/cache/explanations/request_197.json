@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_197",
+  "content_sha256": "77898b8e4f17de26b11f3dba5ab0eda78fd7163af7a87370879841ef2b5ebae4",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can cover the full IDR 50,939,000 family transfer by paying it in 3 installments of IDR 17,658,853.33 on 19 November 2025, 17 December 2025, and 14 January 2026, keeping at least IDR 26,245,900 in reserve, ahead of the 21 January 2026 deadline."
+  },
+  "usage": {
+    "input_tokens": 592,
+    "output_tokens": 116
+  },
+  "timestamp": "2026-09-12T23:37:32.220543+00:00"
+}

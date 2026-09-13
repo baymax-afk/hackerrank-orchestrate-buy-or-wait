@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_169",
+  "content_sha256": "5ca3a033bb305a3cf5c20e94a69bbf9e838246169678ab0c265f9795b345f783",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full ZAR 41,976 education request today, 4 March 2024, while still keeping at least ZAR 18,700 available over the next 90 days."
+  },
+  "usage": {
+    "input_tokens": 545,
+    "output_tokens": 62
+  },
+  "timestamp": "2026-09-12T23:36:09.424871+00:00"
+}

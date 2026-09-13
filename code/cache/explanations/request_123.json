@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_123",
+  "content_sha256": "2958d669f4512c1d0f414296846f8ee7d21f8896bd4226e06dfd443d81afb0ac",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You should not make the IDR 4,076,000 investment by 28 March 2026, since none of the available options lets you pay while keeping your required minimum balance of IDR 18,091,200 intact."
+  },
+  "usage": {
+    "input_tokens": 539,
+    "output_tokens": 72
+  },
+  "timestamp": "2026-09-12T23:33:36.975786+00:00"
+}

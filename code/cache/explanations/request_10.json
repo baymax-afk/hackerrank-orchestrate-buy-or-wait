@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_10",
+  "content_sha256": "e31f966d9c06efcc17a8a01d471c4e6ac87605d81799db7e650faecf5f786d34",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The INR 266,700 purchase requested on 6 December 2024 cannot be made by the 10 February 2025 deadline because paying it would drop your balance below the required minimum of INR 225,400, so no payment plan is currently recommended."
+  },
+  "usage": {
+    "input_tokens": 530,
+    "output_tokens": 87
+  },
+  "timestamp": "2026-09-12T22:57:48.006569+00:00"
+}

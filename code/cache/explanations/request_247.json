@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_247",
+  "content_sha256": "fe6821acca89fa9bea7abd76158d588949505ba7602d7b9f9e4f9fce61679e5b",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full EUR 1,059.30 family transfer today, 5 September 2024, since this still leaves at least EUR 1,300 available over the next 90 days, with no changes to your spending needed."
+  },
+  "usage": {
+    "input_tokens": 552,
+    "output_tokens": 76
+  },
+  "timestamp": "2026-09-12T23:40:03.438636+00:00"
+}

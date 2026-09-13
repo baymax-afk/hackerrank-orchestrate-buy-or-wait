@@ -1,0 +1,22 @@
+{
+  "source_file": "dataset/media/images/image_11.png",
+  "source_id": "image_11",
+  "target_event_id": "event_6859",
+  "content_sha256": "795e000d48428c97748e8af370cb02b604bec88cc52ec8930f38dc744624e886",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "amount": 3650.0,
+    "currency": "INR",
+    "field_used": "Amount Payable",
+    "document_type": "hospital provisional bill"
+  },
+  "confidence": 0.95,
+  "rationale": "The row describes 'Hospital bill payable' matching the document's 'Amount Payable' field of 3650.00 INR, consistent with the Total Bill Amount and Balance since no payment has been made yet.",
+  "usage": {
+    "input_tokens": 2444,
+    "output_tokens": 187
+  },
+  "timestamp": "2026-09-12T23:20:35.273665+00:00"
+}

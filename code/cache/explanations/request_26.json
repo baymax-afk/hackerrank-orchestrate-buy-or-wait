@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_26",
+  "content_sha256": "920e23d03d26c380bd217242413bf6b54d0aa1736ad60a5130700302492374ea",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full family transfer of IDR 15,656,000 today, 3 August 2025, while still keeping at least IDR 24,768,300 available over the next 90 days."
+  },
+  "usage": {
+    "input_tokens": 555,
+    "output_tokens": 67
+  },
+  "timestamp": "2026-09-12T23:11:30.699852+00:00"
+}

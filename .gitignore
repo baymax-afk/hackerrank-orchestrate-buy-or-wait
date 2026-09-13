@@ -1,0 +1,8 @@
+log.txt
+.env
+__pycache__/
+*.pyc
+code.zip
+/imp_docs/
+code/traces/
+run_full.log

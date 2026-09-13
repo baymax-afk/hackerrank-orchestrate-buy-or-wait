@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_75",
+  "content_sha256": "97dd96390ede980882f12a5761634e06962ec1615ddb465d6f1da876b7437f68",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can cover the ZAR 28,270 emergency expense by paying it in 3 installments of ZAR 9,800.27 starting 9 April 2026, and this keeps at least ZAR 39,000 in your account throughout."
+  },
+  "usage": {
+    "input_tokens": 585,
+    "output_tokens": 84
+  },
+  "timestamp": "2026-09-12T23:20:42.653766+00:00"
+}

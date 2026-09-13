@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_22",
+  "content_sha256": "3143b596760365c1c3d6358956efd51d4d0104c5dee85341c856a337627d6052",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Since paying the full EUR 731.50 now would breach the EUR 500 minimum balance, the plan splits it into 3 installments of EUR 253.59 on 8 December 2024, 5 January 2025 and 2 February 2025, keeping at least EUR 500 available throughout."
+  },
+  "usage": {
+    "input_tokens": 570,
+    "output_tokens": 104
+  },
+  "timestamp": "2026-09-12T23:00:57.795429+00:00"
+}

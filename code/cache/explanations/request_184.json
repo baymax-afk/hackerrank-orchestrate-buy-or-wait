@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_184",
+  "content_sha256": "44e221691586f893acfbcc1633dfdcc339795cb0c4a74a3ff38f9c30aa5987ae",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Paying INR 251,900 toward this debt by 30 July 2024 isn't affordable, since only INR 17,569.20 can safely be paid today while keeping your required minimum balance of INR 110,800 protected, so no payment plan is recommended right now."
+  },
+  "usage": {
+    "input_tokens": 537,
+    "output_tokens": 94
+  },
+  "timestamp": "2026-09-12T23:36:43.685094+00:00"
+}

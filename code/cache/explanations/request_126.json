@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_126",
+  "content_sha256": "10760d880d20d059d30f94278bcba6a34be80d6e691af3f638abe22bf5067f88",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full INR 159,600 today for request_126, since doing so on 3 July 2026 still leaves at least INR 129,700 available over the next 90 days, so no spending changes are needed."
+  },
+  "usage": {
+    "input_tokens": 540,
+    "output_tokens": 74
+  },
+  "timestamp": "2026-09-12T23:33:47.929640+00:00"
+}

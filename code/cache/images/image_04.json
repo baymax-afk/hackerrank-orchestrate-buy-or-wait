@@ -1,0 +1,22 @@
+{
+  "source_file": "dataset/media/images/image_04.png",
+  "source_id": "image_04",
+  "target_event_id": "event_1700",
+  "content_sha256": "281e7f1e7bd1f98fbd53cde1381977373e610e6634b11c98098000001ff10f0c",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "amount": 2854.0,
+    "currency": "INR",
+    "field_used": "Item Bill",
+    "document_type": "delivery order receipt"
+  },
+  "confidence": 0.4,
+  "rationale": "The document shows itemized order details totaling ₹2854.00 as 'Item Bill', but the full 'Total Order Bill Details' section is cut off before showing delivery fees or the final grand total, so the true settled amount for the order cannot be confirmed with certainty.",
+  "usage": {
+    "input_tokens": 1531,
+    "output_tokens": 282
+  },
+  "timestamp": "2026-09-12T22:59:51.873753+00:00"
+}

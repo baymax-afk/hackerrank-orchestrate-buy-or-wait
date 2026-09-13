@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_162",
+  "content_sha256": "c0591119b295a0bcd9295fd92c5dcfb55aa8a89f95e7f9a7e5e6f062d2acf238",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Paying the requested IDR 83,923,000 by 26 August 2026 isn't affordable, as no option keeps your required minimum balance of IDR 24,161,100 protected, so this payment is not recommended at this time."
+  },
+  "usage": {
+    "input_tokens": 544,
+    "output_tokens": 82
+  },
+  "timestamp": "2026-09-12T23:35:54.139023+00:00"
+}

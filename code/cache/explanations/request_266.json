@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_266",
+  "content_sha256": "c265a243ee031ad75e1bd1b562d92e66a2d3050ccb9f423ee74b01eb171445d8",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "To fund the EUR 935 investment request by 3 October 2025 while keeping at least EUR 900 available, the plan splits payment into 3 installments of EUR 324.13 on 3 August 2025, 31 August 2025 and 28 September 2025."
+  },
+  "usage": {
+    "input_tokens": 565,
+    "output_tokens": 94
+  },
+  "timestamp": "2026-09-12T23:41:31.586144+00:00"
+}

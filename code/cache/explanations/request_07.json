@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_07",
+  "content_sha256": "54f0675e771daa0ace6c1501b600f86f3c0299d4f0f070e651a60e71f8ea3729",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "To cover the INR 197,400 housing request by 14 November 2024, pay it in 3 installments of INR 68,432 starting 12 September 2024, on 10 October 2024, and on 7 November 2024, keeping at least INR 93,000 in reserve throughout."
+  },
+  "usage": {
+    "input_tokens": 565,
+    "output_tokens": 99
+  },
+  "timestamp": "2026-09-12T22:57:41.517762+00:00"
+}

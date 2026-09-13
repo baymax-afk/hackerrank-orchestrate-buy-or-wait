@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_206",
+  "content_sha256": "e5bbf51c4d51f7667a70b0181bf98678711435dc2de70a5ece097c08df08c974",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can cover the EUR 1,404.70 family transfer by paying it in 3 installments of EUR 486.96 each, on 3 August 2025, 31 August 2025 and 28 September 2025, while always keeping at least EUR 900 in reserve."
+  },
+  "usage": {
+    "input_tokens": 574,
+    "output_tokens": 94
+  },
+  "timestamp": "2026-09-12T23:37:56.318387+00:00"
+}

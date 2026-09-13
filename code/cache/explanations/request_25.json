@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_25",
+  "content_sha256": "552b3dacb1fca23bc91d7ea4c4e553756acc352e4492c10a69faec0868140eed",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The requested IDR 60,496,000 housing payment due 17 April 2024 isn't affordable, since paying it would drop your balance below the required IDR 23,379,100 minimum, so no payment method or plan is recommended at this time."
+  },
+  "usage": {
+    "input_tokens": 545,
+    "output_tokens": 86
+  },
+  "timestamp": "2026-09-12T23:01:05.827415+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_228",
+  "content_sha256": "a02ec5bfc8342772bd4b8ed8d6261d5bb03bddfda60fbe8bf47e779a94cf1799",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Investment request_228 for IDR 63,327,000 due 30 April 2026 is not affordable; paying it would break your required minimum balance of IDR 26,191,200, so no payment method or plan is recommended at this time."
+  },
+  "usage": {
+    "input_tokens": 545,
+    "output_tokens": 82
+  },
+  "timestamp": "2026-09-12T23:39:09.540896+00:00"
+}

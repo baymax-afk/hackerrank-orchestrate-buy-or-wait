@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_89",
+  "content_sha256": "ec230e117f1c72dee32cea1b85544cefbaf0597fd01d497efc3828bb4a622d17",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Paying the requested IDR 13,756,000 by 15 January 2026 would drop your balance below the required minimum of IDR 12,534,700, so this payment is not recommended and no payment plan is currently available."
+  },
+  "usage": {
+    "input_tokens": 544,
+    "output_tokens": 78
+  },
+  "timestamp": "2026-09-12T23:24:19.506446+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_219",
+  "content_sha256": "9352f5f878b14e49750448b37f9f08fb0529dd1a45d3035aa0e6873bf3252852",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The EUR 1,673.10 education request due 13 June 2026 cannot be paid, even in part, because doing so would drop the balance below the required EUR 1,100 minimum, so no payment is recommended at this time."
+  },
+  "usage": {
+    "input_tokens": 534,
+    "output_tokens": 80
+  },
+  "timestamp": "2026-09-12T23:38:38.144258+00:00"
+}

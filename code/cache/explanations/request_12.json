@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_12",
+  "content_sha256": "16bc1d6c8cfca6ad866cec6cec8275c7a2a2b9ddef56dd7802844d0a5828359b",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Your ZAR 65,164 education payment is affordable and will be made in 3 installments of ZAR 22,590.19 on 19 April, 20 May, and 20 June 2026, keeping at least ZAR 43,200 in reserve throughout."
+  },
+  "usage": {
+    "input_tokens": 580,
+    "output_tokens": 92
+  },
+  "timestamp": "2026-09-12T22:57:51.992462+00:00"
+}

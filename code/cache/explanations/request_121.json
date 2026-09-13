@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_121",
+  "content_sha256": "c03ab68438a0627e2305d760a99a9ad0f249ad41beee45d4112c89a2033c4cdf",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full USD 633.60 debt today, 3 March 2024, while still keeping at least USD 800 in reserve over the next 90 days."
+  },
+  "usage": {
+    "input_tokens": 537,
+    "output_tokens": 59
+  },
+  "timestamp": "2026-09-12T23:33:29.993700+00:00"
+}

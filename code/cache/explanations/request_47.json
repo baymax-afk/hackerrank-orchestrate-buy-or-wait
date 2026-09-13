@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_47",
+  "content_sha256": "0682737dbe87e82c19e33bb5277ae92def44d92f82cc85e5157e34d99f2064bc",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The emergency expense request for IDR 38,114,000 due 19 June 2025 cannot be paid, since doing so would drop the balance below the required minimum of IDR 30,049,000, and no partial payment or plan is currently possible."
+  },
+  "usage": {
+    "input_tokens": 543,
+    "output_tokens": 86
+  },
+  "timestamp": "2026-09-12T23:14:15.768100+00:00"
+}

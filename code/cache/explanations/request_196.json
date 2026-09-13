@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_196",
+  "content_sha256": "dddab37fda2eba5a4feb56fb99a765901983ae7f5025249ff3621ecaaa6e02ed",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full EUR 762.30 for request_196 today, 3 June 2024, while still keeping at least EUR 500 available over the next 90 days."
+  },
+  "usage": {
+    "input_tokens": 539,
+    "output_tokens": 61
+  },
+  "timestamp": "2026-09-12T23:37:28.827661+00:00"
+}

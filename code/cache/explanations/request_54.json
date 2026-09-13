@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_54",
+  "content_sha256": "893f799c69e4de5010b08a20438baddd65795fe8e439f9118fb15d34ff5de5d8",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The ZAR 121,528 housing request due 21 August 2026 cannot be paid without dropping below the required ZAR 37,000 minimum balance, so payment is not recommended and only ZAR 3,471.75 is safe to allocate today."
+  },
+  "usage": {
+    "input_tokens": 541,
+    "output_tokens": 90
+  },
+  "timestamp": "2026-09-12T23:15:34.082185+00:00"
+}

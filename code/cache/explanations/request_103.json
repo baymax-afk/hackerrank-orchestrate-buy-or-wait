@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_103",
+  "content_sha256": "c1214b2ea94acde7548697a9e2845fb69d4da198e0a90d4abb1a8ebd8dc73f25",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The INR 368,300 travel request from 7 September 2024 isn't affordable by the 7 October 2024 deadline, since paying it would breach the required INR 125,500 minimum balance, so no payment method is recommended and no full-payment date is expected within 90 days."
+  },
+  "usage": {
+    "input_tokens": 533,
+    "output_tokens": 97
+  },
+  "timestamp": "2026-09-12T23:28:07.889859+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_142",
+  "content_sha256": "0fef5c48752c2544e64f7411e6d3e5072da9decbec4f07464cddd8f705c60eec",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full USD 1,263.60 for this investment request today, 5 December 2024, while still keeping at least USD 1,700 available over the next 90 days, so no spending changes are needed."
+  },
+  "usage": {
+    "input_tokens": 544,
+    "output_tokens": 73
+  },
+  "timestamp": "2026-09-12T23:34:34.371967+00:00"
+}

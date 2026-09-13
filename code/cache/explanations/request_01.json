@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_01",
+  "content_sha256": "4e6a4fea95743a72869c801209a614a7570d42a747216554f3dbe359fca438c8",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can fully cover the ZAR 25,256 purchase today, 3 March 2024, while still keeping at least ZAR 18,000 in reserve over the next 90 days, so no spending changes are needed."
+  },
+  "usage": {
+    "input_tokens": 547,
+    "output_tokens": 77
+  },
+  "timestamp": "2026-09-12T22:57:12.797672+00:00"
+}

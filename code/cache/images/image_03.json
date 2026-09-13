@@ -1,0 +1,22 @@
+{
+  "source_file": "dataset/media/images/image_03.png",
+  "source_id": "image_03",
+  "target_event_id": "event_1545",
+  "content_sha256": "e5fb0bbcda6cc06f8ea95e32e45d4c76acd8c594f4b02ff0d78e6006e103ee4d",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "amount": 41272.0,
+    "currency": "INR",
+    "field_used": "Net Amount",
+    "document_type": "receipt"
+  },
+  "confidence": 0.95,
+  "rationale": "The receipt shows a Net Amount of 41272.0 which matches the Cash Paid amount, representing the total for the grocery purchase, aligning with the ledger row's debit amount.",
+  "usage": {
+    "input_tokens": 1726,
+    "output_tokens": 155
+  },
+  "timestamp": "2026-09-12T22:59:03.153152+00:00"
+}

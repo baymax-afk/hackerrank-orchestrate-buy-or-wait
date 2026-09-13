@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_44",
+  "content_sha256": "248da6743c720f1af417e81237dbc991d73dde60d6bbd0b242084a975742e3c9",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "Since paying INR 95,800 now would drop the balance below the INR 82,900 minimum you want to keep, it's best to wait and pay the full amount on 15 April 2025, ahead of the 15 April 2025 deadline."
+  },
+  "usage": {
+    "input_tokens": 546,
+    "output_tokens": 85
+  },
+  "timestamp": "2026-09-12T23:14:06.958358+00:00"
+}

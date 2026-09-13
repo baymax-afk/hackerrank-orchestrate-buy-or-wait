@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_117",
+  "content_sha256": "79bc7c0afd9143fa3304cc813ba9e462e06a0737b601f32f3b84041c6c1af22b",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You can pay the full EUR 880 housing request today, 5 July 2026, since it's affordable now and still leaves at least EUR 1,000 available over the next 90 days."
+  },
+  "usage": {
+    "input_tokens": 534,
+    "output_tokens": 66
+  },
+  "timestamp": "2026-09-12T23:33:18.923824+00:00"
+}

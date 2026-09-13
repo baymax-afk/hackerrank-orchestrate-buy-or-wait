@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_145",
+  "content_sha256": "d2d85c2d866f6855d8402433f6c7e01163571f12b48fd78d48c9a4f99d543dc2",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "To cover the INR 217,400 travel request by 26 May 2024 while keeping at least INR 155,400 in reserve, the plan splits payment into 3 installments of INR 75,365.33 each, starting 20 March 2024 and finishing 21 May 2024."
+  },
+  "usage": {
+    "input_tokens": 573,
+    "output_tokens": 98
+  },
+  "timestamp": "2026-09-12T23:34:46.813692+00:00"
+}

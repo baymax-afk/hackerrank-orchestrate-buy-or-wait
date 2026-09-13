@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_52",
+  "content_sha256": "12e26c4fff82885a967f4b83102322851bdc901c071cda7761fff160c5e1f840",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "You should pay the full INR 28,870 on 15 June 2024, since paying any sooner would drop your balance below the required minimum of INR 41,500."
+  },
+  "usage": {
+    "input_tokens": 551,
+    "output_tokens": 59
+  },
+  "timestamp": "2026-09-12T23:15:29.103348+00:00"
+}

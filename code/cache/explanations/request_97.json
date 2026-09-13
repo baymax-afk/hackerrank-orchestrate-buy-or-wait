@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_97",
+  "content_sha256": "7857c3cbdd23919130be737aa29b6619427860a1aed56ce36388861349797563",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "To cover the ZAR 23,496 housing request by 24 May 2024, we recommend paying in 3 installments of ZAR 8,145.28 starting 19 March 2024, keeping at least ZAR 29,700 in your account throughout."
+  },
+  "usage": {
+    "input_tokens": 583,
+    "output_tokens": 90
+  },
+  "timestamp": "2026-09-12T23:24:47.860749+00:00"
+}

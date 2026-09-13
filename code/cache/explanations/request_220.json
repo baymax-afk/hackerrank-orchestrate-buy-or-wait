@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_220",
+  "content_sha256": "768a45e86c11f775a3be3fefa7ae47e106ab09290fb388db954fe465e687d1f9",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The EUR 3,118.50 investment request made on 6 June 2024 isn't affordable; only EUR 75.77 can be safely paid today while keeping the required EUR 1,100 minimum balance, and full payment isn't achievable within 90 days, so it's not recommended."
+  },
+  "usage": {
+    "input_tokens": 550,
+    "output_tokens": 101
+  },
+  "timestamp": "2026-09-12T23:38:41.386890+00:00"
+}

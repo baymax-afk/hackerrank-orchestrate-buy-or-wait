@@ -1,0 +1,16 @@
+{
+  "source_file": "decision",
+  "source_id": "request_178",
+  "content_sha256": "fa2dc61cfce8bd359d4631027b731a558bfbadb1db23226c15f1dfb3f59cf94e",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "explanation": "The EUR 2,938.10 investment request can be covered through 3 installments of EUR 1,018.54 starting 7 December 2024, keeping at least EUR 1,400 in reserve throughout."
+  },
+  "usage": {
+    "input_tokens": 580,
+    "output_tokens": 76
+  },
+  "timestamp": "2026-09-12T23:36:29.545932+00:00"
+}
