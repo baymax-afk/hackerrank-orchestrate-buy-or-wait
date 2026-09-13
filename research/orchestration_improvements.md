@@ -31,7 +31,7 @@ treated like any other cached evidence: provenance + content hash + expiry on ch
 
 ## 2. Evidence extraction: make the model outputs *verifiable*, not just *validated*
 
-### 2.1 Two-reader arbitration for images (high value, low cost) — ADOPTED (code); readings pending credit
+### 2.1 Two-reader arbitration for images (high value, low cost) — ADOPTED
 Today: one vision read, arbitrated by the reviewed table. Better: two independent reads with different
 framings (e.g. "what is the total?" vs "list every labelled amount on the document"), plus a *deterministic
 arithmetic check* (line items sum to the total). Accept when both readings agree or the arithmetic confirms one
@@ -43,9 +43,12 @@ Cost: one extra vision call per image (16 here).
 `evidence.images.arbitrate`, which scores each candidate by corroboration — reader A, reader B total,
 reviewed table (1 point each) and line items adding up (2 points, deterministic) — takes a candidate that
 leads with ≥2 points, else a verified reviewed value, else the financially safer value flagged for review.
-The enumeration readings could not be fetched today: the API account ran out of credit mid-session
-(`400 credit balance is too low`); the client now trips immediately on that error. With credit restored, one
-`python code/main.py` fills the 16 enumeration records; until then arbitration uses reader A + the table.*
+Reader B only *corroborates*: its figures include previous balances, subtotals and payments that are not the
+answer, so they can never become the adopted value, and line-item arithmetic breaks ties among targeted
+readings but cannot crown a new one (items usually sum to a pre-tax subtotal). Both rules were learned from
+the real readings: the first draft adopted a previous balance for image_05 and a subtotal for image_07.
+Result on the 16 images: 14 corroborated by ≥2 independent sources, 1 by the verified table, 1 by the
+due-date-safer rule; every value equals the pre-existing decision inputs, so output.csv is unchanged.*
 
 ### 2.2 Self-consistency by sampling (medium value, low cost)
 For any extraction with confidence < 0.9, sample 3 readings at low effort and take the majority; disagreement

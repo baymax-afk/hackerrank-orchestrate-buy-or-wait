@@ -84,6 +84,11 @@ def embodied_records(request_ids: list[str] | None, cache_dir: Path = config.CAC
             u = rec.get("usage") or {}
             out.append({"agent": agent, "source_id": rec.get("source_id", f.stem), "model": rec.get("model") or "unknown", "ok": True,
                         "input_tokens": int(u.get("input_tokens", 0) or 0), "output_tokens": int(u.get("output_tokens", 0) or 0)})
+            enum = rec.get("enumeration") or {}
+            if enum.get("usage"):
+                eu = enum["usage"]
+                out.append({"agent": "image_enumerate", "source_id": rec.get("source_id", f.stem), "model": enum.get("model") or rec.get("model") or "unknown", "ok": True,
+                            "input_tokens": int(eu.get("input_tokens", 0) or 0), "output_tokens": int(eu.get("output_tokens", 0) or 0)})
     return out
 
 
