@@ -10,6 +10,7 @@ import config
 from evidence import messages as msg_rules
 from evidence.cache import Cache
 from evidence.images import resolve_image
+from critic import verify
 from explain import explain
 from forecast import amount_safe_today, build_timeline, earliest_full_payment
 from formatting import fmt_plan_amount
@@ -103,6 +104,9 @@ def decide_request(request: Request, ds: Dataset, svc: Services) -> tuple[Decisi
     chosen = choose(cands)
     decision = to_decision(request, profile, chosen, safe, earliest)
     decision.candidate = chosen
+    # independent re-verification from the rendered row; a failure becomes a fallback row upstream
+    verify(decision, request, profile, flows, series)
+    trace.notes.append("critic: plan, safe amount and earliest date re-verified")
     return decision, trace
 
 

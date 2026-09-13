@@ -18,6 +18,7 @@ python code/main.py                     # full run -> ./output.csv + code/evalua
 python code/main.py --no-llm            # fully deterministic run (caches + reviewed image table + rule-based messages)
 python code/main.py --sample-check      # score against dataset/sample_requests.csv (calibration only)
 python code/main.py --explain request_42 --no-llm   # print the ledger, timeline and candidates for one request
+python code/tools/confidence.py         # perturbation ensemble -> evaluation/confidence.jsonl (per-row decision stability)
 python -m pytest tests -q               # tests (single test: python -m pytest tests/test_core.py::test_fx_exact_date_and_direction -q)
 python code/tools/build_zip.py          # package code.zip
 ```
@@ -33,7 +34,9 @@ On Windows use `python` (or `py`), not `python3`.
 5. `forecast.py` — end-of-day balance timeline over 90 days; `amount_safe_to_pay` and `earliest_date_for_full_payment` in closed form.
 6. `plans.py` — candidates (full, partial, each supplied installment option, full + permitted spending changes, wait), simulation against the minimum balance, ranking: deadline → no changes → total paid → earlier start → fewer payments → lowest option id.
 7. `explain.py` / `agents/explain_agent.py` — explanation from verified numbers (LLM draft accepted only if every figure matches; deterministic template otherwise).
-8. `validate.py` — every row and the file checked against the output contract before writing.
+8. `critic.py` — independent re-verification of every decision from its rendered row (plan re-simulated with
+   the shipped changes, `amount_safe_to_pay` checked to be maximal, earliest date re-simulated); a failure
+   becomes a fallback row. `validate.py` — every row checked against the output contract before writing.
 9. `usage.py` — `evaluation/usage_report.md` from the per-call `usage.jsonl`.
 
 Agents (`agents/`): image OCR, message fallback, explanation drafting, optional audit. They never write a financial recommendation; all outputs are schema-validated, cached with provenance under `code/cache/`, and reproducible without an API key.

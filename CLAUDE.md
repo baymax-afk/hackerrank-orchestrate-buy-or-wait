@@ -19,6 +19,7 @@ python code/main.py                 # full run -> ./output.csv (root, not datase
 python code/main.py --no-llm        # deterministic run without any API call
 python code/main.py --sample-check  # score against the 25 labeled samples (calibration only)
 python -m pytest tests -q           # tests; single test: python -m pytest tests/test_core.py::test_fx_exact_date_and_direction -q
+python code/tools/confidence.py     # per-row decision stability under a perturbation grid (report only)
 python code/tools/build_zip.py      # build code.zip
 ```
 

@@ -205,3 +205,26 @@ def test_llm_client_circuit_breaker_opens_after_consecutive_failures(monkeypatch
     assert c.available()
     c._failure("explain_agent", "request_2", "APIError")
     assert not c.available(), "after N consecutive failures the client must stop calling"
+
+
+def test_critic_rejects_a_plan_that_breaches_the_minimum():
+    from critic import CriticError, verify
+    from conftest import make_profile
+    from models import CashFlow, Decision, Request
+
+    prof = make_profile()  # balance 3000, minimum 1000
+    rd = date(2026, 3, 3)
+    req = Request("request_t", "user_t", rd, "purchase", D("1500"), "1500", date(2026, 3, 20), False, "")
+    flows = [CashFlow(date(2026, 3, 10), D("-900"), "recurring", "e1")]
+    # safe today = 3000 - 900 - 1000 = 1100; a full payment of 1500 today is not safe
+    good = Decision("request_t", D("1100"), "affordable_later", "wait", "2026-03-15:1500", date(2026, 3, 15), "none", "x")
+    with pytest.raises(CriticError):
+        verify(good, req, prof, flows, [])  # 15 March is not safe either (no income) -> rejected
+    bad = Decision("request_t", D("1100"), "affordable_now", "full_payment", "2026-03-03:1500", rd, "none", "x")
+    with pytest.raises(CriticError):
+        verify(bad, req, prof, flows, [])
+    wrong_safe = Decision("request_t", D("500"), "not_affordable", "not_recommended", "none", None, "none", "x")
+    with pytest.raises(CriticError, match="not maximal"):
+        verify(wrong_safe, req, prof, flows, [])
+    ok = Decision("request_t", D("1100"), "not_affordable", "not_recommended", "none", None, "none", "x")
+    verify(ok, req, prof, flows, [])
