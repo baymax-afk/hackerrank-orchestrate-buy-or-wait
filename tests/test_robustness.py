@@ -137,21 +137,22 @@ def test_implausible_salary_claim_is_ignored():
     assert s.amount == D("1000") and s.amount_after is None and any("implausible" in n for n in notes)
 
 
-def test_reviewed_image_value_is_withheld_when_the_file_changed(tmp_path):
+def test_image_reading_is_keyed_to_the_file_hash(tmp_path):
+    """A cached reading applies only to the byte-identical file; a swapped image stays unknown offline."""
     from evidence.cache import Cache
-    from evidence.images import REVIEWED, resolve_image
+    from evidence.images import resolve_image
     from models import ImageRef
 
-    # same id, different bytes -> the reviewed reading for image_14 must not be used
-    fake = tmp_path / "image_14.png"
-    fake.write_bytes(b"\x89PNG not the reviewed file")
-    cache = Cache("images", tmp_path / "cache")
-    fact = resolve_image(ImageRef("image_14", "user_x", None, "event_9421", str(fake)), None, use_llm=False, cache=cache)
-    assert fact.kind == "unknown" and "differs" in fact.rationale
+    cache = Cache("images", tmp_path)
     real = DATASET / "media" / "images" / "image_14.png"
-    fact2 = resolve_image(ImageRef("image_14", "user_x", None, "event_9421", str(real)), None, use_llm=False, cache=cache)
-    assert fact2.kind == "amount" and str(fact2.amount) == REVIEWED["image_14"][0]
-    assert hashlib.sha256(real.read_bytes()).hexdigest()  # sanity: file readable
+    fake = tmp_path / "image_14.png"
+    fake.write_bytes(b"\x89PNG not the cached file")
+    cache.put("image_14", {"content_sha256": hashlib.sha256(real.read_bytes()).hexdigest(), "prompt_version": config.PROMPT_VERSION,
+                           "extracted": {"amount": 4543, "currency": "INR", "field_used": "TOTAL"}, "confidence": 0.9, "rationale": "x"})
+    hit = resolve_image(ImageRef("image_14", "user_x", None, "event_9421", str(real)), None, use_llm=False, cache=cache)
+    assert hit.kind == "amount" and str(hit.amount) == "4543"
+    miss = resolve_image(ImageRef("image_14", "user_x", None, "event_9421", str(fake)), None, use_llm=False, cache=cache)
+    assert miss.kind == "unknown" and "no cache for this file hash" in miss.rationale
 
 
 def test_image_ids_that_are_not_image_n_are_ignored(tmp_path):

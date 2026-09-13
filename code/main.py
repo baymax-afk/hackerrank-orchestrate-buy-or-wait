@@ -2,7 +2,7 @@
 
     python code/main.py                 # full run -> ./output.csv (uses cached evidence; calls the API only for cache misses when a key is set)
     python code/main.py --sample-check  # score the pipeline on dataset/sample_requests.csv
-    python code/main.py --no-llm        # never call the API (cache + reviewed image table + rule-based messages)
+    python code/main.py --no-llm        # never call the API (shipped cache + rule-based messages)
     python code/main.py --explain request_42
 
 Robustness contract of a run:
@@ -59,7 +59,7 @@ def build_services(args) -> Services:
             log.info("LLM agents enabled (%s)", config.MODEL_TEXT)
         else:
             svc.use_llm = False
-            log.info("model calls disabled (%s): caches, reviewed image table and rule-based messages only",
+            log.info("model calls disabled (%s): shipped caches and rule-based messages only",
                      "--no-llm" if args.no_llm else "no ANTHROPIC_API_KEY")
     except Exception as exc:  # pragma: no cover - defensive
         log.warning("LLM agents unavailable (%s); deterministic fallback", exc)

@@ -23,9 +23,10 @@ After N consecutive API failures the client opens and the run continues determin
 decided inside its own try/except with a contract-valid fallback row. Agents can now fail loudly without
 taking the run down.
 
-### 1.3 Hash-pinned human evidence (adopted)
-The reviewed image table only applies to the byte-identical file it was read from. Human-in-the-loop input is
-treated like any other cached evidence: provenance + content hash + expiry on change.
+### 1.3 Hash-keyed evidence (adopted)
+Every model reading is cached under the sha256 of the file it was computed from; a changed file never
+receives a stale reading. Human transcriptions are kept out of the runtime and used only as a golden
+evaluation set (`tests/golden_image_readings.py`), pinned to the same hashes.
 
 ---
 
@@ -47,8 +48,9 @@ Reader B only *corroborates*: its figures include previous balances, subtotals a
 answer, so they can never become the adopted value, and line-item arithmetic breaks ties among targeted
 readings but cannot crown a new one (items usually sum to a pre-tax subtotal). Both rules were learned from
 the real readings: the first draft adopted a previous balance for image_05 and a subtotal for image_07.
-Result on the 16 images: 14 corroborated by ≥2 independent sources, 1 by the verified table, 1 by the
-due-date-safer rule; every value equals the pre-existing decision inputs, so output.csv is unchanged.*
+The reviewed table was subsequently removed from the runtime (the challenge forbids file-specific answers)
+and kept only as an evaluation fixture; with subtotal/tender exclusion and a narrow digit-misread
+correction the two readers plus arithmetic score 16/16 against it. output.csv is unchanged.*
 
 ### 2.2 Self-consistency by sampling (medium value, low cost)
 For any extraction with confidence < 0.9, sample 3 readings at low effort and take the majority; disagreement

@@ -1,18 +1,16 @@
 """Image evidence: blank event amounts extracted from receipts / bills / payslips.
 
 Resolution order for each image:
-  1. cache hit (same file hash + prompt version) written by the vision agent
-  2. vision agent call (if an API key is available and --no-llm is not set)
-  3. REVIEWED table below — values read from the PNGs by a human/lead review,
-     kept as an independent cross-check and as the no-key fallback. Every row is
-     pinned to the sha256 of the PNG it was read from (REVIEWED_SHA256): a file
-     with a different hash never receives a reviewed value, so a swapped image can
-     only be resolved by the vision agent or stays unknown.
-  4. unknown (the event amount stays unknown; never zero)
+  1. cache hit (same file hash + prompt version) written by the vision agent — the cache ships
+     with the code, so a run without an API key reproduces the same readings;
+  2. vision agent call (if an API key is available and --no-llm is not set): two independently
+     framed readings — reader A answers the ledger row's question, reader B enumerates every
+     labelled amount — arbitrated below with a line-item arithmetic check;
+  3. unknown (the event amount stays unknown; never zero; the event is excluded and flagged).
 
-The table is a transcription of evidence that ships with the dataset (the PNGs),
-not of any output label; it exists so that model readings are cross-checked and
-so that the run is reproducible without an API key.
+No hand-transcribed values are used at runtime. The human readings of the dataset images live in
+tests/golden_image_readings.py and are used only to *evaluate* the reader (an evaluation workflow),
+never to answer a row.
 """
 from __future__ import annotations
 
@@ -24,56 +22,14 @@ import config
 from evidence.cache import Cache, sha256_file
 from models import Event, EvidenceFact, ImageRef
 
-# image_id -> (amount, currency, field used, confidence, note)
-REVIEWED: dict[str, tuple[str, str, str, float, str]] = {
-    "image_01": ("4365000", "IDR", "Net Pay", 0.95, "payslip Aug-2019 net pay"),
-    "image_02": ("100000", "INR", "Balance Due", 0.9, "rent receipt: 2,00,000 total, 1,00,000 received, balance due 1,00,000 (event is the outstanding balance)"),
-    "image_03": ("41272", "INR", "Net Amount", 0.95, "grocery bill of supply"),
-    "image_04": ("2854", "INR", "Item Bill", 0.6, "cropped delivery order; item bill visible, delivery fee cut off"),
-    "image_05": ("822.05", "INR", "Amount due after 06-Feb-2026", 0.7, "704.05 due till 06-Feb-2026, 822.05 after; request date is after the due date -> larger amount (safer)"),
-    "image_06": ("1995", "INR", "Total", 0.95, "Blinkit tax invoice"),
-    "image_07": ("8528", "INR", "Grand Total", 0.95, "restaurant tax invoice"),
-    "image_08": ("15339", "INR", "Total Amount Received", 0.95, "property maintenance receipt"),
-    "image_09": ("723", "INR", "Total Amount Received", 0.95, "water bill receipt"),
-    "image_10": ("79679.26", "INR", "Balance Due / Total", 0.9, "grocery invoice"),
-    "image_11": ("3650", "INR", "Balance", 0.9, "hospital provisional bill"),
-    "image_12": ("33.50", "USD", "Total", 0.95, "taxi receipt (cash paid 40, change 6.50)"),
-    "image_13": ("2298", "INR", "Total paid", 0.95, "tote bag order"),
-    "image_14": ("4543", "INR", "TOTAL", 0.95, "handwritten pharmacy bill; line items 1500+724+796+550+303+670 = 4543 (verified)"),
-    "image_15": ("9968", "INR", "Grand Total", 0.95, "flight tax invoice"),
-    "image_16": ("393.22", "INR", "Total", 0.95, "EV charging invoice"),
-}
-
-# sha256 of the PNG each reviewed value was read from; a mismatch disables the reviewed value.
-REVIEWED_SHA256: dict[str, str] = {
-    "image_01": "f37b40e6af42c664846057252cac89ad41b7d029dfe8dacff2db8cceb79fa5ba",
-    "image_02": "ccd779e5382b1bcfacfb47d4ccf346ffd667a34c8b94d0cfd48aa4a609bd117d",
-    "image_03": "e5fb0bbcda6cc06f8ea95e32e45d4c76acd8c594f4b02ff0d78e6006e103ee4d",
-    "image_04": "281e7f1e7bd1f98fbd53cde1381977373e610e6634b11c98098000001ff10f0c",
-    "image_05": "9abcda5647afb3dcdf91613253ac0160bd722333af33a4b952dfc96fea6ff97b",
-    "image_06": "9055551fbe5940feb01b947e1f18ccfed093192d103b1e930a56df0ea7cd3cb4",
-    "image_07": "f6d30a74355224c0b5cda2d7f96399a7b1a0afe4f9fe59ea048bbecb1a21311e",
-    "image_08": "e28592ad8b4dacd03055e0b1ebc46670c83fbfa1162af07bdef33bb226bf63c8",
-    "image_09": "e0e74e14425d923ff8a5c6db26ec6f4f26ee4697bfd257e414ba05c947a75ba8",
-    "image_10": "c90f98caf0877083e471fd47dace772f83d4782037cf112e97c63f79a10ea8cf",
-    "image_11": "795e000d48428c97748e8af370cb02b604bec88cc52ec8930f38dc744624e886",
-    "image_12": "e10b0123e66d512d82f6c431fb741053b336627b89b9d9a138071ac6980a14ff",
-    "image_13": "1ae54b378a9556d94b753093ba80e7117caf86fab4d3fe11ec84e3dd2f6d6dd8",
-    "image_14": "bf88e4aa35e6f36304cbf76bf6f505f32b04466bfd5f7df693fcb3ebe8a3e2c1",
-    "image_15": "0c0fe3d79e670f2b423bbb2aafc0b5601d3eb4e659ac64058cd189abf7792ee1",
-    "image_16": "2665cf731a861ddb217be5b8082fbd390850a7a98feec018519b6fda0b30b4f8",
-}
-
-
-def reviewed_for(image_id: str, content_hash: str):
-    """Reviewed row for this image, only if the file hash matches the one it was read from."""
-    ref = REVIEWED.get(image_id)
-    if ref is None or REVIEWED_SHA256.get(image_id) != content_hash:
-        return None
-    return ref
-
-
-TOTAL_WORDS = ("total", "net", "due", "balance", "payable", "paid", "received", "amount")
+TOTAL_WORDS = ("total", "net", "due", "balance", "payable", "paid", "received", "amount", "grand")
+CHARGE_WORDS = ("tax", "gst", "vat", "cgst", "sgst", "igst", "service", "charge", "fee", "tip", "delivery", "surcharge", "cess", "handling", "convenience", "round")
+SUBTOTAL_WORDS = ("subtotal", "sub total", "sub-total")
+FINAL_TOTAL_WORDS = ("grand total", "net pay", "net amount", "net salary", "take home", "incl tax", "incl. tax", "including tax", "total(incl", "balance due", "amount due", "amount payable", "total paid", "total amount")
+# figures that are never the answer to "what does this document establish for the row"
+NON_ANSWER_WORDS = ("cash paid", "paid by", "tendered", "tender", "change", "previous balance", "previous", "opening", "brought forward", "carried forward", "payments", "discount")
+DIGIT_MISREAD_TOLERANCE = Decimal("0.03")  # arithmetic may correct an agreed total only within this relative distance
+MATCH_TOLERANCE = Decimal("1")  # OCR readings of the same printed figure may differ by paise/cents (8528 vs 8528.10)
 
 
 def _d(x) -> Optional[Decimal]:
@@ -83,68 +39,92 @@ def _d(x) -> Optional[Decimal]:
         return None
 
 
-def arbitrate(model_amt: Optional[Decimal], enumeration: Optional[dict], reviewed: Optional[tuple], is_credit: bool) -> tuple[Optional[Decimal], str, float]:
-    """Combine the single-amount reading (A), the enumeration reading (B) and the reviewed value.
+def _same(a: Optional[Decimal], b: Optional[Decimal]) -> bool:
+    return a is not None and b is not None and abs(a - b) <= MATCH_TOLERANCE
 
-    Order of trust: a value confirmed by two independent sources (A==B total, A==reviewed, or line items that
-    add up to it) beats a single reading; a verified reviewed value beats a lone model reading; when nothing
-    corroborates anything, the financially safer value is taken (larger debit / smaller credit) and flagged.
+
+def arbitrate(model_amt: Optional[Decimal], enumeration: Optional[dict], is_credit: bool) -> tuple[Optional[Decimal], str, float]:
+    """Combine reader A (the targeted answer) with reader B (every labelled amount) and arithmetic.
+
+    Reader A answers the ledger row's question; reader B only sees figures. So:
+      1. A matches a printed total that B also read            -> A, corroborated (two readers, one figure)
+      2. A matches what the line items (+ taxes/fees) add up to -> A, corroborated by arithmetic
+      3. A matches nothing printed, but B lists a total that the line items add up to -> that total
+         (A is most likely a misread), flagged
+      4. A matches nothing and nothing is arithmetic-backed      -> A, flagged low confidence
+      5. no A: an arithmetic-backed printed total (safer of several) or unknown
+    Arithmetic can therefore confirm or replace a misread, but never overrule a figure both readers
+    printed (a payslip's "Total earnings" also adds up, yet it is not the net pay).
     Returns (amount, rationale, confidence).
     """
     totals: list[Decimal] = []
+    subtotals: list[Decimal] = []
     items: list[Decimal] = []
+    charges: list[Decimal] = []
     for a in (enumeration or {}).get("amounts", []) or []:
         v = _d(a.get("amount"))
         if v is None:
             continue
         label = str(a.get("label", "")).lower()
-        if a.get("kind") == "total" or any(w in label for w in TOTAL_WORDS):
+        if any(w in label for w in NON_ANSWER_WORDS):
+            continue
+        if any(w in label for w in SUBTOTAL_WORDS):
+            subtotals.append(v)
+        elif any(w in label for w in FINAL_TOTAL_WORDS):
+            totals.append(v)  # "grand total", "net pay", "total (incl taxes)" are totals even when they mention tax
+        elif any(w in label for w in CHARGE_WORDS):
+            charges.append(v)  # taxes and fees sit between the subtotal and the amount charged
+        elif a.get("kind") == "total" or any(w in label for w in TOTAL_WORDS):
             totals.append(v)
         else:
             items.append(v)
-    item_sum = sum(items, Decimal(0)) if items else None
-    reviewed_amt = _d(reviewed[0]) if reviewed else None
-    # Candidates come only from the targeted readings (reader A answers the ledger question; the reviewed
-    # table was read for that row). Reader B is a corroborator: its figures include previous balances,
-    # subtotals and payments that are *not* the answer, so they can never become the adopted value on
-    # their own. Likewise line-item arithmetic breaks ties between candidates but cannot crown a new one
-    # (items typically sum to a pre-tax subtotal, not to the amount charged).
-    candidates = [c for c in (model_amt, reviewed_amt) if c is not None]
-    if not candidates:
-        return None, "no targeted reading available", 0.0
+    arith: list[Decimal] = []
+    charge_sum = sum(charges, Decimal(0))
+    if len(items) >= 2:
+        arith.append(sum(items, Decimal(0)) + charge_sum)
+    for sub in subtotals:
+        arith.append(sub + charge_sum)
 
-    def corroborated(v: Decimal) -> tuple[int, list[str]]:
-        score, why = 0, []
-        if model_amt is not None and v == model_amt:
-            score += 1; why.append("reader A")
-        if reviewed_amt is not None and v == reviewed_amt:
-            score += 1; why.append("reviewed table")
-        if v in totals:
-            score += 1; why.append("reader B total")
-        if item_sum is not None and v == item_sum:
-            score += 2; why.append(f"line items sum to {item_sum}")
-        return score, why
+    def in_totals(v: Decimal) -> bool:
+        return any(_same(v, t) for t in totals)
 
-    scored = sorted(((corroborated(v), v) for v in set(candidates)), key=lambda t: (-t[0][0], (t[1] if is_credit else -t[1])))
-    (top_score, top_why), top = scored[0]
-    if top_score >= 2 and (len(scored) == 1 or scored[1][0][0] < top_score):
-        return top, f"{top} corroborated by {', '.join(top_why)}", 0.97
-    if reviewed is not None and reviewed[3] >= 0.95 and reviewed_amt is not None:
-        others = sorted(set(candidates) - {reviewed_amt})
-        return reviewed_amt, f"verified reviewed reading {reviewed_amt} ({reviewed[2]}) adopted; other readings {others}", reviewed[3]
-    chosen = min(candidates) if is_credit else max(candidates)
-    seen = sorted(set(candidates) | set(totals))
-    return chosen, f"readings disagree (targeted {sorted(set(candidates))}, reader B totals {sorted(set(totals))}); financially safer targeted value {chosen} adopted (flag for review)", 0.6
+    def arith_backed(v: Decimal) -> bool:
+        return any(_same(v, s) for s in arith)
+
+    if model_amt is not None:
+        if in_totals(model_amt):
+            if arith_backed(model_amt):
+                return model_amt, f"{model_amt} corroborated by reader A, reader B total, line items add up", 0.95
+            # both readers agree on the printed digits, but the line items add up to a figure that is
+            # nearly the same and is not printed anywhere else: a single misread digit (handwritten
+            # totals). Arithmetic wins by a narrow margin; anything further apart is a different figure.
+            near = [s_ for s_ in arith if s_ != model_amt and abs(s_ - model_amt) <= model_amt * DIGIT_MISREAD_TOLERANCE and not in_totals(s_)]
+            if near:
+                fixed = min(near, key=lambda s_: abs(s_ - model_amt))
+                return fixed, f"{fixed} by arithmetic: both readers printed {model_amt} but the line items add up to {fixed} (digit misread)", 0.85
+            return model_amt, f"{model_amt} corroborated by reader A, reader B total", 0.95
+        if arith_backed(model_amt):
+            return model_amt, f"{model_amt} corroborated by reader A, line items add up", 0.9
+        backed = [t for t in totals if arith_backed(t)]
+        if backed:
+            chosen = min(backed) if is_credit else max(backed)
+            return chosen, f"reader A {model_amt} matches nothing printed; arithmetic-backed printed total {chosen} adopted (flag for review)", 0.75
+        return model_amt, f"reader A {model_amt} uncorroborated (reader B totals {sorted(set(totals))}, arithmetic {arith}); kept, flag for review", 0.6
+    backed = [t for t in totals if arith_backed(t)]
+    if backed:
+        chosen = min(backed) if is_credit else max(backed)
+        return chosen, f"no targeted reading; arithmetic-backed printed total {chosen} adopted (safer of {sorted(backed)})", 0.6
+    return None, "no reading available", 0.0
 
 
-def _fact_from_record(image: ImageRef, rec: dict, extractor: str, event: Optional[Event] = None, content_hash: str = "", enumeration: Optional[dict] = None) -> EvidenceFact:
+def _fact_from_record(image: ImageRef, rec: dict, extractor: str, event: Optional[Event] = None, enumeration: Optional[dict] = None) -> EvidenceFact:
     model_amt = _d(rec.get("amount"))
-    ref = reviewed_for(image.image_id, content_hash)
     is_credit = event is not None and event.direction == "credit"
-    if enumeration is None and ref is None:
-        amt, why, conf = model_amt, str(rec.get("rationale", ""))[:300], float(rec.get("confidence") or 0.0)
+    if enumeration is None:
+        amt, why, conf = model_amt, str(rec.get("rationale", ""))[:300], min(float(rec.get("confidence") or 0.0), 0.8)
+        why = "single reading (second reader unavailable). " + why
     else:
-        amt, why, conf = arbitrate(model_amt, enumeration, ref, is_credit)
+        amt, why, conf = arbitrate(model_amt, enumeration, is_credit)
         why = f"{why}. reader A: {model_amt} ({rec.get('field_used')}). " + str(rec.get("rationale", ""))[:200]
     return EvidenceFact(
         kind="amount" if amt is not None else "unknown",
@@ -191,11 +171,6 @@ def resolve_image(image: ImageRef, event: Optional[Event], use_llm: bool, cache:
                 rec = dict(rec, enumeration=enum)
                 cache.put(image.image_id, rec)
         return _fact_from_record(image, rec.get("extracted", {}) | {"confidence": rec.get("confidence"), "rationale": rec.get("rationale")},
-                                 "llm", event, content_hash, rec.get("enumeration"))
-    ref = reviewed_for(image.image_id, content_hash)
-    if ref is not None:
-        amt, ccy, field, conf, note = ref
-        return EvidenceFact("amount", "image", image.image_id, f"dataset/media/images/{image.image_id}.png", image.related_event_id,
-                            Decimal(amt), ccy, confidence=conf, rationale=f"reviewed reading of field '{field}': {note}", extractor="reviewed")
-    why = "no extraction available" if image.image_id not in REVIEWED else "image content differs from the reviewed file; reviewed value withheld"
-    return EvidenceFact("unknown", "image", image.image_id, image.path, image.related_event_id, confidence=0.0, rationale=why, extractor="rules")
+                                 "llm", event, rec.get("enumeration"))
+    return EvidenceFact("unknown", "image", image.image_id, image.path, image.related_event_id, confidence=0.0,
+                        rationale="no reading available (no cache for this file hash and no model access)", extractor="rules")

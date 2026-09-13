@@ -426,3 +426,13 @@ sample misses are noise, and every additional fitted constant is a generalisatio
 
 Verification after the pass: 48 tests pass; sample agreement unchanged (22/23/22/23, 2.5%); full run
 changes 0 decision columns; 250/250 explanations grounded; run exits 0 with no fallback rows.
+
+## Update after the challenge-page wording ("avoid hardcoded test labels or file-specific answers")
+
+The hand-transcribed image table was removed from the runtime path entirely. `evidence/images.py` now
+arbitrates two independent model readings with a line-item arithmetic check (taxes/fees added to the
+subtotal; subtotal, tender and previous-balance lines excluded; arithmetic may correct an agreed total only
+within 3%, for handwritten digit misreads). The human readings moved to `tests/golden_image_readings.py`
+as an evaluation fixture: the shipped readings score 16/16 against them. The runtime uses only the dataset,
+the shipped model-output cache (hash-keyed) and the model itself; an image with no cached reading and no
+API access stays unknown. output.csv is unchanged by this change.

@@ -15,7 +15,7 @@ Run from the repository root (the folder that contains `dataset/`):
 
 ```bash
 python code/main.py                     # full run -> ./output.csv + code/evaluation/usage_report.md
-python code/main.py --no-llm            # fully deterministic run (caches + reviewed image table + rule-based messages)
+python code/main.py --no-llm            # fully deterministic run (shipped model-output cache + rule-based messages; no API calls)
 python code/main.py --sample-check      # score against dataset/sample_requests.csv (calibration only)
 python code/main.py --explain request_42 --no-llm   # print the ledger, timeline and candidates for one request
 python code/tools/confidence.py         # perturbation ensemble -> evaluation/confidence.jsonl (per-row decision stability)
@@ -28,7 +28,7 @@ On Windows use `python` (or `py`), not `python3`.
 ## How it works
 
 1. `loaders.py` — schema-validated CSV loading, indexes by user / request / event, Decimal money.
-2. `evidence/` — messages parsed by EN/ID template rules into closed-schema facts (`EvidenceFact`); images resolved through a cached vision agent, cross-checked against a reviewed reading table (disagreement → financially safer value). An injection guard rejects instruction-like text.
+2. `evidence/` — messages parsed by EN/ID template rules into closed-schema facts (`EvidenceFact`); images resolved by two independently framed vision readings arbitrated with a line-item arithmetic check (disagreement → flagged, safer targeted value). An injection guard rejects instruction-like text.
 3. `ledger.py` — events + facts → dated home-currency cash flows: pending debits reserved, pending credits / failed / cancelled / unrealized ignored, FX at the settlement-date rate, blank amounts filled from images (never zero).
 4. `recurrence.py` — recurring expense series (weekly / biweekly / monthly) from settled history; monthly salary projected at the confirmed level (scheduled row, message, or settled history mode); unconfirmed income (gig payouts, commissions, bonuses, prizes) never projected.
 5. `forecast.py` — balance timeline over the forecast window (`HORIZON_DAYS`, 86 days; intra-day: variable spending before payday credits); `amount_safe_to_pay` and `earliest_date_for_full_payment` in closed form.
@@ -67,7 +67,7 @@ The model never sets an output column. It is used for three bounded jobs, each c
 with the content hash it was computed from:
 
 1. reading one amount from one image (blank event amounts) — two independently framed readings are
-   arbitrated with a deterministic line-item arithmetic check and the reviewed table (`evidence/images.py`);
+   arbitrated with a deterministic line-item arithmetic check (`evidence/images.py`);
 2. classifying a message that no rule matched into the same closed fact schema the rules emit — each fact is
    confidence-gated and must be confirmed by a second call that quotes the exact span stating it;
 3. drafting the explanation sentence from the verified numbers (accepted only if every figure matches; one
@@ -76,11 +76,29 @@ with the content hash it was computed from:
 `--no-llm` never calls the API but still serves every cached model output, so the shipped `output.csv` is
 reproduced byte-for-byte offline. `BOW_MAX_USD` caps estimated spend per run.
 
-`evidence/images.py` also carries a small **reviewed table**: the 16 dataset images transcribed by hand,
-each pinned to the sha256 of the PNG it was read from. It cross-checks the model reading (a verified
-reviewed total wins; otherwise the financially safer value is taken) and makes the run reproducible without
-an API key. It is a transcription of evidence that ships with the dataset, not of any output label, and it
-is never applied to a file whose hash differs.
+No hand-transcribed values or labels are used at runtime. The human readings of the 16 dataset images live in
+`tests/golden_image_readings.py` and are used only to *evaluate* the vision reader (16/16 on the shipped
+readings); a run without an API key uses the shipped cache (keyed by the file hash), and an image with no
+cached reading stays unknown rather than receiving a value from anywhere else.
+
+## Evaluation workflow
+
+| Step | Command | What it checks |
+|---|---|---|
+| Unit + failure-path + agent-contract tests | `python -m pytest tests -q` | 71 tests: ledger/recurrence/forecast rules, plan arithmetic and ranking, change permissions, message rule golden set (15 templates incl. injection), image arbitration, verifier span check, fault isolation, validator gate, circuit breaker, budget guard, critic |
+| Vision reader vs human golden set | `python -m pytest tests/test_agents.py::test_vision_reader_against_golden_set -q` | shipped image readings against `tests/golden_image_readings.py` |
+| Sample regression | `python code/main.py --sample-check --no-llm` | agreement with the 25 solved samples per column (status / method / plan / earliest / changes) and mean relative amount error |
+| Calibration grids | `python code/tools/calibrate.py` | estimator and horizon sensitivity on the samples |
+| Decision stability | `python code/tools/confidence.py` | per-row agreement across 12 modelling variants -> `evaluation/confidence.jsonl` |
+| Contract validation + critic | part of every run | every row validated against the output contract; every decision re-simulated from its rendered strings; failures become fallback rows and a non-zero exit |
+| Token/cost report | written by every run | `evaluation/usage_report.md` |
+
+## Package layout (code.zip)
+
+The zip contains `code/` (this package, with `code/cache/` model outputs and `code/evaluation/`),
+`tests/`, `research/` (calibration notes, code review), `README.md`, `requirements.txt`, `.env.example`,
+`pytest.ini`, and `evaluation/usage_report.md` at the root as required. It excludes `dataset/`, `.env`,
+`log.txt`, traces and build artefacts. Unzip next to `dataset/` and run `python code/main.py`.
 
 ## Calibrated constants (read before changing)
 

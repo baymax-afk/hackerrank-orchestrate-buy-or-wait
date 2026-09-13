@@ -31,34 +31,33 @@ class FakeClient:
 
 # --- image arbitration ------------------------------------------------------------------------
 
-def test_arbitrate_prefers_values_confirmed_by_two_sources():
+def test_arbitrate_corroboration_rules():
     from evidence.images import arbitrate
 
-    enum = {"amounts": [{"label": "Samhan", "amount": 1500, "kind": "item"}, {"label": "Moov", "amount": 724, "kind": "item"},
-                        {"label": "Axe oil", "amount": 796, "kind": "item"}, {"label": "Stayfree", "amount": 550, "kind": "item"},
-                        {"label": "Benadryl", "amount": 303, "kind": "item"}, {"label": "x", "amount": 670, "kind": "item"},
-                        {"label": "TOTAL", "amount": 4593, "kind": "total"}]}
-    # reader A misread 4593 and reader B's total agrees with A, but the line items sum to 4543 = reviewed
-    amt, why, conf = arbitrate(D("4593"), enum, ("4543", "INR", "TOTAL", 0.95, "pharmacy"), is_credit=False)
-    assert amt == D("4543") and "line items sum" in why and conf >= 0.95
-    # no reviewed value: A and B agree -> corroborated
-    amt, why, _ = arbitrate(D("4593"), {"amounts": [{"label": "TOTAL", "amount": 4593, "kind": "total"}]}, None, False)
-    assert amt == D("4593") and "reader A, reader B total" in why
-    # reader B alone can never supply the value (its totals include previous balances and subtotals):
-    # an uncorroborated reader A stands, flagged with low confidence
-    amt, why, conf = arbitrate(D("100"), {"amounts": [{"label": "Total", "amount": 120, "kind": "total"}]}, None, False)
-    assert amt == D("100") and "disagree" in why and conf < 0.7
-    # A vs reviewed disagree, nothing verified: debit -> larger, credit -> smaller
-    assert arbitrate(D("100"), None, ("120", "INR", "Total", 0.7, "x"), False)[0] == D("120")
-    assert arbitrate(D("100"), None, ("120", "INR", "Net Pay", 0.7, "x"), True)[0] == D("100")
-    # line items summing to a figure that is not a candidate (a subtotal) do not crown it
-    sub = {"amounts": [{"label": "Dosa", "amount": 100, "kind": "item"}, {"label": "Tea", "amount": 20, "kind": "item"},
-                       {"label": "Sub Total", "amount": 120, "kind": "total"}, {"label": "Grand Total", "amount": 126, "kind": "total"}]}
-    assert arbitrate(D("126"), sub, ("126", "INR", "Grand Total", 0.95, "x"), False)[0] == D("126")
+    def enum(*rows):
+        return {"amounts": [{"label": l, "amount": a, "kind": k} for l, a, k in rows]}
+
+    # A agrees with a B total -> corroborated, high confidence
+    amt, why, conf = arbitrate(D("1995"), enum(("Item 1", 1000, "item"), ("Item 2", 995, "item"), ("Total", 1995, "total")), False)
+    assert amt == D("1995") and "reader A" in why and "line items add up" in why and conf >= 0.9
+    # items + tax lines add up to the grand total, not the subtotal: the subtotal is never adopted
+    amt, why, _ = arbitrate(D("8528.1"), enum(("Dosa", 8000, "item"), ("Tea", 122, "item"), ("Sub Total", 8122, "total"),
+                                               ("CGST", 203, "charge"), ("SGST", 203, "charge"), ("Grand Total", 8528, "total")), False)
+    assert amt == D("8528.1") and "corroborated" in why
+    # a B total that arithmetic does not back can never displace reader A; A stands flagged
+    amt, why, conf = arbitrate(D("704.05"), enum(("Previous balance", 3543.54, "total"), ("Amount due", 704.05, "total"), ("Amount due after", 822.05, "total")), False)
+    assert amt == D("704.05") and conf >= 0.9
+    amt, why, conf = arbitrate(D("100"), enum(("Total", 120, "total")), False)
+    assert amt == D("100") and "uncorroborated" in why and conf < 0.7
+    # reader A missing: an arithmetic-backed B total is adopted (safer of several: larger debit)
+    amt, why, _ = arbitrate(None, enum(("a", 10, "item"), ("b", 20, "item"), ("Total", 30, "total"), ("Previous", 999, "total")), False)
+    assert amt == D("30") and "arithmetic-backed" in why
+    # nothing at all -> unknown
+    assert arbitrate(None, enum(("Previous", 999, "total")), False)[0] is None
 
 
 def test_resolve_image_adds_enumeration_once_and_survives_reader_failure(tmp_path):
-    from evidence.cache import Cache
+    from evidence.cache import Cache, sha256_file
     from evidence.images import resolve_image
     from models import ImageRef
 
@@ -73,14 +72,46 @@ def test_resolve_image_adds_enumeration_once_and_survives_reader_failure(tmp_pat
             return {"amount": 4593, "currency": "INR", "field_used": "TOTAL", "document_type": "bill", "confidence": 0.85, "rationale": "handwritten", "model": "fake", "usage": {}}
 
         def enumerate(self, image):
-            return None  # second reader unavailable (e.g. out of credit)
+            return None  # second reader unavailable
 
     ref = ImageRef("image_14", "user_x", None, "event_9421", str(real))
     fact = resolve_image(ref, None, True, cache, Agent(None))
-    assert fact.amount == D("4543"), "verified reviewed reading must still win when the second reader is down"
-    assert "enumeration" not in cache.get("image_14", __import__("evidence.cache", fromlist=["sha256_file"]).sha256_file(real))
-    fact2 = resolve_image(ref, None, False, cache)  # offline: same answer from the cache
-    assert fact2.amount == D("4543")
+    assert fact.amount == D("4593") and fact.confidence <= 0.8 and "second reader unavailable" in fact.rationale
+    assert "enumeration" not in cache.get("image_14", sha256_file(real))
+    assert resolve_image(ref, None, False, cache).amount == D("4593")  # offline: same answer from the cache
+
+
+def test_vision_reader_against_golden_set():
+    """Evaluation workflow: the shipped readings (cache) versus human transcriptions of the same PNGs.
+
+    This measures the reader; it never feeds the runtime. Two known hard cases are tolerated: a handwritten
+    total whose digit is ambiguous (image_14) and a bill with two printed due amounts (image_05)."""
+    import json
+
+    from evidence.cache import sha256_file
+    from evidence.images import _fact_from_record
+    from golden_image_readings import GOLDEN
+
+    root = Path(__file__).resolve().parents[1]
+    cache_dir = root / "code" / "cache" / "images"
+    hits, misses, evaluated = 0, [], 0
+    for image_id, (amount, currency, field, note, sha) in GOLDEN.items():
+        png = root / "dataset" / "media" / "images" / f"{image_id}.png"
+        rec_path = cache_dir / f"{image_id}.json"
+        if not png.exists() or not rec_path.exists() or sha256_file(png) != sha:
+            continue
+        rec = json.loads(rec_path.read_text(encoding="utf-8"))
+        evaluated += 1
+        from models import ImageRef
+
+        fact = _fact_from_record(ImageRef(image_id, "u", None, None, str(png)), rec.get("extracted", {}) | {"confidence": rec.get("confidence"), "rationale": rec.get("rationale")},
+                                 "llm", None, rec.get("enumeration"))
+        if fact.amount is not None and abs(fact.amount - Decimal(amount)) <= Decimal("1"):
+            hits += 1
+        else:
+            misses.append((image_id, str(fact.amount), amount, note))
+    if evaluated:
+        assert hits >= evaluated - 2, f"vision reader accuracy {hits}/{evaluated}; misses: {misses}"
 
 
 # --- message verifier and gating --------------------------------------------------------------
