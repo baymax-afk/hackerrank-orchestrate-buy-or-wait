@@ -1,6 +1,6 @@
 # Token usage and cost report
 
-Generated: 2026-09-13T03:44:52.253658+00:00
+Generated: 2026-09-13T03:50:24.899982+00:00
 Dataset run: 250 requests (dataset/requests.csv). Provider: anthropic. Prompt version: v1.
 
 Model calls are made only by the bounded evidence/explanation agents (image OCR, message extraction fallback, explanation drafting, optional audit). All forecasting, plan generation, ranking and validation are deterministic Python. Cache hits make no API call and consume no tokens.
@@ -22,12 +22,11 @@ Each shipped row is built from cached, provenance-tracked model outputs (image O
 
 | Model | Calls | Failed | Input tokens | Output tokens | Total tokens | Est. cost (USD) |
 |---|---:|---:|---:|---:|---:|---:|
-| claude-sonnet-5 | 45 | 0 | 25744 | 3738 | 29482 | 0.0889 |
-| **All models** | 45 | | 25744 | 3738 | 29482 | 0.0889 |
+| **All models** | 0 | | 0 | 0 | 0 | 0.0000 |
 
-- Total tokens: 29482; average per request: 117.9
-- Estimated total cost: USD 0.0889; average per request: USD 0.000355
-- Calls per agent: {'explain_agent': 45}
+- Total tokens: 0; average per request: 0.0
+- Estimated total cost: USD 0.0000; average per request: USD 0.000000
+- Calls per agent: {}
 
 ## Cumulative calls that built the shipped evidence caches (all runs)
 

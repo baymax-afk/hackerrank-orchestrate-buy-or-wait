@@ -32,7 +32,7 @@ REVIEWED: dict[str, tuple[str, str, str, float, str]] = {
     "image_11": ("3650", "INR", "Balance", 0.9, "hospital provisional bill"),
     "image_12": ("33.50", "USD", "Total", 0.95, "taxi receipt (cash paid 40, change 6.50)"),
     "image_13": ("2298", "INR", "Total paid", 0.95, "tote bag order"),
-    "image_14": ("4543", "INR", "TOTAL", 0.7, "handwritten pharmacy bill"),
+    "image_14": ("4543", "INR", "TOTAL", 0.95, "handwritten pharmacy bill; line items 1500+724+796+550+303+670 = 4543 (verified)"),
     "image_15": ("9968", "INR", "Grand Total", 0.95, "flight tax invoice"),
     "image_16": ("393.22", "INR", "Total", 0.95, "EV charging invoice"),
 }
@@ -44,12 +44,18 @@ def _fact_from_record(image: ImageRef, rec: dict, extractor: str, event: Optiona
     confidence = float(rec.get("confidence") or 0.0)
     ref = REVIEWED.get(image.image_id)
     if amt is not None and ref is not None and Decimal(str(amt)) != Decimal(ref[0]):
-        # model and reviewed reading disagree -> financially safer value (larger debit / smaller credit)
         model_amt, reviewed_amt = Decimal(str(amt)), Decimal(ref[0])
-        is_credit = event is not None and event.direction == "credit"
-        chosen = min(model_amt, reviewed_amt) if is_credit else max(model_amt, reviewed_amt)
-        rationale = f"model read {model_amt} ({rec.get('field_used')}), reviewed reading {reviewed_amt} ({ref[2]}); safer value {chosen} adopted. " + rationale
-        confidence = min(confidence, ref[3], 0.7)
+        if ref[3] >= 0.95:
+            # a verified reviewed reading (e.g. line items add up to the total) outranks the model
+            chosen = reviewed_amt
+            rationale = f"model read {model_amt} ({rec.get('field_used')}); verified reviewed reading {reviewed_amt} ({ref[2]}) adopted. " + rationale
+            confidence = ref[3]
+        else:
+            # both readings uncertain -> financially safer value (larger debit / smaller credit)
+            is_credit = event is not None and event.direction == "credit"
+            chosen = min(model_amt, reviewed_amt) if is_credit else max(model_amt, reviewed_amt)
+            rationale = f"model read {model_amt} ({rec.get('field_used')}), reviewed reading {reviewed_amt} ({ref[2]}); safer value {chosen} adopted. " + rationale
+            confidence = min(confidence, ref[3], 0.7)
         amt = chosen
     return EvidenceFact(
         kind="amount" if amt is not None else "unknown",
