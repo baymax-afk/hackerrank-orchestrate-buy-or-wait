@@ -33,6 +33,15 @@ def main() -> int:
         rep = score(rows, labeled)
         mre = sum(rep.rel_errors) / len(rep.rel_errors)
         print(f"{est:14s} {str(msg_amounts):18s}  {rep.status_ok:6d} {rep.method_ok:6d} {rep.plan_ok:4d} {rep.earliest_ok:8d} {rep.changes_ok:7d}  {mre:.4f}")
+    config.ESTIMATOR, config.SALARY_MESSAGE_AMOUNTS = "median", False
+    print()
+    print("horizon_days   status method plan earliest changes  mean_rel_err")
+    for horizon in (80, 82, 84, 85, 86, 87, 88, 90, 120):
+        config.HORIZON_DAYS = horizon
+        rows = [decide_request(r, ds, svc)[0].to_row() for r in ds.requests]
+        rep = score(rows, labeled)
+        mre = sum(rep.rel_errors) / len(rep.rel_errors)
+        print(f"{horizon:<14d} {rep.status_ok:6d} {rep.method_ok:6d} {rep.plan_ok:4d} {rep.earliest_ok:8d} {rep.changes_ok:7d}  {mre:.4f}")
     return 0
 
 

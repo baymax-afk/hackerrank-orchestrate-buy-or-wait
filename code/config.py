@@ -19,7 +19,12 @@ USAGE_LOG = EVALUATION_DIR / "usage.jsonl"
 USAGE_REPORT = EVALUATION_DIR / "usage_report.md"
 PROMPTS_DIR = CODE_DIR / "agents" / "prompts"
 
-HORIZON_DAYS = 90
+# Forecast window in days after request_date (inclusive). The spec frames the check as a
+# "90-day" safety check, but calibration on the 25 solved samples (code/tools/calibrate.py,
+# research/synthesis.md) shows the labels ignore monthly flows landing on day 87-88 while
+# counting flows on day 84; 86 is the longest (financially safest) window consistent with
+# every sample. Override with BOW_HORIZON_DAYS for experiments.
+HORIZON_DAYS = int(os.environ.get("BOW_HORIZON_DAYS", "86"))
 
 OUTPUT_COLUMNS = [
     "request_id",

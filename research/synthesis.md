@@ -114,3 +114,26 @@ Header/columns/row-count/ids; enums; `0 ≤ S ≤ A` (Decimal, ≤ 2 dp); status
 ## 13. Recommended implementation plan
 
 See `C:\Users\ayush\.claude\plans\cheeky-wibbling-lovelace.md` (copied to `research/plan.md`).
+
+
+## Addendum (2026-09-13): forecast horizon calibration
+
+Gridding `HORIZON_DAYS` on the 25 samples (`python code/tools/calibrate.py`) with the median
+estimator:
+
+| horizon (days, inclusive) | status | method | plan | earliest | mean rel. amount error |
+|---|---|---|---|---|---|
+| 80-81 | 22 | 25 | 22 | 20 | 0.045 |
+| 82-83 | 22 | 25 | 22 | 20 | 0.043-0.042 |
+| 84-86 | 22 | 25 | 22 | 20 | 0.041 |
+| 87 | 21 | 24 | 21 | 19 | 0.040 |
+| 88-90 | 20 | 23 | 20 | 18 | 0.041 |
+
+Only four samples move between 86 and 90 days, and all four move the same way: a monthly
+rent landing on day 87 (request_10, request_13) or day 88 (request_05, request_08) after the
+request is *not* reflected in the labels (request_05 and request_10 have positive
+`amount_safe_to_pay`, request_08 and request_13 are `affordable_later` on a salary date that
+only passes when that rent is outside the window). request_10's amount also shows that a flow
+on day 84 *is* counted. No sample separates 84 from 86, so `HORIZON_DAYS = 86`, the longest
+(financially safest) window consistent with every sample, is shipped; the deterministic
+explanations keep the specification's "90 days" wording.

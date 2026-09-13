@@ -141,7 +141,7 @@ def test_recurrence_monthly_fixed_and_weekly_variable():
     flows = project_series(series, rd, [])
     rent_dates = sorted(f.date for f in flows if f.category == "rent")
     assert rent_dates[0] == date(2026, 3, 2) if date(2026, 3, 2) >= rd else rent_dates[0] == date(2026, 4, 2)
-    assert all(rd <= f.date <= rd + __import__("datetime").timedelta(days=90) for f in flows)
+    assert all(rd <= f.date <= rd + __import__("datetime").timedelta(days=config.HORIZON_DAYS) for f in flows)
 
 
 def test_recurrence_singleton_description_dropped_from_estimate():
