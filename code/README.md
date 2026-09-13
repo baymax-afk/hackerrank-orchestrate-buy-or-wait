@@ -31,7 +31,7 @@ On Windows use `python` (or `py`), not `python3`.
 2. `evidence/` — messages parsed by EN/ID template rules into closed-schema facts (`EvidenceFact`); images resolved through a cached vision agent, cross-checked against a reviewed reading table (disagreement → financially safer value). An injection guard rejects instruction-like text.
 3. `ledger.py` — events + facts → dated home-currency cash flows: pending debits reserved, pending credits / failed / cancelled / unrealized ignored, FX at the settlement-date rate, blank amounts filled from images (never zero).
 4. `recurrence.py` — recurring expense series (weekly / biweekly / monthly) from settled history; monthly salary projected at the confirmed level (scheduled row, message, or settled history mode); unconfirmed income (gig payouts, commissions, bonuses, prizes) never projected.
-5. `forecast.py` — end-of-day balance timeline over 90 days; `amount_safe_to_pay` and `earliest_date_for_full_payment` in closed form.
+5. `forecast.py` — balance timeline over the forecast window (`HORIZON_DAYS`, 86 days; intra-day: variable spending before payday credits); `amount_safe_to_pay` and `earliest_date_for_full_payment` in closed form.
 6. `plans.py` — candidates (full, partial, each supplied installment option, full + permitted spending changes, wait), simulation against the minimum balance, ranking: deadline → no changes → total paid → earlier start → fewer payments → lowest option id.
 7. `explain.py` / `agents/explain_agent.py` — explanation from verified numbers (LLM draft accepted only if every figure matches; deterministic template otherwise).
 8. `critic.py` — independent re-verification of every decision from its rendered row (plan re-simulated with

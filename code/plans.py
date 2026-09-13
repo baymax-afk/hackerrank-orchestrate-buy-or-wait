@@ -18,6 +18,8 @@ def installment_eligible(opt: PaymentOption, profile: Profile, request: Request)
         return False, "user does not consider installments"
     if opt.number_of_payments > profile.max_installment_months:
         return False, f"{opt.number_of_payments} payments exceed max {profile.max_installment_months} months"
+    if opt.number_of_payments > 1 and not opt.payment_frequency_days:
+        return False, "installment option has no payment frequency"
     return True, ""
 
 

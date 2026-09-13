@@ -1,8 +1,22 @@
-log.txt
+# secrets and per-machine files
 .env
+.env.local
+# transcript (uploaded separately as chat_transcript, never committed)
+log.txt
+# build / run artefacts
+code.zip
+*.log
+*.tmp
+code/traces/
+code/evaluation/confidence_samples.jsonl
+# python
 __pycache__/
 *.pyc
-code.zip
+.pytest_cache/
+.venv/
+venv/
+# personal notes
 /imp_docs/
-code/traces/
-run_full.log
+# OS
+.DS_Store
+Thumbs.db

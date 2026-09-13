@@ -107,7 +107,7 @@ def write_report(n_requests: int, run_start: str | None = None, usage_log: Path 
         f"Generated: {datetime.now(timezone.utc).isoformat()}" + (f" (run id {run_id})" if run_id else ""),
         f"Dataset run: {n_requests} requests (dataset/requests.csv). Provider: {config.PROVIDER}. Prompt version: {config.PROMPT_VERSION}.",
         "",
-        "Model calls are made only by the bounded evidence/explanation agents (image OCR, message extraction fallback, explanation drafting). "
+        "Model calls are made only by the bounded evidence/explanation agents (two image readings per image, message extraction fallback with a verifier pass, explanation drafting with one feedback retry). "
         "All forecasting, plan generation, ranking and validation are deterministic Python. Cache hits make no API call and consume no tokens.",
         "",
         "## Final full-dataset run: model work behind the shipped output.csv",

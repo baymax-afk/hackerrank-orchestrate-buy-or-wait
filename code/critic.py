@@ -69,6 +69,10 @@ def verify(decision: Decision, request: Request, profile: Profile, flows: list[C
         raise CriticError("plan payments do not sum to the requested amount")
     if any(d < rd for d, _ in plan):
         raise CriticError("plan starts before the request date")
+    if any(plan[i][0] >= plan[i + 1][0] for i in range(len(plan) - 1)):
+        raise CriticError("plan dates are not strictly increasing")
+    if any(a <= 0 for _, a in plan):
+        raise CriticError("plan contains a non-positive payment")
 
     # 3. earliest date is consistent with the status
     e = decision.earliest_date_for_full_payment

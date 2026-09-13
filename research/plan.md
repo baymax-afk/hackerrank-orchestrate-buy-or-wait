@@ -1,3 +1,9 @@
+> Status (2026-09-13): historical planning document. The implementation followed it with two layout changes
+> (`capacity.py`/`changes.py` were folded into `forecast.py`/`plans.py`; the optional audit agent was later
+> removed) and several additions made after the code review: `critic.py`, `tools/confidence.py`,
+> `tests/test_robustness.py`, `tests/test_agents.py`. See `research/code_review.md` and
+> `research/orchestration_improvements.md` for the current state.
+
 # Plan — Buy or Wait? implementation
 
 ## Context
