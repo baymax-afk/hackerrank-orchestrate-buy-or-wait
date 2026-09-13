@@ -66,9 +66,15 @@ Configuration knobs live in `config.py` (`ESTIMATOR`, `HORIZON_DAYS`, model name
 The model never sets an output column. It is used for three bounded jobs, each cached under `code/cache/`
 with the content hash it was computed from:
 
-1. reading one amount from one image (blank event amounts);
-2. classifying a message that no rule matched into the same closed fact schema the rules emit;
-3. drafting the explanation sentence from the verified numbers (accepted only if every figure matches).
+1. reading one amount from one image (blank event amounts) — two independently framed readings are
+   arbitrated with a deterministic line-item arithmetic check and the reviewed table (`evidence/images.py`);
+2. classifying a message that no rule matched into the same closed fact schema the rules emit — each fact is
+   confidence-gated and must be confirmed by a second call that quotes the exact span stating it;
+3. drafting the explanation sentence from the verified numbers (accepted only if every figure matches; one
+   feedback-guided retry naming the missing figures).
+
+`--no-llm` never calls the API but still serves every cached model output, so the shipped `output.csv` is
+reproduced byte-for-byte offline. `BOW_MAX_USD` caps estimated spend per run.
 
 `evidence/images.py` also carries a small **reviewed table**: the 16 dataset images transcribed by hand,
 each pinned to the sha256 of the PNG it was read from. It cross-checks the model reading (a verified

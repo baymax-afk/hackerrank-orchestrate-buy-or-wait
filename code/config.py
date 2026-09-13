@@ -95,6 +95,8 @@ MAX_CHANGE_COMBINATIONS = 5000
 EXPLAIN_WORKERS = int(os.environ.get("BOW_EXPLAIN_WORKERS", "4"))
 # After this many consecutive API failures the client stops calling and the run continues deterministically.
 LLM_CIRCUIT_BREAKER = int(os.environ.get("BOW_LLM_CIRCUIT_BREAKER", "5"))
+# Optional spend cap per run (USD, estimated from PRICE_TABLE); the client stops calling once reached.
+MAX_USD_PER_RUN = Decimal(os.environ["BOW_MAX_USD"]) if os.environ.get("BOW_MAX_USD") else None
 # Set by main.run; stamped on usage records and traces so a run can be reconstructed.
 RUN_ID = "manual"
 

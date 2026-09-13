@@ -31,7 +31,7 @@ treated like any other cached evidence: provenance + content hash + expiry on ch
 
 ## 2. Evidence extraction: make the model outputs *verifiable*, not just *validated*
 
-### 2.1 Two-reader arbitration for images (high value, low cost)
+### 2.1 Two-reader arbitration for images (high value, low cost) — ADOPTED (code); readings pending credit
 Today: one vision read, arbitrated by the reviewed table. Better: two independent reads with different
 framings (e.g. "what is the total?" vs "list every labelled amount on the document"), plus a *deterministic
 arithmetic check* (line items sum to the total). Accept when both readings agree or the arithmetic confirms one
@@ -39,19 +39,35 @@ of them; otherwise take the financially safer value and flag. This replaces the 
 unseen images and would have caught image_14 (4593 vs 4543) automatically because the items sum to 4543.
 Cost: one extra vision call per image (16 here).
 
+*Implemented: `ImageAgent.enumerate` (second framing: every labelled amount, item vs total) and
+`evidence.images.arbitrate`, which scores each candidate by corroboration — reader A, reader B total,
+reviewed table (1 point each) and line items adding up (2 points, deterministic) — takes a candidate that
+leads with ≥2 points, else a verified reviewed value, else the financially safer value flagged for review.
+The enumeration readings could not be fetched today: the API account ran out of credit mid-session
+(`400 credit balance is too low`); the client now trips immediately on that error. With credit restored, one
+`python code/main.py` fills the 16 enumeration records; until then arbitration uses reader A + the table.*
+
 ### 2.2 Self-consistency by sampling (medium value, low cost)
 For any extraction with confidence < 0.9, sample 3 readings at low effort and take the majority; disagreement
 → safer value + flag. Cheap insurance against single-shot misreads; cached like everything else.
 
-### 2.3 Extractor → verifier split for messages (high value, medium cost)
+### 2.3 Extractor → verifier split for messages (high value, medium cost) — ADOPTED
 A second, differently-prompted call that receives the message and the *extracted fact* and answers only
 "is this fact stated explicitly in the text? quote the span". Facts without a quoted span are downgraded to
 unconfirmed. This is the cheapest way to make hallucinated amounts impossible: the verifier must point at
 the text. Combine with the plausibility bound (adopted) for numeric sanity.
 
-### 2.4 Confidence-gated adoption (low cost)
+*Implemented: `MessageAgent.verify` — a second call with a different prompt that must return the exact
+substring stating the fact; the span is checked against the message text in code (`span_supported`), so a
+verifier that "agrees" without a real quote is rejected. Facts that cannot be verified (or when the client is
+unavailable) are dropped. Only rule-miss messages reach this path.*
+
+### 2.4 Confidence-gated adoption (low cost) — ADOPTED
 Model facts carry a confidence but the pipeline ignores it. Gate: confidence ≥ 0.8 → adopt; 0.5–0.8 → adopt
 only if it makes the forecast *safer*; < 0.5 → ignore and note. Deterministic, one function.
+
+*Implemented as `message_agent.gate`: optimistic kinds (salary rise, first salary, one-off credit, amendments)
+need ≥ 0.8; conservative kinds ≥ 0.5.*
 
 ### 2.5 Rule mining offline, rules online (medium value, medium cost)
 The regex families were hand-written for this dataset. A better workflow: run the message agent over *all*
@@ -103,21 +119,26 @@ idempotent and separately replayable from its cached inputs: `facts.json → led
 timeline.json → candidates.json → decision.json`. Failures then resume from the last good stage, and the
 trace *is* the state. Cheap to add given `Trace` already holds every intermediate.
 
-### 4.2 Budget-aware scheduling (low cost)
+### 4.2 Budget-aware scheduling (low cost) — ADOPTED
 A token/cost budget per run (`BOW_MAX_USD`): the client refuses new calls once the budget is spent and the
 run completes deterministically. Combine with the circuit breaker. Prevents runaway cost when a cache is
 invalidated by a prompt-version bump.
+
+*Implemented: `BOW_MAX_USD` → `config.MAX_USD_PER_RUN`; the client tracks estimated spend from the price table.*
 
 ### 4.3 Concurrency with determinism (adopted for explanations)
 Extraction calls are independent per source; the explanation calls are independent per request. Parallelise
 both; keep ordering by index and cache writes atomic (already true). The decision loop stays sequential — it
 is 0.7 s for 250 rows and its ordering must be reproducible.
 
-### 4.4 Prompt/version contracts (medium value, low cost)
+### 4.4 Prompt/version contracts (medium value, low cost) — PARTIALLY ADOPTED
 Every prompt has `PROMPT_VERSION`; add a golden set: 10 messages, 5 images, 10 decisions with expected
 extractions/explanations, run in CI when the prompt changes. A prompt edit that shifts extraction becomes a
 failing test rather than a silent output change (the "never state a number of days" edit this session broke
 grounding for 116 rows — a golden set would have caught it before a full run).
+
+*Implemented for the deterministic layer: `tests/test_agents.py::test_message_rules_golden_set` (15 messages).
+A model-side golden set needs API access and is left for when credit is available.*
 
 ### 4.5 Model routing by task (low cost)
 Vision reads: keep the stronger model. Message classification and explanation drafts: a smaller model is

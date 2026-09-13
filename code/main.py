@@ -41,26 +41,29 @@ log = logging.getLogger("bow")
 
 
 def build_services(args) -> Services:
+    """Agents are always constructed; --no-llm (or a missing key) makes the client unavailable so every
+    agent serves cache hits only and never calls the API. Cached explanation drafts therefore survive an
+    offline run instead of degrading to the template."""
     svc = Services(use_llm=not args.no_llm, refresh_cache=args.refresh_cache)
-    if svc.use_llm:
-        try:
-            from agents.client import LLMClient
-            from agents.explain_agent import ExplainAgent
-            from agents.image_agent import ImageAgent
-            from agents.message_agent import MessageAgent
+    try:
+        from agents.client import LLMClient
+        from agents.explain_agent import ExplainAgent
+        from agents.image_agent import ImageAgent
+        from agents.message_agent import MessageAgent
 
-            client = LLMClient()
-            if client.available():
-                svc.image_agent = ImageAgent(client)
-                svc.message_agent = MessageAgent(client)
-                svc.explain_agent = ExplainAgent(client)
-                log.info("LLM agents enabled (%s)", config.MODEL_TEXT)
-            else:
-                log.warning("no ANTHROPIC_API_KEY: running with caches, reviewed image table and rule-based messages only")
-                svc.use_llm = False
-        except Exception as exc:  # pragma: no cover - defensive
-            log.warning("LLM agents unavailable (%s); deterministic fallback", exc)
+        client = LLMClient(enabled=svc.use_llm)
+        svc.image_agent = ImageAgent(client)
+        svc.message_agent = MessageAgent(client)
+        svc.explain_agent = ExplainAgent(client)
+        if client.available():
+            log.info("LLM agents enabled (%s)", config.MODEL_TEXT)
+        else:
             svc.use_llm = False
+            log.info("model calls disabled (%s): caches, reviewed image table and rule-based messages only",
+                     "--no-llm" if args.no_llm else "no ANTHROPIC_API_KEY")
+    except Exception as exc:  # pragma: no cover - defensive
+        log.warning("LLM agents unavailable (%s); deterministic fallback", exc)
+        svc.use_llm = False
     return svc
 
 

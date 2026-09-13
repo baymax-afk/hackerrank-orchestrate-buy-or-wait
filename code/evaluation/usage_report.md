@@ -1,7 +1,7 @@
 # Token usage and cost report
 
-Generated: 2026-09-13T04:28:39.158198+00:00 (run id 20260913T042838Z-dce208)
-Dataset run: 3 requests (dataset/requests.csv). Provider: anthropic. Prompt version: v1.
+Generated: 2026-09-13T07:13:42.109677+00:00 (run id 20260913T071340Z-31b7c8)
+Dataset run: 250 requests (dataset/requests.csv). Provider: anthropic. Prompt version: v1.
 
 Model calls are made only by the bounded evidence/explanation agents (image OCR, message extraction fallback, explanation drafting). All forecasting, plan generation, ranking and validation are deterministic Python. Cache hits make no API call and consume no tokens.
 
@@ -11,12 +11,12 @@ Each shipped row is built from cached, provenance-tracked model outputs (image O
 
 | Model | Calls | Input tokens | Output tokens | Total tokens | Est. cost (USD) |
 |---|---:|---:|---:|---:|---:|
-| claude-sonnet-5 | 22 | 42331 | 3706 | 46037 | 0.1217 |
-| **All models** | 22 | 42331 | 3706 | 46037 | 0.1217 |
+| claude-sonnet-5 | 269 | 207852 | 23049 | 230901 | 0.6462 |
+| **All models** | 269 | 207852 | 23049 | 230901 | 0.6462 |
 
-- Total tokens: 46037; average per request: 15345.7
-- Estimated total cost: USD 0.1217; average per request: USD 0.040574
-- Calls per agent: {'explain_agent': 3, 'image_agent': 16, 'message_agent': 3}
+- Total tokens: 230901; average per request: 923.6
+- Estimated total cost: USD 0.6462; average per request: USD 0.002585
+- Calls per agent: {'explain_agent': 250, 'image_agent': 16, 'message_agent': 3}
 
 ## API calls made during this run (cache misses only)
 

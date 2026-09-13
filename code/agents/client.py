@@ -11,6 +11,7 @@ import logging
 import os
 import threading
 import time
+from decimal import Decimal
 from datetime import datetime, timezone
 from typing import Any, Optional
 
@@ -19,10 +20,14 @@ import config
 log = logging.getLogger("bow.llm")
 
 
+HARD_FAILURE_MARKERS = ("credit balance", "authentication", "invalid x-api-key", "permission")
+
+
 class LLMClient:
-    def __init__(self) -> None:
+    def __init__(self, enabled: bool = True) -> None:
         self._client = None
-        self.key = config.api_key()
+        self.key = config.api_key() if enabled else None
+        self.spent_usd = Decimal(0)
         if self.key:
             try:
                 import anthropic
@@ -38,7 +43,14 @@ class LLMClient:
         self._lock = threading.Lock()
 
     def available(self) -> bool:
-        return self._client is not None and not self.tripped
+        if self._client is None or self.tripped:
+            return False
+        if config.MAX_USD_PER_RUN is not None and self.spent_usd >= config.MAX_USD_PER_RUN:
+            if not self.tripped:
+                log.error("model budget of USD %s exhausted (spent %.4f); continuing deterministically", config.MAX_USD_PER_RUN, self.spent_usd)
+                self.tripped = True
+            return False
+        return True
 
     def _log_usage(self, record: dict[str, Any]) -> None:
         record = {"run_id": config.RUN_ID, **record}
@@ -47,18 +59,25 @@ class LLMClient:
             with open(config.USAGE_LOG, "a", encoding="utf-8") as fh:
                 fh.write(json.dumps(record, ensure_ascii=False) + "\n")
 
-    def _failure(self, agent: str, source_id: str, why: str) -> None:
+    def _failure(self, agent: str, source_id: str, why: str, hard: bool = False) -> None:
         with self._lock:
             self.consecutive_failures += 1
+            if hard and not self.tripped:
+                self.tripped = True
+                log.error("unrecoverable API error (%s) on %s %s; circuit open, continuing deterministically", why, agent, source_id)
+                return
             if self.consecutive_failures >= config.LLM_CIRCUIT_BREAKER and not self.tripped:
                 self.tripped = True
                 log.error("%d consecutive API failures (last: %s %s %s); circuit open, continuing deterministically",
                           self.consecutive_failures, agent, source_id, why)
 
-    def _success(self) -> None:
+    def _success(self, model: str = "", inp: int = 0, out: int = 0) -> None:
         with self._lock:
             self.consecutive_failures = 0
             self.calls += 1
+            price = config.PRICE_TABLE.get(model) or next((v for k, v in config.PRICE_TABLE.items() if model.startswith(k)), None)
+            if price:
+                self.spent_usd += (Decimal(inp) * price[0] + Decimal(out) * price[1]) / Decimal(1_000_000)
 
     def json_call(self, *, agent: str, source_id: str, system: str, content: list[dict], schema: dict,
                   model: Optional[str] = None, max_tokens: int = 2048, effort: str = "low") -> Optional[dict]:
@@ -79,7 +98,8 @@ class LLMClient:
             log.warning("%s %s: API call failed: %s", agent, source_id, type(exc).__name__)
             self._log_usage({"ts": datetime.now(timezone.utc).isoformat(), "agent": agent, "source_id": source_id, "provider": config.PROVIDER,
                              "model": model, "ok": False, "error": type(exc).__name__, "input_tokens": 0, "output_tokens": 0})
-            self._failure(agent, source_id, type(exc).__name__)
+            text = str(exc).lower()
+            self._failure(agent, source_id, type(exc).__name__, hard=any(m in text for m in HARD_FAILURE_MARKERS))
             return None
         usage = getattr(resp, "usage", None)
         rec = {
@@ -96,7 +116,7 @@ class LLMClient:
             "stop_reason": getattr(resp, "stop_reason", None),
         }
         self._log_usage(rec)
-        self._success()
+        self._success(str(rec["model"]), int(rec["input_tokens"]), int(rec["output_tokens"]))
         if getattr(resp, "stop_reason", None) == "refusal":
             return None
         try:

@@ -73,35 +73,84 @@ def reviewed_for(image_id: str, content_hash: str):
     return ref
 
 
-def _fact_from_record(image: ImageRef, rec: dict, extractor: str, event: Optional[Event] = None, content_hash: str = "") -> EvidenceFact:
-    amt = rec.get("amount")
-    rationale = str(rec.get("rationale", ""))[:300]
-    confidence = float(rec.get("confidence") or 0.0)
-    ref = reviewed_for(image.image_id, content_hash)
-    if amt is not None and ref is not None and Decimal(str(amt)) != Decimal(ref[0]):
-        model_amt, reviewed_amt = Decimal(str(amt)), Decimal(ref[0])
-        if ref[3] >= 0.95:
-            # a verified reviewed reading (e.g. line items add up to the total) outranks the model
-            chosen = reviewed_amt
-            rationale = f"model read {model_amt} ({rec.get('field_used')}); verified reviewed reading {reviewed_amt} ({ref[2]}) adopted. " + rationale
-            confidence = ref[3]
+TOTAL_WORDS = ("total", "net", "due", "balance", "payable", "paid", "received", "amount")
+
+
+def _d(x) -> Optional[Decimal]:
+    try:
+        return Decimal(str(x)) if x is not None else None
+    except (ArithmeticError, ValueError):
+        return None
+
+
+def arbitrate(model_amt: Optional[Decimal], enumeration: Optional[dict], reviewed: Optional[tuple], is_credit: bool) -> tuple[Optional[Decimal], str, float]:
+    """Combine the single-amount reading (A), the enumeration reading (B) and the reviewed value.
+
+    Order of trust: a value confirmed by two independent sources (A==B total, A==reviewed, or line items that
+    add up to it) beats a single reading; a verified reviewed value beats a lone model reading; when nothing
+    corroborates anything, the financially safer value is taken (larger debit / smaller credit) and flagged.
+    Returns (amount, rationale, confidence).
+    """
+    totals: list[Decimal] = []
+    items: list[Decimal] = []
+    for a in (enumeration or {}).get("amounts", []) or []:
+        v = _d(a.get("amount"))
+        if v is None:
+            continue
+        label = str(a.get("label", "")).lower()
+        if a.get("kind") == "total" or any(w in label for w in TOTAL_WORDS):
+            totals.append(v)
         else:
-            # both readings uncertain -> financially safer value (larger debit / smaller credit)
-            is_credit = event is not None and event.direction == "credit"
-            chosen = min(model_amt, reviewed_amt) if is_credit else max(model_amt, reviewed_amt)
-            rationale = f"model read {model_amt} ({rec.get('field_used')}), reviewed reading {reviewed_amt} ({ref[2]}); safer value {chosen} adopted. " + rationale
-            confidence = min(confidence, ref[3], 0.7)
-        amt = chosen
+            items.append(v)
+    item_sum = sum(items, Decimal(0)) if items else None
+    reviewed_amt = _d(reviewed[0]) if reviewed else None
+    candidates = [c for c in (model_amt, reviewed_amt, *totals) if c is not None]
+    if not candidates:
+        return None, "no reading available", 0.0
+
+    def corroborated(v: Decimal) -> tuple[int, list[str]]:
+        # arithmetic (line items adding up) is a deterministic check and outweighs any single reading
+        score, why = 0, []
+        if model_amt is not None and v == model_amt:
+            score += 1; why.append("reader A")
+        if reviewed_amt is not None and v == reviewed_amt:
+            score += 1; why.append("reviewed table")
+        if v in totals:
+            score += 1; why.append("reader B total")
+        if item_sum is not None and v == item_sum:
+            score += 2; why.append(f"line items sum to {item_sum}")
+        return score, why
+
+    scored = sorted(((corroborated(v), v) for v in set(candidates)), key=lambda t: (-t[0][0], (t[1] if is_credit else -t[1])))
+    (top_score, top_why), top = scored[0]
+    if top_score >= 2 and (len(scored) == 1 or scored[1][0][0] < top_score):
+        return top, f"{top} corroborated by {', '.join(top_why)}", 0.97
+    if reviewed is not None and reviewed[3] >= 0.95 and reviewed_amt is not None:
+        others = sorted(set(candidates) - {reviewed_amt})
+        return reviewed_amt, f"verified reviewed reading {reviewed_amt} ({reviewed[2]}) adopted; other readings {others}", reviewed[3]
+    chosen = min(candidates) if is_credit else max(candidates)
+    return chosen, f"readings disagree {sorted(set(candidates))}; financially safer value {chosen} adopted (flag for review)", 0.6
+
+
+def _fact_from_record(image: ImageRef, rec: dict, extractor: str, event: Optional[Event] = None, content_hash: str = "", enumeration: Optional[dict] = None) -> EvidenceFact:
+    model_amt = _d(rec.get("amount"))
+    ref = reviewed_for(image.image_id, content_hash)
+    is_credit = event is not None and event.direction == "credit"
+    if enumeration is None and ref is None:
+        amt, why, conf = model_amt, str(rec.get("rationale", ""))[:300], float(rec.get("confidence") or 0.0)
+    else:
+        amt, why, conf = arbitrate(model_amt, enumeration, ref, is_credit)
+        why = f"{why}. reader A: {model_amt} ({rec.get('field_used')}). " + str(rec.get("rationale", ""))[:200]
     return EvidenceFact(
         kind="amount" if amt is not None else "unknown",
         source_kind="image",
         source_id=image.image_id,
         source_file=f"dataset/media/images/{image.image_id}.png",
         target_event_id=image.related_event_id,
-        amount=Decimal(str(amt)) if amt is not None else None,
+        amount=amt,
         currency=rec.get("currency"),
-        confidence=confidence,
-        rationale=rationale,
+        confidence=conf,
+        rationale=why[:400],
         extractor=extractor,
     )
 
@@ -112,12 +161,10 @@ def resolve_image(image: ImageRef, event: Optional[Event], use_llm: bool, cache:
         return EvidenceFact("unknown", "image", image.image_id, image.path, image.related_event_id, confidence=0.0, rationale="image file missing", extractor="rules")
     content_hash = sha256_file(path)
     rec = None if refresh else cache.get(image.image_id, content_hash)
-    if rec is not None:
-        return _fact_from_record(image, rec.get("extracted", {}) | {"confidence": rec.get("confidence"), "rationale": rec.get("rationale")}, "llm", event, content_hash)
-    if use_llm and agent is not None:
+    if rec is None and use_llm and agent is not None:
         result = agent.extract(image, event)
         if result is not None:
-            cache.put(image.image_id, {
+            rec = {
                 "source_file": f"dataset/media/images/{image.image_id}.png",
                 "source_id": image.image_id,
                 "target_event_id": image.related_event_id,
@@ -129,8 +176,17 @@ def resolve_image(image: ImageRef, event: Optional[Event], use_llm: bool, cache:
                 "confidence": result.get("confidence"),
                 "rationale": result.get("rationale"),
                 "usage": result.get("usage"),
-            })
-            return _fact_from_record(image, result, "llm", event, content_hash)
+            }
+            cache.put(image.image_id, rec)
+    if rec is not None:
+        # second reader (enumeration) is added to the same record once; cache hits never call again
+        if "enumeration" not in rec and use_llm and agent is not None and hasattr(agent, "enumerate"):
+            enum = agent.enumerate(image)
+            if enum is not None:
+                rec = dict(rec, enumeration=enum)
+                cache.put(image.image_id, rec)
+        return _fact_from_record(image, rec.get("extracted", {}) | {"confidence": rec.get("confidence"), "rationale": rec.get("rationale")},
+                                 "llm", event, content_hash, rec.get("enumeration"))
     ref = reviewed_for(image.image_id, content_hash)
     if ref is not None:
         amt, ccy, field, conf, note = ref

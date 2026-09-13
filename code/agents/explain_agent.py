@@ -59,7 +59,7 @@ class ExplainAgent:
         if self._grounded(text, facts, decision, cur):
             return text
         # validator feedback loop (bounded to one retry): tell the model exactly which figures were missing
-        if int(rec.get("attempts", 1)) < 2:
+        if int(rec.get("attempts", 1)) < 2 and self.client.available():
             missing = [m for m in self._must(facts, decision) if m.lower() not in text.lower()]
             feedback = (f"Your previous draft was rejected by the checker: it must quote these exact figures verbatim: {missing}; "
                         f"and it must not contain any number that is not in the facts. Previous draft: {text}")
