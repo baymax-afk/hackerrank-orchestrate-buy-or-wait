@@ -63,9 +63,9 @@ Order (problem statement): explicit cancellation / settlement / amendment → ne
 - Income: monthly salary series (`Payroll credit`, `Base salary`, `Primary household salary`, `International/New employer payroll`, `First-job payroll`) projected at the amount of the scheduled `Next confirmed salary` (or last regular amount), anchored on the scheduled row when present. Excluded from projection: bonus, commission, arrears, prorated, reimbursements, prizes, gig payouts (`... payout`, `Weekly app earnings`), freelance invoice payments (only message-confirmed invoices count once), second household income (variable; sample 13 confirms exclusion is closer). `Final employer payroll` / employment-ended / contract-ended messages stop the series; household-record-ended messages cap it at the stated remaining salary.
 - Representative event for spending changes = latest settled occurrence of the series (samples 06/11/21 all point at the latest instance).
 
-## 6. 90-day forecast semantics
+## 6. Forecast semantics (horizon superseded by the addendum: 86 days inclusive)
 
-- Horizon: request_date .. request_date + 90 days inclusive.
+- Horizon: request_date .. request_date + 90 days inclusive (original assumption; calibrated to 86 in the addendum below).
 - Granularity: end-of-day net balance per date (samples reject intra-day debit-first ordering); payment on a salary day may use that day's salary.
 - Safety: every end-of-day balance in the horizon ≥ `minimum_balance_to_keep`.
 - Baseline (no request) is computed once per request; candidate plans are simulated by inserting their payments.
@@ -135,8 +135,8 @@ request is *not* reflected in the labels (request_05 and request_10 have positiv
 `amount_safe_to_pay`, request_08 and request_13 are `affordable_later` on a salary date that
 only passes when that rent is outside the window). request_10's amount also shows that a flow
 on day 84 *is* counted. No sample separates 84 from 86, so `HORIZON_DAYS = 86`, the longest
-(financially safest) window consistent with every sample, is shipped; the deterministic
-explanations keep the specification's "90 days" wording.
+(financially safest) window consistent with every sample, is shipped; explanations no longer state a
+number of days.
 
 ## Addendum (2026-09-13, later): recurrence cadences, salary evidence, intra-day ordering
 

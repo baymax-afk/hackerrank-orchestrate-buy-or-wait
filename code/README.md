@@ -30,16 +30,17 @@ On Windows use `python` (or `py`), not `python3`.
 1. `loaders.py` — schema-validated CSV loading, indexes by user / request / event, Decimal money.
 2. `evidence/` — messages parsed by EN/ID template rules into closed-schema facts (`EvidenceFact`); images resolved by two independently framed vision readings arbitrated with a line-item arithmetic check (disagreement → flagged, safer targeted value). An injection guard rejects instruction-like text.
 3. `ledger.py` — events + facts → dated home-currency cash flows: pending debits reserved, pending credits / failed / cancelled / unrealized ignored, FX at the settlement-date rate, blank amounts filled from images (never zero).
-4. `recurrence.py` — recurring expense series (weekly / biweekly / monthly) from settled history; monthly salary projected at the confirmed level (scheduled row, message, or settled history mode); unconfirmed income (gig payouts, commissions, bonuses, prizes) never projected.
+4. `recurrence.py` — recurring expense series from settled history (5-, 7-, 10-, 14-, 21-day and monthly cadences, median amount); monthly salary projected at the confirmed level (scheduled row, message, or settled-history mode), with employer-dated rises applied from their effective payroll, resumed salaries after leave, and a plausibility bound on message-stated amounts; unconfirmed income (gig payouts, commissions, bonuses, prizes) never projected.
 5. `forecast.py` — balance timeline over the forecast window (`HORIZON_DAYS`, 86 days; intra-day: variable spending before payday credits); `amount_safe_to_pay` and `earliest_date_for_full_payment` in closed form.
-6. `plans.py` — candidates (full, partial, each supplied installment option, full + permitted spending changes, wait), simulation against the minimum balance, ranking: deadline → no changes → total paid → earlier start → fewer payments → lowest option id.
-7. `explain.py` / `agents/explain_agent.py` — explanation from verified numbers (LLM draft accepted only if every figure matches; deterministic template otherwise).
+6. `plans.py` — candidates (full, partial, each supplied installment option, full + permitted spending changes, wait), simulation against the minimum balance, ranking: deadline → no changes → total paid → earlier start → fewer payments → lowest option id. Spending changes: the safe combination (≤3) with the smallest total cut.
+7. `explain.py` / `agents/explain_agent.py` — explanation from verified numbers (LLM draft accepted only if every figure matches, with one feedback-guided retry; deterministic template otherwise).
 8. `critic.py` — independent re-verification of every decision from its rendered row (plan re-simulated with
    the shipped changes, `amount_safe_to_pay` checked to be maximal, earliest date re-simulated); a failure
    becomes a fallback row. `validate.py` — every row checked against the output contract before writing.
 9. `usage.py` — `evaluation/usage_report.md` from the per-call `usage.jsonl`.
+10. `tools/` — `calibrate.py` (estimator/horizon grids on the samples), `confidence.py` (perturbation ensemble), `build_zip.py` (packaging with a secret guard).
 
-Agents (`agents/`): image OCR, message fallback, explanation drafting, optional audit. They never write a financial recommendation; all outputs are schema-validated, cached with provenance under `code/cache/`, and reproducible without an API key.
+Agents (`agents/`): `image_agent` (two readings per image: the row's amount, and every labelled amount), `message_agent` (rule-miss classifier + verifier that must quote the supporting span), `explain_agent` (draft + grounding retry). They never write a financial recommendation; all outputs are schema-validated, cached with provenance under `code/cache/`, and reproducible without an API key. `agents/client.py` wraps the API with usage logging, a circuit breaker and a spend cap.
 
 Configuration knobs live in `config.py` (`ESTIMATOR`, `HORIZON_DAYS`, model names, price table).
 

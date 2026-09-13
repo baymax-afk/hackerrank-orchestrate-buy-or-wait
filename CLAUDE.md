@@ -23,14 +23,14 @@ python code/tools/confidence.py     # per-row decision stability under a perturb
 python code/tools/build_zip.py      # build code.zip
 ```
 
-Use `python` (or `py`) on this machine — `python3` is the Microsoft Store stub. `validate.py` runs on every output; the checks it enforces:
+Use `python` (or `py`) on this machine — `python3` is the Microsoft Store stub. Every request runs inside a fault boundary (an exception or contract violation becomes a `not_affordable` fallback row and a non-zero exit), `critic.py` re-simulates every decision from its rendered row, and `validate.py` gates every output; the checks it enforces:
 
 - `output.csv` has exactly the 8 required columns in order and 251 lines (header + 250 rows), one per `request_id` in `dataset/requests.csv`.
 - `0 <= amount_safe_to_pay <= requested_amount` on every row.
 - Every `installments` plan matches a row in `request_payment_options.csv` exactly; every `partial_payment` plan is exactly two entries summing to `requested_amount`.
 - Score against the 25 labeled rows in `dataset/sample_requests.csv` before running the full set.
 
-Secrets (LLM API keys, if any) come from environment variables / `.env` only. `log.txt`, `.env`, and `code.zip` are gitignored.
+Secrets (LLM API keys, if any) come from environment variables / `.env` only. `log.txt`, `.env`, `code.zip`, traces and caches' temp files are gitignored; `tests/` is part of the required evaluation workflow and must stay tracked. No hand-transcribed dataset values are used at runtime (the human image readings in `tests/golden_image_readings.py` are an evaluation fixture only).
 
 ## Data model (how the files join)
 
@@ -46,7 +46,7 @@ All balances, request amounts, payment options, and output amounts are in the us
 
 1. **Reconstruct state**: start from `current_available_balance`; reserve pending debits; ignore pending credits, failed/cancelled rows, duplicates, and `unrealized` investment value; count salary only on its settlement date.
 2. **Detect recurrence** from history only (rent, utilities, subscriptions, salary); forecast essential variable spending conservatively.
-3. **90-day forecast** from `request_date`: balance must never drop below `minimum_balance_to_keep` after any projected essential expense or plan payment.
+3. **Forecast window** from `request_date` (the spec's "90-day" check; `HORIZON_DAYS` is calibrated to 86, see `code/README.md`): balance must never drop below `minimum_balance_to_keep` after any projected essential expense or plan payment.
 4. **Derive outputs**: `amount_safe_to_pay` (max safe today, before optional spending changes, capped at `requested_amount`); `earliest_date_for_full_payment` (first safe date for a single full payment — independent of the user's method preferences; equals `request_date` for `affordable_now`, empty if never within the forecast window — `HORIZON_DAYS`, calibrated to 86 days, see code/README.md).
 5. **Rank eligible plans** (only methods in `payment_methods_user_will_consider`; installments also gated by `max_installment_months`): complete by `desired_completion_date` → no spending changes → lowest total paid → earliest start → fewest payments → lowest `payment_option_id`. `wait` requires full payment to become safe later and the user accepting `full_payment`; `not_recommended` is the fallback.
 6. **Spending changes**: at most three, only `flexible` recurring events in a category the user is willing to reduce/stop, `stop` and `reduce_to` never on the same event.

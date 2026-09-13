@@ -4,14 +4,15 @@ Starter repository for the **HackerRank Orchestrate** 24-hour hackathon (Septemb
 
 ## Solution (participant submission)
 
-The solution is a deterministic Python decision engine under [`code/`](./code/README.md) with bounded, cached LLM agents for evidence interpretation (image OCR, message extraction, explanation drafting). Full module map, design notes and CLI flags: [`code/README.md`](./code/README.md).
+The solution is a deterministic Python decision engine under [`code/`](./code/README.md) with bounded, cached LLM agents for evidence interpretation (two-reader image OCR with arithmetic arbitration, verified message extraction, grounded explanation drafting). Every decision is re-verified by an independent critic and validated against the output contract before it is written. Full module map, robustness contract, evidence policy and the evaluation workflow: [`code/README.md`](./code/README.md).
 
 ```bash
 pip install -r requirements.txt        # anthropic (optional) + pytest
 cp .env.example .env                   # optional: ANTHROPIC_API_KEY enables the agents; omit for a fully offline run
 python code/main.py                    # -> ./output.csv (250 rows) + code/evaluation/usage_report.md
 python code/main.py --no-llm           # same, with no API calls (cached evidence + rule-based parsing)
-python -m pytest tests -q              # unit tests
+python -m pytest tests -q              # evaluation workflow: 71 unit / failure-path / agent-contract tests
+python code/main.py --sample-check --no-llm   # regression against the 25 solved samples
 python code/tools/build_zip.py         # -> ./code.zip (includes evaluation/usage_report.md)
 ```
 
