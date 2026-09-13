@@ -18,5 +18,160 @@
     "input_tokens": 2430,
     "output_tokens": 160
   },
-  "timestamp": "2026-09-13T03:09:14.648121+00:00"
+  "timestamp": "2026-09-13T03:09:14.648121+00:00",
+  "enumeration": {
+    "amounts": [
+      {
+        "label": "Kellogg's Corn Flakes",
+        "amount": 1425.0,
+        "kind": "item"
+      },
+      {
+        "label": "Nestle Munch",
+        "amount": 1000.0,
+        "kind": "item"
+      },
+      {
+        "label": "Akshayakalpa Butter Milk Plain",
+        "amount": 6480.0,
+        "kind": "item"
+      },
+      {
+        "label": "Akshayakalpa Buttermilk Spiced",
+        "amount": 6480.0,
+        "kind": "item"
+      },
+      {
+        "label": "Bisleri",
+        "amount": 480.0,
+        "kind": "item"
+      },
+      {
+        "label": "Nimbooz",
+        "amount": 2250.0,
+        "kind": "item"
+      },
+      {
+        "label": "Coca Cola Zero Sugar",
+        "amount": 9600.0,
+        "kind": "item"
+      },
+      {
+        "label": "Pepsi",
+        "amount": 1920.0,
+        "kind": "item"
+      },
+      {
+        "label": "Yougrt Berry Bar",
+        "amount": 2880.0,
+        "kind": "item"
+      },
+      {
+        "label": "Nuts & Seeds Bar",
+        "amount": 480.0,
+        "kind": "item"
+      },
+      {
+        "label": "PenutButter Bar",
+        "amount": 2400.0,
+        "kind": "item"
+      },
+      {
+        "label": "Minute Maid Pulpy Orange",
+        "amount": 2250.0,
+        "kind": "item"
+      },
+      {
+        "label": "Sunfeast Dark Fantasy",
+        "amount": 400.0,
+        "kind": "item"
+      },
+      {
+        "label": "Haldiram's Mini Bhakarwadi",
+        "amount": 3120.0,
+        "kind": "item"
+      },
+      {
+        "label": "Haldiram's Moong Dal",
+        "amount": 4520.0,
+        "kind": "item"
+      },
+      {
+        "label": "Rainbow Ocean Fruit Drink",
+        "amount": 4320.0,
+        "kind": "item"
+      },
+      {
+        "label": "Whole The Truth Almond",
+        "amount": 4800.0,
+        "kind": "item"
+      },
+      {
+        "label": "Whole The Truth Cocoa",
+        "amount": 4800.0,
+        "kind": "item"
+      },
+      {
+        "label": "Whole the thruth",
+        "amount": 4800.0,
+        "kind": "item"
+      },
+      {
+        "label": "Whole Almond Raisin",
+        "amount": 3720.0,
+        "kind": "item"
+      },
+      {
+        "label": "Whole Hazelnut Dark Chocolate",
+        "amount": 2680.0,
+        "kind": "item"
+      },
+      {
+        "label": "Whole Sea Salt Dark Chocolate",
+        "amount": 1240.0,
+        "kind": "item"
+      },
+      {
+        "label": "Sub Total",
+        "amount": 72045.0,
+        "kind": "total"
+      },
+      {
+        "label": "CGST2.5 (2.5%)",
+        "amount": 1513.13,
+        "kind": "total"
+      },
+      {
+        "label": "SGST2.5 (2.5%)",
+        "amount": 1513.13,
+        "kind": "total"
+      },
+      {
+        "label": "CGST20 (20%)",
+        "amount": 2304.0,
+        "kind": "total"
+      },
+      {
+        "label": "SGST20 (20%)",
+        "amount": 2304.0,
+        "kind": "total"
+      },
+      {
+        "label": "Total",
+        "amount": 79679.26,
+        "kind": "total"
+      },
+      {
+        "label": "Balance Due",
+        "amount": 79679.26,
+        "kind": "total"
+      }
+    ],
+    "currency": "INR",
+    "model": "claude-sonnet-5",
+    "usage": {
+      "input_tokens": 2159,
+      "output_tokens": 971
+    }
+  }
 }

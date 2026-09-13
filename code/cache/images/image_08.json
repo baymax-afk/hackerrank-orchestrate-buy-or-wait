@@ -18,5 +18,55 @@
     "input_tokens": 2700,
     "output_tokens": 207
   },
-  "timestamp": "2026-09-12T23:15:12.738070+00:00"
+  "timestamp": "2026-09-12T23:15:12.738070+00:00",
+  "enumeration": {
+    "amounts": [
+      {
+        "label": "Maintenance - April to June-2026 - Charged Amount",
+        "amount": 13880.0,
+        "kind": "item"
+      },
+      {
+        "label": "Maintenance - April to June-2026 - Amount",
+        "amount": 13880.0,
+        "kind": "item"
+      },
+      {
+        "label": "Club House Charges - April to June-2026 - Charged Amount",
+        "amount": 1050.0,
+        "kind": "item"
+      },
+      {
+        "label": "Club House Charges - April to June-2026 - Amount",
+        "amount": 1050.0,
+        "kind": "item"
+      },
+      {
+        "label": "Infrastructure Expenses - Charged Amount",
+        "amount": 409.0,
+        "kind": "item"
+      },
+      {
+        "label": "Infrastructure Expenses - Amount",
+        "amount": 409.0,
+        "kind": "item"
+      },
+      {
+        "label": "Total Amount Received",
+        "amount": 15339.0,
+        "kind": "total"
+      },
+      {
+        "label": "Convenience Fee",
+        "amount": 0.0,
+        "kind": "item"
+      }
+    ],
+    "currency": "INR",
+    "model": "claude-sonnet-5",
+    "usage": {
+      "input_tokens": 2431,
+      "output_tokens": 313
+    }
+  }
 }

@@ -18,5 +18,80 @@
     "input_tokens": 1386,
     "output_tokens": 226
   },
-  "timestamp": "2026-09-12T23:13:36.502571+00:00"
+  "timestamp": "2026-09-12T23:13:36.502571+00:00",
+  "enumeration": {
+    "amounts": [
+      {
+        "label": "Carrier Meals",
+        "amount": 2900.0,
+        "kind": "item"
+      },
+      {
+        "label": "Parcel Charges",
+        "amount": 450.0,
+        "kind": "item"
+      },
+      {
+        "label": "Chicken Nagarjuna",
+        "amount": 2490.0,
+        "kind": "item"
+      },
+      {
+        "label": "Chapathi",
+        "amount": 1800.0,
+        "kind": "item"
+      },
+      {
+        "label": "Dal",
+        "amount": 310.0,
+        "kind": "item"
+      },
+      {
+        "label": "Big Container",
+        "amount": 30.0,
+        "kind": "item"
+      },
+      {
+        "label": "Container Small",
+        "amount": 96.0,
+        "kind": "item"
+      },
+      {
+        "label": "Packing (Large)",
+        "amount": 46.0,
+        "kind": "item"
+      },
+      {
+        "label": "SubTotal",
+        "amount": 8122.0,
+        "kind": "total"
+      },
+      {
+        "label": "SGST 2.50%",
+        "amount": 203.05,
+        "kind": "total"
+      },
+      {
+        "label": "CGST 2.50%",
+        "amount": 203.05,
+        "kind": "total"
+      },
+      {
+        "label": "Total",
+        "amount": 8528.1,
+        "kind": "total"
+      },
+      {
+        "label": "Grand Total (RS)",
+        "amount": 8528,
+        "kind": "total"
+      }
+    ],
+    "currency": "INR",
+    "model": "claude-sonnet-5",
+    "usage": {
+      "input_tokens": 1116,
+      "output_tokens": 376
+    }
+  }
 }

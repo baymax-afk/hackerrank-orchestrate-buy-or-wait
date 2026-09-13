@@ -18,5 +18,55 @@
     "input_tokens": 2814,
     "output_tokens": 213
   },
-  "timestamp": "2026-09-12T22:58:24.472281+00:00"
+  "timestamp": "2026-09-12T22:58:24.472281+00:00",
+  "enumeration": {
+    "amounts": [
+      {
+        "label": "Rupees (sum acknowledged)",
+        "amount": 200000,
+        "kind": "total"
+      },
+      {
+        "label": "Rent & Maintanance",
+        "amount": 180000,
+        "kind": "item"
+      },
+      {
+        "label": "Water Charges",
+        "amount": 5000,
+        "kind": "item"
+      },
+      {
+        "label": "Rental Tax",
+        "amount": 5000,
+        "kind": "item"
+      },
+      {
+        "label": "Electrical Charges",
+        "amount": 10000,
+        "kind": "item"
+      },
+      {
+        "label": "Total Amount to be Received",
+        "amount": 200000,
+        "kind": "total"
+      },
+      {
+        "label": "Amount Received",
+        "amount": 100000,
+        "kind": "total"
+      },
+      {
+        "label": "Balance Due",
+        "amount": 100000,
+        "kind": "total"
+      }
+    ],
+    "currency": "INR",
+    "model": "claude-sonnet-5",
+    "usage": {
+      "input_tokens": 2543,
+      "output_tokens": 238
+    }
+  }
 }

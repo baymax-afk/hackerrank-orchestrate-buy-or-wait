@@ -18,5 +18,50 @@
     "input_tokens": 1458,
     "output_tokens": 195
   },
-  "timestamp": "2026-09-13T03:09:18.114525+00:00"
+  "timestamp": "2026-09-13T03:09:18.114525+00:00",
+  "enumeration": {
+    "amounts": [
+      {
+        "label": "Ride Distance: 12.3 miles",
+        "amount": 28.5,
+        "kind": "item"
+      },
+      {
+        "label": "Airport Surcharge",
+        "amount": 5.0,
+        "kind": "item"
+      },
+      {
+        "label": "Subtotal",
+        "amount": 33.5,
+        "kind": "total"
+      },
+      {
+        "label": "Tax",
+        "amount": 0.0,
+        "kind": "item"
+      },
+      {
+        "label": "Total",
+        "amount": 33.5,
+        "kind": "total"
+      },
+      {
+        "label": "Cash Paid",
+        "amount": 40.0,
+        "kind": "item"
+      },
+      {
+        "label": "Change",
+        "amount": 6.5,
+        "kind": "item"
+      }
+    ],
+    "currency": "USD",
+    "model": "claude-sonnet-5",
+    "usage": {
+      "input_tokens": 1192,
+      "output_tokens": 206
+    }
+  }
 }

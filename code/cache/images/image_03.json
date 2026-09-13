@@ -18,5 +18,80 @@
     "input_tokens": 1726,
     "output_tokens": 155
   },
-  "timestamp": "2026-09-12T22:59:03.153152+00:00"
+  "timestamp": "2026-09-12T22:59:03.153152+00:00",
+  "enumeration": {
+    "amounts": [
+      {
+        "label": "Coke Die..",
+        "amount": 5800.0,
+        "kind": "item"
+      },
+      {
+        "label": "pulpy or..",
+        "amount": 750.0,
+        "kind": "item"
+      },
+      {
+        "label": "the whol..",
+        "amount": 13920.0,
+        "kind": "item"
+      },
+      {
+        "label": "Rite Bit..",
+        "amount": 4800.0,
+        "kind": "item"
+      },
+      {
+        "label": "Ocean Fr..",
+        "amount": 2500.0,
+        "kind": "item"
+      },
+      {
+        "label": "ferrero ..",
+        "amount": 2152.0,
+        "kind": "item"
+      },
+      {
+        "label": "munch",
+        "amount": 750.0,
+        "kind": "item"
+      },
+      {
+        "label": "5 star",
+        "amount": 540.0,
+        "kind": "item"
+      },
+      {
+        "label": "dark fan..",
+        "amount": 1690.0,
+        "kind": "item"
+      },
+      {
+        "label": "Butter ..",
+        "amount": 7290.0,
+        "kind": "item"
+      },
+      {
+        "label": "dairy m..",
+        "amount": 1080.0,
+        "kind": "item"
+      },
+      {
+        "label": "Net Amount",
+        "amount": 41272.0,
+        "kind": "total"
+      },
+      {
+        "label": "Cash Paid",
+        "amount": 41272.0,
+        "kind": "total"
+      }
+    ],
+    "currency": "INR",
+    "model": "claude-sonnet-5",
+    "usage": {
+      "input_tokens": 1451,
+      "output_tokens": 370
+    }
+  }
 }

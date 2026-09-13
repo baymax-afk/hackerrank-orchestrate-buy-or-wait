@@ -18,5 +18,45 @@
     "input_tokens": 2720,
     "output_tokens": 172
   },
-  "timestamp": "2026-09-12T23:32:46.952503+00:00"
+  "timestamp": "2026-09-12T23:32:46.952503+00:00",
+  "enumeration": {
+    "amounts": [
+      {
+        "label": "Amount (Energy Delivered)",
+        "amount": 333.24,
+        "kind": "item"
+      },
+      {
+        "label": "Session Fee",
+        "amount": 0,
+        "kind": "item"
+      },
+      {
+        "label": "Idle Fee",
+        "amount": 0,
+        "kind": "item"
+      },
+      {
+        "label": "CGST 9 %",
+        "amount": 29.99,
+        "kind": "item"
+      },
+      {
+        "label": "SGST 9 %",
+        "amount": 29.99,
+        "kind": "item"
+      },
+      {
+        "label": "Total",
+        "amount": 393.22,
+        "kind": "total"
+      }
+    ],
+    "currency": "INR",
+    "model": "claude-sonnet-5",
+    "usage": {
+      "input_tokens": 2451,
+      "output_tokens": 180
+    }
+  }
 }

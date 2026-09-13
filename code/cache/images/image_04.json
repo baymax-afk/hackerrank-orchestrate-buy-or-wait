@@ -18,5 +18,85 @@
     "input_tokens": 1531,
     "output_tokens": 282
   },
-  "timestamp": "2026-09-12T22:59:51.873753+00:00"
+  "timestamp": "2026-09-12T22:59:51.873753+00:00",
+  "enumeration": {
+    "amounts": [
+      {
+        "label": "1 x [Combo] Nissin Cup Noodles Mazedaar Masala",
+        "amount": 95.0,
+        "kind": "item"
+      },
+      {
+        "label": "1 x The Whole Truth 20G Protein Bars No Added…",
+        "amount": 531.0,
+        "kind": "item"
+      },
+      {
+        "label": "1 x Flyer - Nubu",
+        "amount": 0,
+        "kind": "item"
+      },
+      {
+        "label": "1 x [Combo] The Whole Truth 13G Protein Millet Bar…",
+        "amount": 186.0,
+        "kind": "item"
+      },
+      {
+        "label": "1 x [Combo] O'Cean Fruit Water Mango & Passion…",
+        "amount": 122.0,
+        "kind": "item"
+      },
+      {
+        "label": "2 x [Combo] The Whole Truth Double Cocoa Prote…",
+        "amount": 464.0,
+        "kind": "item"
+      },
+      {
+        "label": "1 x [Combo] The Whole Truth Almond Choco Fudg…",
+        "amount": 184.0,
+        "kind": "item"
+      },
+      {
+        "label": "3 x Nissin Cup Noodles Mazedaar Masala",
+        "amount": 144.0,
+        "kind": "item"
+      },
+      {
+        "label": "3 x Wickedgud Instant Masala Cup Noodles",
+        "amount": 75.0,
+        "kind": "item"
+      },
+      {
+        "label": "3 x [Combo] O'Cean Peach & Passion Fruit Juice…",
+        "amount": 366.0,
+        "kind": "item"
+      },
+      {
+        "label": "1 x [Combo] The Whole Truth Protein Bar Orange…",
+        "amount": 190.0,
+        "kind": "item"
+      },
+      {
+        "label": "1 x The Whole Truth Protein Bar Hazelnut Cocoa No…",
+        "amount": 121.0,
+        "kind": "item"
+      },
+      {
+        "label": "2 x [Combo] Nissin Cup Noodles Spiced Chicken",
+        "amount": 376.0,
+        "kind": "item"
+      },
+      {
+        "label": "Item Bill",
+        "amount": 2854.0,
+        "kind": "total"
+      }
+    ],
+    "currency": "INR",
+    "model": "claude-sonnet-5",
+    "usage": {
+      "input_tokens": 1262,
+      "output_tokens": 641
+    }
+  }
 }

@@ -18,5 +18,60 @@
     "input_tokens": 2600,
     "output_tokens": 201
   },
-  "timestamp": "2026-09-12T23:00:50.389217+00:00"
+  "timestamp": "2026-09-12T23:00:50.389217+00:00",
+  "enumeration": {
+    "amounts": [
+      {
+        "label": "Previous balance",
+        "amount": 3543.54,
+        "kind": "item"
+      },
+      {
+        "label": "Payments",
+        "amount": 3543.54,
+        "kind": "item"
+      },
+      {
+        "label": "This month's charges",
+        "amount": 704.05,
+        "kind": "item"
+      },
+      {
+        "label": "Amount due till 06-Feb-2026",
+        "amount": 704.05,
+        "kind": "total"
+      },
+      {
+        "label": "Amount due after 06-Feb-2026",
+        "amount": 822.05,
+        "kind": "total"
+      },
+      {
+        "label": "Rentals",
+        "amount": 580.65,
+        "kind": "item"
+      },
+      {
+        "label": "Usage charges",
+        "amount": 16.0,
+        "kind": "item"
+      },
+      {
+        "label": "Taxes",
+        "amount": 107.4,
+        "kind": "item"
+      },
+      {
+        "label": "Total (₹)",
+        "amount": 704.05,
+        "kind": "total"
+      }
+    ],
+    "currency": "INR",
+    "model": "claude-sonnet-5",
+    "usage": {
+      "input_tokens": 2329,
+      "output_tokens": 270
+    }
+  }
 }

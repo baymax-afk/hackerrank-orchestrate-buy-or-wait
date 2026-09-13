@@ -18,5 +18,125 @@
     "input_tokens": 3686,
     "output_tokens": 178
   },
-  "timestamp": "2026-09-12T22:57:30.322599+00:00"
+  "timestamp": "2026-09-12T22:57:30.322599+00:00",
+  "enumeration": {
+    "amounts": [
+      {
+        "label": "Salary",
+        "amount": 4500000,
+        "kind": "item"
+      },
+      {
+        "label": "Allowance BPJS Pen 2% Company",
+        "amount": 90000,
+        "kind": "item"
+      },
+      {
+        "label": "Allowance JHT 3.7%",
+        "amount": 166500,
+        "kind": "item"
+      },
+      {
+        "label": "Allowance JKK 0.24%",
+        "amount": 10800,
+        "kind": "item"
+      },
+      {
+        "label": "Allowance JKM 0.3%",
+        "amount": 13500,
+        "kind": "item"
+      },
+      {
+        "label": "Deduction BPJS Pen 2% Company",
+        "amount": 90000,
+        "kind": "item"
+      },
+      {
+        "label": "Deduction BPJS Pen 1% Employee",
+        "amount": 45000,
+        "kind": "item"
+      },
+      {
+        "label": "Deduction JHT 3.7%",
+        "amount": 166500,
+        "kind": "item"
+      },
+      {
+        "label": "Deduction JHT 2% Employee",
+        "amount": 90000,
+        "kind": "item"
+      },
+      {
+        "label": "Deduction JKK 0.24%",
+        "amount": 10800,
+        "kind": "item"
+      },
+      {
+        "label": "Deduction JKM 0.3%",
+        "amount": 13500,
+        "kind": "item"
+      },
+      {
+        "label": "Subtotal Earnings",
+        "amount": 4780800,
+        "kind": "total"
+      },
+      {
+        "label": "Subtotal Deductions",
+        "amount": 415800,
+        "kind": "total"
+      },
+      {
+        "label": "Tax Allowance",
+        "amount": 0,
+        "kind": "item"
+      },
+      {
+        "label": "Tax Borne by Company",
+        "amount": 0,
+        "kind": "item"
+      },
+      {
+        "label": "Tax Penalty Borne By Company",
+        "amount": 0,
+        "kind": "item"
+      },
+      {
+        "label": "Tax",
+        "amount": 0,
+        "kind": "item"
+      },
+      {
+        "label": "Tax Penalty",
+        "amount": 0,
+        "kind": "item"
+      },
+      {
+        "label": "Total Earnings",
+        "amount": 4780800,
+        "kind": "total"
+      },
+      {
+        "label": "Total Deductions",
+        "amount": 415800,
+        "kind": "total"
+      },
+      {
+        "label": "Net Pay",
+        "amount": 4365000,
+        "kind": "total"
+      },
+      {
+        "label": "Transferred to :Bank Central Asia - 2582373290 - M NURHUDA SY",
+        "amount": 4365000,
+        "kind": "total"
+      }
+    ],
+    "currency": "IDR",
+    "model": "claude-sonnet-5",
+    "usage": {
+      "input_tokens": 3418,
+      "output_tokens": 767
+    }
+  }
 }

@@ -44,11 +44,17 @@ def test_arbitrate_prefers_values_confirmed_by_two_sources():
     # no reviewed value: A and B agree -> corroborated
     amt, why, _ = arbitrate(D("4593"), {"amounts": [{"label": "TOTAL", "amount": 4593, "kind": "total"}]}, None, False)
     assert amt == D("4593") and "reader A, reader B total" in why
-    # nothing corroborates: debit -> larger value, flagged
+    # reader B alone can never supply the value (its totals include previous balances and subtotals):
+    # an uncorroborated reader A stands, flagged with low confidence
     amt, why, conf = arbitrate(D("100"), {"amounts": [{"label": "Total", "amount": 120, "kind": "total"}]}, None, False)
-    assert amt == D("120") and "disagree" in why and conf < 0.7
-    # credit -> smaller value
-    assert arbitrate(D("100"), {"amounts": [{"label": "Net Pay", "amount": 120, "kind": "total"}]}, None, True)[0] == D("100")
+    assert amt == D("100") and "disagree" in why and conf < 0.7
+    # A vs reviewed disagree, nothing verified: debit -> larger, credit -> smaller
+    assert arbitrate(D("100"), None, ("120", "INR", "Total", 0.7, "x"), False)[0] == D("120")
+    assert arbitrate(D("100"), None, ("120", "INR", "Net Pay", 0.7, "x"), True)[0] == D("100")
+    # line items summing to a figure that is not a candidate (a subtotal) do not crown it
+    sub = {"amounts": [{"label": "Dosa", "amount": 100, "kind": "item"}, {"label": "Tea", "amount": 20, "kind": "item"},
+                       {"label": "Sub Total", "amount": 120, "kind": "total"}, {"label": "Grand Total", "amount": 126, "kind": "total"}]}
+    assert arbitrate(D("126"), sub, ("126", "INR", "Grand Total", 0.95, "x"), False)[0] == D("126")
 
 
 def test_resolve_image_adds_enumeration_once_and_survives_reader_failure(tmp_path):

@@ -18,5 +18,135 @@
     "input_tokens": 3136,
     "output_tokens": 245
   },
-  "timestamp": "2026-09-12T23:31:12.395319+00:00"
+  "timestamp": "2026-09-12T23:31:12.395319+00:00",
+  "enumeration": {
+    "amounts": [
+      {
+        "label": "Air Travel and related charges - Taxable Value",
+        "amount": 9124.0,
+        "kind": "item"
+      },
+      {
+        "label": "Air Travel and related charges - NonTaxable/Exempted Value",
+        "amount": 0.0,
+        "kind": "item"
+      },
+      {
+        "label": "Air Travel and related charges - Total",
+        "amount": 9124.0,
+        "kind": "item"
+      },
+      {
+        "label": "Air Travel and related charges - IGST Amount",
+        "amount": 0.0,
+        "kind": "item"
+      },
+      {
+        "label": "Air Travel and related charges - CGST Amount",
+        "amount": 228.0,
+        "kind": "item"
+      },
+      {
+        "label": "Air Travel and related charges - SGST/UGST Amount",
+        "amount": 228.0,
+        "kind": "item"
+      },
+      {
+        "label": "Air Travel and related charges - CESS Amount",
+        "amount": 0.0,
+        "kind": "item"
+      },
+      {
+        "label": "Air Travel and related charges - Total(Incl Taxes)",
+        "amount": 9580.0,
+        "kind": "item"
+      },
+      {
+        "label": "Airport Charges - Taxable Value",
+        "amount": 0.0,
+        "kind": "item"
+      },
+      {
+        "label": "Airport Charges - NonTaxable/Exempted Value",
+        "amount": 388.0,
+        "kind": "item"
+      },
+      {
+        "label": "Airport Charges - Total",
+        "amount": 388.0,
+        "kind": "item"
+      },
+      {
+        "label": "Airport Charges - IGST Amount",
+        "amount": 0.0,
+        "kind": "item"
+      },
+      {
+        "label": "Airport Charges - CGST Amount",
+        "amount": 0.0,
+        "kind": "item"
+      },
+      {
+        "label": "Airport Charges - SGST/UGST Amount",
+        "amount": 0.0,
+        "kind": "item"
+      },
+      {
+        "label": "Airport Charges - CESS Amount",
+        "amount": 0.0,
+        "kind": "item"
+      },
+      {
+        "label": "Airport Charges - Total(Incl Taxes)",
+        "amount": 388.0,
+        "kind": "item"
+      },
+      {
+        "label": "Grand Total - Taxable Value",
+        "amount": 9124.0,
+        "kind": "total"
+      },
+      {
+        "label": "Grand Total - NonTaxable/Exempted Value",
+        "amount": 388.0,
+        "kind": "total"
+      },
+      {
+        "label": "Grand Total - Total",
+        "amount": 9512.0,
+        "kind": "total"
+      },
+      {
+        "label": "Grand Total - IGST Amount",
+        "amount": 0.0,
+        "kind": "total"
+      },
+      {
+        "label": "Grand Total - CGST Amount",
+        "amount": 228.0,
+        "kind": "total"
+      },
+      {
+        "label": "Grand Total - SGST/UGST Amount",
+        "amount": 228.0,
+        "kind": "total"
+      },
+      {
+        "label": "Grand Total - CESS Amount",
+        "amount": 0.0,
+        "kind": "total"
+      },
+      {
+        "label": "Grand Total - Total(Incl Taxes)",
+        "amount": 9968.0,
+        "kind": "total"
+      }
+    ],
+    "currency": "INR",
+    "model": "claude-sonnet-5",
+    "usage": {
+      "input_tokens": 2867,
+      "output_tokens": 893
+    }
+  }
 }

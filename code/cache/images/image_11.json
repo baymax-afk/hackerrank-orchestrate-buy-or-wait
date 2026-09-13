@@ -18,5 +18,100 @@
     "input_tokens": 2444,
     "output_tokens": 187
   },
-  "timestamp": "2026-09-12T23:20:35.273665+00:00"
+  "timestamp": "2026-09-12T23:20:35.273665+00:00",
+  "enumeration": {
+    "amounts": [
+      {
+        "label": "Room & Nursing Charges",
+        "amount": 1650.0,
+        "kind": "item"
+      },
+      {
+        "label": "OT Charges",
+        "amount": 1000.0,
+        "kind": "item"
+      },
+      {
+        "label": "Professional Fees",
+        "amount": 1000.0,
+        "kind": "item"
+      },
+      {
+        "label": "Total Bill Amount",
+        "amount": 3650.0,
+        "kind": "total"
+      },
+      {
+        "label": "Amount Payable",
+        "amount": 3650.0,
+        "kind": "total"
+      },
+      {
+        "label": "Amount Paid",
+        "amount": 0.0,
+        "kind": "total"
+      },
+      {
+        "label": "Balance",
+        "amount": 3650.0,
+        "kind": "total"
+      },
+      {
+        "label": "Bed Charges - GENERAL (GEN001)",
+        "amount": 250.0,
+        "kind": "item"
+      },
+      {
+        "label": "Room/Bed Charges Subtotal",
+        "amount": 250.0,
+        "kind": "total"
+      },
+      {
+        "label": "Nursing Fees - GENERAL (GEN001)",
+        "amount": 250.0,
+        "kind": "item"
+      },
+      {
+        "label": "Nebulization - GENERAL (GEN001)",
+        "amount": 100.0,
+        "kind": "item"
+      },
+      {
+        "label": "Injection Charges - GENERAL (GEN001)",
+        "amount": 50.0,
+        "kind": "item"
+      },
+      {
+        "label": "Blood Transfusion Charges - GENERAL(GEN001)",
+        "amount": 1000.0,
+        "kind": "item"
+      },
+      {
+        "label": "Nursing Charges Subtotal",
+        "amount": 1400.0,
+        "kind": "total"
+      },
+      {
+        "label": "Major OT Charge - GENERAL (GEN001)",
+        "amount": 1000.0,
+        "kind": "item"
+      },
+      {
+        "label": "OT Charges Subtotal",
+        "amount": 1000.0,
+        "kind": "total"
+      },
+      {
+        "label": "Dr. Akshara Raje",
+        "amount": 500.0,
+        "kind": "item"
+      }
+    ],
+    "currency": "INR",
+    "model": "claude-sonnet-5",
+    "usage": {
+      "input_tokens": 2172,
+      "output_tokens": 591
+    }
+  }
 }

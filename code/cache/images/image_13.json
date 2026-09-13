@@ -18,5 +18,35 @@
     "input_tokens": 2330,
     "output_tokens": 138
   },
-  "timestamp": "2026-09-12T23:24:02.564650+00:00"
+  "timestamp": "2026-09-12T23:24:02.564650+00:00",
+  "enumeration": {
+    "amounts": [
+      {
+        "label": "DailyObjects Mumbai City Tote Bag",
+        "amount": 699,
+        "kind": "item"
+      },
+      {
+        "label": "Ivory - Navy All Time Tote Bag",
+        "amount": 1599,
+        "kind": "item"
+      },
+      {
+        "label": "Item Total (2 items)",
+        "amount": 2298,
+        "kind": "total"
+      },
+      {
+        "label": "Total paid",
+        "amount": 2298,
+        "kind": "total"
+      }
+    ],
+    "currency": "INR",
+    "model": "claude-sonnet-5",
+    "usage": {
+      "input_tokens": 2063,
+      "output_tokens": 146
+    }
+  }
 }

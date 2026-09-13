@@ -18,5 +18,280 @@
     "input_tokens": 2351,
     "output_tokens": 205
   },
-  "timestamp": "2026-09-12T23:12:37.881354+00:00"
+  "timestamp": "2026-09-12T23:12:37.881354+00:00",
+  "enumeration": {
+    "amounts": [
+      {
+        "label": "The Whole Truth Almond Raisin 55% Dark Chocolate Bar(Pack) - MRP",
+        "amount": 310.0,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Almond Raisin 55% Dark Chocolate Bar(Pack) - Discount",
+        "amount": 27.5,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Almond Raisin 55% Dark Chocolate Bar(Pack) - Taxable Value",
+        "amount": 538.1,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Almond Raisin 55% Dark Chocolate Bar(Pack) - CGST (INR)",
+        "amount": 13.45,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Almond Raisin 55% Dark Chocolate Bar(Pack) - SGST (INR)",
+        "amount": 13.45,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Almond Raisin 55% Dark Chocolate Bar(Pack) - Total",
+        "amount": 565.0,
+        "kind": "item"
+      },
+      {
+        "label": "Delivery and other charges - Taxable Value",
+        "amount": 2.98,
+        "kind": "item"
+      },
+      {
+        "label": "Delivery and other charges - CGST (INR)",
+        "amount": 0.07,
+        "kind": "item"
+      },
+      {
+        "label": "Delivery and other charges - SGST (INR)",
+        "amount": 0.07,
+        "kind": "item"
+      },
+      {
+        "label": "Delivery and other charges - Total",
+        "amount": 3.13,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Rich 71% Dark Chocolate Bar(Pack) - MRP",
+        "amount": 310.0,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Rich 71% Dark Chocolate Bar(Pack) - Discount",
+        "amount": 34.0,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Rich 71% Dark Chocolate Bar(Pack) - Taxable Value",
+        "amount": 525.71,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Rich 71% Dark Chocolate Bar(Pack) - CGST (INR)",
+        "amount": 13.14,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Rich 71% Dark Chocolate Bar(Pack) - SGST (INR)",
+        "amount": 13.14,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Rich 71% Dark Chocolate Bar(Pack) - Total",
+        "amount": 552.0,
+        "kind": "item"
+      },
+      {
+        "label": "Delivery and other charges - Taxable Value",
+        "amount": 2.91,
+        "kind": "item"
+      },
+      {
+        "label": "Delivery and other charges - CGST (INR)",
+        "amount": 0.07,
+        "kind": "item"
+      },
+      {
+        "label": "Delivery and other charges - SGST (INR)",
+        "amount": 0.07,
+        "kind": "item"
+      },
+      {
+        "label": "Delivery and other charges - Total",
+        "amount": 3.06,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Almond Raisin 55% Dark Chocolate Bar(Pack) - MRP",
+        "amount": 310.0,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Almond Raisin 55% Dark Chocolate Bar(Pack) - Discount",
+        "amount": 21.0,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Almond Raisin 55% Dark Chocolate Bar(Pack) - Taxable Value",
+        "amount": 275.24,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Almond Raisin 55% Dark Chocolate Bar(Pack) - CGST (INR)",
+        "amount": 6.88,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Almond Raisin 55% Dark Chocolate Bar(Pack) - SGST (INR)",
+        "amount": 6.88,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Almond Raisin 55% Dark Chocolate Bar(Pack) - Total",
+        "amount": 289.0,
+        "kind": "item"
+      },
+      {
+        "label": "Delivery and other charges - Taxable Value",
+        "amount": 1.53,
+        "kind": "item"
+      },
+      {
+        "label": "Delivery and other charges - CGST (INR)",
+        "amount": 0.04,
+        "kind": "item"
+      },
+      {
+        "label": "Delivery and other charges - SGST (INR)",
+        "amount": 0.04,
+        "kind": "item"
+      },
+      {
+        "label": "Delivery and other charges - Total",
+        "amount": 1.6,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Rich 55% Dark Chocolate Bar(Pack) - MRP",
+        "amount": 310.0,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Rich 55% Dark Chocolate Bar(Pack) - Discount",
+        "amount": 21.0,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Rich 55% Dark Chocolate Bar(Pack) - Taxable Value",
+        "amount": 275.24,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Rich 55% Dark Chocolate Bar(Pack) - CGST (INR)",
+        "amount": 6.88,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Rich 55% Dark Chocolate Bar(Pack) - SGST (INR)",
+        "amount": 6.88,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Rich 55% Dark Chocolate Bar(Pack) - Total",
+        "amount": 289.0,
+        "kind": "item"
+      },
+      {
+        "label": "Delivery and other charges - Taxable Value",
+        "amount": 1.53,
+        "kind": "item"
+      },
+      {
+        "label": "Delivery and other charges - CGST (INR)",
+        "amount": 0.04,
+        "kind": "item"
+      },
+      {
+        "label": "Delivery and other charges - SGST (INR)",
+        "amount": 0.04,
+        "kind": "item"
+      },
+      {
+        "label": "Delivery and other charges - Total",
+        "amount": 1.6,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Sea Salt 71% Dark Chocolate Bar(Pack) - MRP",
+        "amount": 310.0,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Sea Salt 71% Dark Chocolate Bar(Pack) - Discount",
+        "amount": 21.0,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Sea Salt 71% Dark Chocolate Bar(Pack) - Taxable Value",
+        "amount": 275.24,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Sea Salt 71% Dark Chocolate Bar(Pack) - CGST (INR)",
+        "amount": 6.88,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Sea Salt 71% Dark Chocolate Bar(Pack) - SGST (INR)",
+        "amount": 6.88,
+        "kind": "item"
+      },
+      {
+        "label": "The Whole Truth Sea Salt 71% Dark Chocolate Bar(Pack) - Total",
+        "amount": 289.0,
+        "kind": "item"
+      },
+      {
+        "label": "Delivery and other charges - Taxable Value",
+        "amount": 1.53,
+        "kind": "item"
+      },
+      {
+        "label": "Delivery and other charges - CGST (INR)",
+        "amount": 0.04,
+        "kind": "item"
+      },
+      {
+        "label": "Delivery and other charges - SGST (INR)",
+        "amount": 0.04,
+        "kind": "item"
+      },
+      {
+        "label": "Delivery and other charges - Total",
+        "amount": 1.6,
+        "kind": "item"
+      },
+      {
+        "label": "Total - CGST (INR)",
+        "amount": 47.49,
+        "kind": "total"
+      },
+      {
+        "label": "Total - SGST (INR)",
+        "amount": 47.49,
+        "kind": "total"
+      },
+      {
+        "label": "Total",
+        "amount": 1995.0,
+        "kind": "total"
+      }
+    ],
+    "currency": "INR",
+    "model": "claude-sonnet-5",
+    "usage": {
+      "input_tokens": 2081,
+      "output_tokens": 2551
+    }
+  }
 }

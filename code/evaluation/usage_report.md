@@ -1,6 +1,6 @@
 # Token usage and cost report
 
-Generated: 2026-09-13T07:13:42.109677+00:00 (run id 20260913T071340Z-31b7c8)
+Generated: 2026-09-13T07:25:02.032231+00:00 (run id 20260913T072457Z-081966)
 Dataset run: 250 requests (dataset/requests.csv). Provider: anthropic. Prompt version: v1.
 
 Model calls are made only by the bounded evidence/explanation agents (image OCR, message extraction fallback, explanation drafting). All forecasting, plan generation, ranking and validation are deterministic Python. Cache hits make no API call and consume no tokens.

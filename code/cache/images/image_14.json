@@ -18,5 +18,50 @@
     "input_tokens": 1175,
     "output_tokens": 243
   },
-  "timestamp": "2026-09-13T03:09:24.482727+00:00"
+  "timestamp": "2026-09-13T03:09:24.482727+00:00",
+  "enumeration": {
+    "amounts": [
+      {
+        "label": "Samhan",
+        "amount": 1500.0,
+        "kind": "item"
+      },
+      {
+        "label": "Moov spray",
+        "amount": 724.0,
+        "kind": "item"
+      },
+      {
+        "label": "Axe oil",
+        "amount": 796.0,
+        "kind": "item"
+      },
+      {
+        "label": "Stayfree",
+        "amount": 550.0,
+        "kind": "item"
+      },
+      {
+        "label": "Benadryl",
+        "amount": 303.0,
+        "kind": "item"
+      },
+      {
+        "label": "Item 6",
+        "amount": 670.0,
+        "kind": "item"
+      },
+      {
+        "label": "TOTAL",
+        "amount": 4593.0,
+        "kind": "total"
+      }
+    ],
+    "currency": "Rs.",
+    "model": "claude-sonnet-5",
+    "usage": {
+      "input_tokens": 904,
+      "output_tokens": 202
+    }
+  }
 }

@@ -71,7 +71,7 @@ class ImageAgent:
             {"type": "text", "text": "List every labelled amount on this document. Return JSON only."},
         ]
         result = self.client.json_call(agent="image_enumerate", source_id=image.image_id, system=ENUMERATE_SYSTEM, content=content,
-                                       schema=ENUMERATE_SCHEMA, model=config.MODEL_VISION, max_tokens=1500, effort="medium")
+                                       schema=ENUMERATE_SCHEMA, model=config.MODEL_VISION, max_tokens=4000, effort="medium")
         if result is None:
             return None
         return {"amounts": result.get("amounts", []), "currency": result.get("currency"), "model": result.get("_model"), "usage": result.get("_usage")}

@@ -104,12 +104,16 @@ def arbitrate(model_amt: Optional[Decimal], enumeration: Optional[dict], reviewe
             items.append(v)
     item_sum = sum(items, Decimal(0)) if items else None
     reviewed_amt = _d(reviewed[0]) if reviewed else None
-    candidates = [c for c in (model_amt, reviewed_amt, *totals) if c is not None]
+    # Candidates come only from the targeted readings (reader A answers the ledger question; the reviewed
+    # table was read for that row). Reader B is a corroborator: its figures include previous balances,
+    # subtotals and payments that are *not* the answer, so they can never become the adopted value on
+    # their own. Likewise line-item arithmetic breaks ties between candidates but cannot crown a new one
+    # (items typically sum to a pre-tax subtotal, not to the amount charged).
+    candidates = [c for c in (model_amt, reviewed_amt) if c is not None]
     if not candidates:
-        return None, "no reading available", 0.0
+        return None, "no targeted reading available", 0.0
 
     def corroborated(v: Decimal) -> tuple[int, list[str]]:
-        # arithmetic (line items adding up) is a deterministic check and outweighs any single reading
         score, why = 0, []
         if model_amt is not None and v == model_amt:
             score += 1; why.append("reader A")
@@ -129,7 +133,8 @@ def arbitrate(model_amt: Optional[Decimal], enumeration: Optional[dict], reviewe
         others = sorted(set(candidates) - {reviewed_amt})
         return reviewed_amt, f"verified reviewed reading {reviewed_amt} ({reviewed[2]}) adopted; other readings {others}", reviewed[3]
     chosen = min(candidates) if is_credit else max(candidates)
-    return chosen, f"readings disagree {sorted(set(candidates))}; financially safer value {chosen} adopted (flag for review)", 0.6
+    seen = sorted(set(candidates) | set(totals))
+    return chosen, f"readings disagree (targeted {sorted(set(candidates))}, reader B totals {sorted(set(totals))}); financially safer targeted value {chosen} adopted (flag for review)", 0.6
 
 
 def _fact_from_record(image: ImageRef, rec: dict, extractor: str, event: Optional[Event] = None, content_hash: str = "", enumeration: Optional[dict] = None) -> EvidenceFact:
