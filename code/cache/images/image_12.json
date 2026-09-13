@@ -1,0 +1,22 @@
+{
+  "source_file": "dataset/media/images/image_12.png",
+  "source_id": "image_12",
+  "target_event_id": "event_7307",
+  "content_sha256": "e10b0123e66d512d82f6c431fb741053b336627b89b9d9a138071ac6980a14ff",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "amount": 33.5,
+    "currency": "USD",
+    "field_used": "Total",
+    "document_type": "taxi receipt"
+  },
+  "confidence": 0.97,
+  "rationale": "The receipt's Total field ($33.50) represents the fare amount owed for the taxi trip, matching the 'Taxi fare' debit description; cash paid and change reflect payment settlement, not the fare itself.",
+  "usage": {
+    "input_tokens": 1458,
+    "output_tokens": 195
+  },
+  "timestamp": "2026-09-13T03:09:18.114525+00:00"
+}

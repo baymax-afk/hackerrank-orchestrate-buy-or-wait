@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_203",
-  "content_sha256": "b0c4e5157899527ebde83f9d362c38fa9010bd904fbabf28d139c3fc3c784abf",
+  "content_sha256": "3f6c5c426b817a7571cef74229a4c8292e699cbf7aaf37bb946f2995bd6b6dc3",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "Request_203's emergency expense of EUR 1,442.10 due 8 July 2025 can't be paid without dropping below the EUR 1,400 minimum balance, so payment is not recommended and no plan is currently feasible."
+    "explanation": "Your EUR 1,442.10 emergency expense for request_203 will be paid in 3 installments of EUR 499.93 each, starting 10 May 2025, keeping at least EUR 1,400 available throughout."
   },
   "usage": {
-    "input_tokens": 541,
-    "output_tokens": 84
+    "input_tokens": 579,
+    "output_tokens": 81
   },
-  "timestamp": "2026-09-12T23:37:48.763840+00:00"
+  "timestamp": "2026-09-13T03:09:37.980160+00:00"
 }

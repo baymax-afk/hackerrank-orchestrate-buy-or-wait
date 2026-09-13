@@ -1,0 +1,22 @@
+{
+  "source_file": "dataset/media/images/image_14.png",
+  "source_id": "image_14",
+  "target_event_id": "event_9421",
+  "content_sha256": "bf88e4aa35e6f36304cbf76bf6f505f32b04466bfd5f7df693fcb3ebe8a3e2c1",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "amount": 4593.0,
+    "currency": "INR",
+    "field_used": "TOTAL",
+    "document_type": "receipt"
+  },
+  "confidence": 0.85,
+  "rationale": "The receipt lists pharmacy items with individual amounts summing to a printed TOTAL of Rs.4593.00, which matches the ledger row's 'Pharmacy purchase' debit entry in INR.",
+  "usage": {
+    "input_tokens": 1175,
+    "output_tokens": 243
+  },
+  "timestamp": "2026-09-13T03:09:24.482727+00:00"
+}

@@ -75,8 +75,10 @@ class ExplainAgent:
         if decision.recommended_payment_method == "installments":
             must.append("installment")
         # numbers in the text must all appear in the facts (no invented figures)
-        allowed = set(re.findall(r"\d[\d,]*\.?\d*", " ".join(str(v) for v in facts.values())))
-        for num in re.findall(r"\d[\d,]*\.?\d*", text):
+        # a number never ends in a separator, so "2025," or "1,302.40." is read as 2025 / 1,302.40
+        number = r"\d(?:[\d,]*\d)?(?:\.\d+)?"
+        allowed = set(re.findall(number, " ".join(str(v) for v in facts.values())))
+        for num in re.findall(number, text):
             if num not in allowed and num.rstrip("0").rstrip(".") not in {a.rstrip("0").rstrip(".") for a in allowed}:
                 return False
         return all(m.lower() in text.lower() for m in must)

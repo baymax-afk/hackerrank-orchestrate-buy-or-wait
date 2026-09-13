@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_51",
-  "content_sha256": "a63b6c40c7c59fb8b52d8ccb9e8b3c2a4838419cfe17828e008b2b61a78b437a",
+  "content_sha256": "dbb9004e4637f792c5f534bb74b5009416da496dd51dfaff37ff511d47d9f6ab",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The IDR 2,191,000 investment request made on 3 January 2026 is not recommended, since although IDR 2,081,235.83 is available today, funding the full amount while keeping the required IDR 7,811,000 minimum balance isn't possible within 90 days."
+    "explanation": "You can fully invest IDR 2,191,000 today, 3 January 2026, since it's affordable now and still leaves at least IDR 7,811,000 available over the next 90 days."
   },
   "usage": {
-    "input_tokens": 560,
-    "output_tokens": 96
+    "input_tokens": 552,
+    "output_tokens": 69
   },
-  "timestamp": "2026-09-12T23:15:25.696550+00:00"
+  "timestamp": "2026-09-13T03:09:06.147712+00:00"
 }

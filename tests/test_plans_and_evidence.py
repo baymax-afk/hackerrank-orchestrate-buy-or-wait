@@ -228,3 +228,16 @@ def test_sample_regression_no_llm():
     for rid in exact:
         for col in ("amount_safe_to_pay", "affordability_status", "recommended_payment_method", "payment_plan", "earliest_date_for_full_payment"):
             assert pred[rid][col] == truth[rid][col], (rid, col)
+
+
+def test_explanation_grounding_ignores_trailing_separators():
+    from agents.explain_agent import ExplainAgent
+    from models import Decision
+
+    facts = {"requested_amount": "EUR 1,302.40", "minimum_balance_to_keep": "EUR 1,100", "earliest_full_payment_date": "15 July 2024",
+             "request_date": "3 May 2024", "amount_safe_to_pay_today": "EUR 0"}
+    d = Decision.__new__(Decision)
+    d.recommended_payment_method = "wait"
+    ok = ExplainAgent._grounded("Wait and pay EUR 1,302.40 on 15 July 2024, since paying earlier drops below the EUR 1,100 minimum.", facts, d, "EUR")
+    invented = ExplainAgent._grounded("Wait and pay EUR 1,302.40 on 15 July 2024, keeping EUR 1,250 spare above the EUR 1,100 minimum.", facts, d, "EUR")
+    assert ok and not invented

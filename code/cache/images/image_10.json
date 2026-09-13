@@ -1,0 +1,22 @@
+{
+  "source_file": "dataset/media/images/image_10.png",
+  "source_id": "image_10",
+  "target_event_id": "event_6033",
+  "content_sha256": "c90f98caf0877083e471fd47dace772f83d4782037cf112e97c63f79a10ea8cf",
+  "prompt_version": "v1",
+  "provider": "anthropic",
+  "model": "claude-sonnet-5",
+  "extracted": {
+    "amount": 79679.26,
+    "currency": "INR",
+    "field_used": "Balance Due",
+    "document_type": "invoice"
+  },
+  "confidence": 0.95,
+  "rationale": "The invoice shows a Balance Due of ₹79,679.26 matching the Total, which corresponds to the full outstanding amount for this grocery invoice ledger row.",
+  "usage": {
+    "input_tokens": 2430,
+    "output_tokens": 160
+  },
+  "timestamp": "2026-09-13T03:09:14.648121+00:00"
+}

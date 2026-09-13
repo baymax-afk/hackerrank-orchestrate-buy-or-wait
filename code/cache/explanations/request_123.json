@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_123",
-  "content_sha256": "2958d669f4512c1d0f414296846f8ee7d21f8896bd4226e06dfd443d81afb0ac",
+  "content_sha256": "870fc30d8b3177cfe4deace1c71bd5b8ac85d5e064c98e8e62b7136c4e705f0e",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "You should not make the IDR 4,076,000 investment by 28 March 2026, since none of the available options lets you pay while keeping your required minimum balance of IDR 18,091,200 intact."
+    "explanation": "You can invest IDR 4,076,000 today in full, since doing so still keeps at least IDR 18,091,200 available over the next 90 days, with no changes needed to your spending."
   },
   "usage": {
-    "input_tokens": 539,
-    "output_tokens": 72
+    "input_tokens": 552,
+    "output_tokens": 68
   },
-  "timestamp": "2026-09-12T23:33:36.975786+00:00"
+  "timestamp": "2026-09-13T03:09:26.612354+00:00"
 }

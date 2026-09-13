@@ -126,7 +126,7 @@ def run(args) -> int:
         try:
             from usage import write_report
 
-            write_report(len(rows), run_start)
+            write_report(len(rows), run_start, request_ids=[r.request_id for r in requests])
         except Exception as exc:  # pragma: no cover
             log.warning("usage report not written: %s", exc)
     return 1 if errors else 0

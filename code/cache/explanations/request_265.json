@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_265",
-  "content_sha256": "e47ec5c9ba2ee6fd48af3c04ed5d1af9e0e485450f4ceac1a3efa58c82659b85",
+  "content_sha256": "f7ce948aebf89c128ccae464ce4961f8f522dfbe8fc458a77afe46ba0343f42d",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The requested family transfer of INR 45,970 cannot be paid by 21 March 2024, since doing so would drop your balance below the required minimum of INR 189,700, so no amount is safe to pay today and no payment plan is recommended."
+    "explanation": "You can pay the full INR 45,970 family transfer today, 6 March 2024, ahead of the 21 March 2024 deadline, while still keeping at least INR 189,700 available."
   },
   "usage": {
-    "input_tokens": 532,
-    "output_tokens": 86
+    "input_tokens": 539,
+    "output_tokens": 70
   },
-  "timestamp": "2026-09-12T23:41:29.342926+00:00"
+  "timestamp": "2026-09-13T03:09:46.714470+00:00"
 }

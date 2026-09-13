@@ -61,7 +61,34 @@ def summarise(records: list[dict]) -> dict:
     return {"per_model": per_model, "per_agent": per_agent, "total": total}
 
 
-def write_report(n_requests: int, run_start: str | None = None, usage_log: Path = config.USAGE_LOG, out: Path = config.USAGE_REPORT) -> Path:
+def embodied_records(request_ids: list[str] | None, cache_dir: Path = config.CACHE_DIR) -> list[dict]:
+    """Synthesise one usage record per cached model output that the shipped rows rely on.
+
+    Cache hits make no API call, so the per-run table alone would hide the model work behind
+    output.csv. Every cache record carries the usage of the call that produced it; this returns
+    those as records (explanations only for the requests in the run, all evidence caches).
+    """
+    wanted = set(request_ids or [])
+    out = []
+    for kind, agent in (("images", "image_agent"), ("messages", "message_agent"), ("explanations", "explain_agent")):
+        d = cache_dir / kind
+        if not d.exists():
+            continue
+        for f in sorted(d.glob("*.json")):
+            if kind == "explanations" and wanted and f.stem not in wanted:
+                continue
+            try:
+                rec = json.loads(f.read_text(encoding="utf-8"))
+            except json.JSONDecodeError:
+                continue
+            u = rec.get("usage") or {}
+            out.append({"agent": agent, "source_id": rec.get("source_id", f.stem), "model": rec.get("model") or "unknown", "ok": True,
+                        "input_tokens": int(u.get("input_tokens", 0) or 0), "output_tokens": int(u.get("output_tokens", 0) or 0)})
+    return out
+
+
+def write_report(n_requests: int, run_start: str | None = None, usage_log: Path = config.USAGE_LOG, out: Path = config.USAGE_REPORT,
+                 request_ids: list[str] | None = None) -> Path:
     records = _load(usage_log)
     run_records = [r for r in records if run_start is None or r.get("ts", "") >= run_start]
     run = summarise(run_records)
@@ -76,7 +103,28 @@ def write_report(n_requests: int, run_start: str | None = None, usage_log: Path 
         "Model calls are made only by the bounded evidence/explanation agents (image OCR, message extraction fallback, explanation drafting, optional audit). "
         "All forecasting, plan generation, ranking and validation are deterministic Python. Cache hits make no API call and consume no tokens.",
         "",
-        "## Final full-dataset run (calls made during this run)",
+        "## Final full-dataset run: model work behind the shipped output.csv",
+        "",
+        "Each shipped row is built from cached, provenance-tracked model outputs (image OCR, message extraction, explanation draft). "
+        "A cached output is reused without a new API call, so this table sums the usage recorded when each output used by this run was originally produced. "
+        "This is the per-request model cost of reproducing output.csv from scratch.",
+        "",
+        "| Model | Calls | Input tokens | Output tokens | Total tokens | Est. cost (USD) |",
+        "|---|---:|---:|---:|---:|---:|",
+    ]
+    emb = summarise(embodied_records(request_ids))
+    for m, d in sorted(emb["per_model"].items()):
+        lines.append(f"| {m} | {d['calls']} | {d['input_tokens']} | {d['output_tokens']} | {d['input_tokens'] + d['output_tokens']} | {d['cost']:.4f} |")
+    e = emb["total"]
+    et = e["input_tokens"] + e["output_tokens"]
+    lines += [
+        f"| **All models** | {e['calls']} | {e['input_tokens']} | {e['output_tokens']} | {et} | {e['cost']:.4f} |",
+        "",
+        f"- Total tokens: {et}; average per request: {et / n:.1f}",
+        f"- Estimated total cost: USD {e['cost']:.4f}; average per request: USD {e['cost'] / n:.6f}",
+        f"- Calls per agent: {dict(sorted(emb['per_agent'].items()))}",
+        "",
+        "## API calls made during this run (cache misses only)",
         "",
         "| Model | Calls | Failed | Input tokens | Output tokens | Total tokens | Est. cost (USD) |",
         "|---|---:|---:|---:|---:|---:|---:|",

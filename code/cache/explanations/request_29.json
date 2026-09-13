@@ -1,16 +1,16 @@
 {
   "source_file": "decision",
   "source_id": "request_29",
-  "content_sha256": "d7cf62de7ab1b65b85eb4f9a705682b2d68296133653ee9717e15283f163f7e1",
+  "content_sha256": "2b273e9c921fe3f236026443bdb9121c7530d5a6ed33a03470221d97ee97ca7b",
   "prompt_version": "v1",
   "provider": "anthropic",
   "model": "claude-sonnet-5",
   "extracted": {
-    "explanation": "The requested ZAR 51,524 investment due 23 November 2025 cannot be made, since paying it would drop the balance below the required ZAR 28,300 minimum; only ZAR 23,455.20 is safe to pay today, and no full-payment date is available within 90 days."
+    "explanation": "The requested ZAR 51,524 investment due by 23 November 2025 is not affordable, since paying it would drop the balance below the required ZAR 28,300 minimum, so no payment or plan is recommended at this time."
   },
   "usage": {
     "input_tokens": 541,
-    "output_tokens": 100
+    "output_tokens": 81
   },
-  "timestamp": "2026-09-12T23:11:40.250217+00:00"
+  "timestamp": "2026-09-13T03:09:01.685056+00:00"
 }
