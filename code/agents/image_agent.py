@@ -1,7 +1,7 @@
 """Vision agent: read the amount of one financial document image.
 
 Output is schema-constrained, provenance-tagged and treated as a hypothesis;
-the ledger only uses it to fill a blank event amount and the reviewed table
+the ledger only uses it to fill a blank event amount and a second reading
 cross-checks it (see evidence/images.py).
 """
 from __future__ import annotations

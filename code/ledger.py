@@ -62,7 +62,7 @@ def apply_event_facts(events: list[Event], facts: list[EvidenceFact], notes: lis
             continue
         e = by_id[f.target_event_id]
         if f.kind == "amount" and f.amount is not None:
-            if e.amount is None or f.extractor == "reviewed":
+            if e.amount is None:
                 by_id[e.event_id] = replace(e, amount=f.amount)
                 notes.append(f"{e.event_id}: amount {f.amount} from {f.source_kind} {f.source_id} ({f.extractor}, conf {f.confidence:.2f})")
         elif f.kind == "amend_event_date" and f.effective_date and e.status == "scheduled":

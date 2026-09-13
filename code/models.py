@@ -154,7 +154,7 @@ class EvidenceFact:
     pattern: Optional[str] = None
     confidence: float = 1.0
     rationale: str = ""
-    extractor: str = "rules"  # rules | llm | reviewed
+    extractor: str = "rules"  # rules | llm
 
 
 @dataclass(frozen=True)
