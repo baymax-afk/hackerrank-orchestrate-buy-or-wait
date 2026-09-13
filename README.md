@@ -2,6 +2,23 @@
 
 Starter repository for the **HackerRank Orchestrate** 24-hour hackathon (September 2026).
 
+## Solution (participant submission)
+
+The solution is a deterministic Python decision engine under [`code/`](./code/README.md) with bounded, cached LLM agents for evidence interpretation (image OCR, message extraction, explanation drafting). Full module map, design notes and CLI flags: [`code/README.md`](./code/README.md).
+
+```bash
+pip install -r requirements.txt        # anthropic (optional) + pytest
+cp .env.example .env                   # optional: ANTHROPIC_API_KEY enables the agents; omit for a fully offline run
+python code/main.py                    # -> ./output.csv (250 rows) + code/evaluation/usage_report.md
+python code/main.py --no-llm           # same, with no API calls (cached evidence + rule-based parsing)
+python -m pytest tests -q              # unit tests
+python code/tools/build_zip.py         # -> ./code.zip (includes evaluation/usage_report.md)
+```
+
+Runs are reproducible without an API key: every model output is shipped as a JSON cache under `code/cache/` with provenance.
+
+---
+
 ## Buy or Wait?
 
 Build an AI-powered financial agent that decides whether a user can safely afford a requested expense.

@@ -43,7 +43,12 @@ def main() -> int:
     with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as zf:
         for p in files:
             zf.write(p, p.relative_to(ROOT).as_posix())
-    print(f"wrote {out} ({len(files)} files)")
+        # The submission contract expects evaluation/usage_report.md at the zip root;
+        # the generator writes it under code/evaluation/, so ship it at both paths.
+        report = ROOT / "code" / "evaluation" / "usage_report.md"
+        if report.exists():
+            zf.write(report, "evaluation/usage_report.md")
+    print(f"wrote {out} ({len(files)} files + evaluation/usage_report.md)")
     return 0
 
 
